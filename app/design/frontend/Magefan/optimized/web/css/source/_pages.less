@@ -1,0 +1,48 @@
+// /**
+//  * Copyright © Magefan (support@magefan.com). All rights reserved.
+//  * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .pages {
+        .lib-pager();
+
+        .items {
+            white-space: normal;
+        }
+
+        .page {
+            border-radius: 50%;
+        }
+
+        a.page {
+            .lib-css(transition, all .2s ease);
+            &:hover {
+                .lib-css(transition, all .2s ease);
+            }
+        }
+
+        .action {
+            width: 65px;
+            &.previous {
+                margin-right: 0;
+            }
+
+            &.next {
+                margin-left: 0;
+            }
+
+            .label + span {
+                .lib-visually-hidden();
+            }
+
+            svg {
+                color: @theme__color__secondary;
+            }
+        }
+    }
+}

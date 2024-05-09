@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="mage/gallery/gallery.css"/>
+        <css src="Magento_Catalog::css/gallery-preloaded.css"/>
+    </head>
+    <body>
+
+        <!-- return old breadcrumbs -->
+        <referenceContainer name="page.top">
+            <block class="Magento\Catalog\Block\Breadcrumbs" name="product.breadcrumbs" />
+        </referenceContainer>
+        <referenceBlock name="breadcrumbs" template="Magento_Theme::html/breadcrumbs.phtml" />
+        <!-- end return old breadcrumbs -->
+
+        <move element="page.main.title" destination="product.info.main" before="product.info.price" />
+
+        <referenceContainer name="product.info.main">
+            <container name="product.info.review.stock.sku" label="Product info review stock sku" htmlTag="div" htmlClass="product-info-review-stock-sku">
+                <container name="product.info.stock.sku" label="Product info stock sku" htmlTag="div" htmlClass="product-info-stock-sku" />
+            </container>
+        </referenceContainer>
+
+        <move element="product.info.review.stock.sku" destination="product.info.main" after="page.main.title" />
+        <move element="product.info.review" destination="product.info.review.stock.sku" before="-" />
+        <move element="product.info.type" destination="product.info.stock.sku" before="-" />
+        <move element="product.info.sku" destination="product.info.stock.sku" after="-" />
+
+    </body>
+</page>

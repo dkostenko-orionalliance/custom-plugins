@@ -1,0 +1,41 @@
+// /**
+//  * Copyright © Magefan (support@magefan.com). All rights reserved.
+//  * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .breadcrumbs {
+        .lib-breadcrumbs(
+            @_breadcrumbs-link-color-hover: @_breadcrumbs-link-color,
+            @_breadcrumbs-link-color-active: @_breadcrumbs-link-color,
+            @_breadcrumbs-link-color-visited: @_breadcrumbs-link-color
+        );
+        .items {
+            color: @_breadcrumbs-current-color;
+        }
+    }
+}
+
+//  (max-width: 768px)
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .breadcrumbs {
+        .item {
+            &:last-child {
+                display: inline-block;
+                text-decoration: none;
+                padding: 0;
+                .lib-icon-font(
+                    @icon-prev,
+                    @_icon-font-size: 26px
+                );
+            }
+            &:not(:last-child) {
+                display: none;
+            }
+        }
+    }
+}
