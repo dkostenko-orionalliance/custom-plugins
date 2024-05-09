@@ -1,7 +1,7 @@
 define([
     'jquery',
-    'OrionAlliance_NewModule/js/product/weight-handler',
-    'OrionAlliance_NewModule/catalog/type-events'
+    'Webkul_Marketplace/js/product/weight-handler',
+    'Webkul_Marketplace/catalog/type-events'
 ], function ($, weight, productType) {
     'use strict';
 
@@ -27,7 +27,7 @@ define([
         /**
          * Constructor component
          */
-        'OrionAlliance_NewModule/catalog/apply-to-type-switcher': function () {
+        'Webkul_Marketplace/catalog/apply-to-type-switcher': function () {
             this.bindAll();
             this._switchToTypeByApplyAttr();
         },

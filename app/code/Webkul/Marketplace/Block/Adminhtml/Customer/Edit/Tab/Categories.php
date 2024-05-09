@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab;
 
 use Magento\Customer\Controller\RegistryConstants;
-use OrionAlliance\NewModule\Model\SellerFactory;
+use Webkul\Marketplace\Model\SellerFactory;
 
 class Categories extends \Magento\Catalog\Block\Adminhtml\Category\Tree
 {
@@ -35,7 +35,7 @@ class Categories extends \Magento\Catalog\Block\Adminhtml\Category\Tree
     public $categoryHelper;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\SellerFactory
+     * @var \Webkul\Marketplace\Model\SellerFactory
      */
 
     public $sellerFactory;

@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\Rewrite\Sitemap;
+namespace Webkul\Marketplace\Model\Rewrite\Sitemap;
 
 use Magento\Framework\App\ObjectManager;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 use Magento\Sitemap\Model\ItemProvider\ItemProviderInterface;
 use Magento\Sitemap\Model\SitemapConfigReaderInterface;
 
 class Sitemap extends \Magento\Sitemap\Model\Sitemap
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $mpHelper;
     /**
@@ -43,7 +43,7 @@ class Sitemap extends \Magento\Sitemap\Model\Sitemap
      */
     protected $_directory;
     /**
-     * @var \OrionAlliance\NewModule\Model\Seller
+     * @var \Webkul\Marketplace\Model\Seller
      */
     protected $_cmsFactory;
     /**

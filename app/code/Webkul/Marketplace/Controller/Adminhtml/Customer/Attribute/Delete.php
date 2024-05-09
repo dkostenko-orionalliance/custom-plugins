@@ -1,9 +1,9 @@
 <?php
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Customer\Attribute;
+namespace Webkul\Marketplace\Controller\Adminhtml\Customer\Attribute;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
-use OrionAlliance\NewModule\Model\CustomerAttributeFactory;
+use Webkul\Marketplace\Model\CustomerAttributeFactory;
 
 class Delete extends Action
 {

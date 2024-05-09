@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Observer;
+namespace Webkul\Marketplace\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Session\SessionManager;
@@ -17,17 +17,17 @@ use Magento\Quote\Model\QuoteRepository;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelper;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelper;
 use Magento\Sales\Model\Order\AddressFactory;
-use OrionAlliance\NewModule\Model\SaleslistFactory;
+use Webkul\Marketplace\Model\SaleslistFactory;
 use Magento\Directory\Model\CountryFactory;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
-use OrionAlliance\NewModule\Helper\Orders as OrdersHelper;
-use OrionAlliance\NewModule\Model\ProductFactory;
-use OrionAlliance\NewModule\Model\OrdersFactory;
-use OrionAlliance\NewModule\Model\OrderPendingMailsFactory;
-use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
-use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Orders as OrdersHelper;
+use Webkul\Marketplace\Model\ProductFactory;
+use Webkul\Marketplace\Model\OrdersFactory;
+use Webkul\Marketplace\Model\OrderPendingMailsFactory;
+use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use Webkul\Marketplace\Model\SaleperpartnerFactory;
 
 /**
  * Webkul Marketplace SalesOrderPlaceAfterObserver Observer Model.
@@ -664,7 +664,7 @@ class SalesOrderPlaceAfterObserver implements ObserverInterface
                 $sellerOrderId = $collection->getId();
                 if (!$this->_marketplaceHelper->getOrderApprovalRequired()) {
                     $this->notificationHelper->saveNotification(
-                        \OrionAlliance\NewModule\Model\Notification::TYPE_ORDER,
+                        \Webkul\Marketplace\Model\Notification::TYPE_ORDER,
                         $sellerOrderId,
                         $lastOrderId
                     );
@@ -796,7 +796,7 @@ class SalesOrderPlaceAfterObserver implements ObserverInterface
                 $collectionsave->setMagerealorderId($order->getIncrementId());
                 $collectionsave->setMagequantity($qty);
                 $collectionsave->setSellerId($sellerId);
-                $collectionsave->setCpprostatus(\OrionAlliance\NewModule\Model\Saleslist::PAID_STATUS_PENDING);
+                $collectionsave->setCpprostatus(\Webkul\Marketplace\Model\Saleslist::PAID_STATUS_PENDING);
                 $collectionsave->setMagebuyerId($this->_customerSession->getCustomerId());
                 $collectionsave->setMageproPrice($price);
                 $collectionsave->setMageproName($item->getName());

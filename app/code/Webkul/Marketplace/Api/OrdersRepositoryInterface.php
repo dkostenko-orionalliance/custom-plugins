@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 /**
  * Orders CRUD interface.
@@ -20,7 +20,7 @@ interface OrdersRepositoryInterface
      *
      * @api
      * @param string $id
-     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
+     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -31,7 +31,7 @@ interface OrdersRepositoryInterface
      *
      * @api
      * @param int $sellerId
-     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
+     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -42,7 +42,7 @@ interface OrdersRepositoryInterface
      *
      * @api
      * @param int $orderId
-     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
+     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -52,7 +52,7 @@ interface OrdersRepositoryInterface
      * Retrieve all seller order.
      *
      * @api
-     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
+     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
      */
     public function getList();
 }

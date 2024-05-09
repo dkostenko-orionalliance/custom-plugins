@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category Marketplace
- * @package  OrionAlliance_NewModule
+ * @package  Webkul_Marketplace
  * @author   Webkul
  * @license  https://store.webkul.com/license.html
  */
@@ -13,7 +13,7 @@
     <columns name="sales_order_columns">
         <column name="order_approval_status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">OrionAlliance\NewModule\Ui\Component\Listing\Column\ApprovalStatus\Options</item>
+                <item name="options" xsi:type="object">Webkul\Marketplace\Ui\Component\Listing\Column\ApprovalStatus\Options</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>

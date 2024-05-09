@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Order;
+namespace Webkul\Marketplace\Controller\Adminhtml\Order;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Model\OrderPendingMailsFactory;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\OrderPendingMailsFactory;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
 
 /**
  * Class MassApprove used to mass mass approved.
@@ -49,11 +49,11 @@ class MassApprove extends \Magento\Backend\App\Action
      */
     protected $mpEmailHelper;
     /**
-     * @var \OrionAlliance\NewModule\Helper\Notification
+     * @var \Webkul\Marketplace\Helper\Notification
      */
     protected $notificationHelper;
     /**
-     * @var \OrionAlliance\NewModule\Model\OrdersFactory
+     * @var \Webkul\Marketplace\Model\OrdersFactory
      */
     protected $ordersFactory;
 
@@ -66,8 +66,8 @@ class MassApprove extends \Magento\Backend\App\Action
      * @param MpHelper $mpHelper
      * @param OrderPendingMailsFactory $orderPendingMails
      * @param MpEmailHelper $mpEmailHelper
-     * @param \OrionAlliance\NewModule\Helper\Notification $notificationHelper
-     * @param \OrionAlliance\NewModule\Model\OrdersFactory $ordersFactory
+     * @param \Webkul\Marketplace\Helper\Notification $notificationHelper
+     * @param \Webkul\Marketplace\Model\OrdersFactory $ordersFactory
      */
     public function __construct(
         Context $context,
@@ -76,8 +76,8 @@ class MassApprove extends \Magento\Backend\App\Action
         MpHelper $mpHelper,
         OrderPendingMailsFactory $orderPendingMails,
         MpEmailHelper $mpEmailHelper,
-        \OrionAlliance\NewModule\Helper\Notification $notificationHelper,
-        \OrionAlliance\NewModule\Model\OrdersFactory $ordersFactory
+        \Webkul\Marketplace\Helper\Notification $notificationHelper,
+        \Webkul\Marketplace\Model\OrdersFactory $ordersFactory
     ) {
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
@@ -138,7 +138,7 @@ class MassApprove extends \Magento\Backend\App\Action
                 $value->setStatus(1)->save();
                 $item->setOrderApprovalStatus(1)->save();
                 $this->notificationHelper->saveNotification(
-                    \OrionAlliance\NewModule\Model\Notification::TYPE_ORDER,
+                    \Webkul\Marketplace\Model\Notification::TYPE_ORDER,
                     $mpOrderId->getEntityId(),
                     $value->getOrderId()
                 );
@@ -175,6 +175,6 @@ class MassApprove extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

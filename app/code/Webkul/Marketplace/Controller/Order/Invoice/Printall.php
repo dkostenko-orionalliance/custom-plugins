@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Invoice;
+namespace Webkul\Marketplace\Controller\Order\Invoice;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
  * Webkul Marketplace Order Invoice Printall Controller by date range.
  */
-class Printall extends \OrionAlliance\NewModule\Controller\Order
+class Printall extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Print all invoice

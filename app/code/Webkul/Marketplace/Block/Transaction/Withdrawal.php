@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Transaction;
+namespace Webkul\Marketplace\Block\Transaction;
 
 use Magento\Framework\View\Element\Template\Context;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
+use Webkul\Marketplace\Model\ResourceModel\Saleperpartner\CollectionFactory;
 
 class Withdrawal extends \Magento\Framework\View\Element\Template
 {

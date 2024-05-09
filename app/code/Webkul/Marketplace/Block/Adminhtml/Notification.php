@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml;
+namespace Webkul\Marketplace\Block\Adminhtml;
 
 class Notification extends \Magento\Backend\Block\Template
 {
@@ -26,13 +26,13 @@ class Notification extends \Magento\Backend\Block\Template
      * Construct
      *
      * @param \Magento\Backend\Block\Template\Context $context
-     * @param \OrionAlliance\NewModule\Model\Notification\MarketplaceConfigProvider $configProvider
+     * @param \Webkul\Marketplace\Model\Notification\MarketplaceConfigProvider $configProvider
      * @param \Magento\Framework\Json\Helper\Data $jsonHelper
      * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
-        \OrionAlliance\NewModule\Model\Notification\MarketplaceConfigProvider $configProvider,
+        \Webkul\Marketplace\Model\Notification\MarketplaceConfigProvider $configProvider,
         \Magento\Framework\Json\Helper\Data $jsonHelper,
         array $data = []
     ) {

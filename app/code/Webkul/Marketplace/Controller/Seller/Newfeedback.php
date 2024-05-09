@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Seller;
+namespace Webkul\Marketplace\Controller\Seller;
 
 use Magento\Customer\Controller\AccountInterface;
 use Magento\Framework\App\Action\Action;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Data as HelperData;
 use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
-use OrionAlliance\NewModule\Model\FeedbackcountFactory;
-use OrionAlliance\NewModule\Model\FeedbackFactory;
+use Webkul\Marketplace\Model\FeedbackcountFactory;
+use Webkul\Marketplace\Model\FeedbackFactory;
 
 /**
  * Webkul Marketplace Seller Newfeedback controller.

@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -20,8 +20,8 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Transaction\Withdrawal" name="marketplace_transaction_withdrawal" template="OrionAlliance_NewModule::transaction/withdrawal.phtml" cacheable="false"/>
-            <block class="OrionAlliance\NewModule\Block\Transaction\History" name="marketplace_transaction_history" template="OrionAlliance_NewModule::transaction/history.phtml" cacheable="false"/>
+            <block class="Webkul\Marketplace\Block\Transaction\Withdrawal" name="marketplace_transaction_withdrawal" template="Webkul_Marketplace::transaction/withdrawal.phtml" cacheable="false"/>
+            <block class="Webkul\Marketplace\Block\Transaction\History" name="marketplace_transaction_history" template="Webkul_Marketplace::transaction/history.phtml" cacheable="false"/>
         </referenceContainer>
     </body>
 </page>

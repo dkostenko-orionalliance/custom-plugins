@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -19,7 +19,7 @@
             <label>Marketplace</label>
             <!-- Assign section to tab -->
             <tab>webkul</tab>
-            <resource>OrionAlliance_NewModule::config_marketplace</resource>
+            <resource>Webkul_Marketplace::config_marketplace</resource>
             <!-- create group for fields in section -->
             <group id="general_settings" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Settings</label>
@@ -40,7 +40,7 @@
                 </field>
                 <field id="deduct_discount" translate="label comment" sortOrder="3" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Deduct Discount Amount From</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\CommissionWithDiscount</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\CommissionWithDiscount</source_model>
                     <comment>If discount amount applies in a order then commission will be calculating on the basis of selected option.</comment>
                 </field>
                 <field id="order_manage" translate="label comment" sortOrder="4" type="select" showInDefault="1">
@@ -104,7 +104,7 @@
                 </field>
                 <field id="reason" translate="label comment" sortOrder="4" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Reason</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\Reasonstatus</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\Reasonstatus</source_model>
                     <depends>
                         <field id="status">1</field>
                     </depends>
@@ -154,11 +154,11 @@
                 <field id="allow_for_seller" translate="label comment" sortOrder="8" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Product Type For Seller</label>
                     <validate>required-entry</validate>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\Producttype</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\Producttype</source_model>
                 </field>
                 <field id="sku_type" translate="label comment" sortOrder="9" type="select" showInDefault="1">
                     <label>Allow seller to add products with sku type</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\SkuType</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\SkuType</source_model>
                 </field>
                 <field id="sku_prefix" translate="label comment" sortOrder="10" type="text" showInDefault="1">
                     <label>Product Sku Prefix</label>
@@ -214,7 +214,7 @@
                 </field>
                 <field id="reason" translate="label comment" sortOrder="4" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Reason</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\Reasonstatus</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\Reasonstatus</source_model>
                     <depends>
                         <field id="status">1</field>
                     </depends>
@@ -291,7 +291,7 @@
                 </field>
                 <field id="profile_type" translate="label comment" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Seller Profile Layout</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\SellerProfileLayout</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\SellerProfileLayout</source_model>
                     <depends>
                         <field id="seller_profile_display">1</field>
                     </depends>
@@ -308,7 +308,7 @@
                 </field>
                 <field id="card_type" translate="label comment" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Seller Information Display Card Type</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\CardType</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\CardType</source_model>
                     <comment>It will be visible on Product Page</comment>
                     <depends>
                         <field id="seller_profile_display">1</field>
@@ -373,7 +373,7 @@
                 </field>
                 <field id="pageLayout" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Marketplace Landing Page Layout</label>
-                    <source_model>OrionAlliance\NewModule\Model\Config\Source\LandingPageLayout</source_model>
+                    <source_model>Webkul\Marketplace\Model\Config\Source\LandingPageLayout</source_model>
                     <comment>e.g Select Layout Which will be seen at frontend</comment>
                 </field>
                 <!-- Layout 1 fields -->

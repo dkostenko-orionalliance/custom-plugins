@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Ui\DataProvider\Product\Form\Modifier;
+namespace Webkul\Marketplace\Ui\DataProvider\Product\Form\Modifier;
 
 /**
  * Class Flags
@@ -62,7 +62,7 @@ class Flags extends AbstractModifier
      */
     public function modifyMeta(array $meta)
     {
-        if (!$this->locator->getProduct()->getId() || !$this->moduleManager->isOutputEnabled('OrionAlliance_NewModule')) {
+        if (!$this->locator->getProduct()->getId() || !$this->moduleManager->isOutputEnabled('Webkul_Marketplace')) {
             return $meta;
         }
         $meta[static::GROUP_FLAGS] = [

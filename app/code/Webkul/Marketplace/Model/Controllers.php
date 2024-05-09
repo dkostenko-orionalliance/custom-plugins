@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\ControllersInterface;
+use Webkul\Marketplace\Api\Data\ControllersInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Controllers Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Controllers _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Controllers getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Controllers _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Controllers getResource()
  */
 class Controllers extends AbstractModel implements ControllersInterface, IdentityInterface
 {
@@ -51,7 +51,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Controllers::class
+            \Webkul\Marketplace\Model\ResourceModel\Controllers::class
         );
     }
 
@@ -75,7 +75,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
     /**
      * Load No-Route Controllers.
      *
-     * @return \OrionAlliance\NewModule\Model\Controllers
+     * @return \Webkul\Marketplace\Model\Controllers
      */
     public function noRouteControllers()
     {
@@ -107,7 +107,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setId($id)
     {
@@ -128,7 +128,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Module Name
      *
      * @param int $modulename
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setModuleName($modulename)
     {
@@ -149,7 +149,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set controller path
      *
      * @param int $controllerPath
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setControllerPath($controllerPath)
     {
@@ -170,7 +170,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Label
      *
      * @param int $label
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setLabel($label)
     {
@@ -191,7 +191,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Is Child value
      *
      * @param int $isChild
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setIsChild($isChild)
     {
@@ -212,7 +212,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Parent Id
      *
      * @param int $parentId
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setParentId($parentId)
     {
@@ -233,7 +233,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Created Time
      *
      * @param string $createdAt
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setCreatedAt($createdAt)
     {
@@ -254,7 +254,7 @@ class Controllers extends AbstractModel implements ControllersInterface, Identit
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
+     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
      */
     public function setUpdatedAt($updatedAt)
     {

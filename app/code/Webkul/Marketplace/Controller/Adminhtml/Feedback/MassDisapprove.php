@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Feedback;
+namespace Webkul\Marketplace\Controller\Adminhtml\Feedback;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
 
 /**
  * Class MassDisapprove used to multiple feedback disapproved.
@@ -42,7 +42,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
     protected $dateTime;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -52,7 +52,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param \Magento\Framework\Stdlib\DateTime          $dateTime
      * @param CollectionFactory                           $collectionFactory
-     * @param \OrionAlliance\NewModule\Helper\Data             $helper
+     * @param \Webkul\Marketplace\Helper\Data             $helper
      */
     public function __construct(
         Context $context,
@@ -60,7 +60,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\Stdlib\DateTime $dateTime,
         CollectionFactory $collectionFactory,
-        \OrionAlliance\NewModule\Helper\Data $helper
+        \Webkul\Marketplace\Helper\Data $helper
     ) {
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
@@ -106,6 +106,6 @@ class MassDisapprove extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::feedback');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::feedback');
     }
 }

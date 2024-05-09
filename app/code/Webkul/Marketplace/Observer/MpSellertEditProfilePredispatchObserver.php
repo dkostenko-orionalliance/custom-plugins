@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Observer;
+namespace Webkul\Marketplace\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 
@@ -19,7 +19,7 @@ use Magento\Framework\Event\ObserverInterface;
 class MpSellertEditProfilePredispatchObserver implements ObserverInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -34,12 +34,12 @@ class MpSellertEditProfilePredispatchObserver implements ObserverInterface
     protected $url;
 
     /**
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param \Magento\Framework\App\ResponseFactory $responseFactory
      * @param \Magento\Framework\UrlInterface $url
      */
     public function __construct(
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         \Magento\Framework\App\ResponseFactory $responseFactory,
         \Magento\Framework\UrlInterface $url
     ) {

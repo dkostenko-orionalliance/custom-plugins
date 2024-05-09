@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Order;
+namespace Webkul\Marketplace\Controller\Order;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\Exception\StateException;
 use Magento\Framework\Exception\InputException;
 use Magento\Framework\App\RequestInterface;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 class UpdateNotification extends \Magento\Framework\App\Action\Action
 {

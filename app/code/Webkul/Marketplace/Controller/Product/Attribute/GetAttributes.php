@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Product\Attribute;
+namespace Webkul\Marketplace\Controller\Product\Attribute;
 
 use \Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory;
 use Magento\Catalog\Model\ResourceModel\Eav\Attribute;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Data as HelperData;
 use Magento\Framework\Json\Helper\Data as JsonHelper;
-use OrionAlliance\NewModule\Helper\Orders as OrdersHelper;
+use Webkul\Marketplace\Helper\Orders as OrdersHelper;
 
 /**
  * Marketplace Product GetAttributes controller.

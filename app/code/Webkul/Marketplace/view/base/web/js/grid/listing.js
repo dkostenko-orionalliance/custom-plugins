@@ -6,7 +6,7 @@ define([
     return Component.extend({
         defaults: {
             editorConfig: {
-                component: 'OrionAlliance_NewModule/js/grid/editing/editor'
+                component: 'Webkul_Marketplace/js/grid/editing/editor'
             }
         }
     })

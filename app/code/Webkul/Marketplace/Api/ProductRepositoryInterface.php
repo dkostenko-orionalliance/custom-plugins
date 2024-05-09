@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 /**
  * ProductRepository CRUD Interface
@@ -20,7 +20,7 @@ interface ProductRepositoryInterface
      * Get by id.
      *
      * @param int $id
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @return \Webkul\Marketplace\Model\Product
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getById($id);
@@ -28,10 +28,10 @@ interface ProductRepositoryInterface
     /**
      * Save Record.
      *
-     * @param \OrionAlliance\NewModule\Model\Product $subject
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @param \Webkul\Marketplace\Model\Product $subject
+     * @return \Webkul\Marketplace\Model\Product
      */
-    public function save(\OrionAlliance\NewModule\Model\Product $subject);
+    public function save(\Webkul\Marketplace\Model\Product $subject);
 
     /**
      * Get list
@@ -44,10 +44,10 @@ interface ProductRepositoryInterface
     /**
      * Delete Record.
      *
-     * @param \OrionAlliance\NewModule\Model\Product $subject
+     * @param \Webkul\Marketplace\Model\Product $subject
      * @return boolean
      */
-    public function delete(\OrionAlliance\NewModule\Model\Product $subject);
+    public function delete(\Webkul\Marketplace\Model\Product $subject);
 
     /**
      * Delete recod by id.

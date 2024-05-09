@@ -1,5 +1,5 @@
 <?php
-namespace OrionAlliance\NewModule\Model\ResourceModel;
+namespace Webkul\Marketplace\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 

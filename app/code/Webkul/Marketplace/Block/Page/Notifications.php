@@ -3,30 +3,30 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Page;
+namespace Webkul\Marketplace\Block\Page;
 
-use OrionAlliance\NewModule\Model\ResourceModel\Notification\CollectionFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection as OrderColl;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
-use OrionAlliance\NewModule\Model\Notification;
+use Webkul\Marketplace\Model\ResourceModel\Notification\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Orders\Collection as OrderColl;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use Webkul\Marketplace\Model\Notification;
 
 class Notifications extends \Magento\Framework\View\Element\Template
 {
     /**
      * @var string
      */
-    protected $_template = 'OrionAlliance_NewModule::layout2/page/header.phtml';
+    protected $_template = 'Webkul_Marketplace::layout2/page/header.phtml';
 
     /**
      * Notification collection
      *
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Notification\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Notification\Collection
      */
     protected $collectionFactory;
 
@@ -43,7 +43,7 @@ class Notifications extends \Magento\Framework\View\Element\Template
     /**
      * Collection for getting table name
      *
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Orders\Collection
      */
     protected $orderColl;
 

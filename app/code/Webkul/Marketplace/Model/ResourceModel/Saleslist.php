@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\ResourceModel;
+namespace Webkul\Marketplace\Model\ResourceModel;
  
 class Saleslist extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

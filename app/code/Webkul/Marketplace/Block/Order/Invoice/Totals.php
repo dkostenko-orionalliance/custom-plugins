@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Order\Invoice;
+namespace Webkul\Marketplace\Block\Order\Invoice;
 
-class Totals extends \OrionAlliance\NewModule\Block\Order\Totals
+class Totals extends \Webkul\Marketplace\Block\Order\Totals
 {
     /**
      * Get totals source object

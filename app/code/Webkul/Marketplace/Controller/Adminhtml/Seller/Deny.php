@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
+namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Catalog\Model\Indexer\Product\Price\Processor;
-use OrionAlliance\NewModule\Model\SellerFactory;
+use Webkul\Marketplace\Model\SellerFactory;
 use Magento\Catalog\Model\Product\Action as ProductAction;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
 
 /**
  * Class massDisapprove
@@ -143,7 +143,7 @@ class Deny extends \Magento\Backend\App\Action
         $data = $this->getRequest()->getParams();
         $allStores = $this->_storeManager->getStores();
         $status = \Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_DISABLED;
-        $sellerStatus = \OrionAlliance\NewModule\Model\Seller::STATUS_DENIED;
+        $sellerStatus = \Webkul\Marketplace\Model\Seller::STATUS_DENIED;
 
         $collection = $this->sellerModel->create()
         ->getCollection()
@@ -228,6 +228,6 @@ class Deny extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

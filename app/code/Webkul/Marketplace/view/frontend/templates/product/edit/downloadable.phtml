@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -11,7 +11,7 @@
 ?>
 <?php
 /**
- * @var $block \OrionAlliance\NewModule\Controller\Product\Edit\Tab\Downloadable
+ * @var $block \Webkul\Marketplace\Controller\Product\Edit\Tab\Downloadable
  */
 ?>
 <?php
@@ -237,7 +237,7 @@ if (in_array($type, $allowedtypes) && ($productType == 'downloadable' || $produc
             <script type="text/x-magento-init">
                 {
                     "*": {
-                        "OrionAlliance_NewModule/downloadable-type-handler": {
+                        "Webkul_Marketplace/downloadable-type-handler": {
                             "isDownloadable": "true",
                             "tabId": "downloadable_items"
                         }
@@ -251,8 +251,8 @@ if (in_array($type, $allowedtypes) && ($productType == 'downloadable' || $produc
                  */
                 require([
                     'jquery',
-                    'OrionAlliance_NewModule/catalog/type-events',
-                    'OrionAlliance_NewModule/downloadable-type-handler',
+                    'Webkul_Marketplace/catalog/type-events',
+                    'Webkul_Marketplace/downloadable-type-handler',
                     'Magento_Ui/js/lib/view/utils/async'
                 ], function ($, typeProducts) {
 

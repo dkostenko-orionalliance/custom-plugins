@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Creditmemo;
+namespace Webkul\Marketplace\Controller\Order\Creditmemo;
 
 /**
  * Webkul Marketplace Order Creditmemo View Controller.
  */
-class View extends \OrionAlliance\NewModule\Controller\Order
+class View extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Order Creditmemo View page.

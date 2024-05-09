@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
-use OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface;
+use Webkul\Marketplace\Api\Data\SellerFlagReasonInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\MailException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -43,7 +43,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      */
     protected function _construct()
     {
-        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason::class);
+        $this->_init(\Webkul\Marketplace\Model\ResourceModel\SellerFlagReason::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      * Set entity_id
      *
      * @param string $entityId
-     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface
      */
     public function setEntityId($entityId)
     {
@@ -81,7 +81,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      * Set reason
      *
      * @param string $reason
-     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface
      */
     public function setReason($reason)
     {
@@ -102,7 +102,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      * Set CreatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface
      */
     public function setCreatedAt($timestamp)
     {
@@ -123,7 +123,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      * Set UpdatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface
      */
     public function setUpdatedAt($timestamp)
     {
@@ -144,7 +144,7 @@ class SellerFlagReason extends \Magento\Framework\Model\AbstractModel implements
      * Set status
      *
      * @param int $status
-     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface
      */
     public function setStatus($status)
     {

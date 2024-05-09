@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Account;
+namespace Webkul\Marketplace\Block\Account;
 
 use Magento\Framework\App\Request\DataPersistorInterface;
-use OrionAlliance\NewModule\Model\SaleperpartnerFactory as MpSalesPartner;
+use Webkul\Marketplace\Model\SaleperpartnerFactory as MpSalesPartner;
 
 /**
  * Webkul Marketplace Account Editprofile Block
@@ -30,7 +30,7 @@ class Editprofile extends \Magento\Framework\View\Element\Template
     protected $dataPersistor;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -49,7 +49,7 @@ class Editprofile extends \Magento\Framework\View\Element\Template
      * @param \Magento\Directory\Model\ResourceModel\Country\CollectionFactory $countryCollectionFactory
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param DataPersistorInterface $dataPersistor
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param array $data
      * @param MpSalesPartner|null $mpSalesPartner
      * @param \Magento\Cms\Helper\Wysiwyg\Images|null $wysiwygImages
@@ -58,7 +58,7 @@ class Editprofile extends \Magento\Framework\View\Element\Template
         \Magento\Directory\Model\ResourceModel\Country\CollectionFactory $countryCollectionFactory,
         \Magento\Framework\View\Element\Template\Context $context,
         DataPersistorInterface $dataPersistor,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         array $data = [],
         MpSalesPartner $mpSalesPartner = null,
         \Magento\Cms\Helper\Wysiwyg\Images $wysiwygImages = null

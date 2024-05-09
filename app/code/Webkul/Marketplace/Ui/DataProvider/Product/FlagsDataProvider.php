@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Ui\DataProvider\Product;
+namespace Webkul\Marketplace\Ui\DataProvider\Product;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
-use OrionAlliance\NewModule\Model\ResourceModel\ProductFlags\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\ProductFlags\CollectionFactory;
 
 /**
  * Class Flag DataProvider

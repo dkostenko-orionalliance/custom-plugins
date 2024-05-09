@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 /*
  * Webkul Marketplace Seller Feedback Block
@@ -92,7 +92,7 @@ class Feedback extends \Magento\Framework\View\Element\Template
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {

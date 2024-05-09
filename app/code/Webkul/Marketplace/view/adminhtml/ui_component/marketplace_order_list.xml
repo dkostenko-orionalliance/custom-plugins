@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -65,7 +65,7 @@
                 </item>
             </argument>
         </component>
-        <exportButton name="export_button" class="OrionAlliance\NewModule\Ui\Component\ExportButton">
+        <exportButton name="export_button" class="Webkul\Marketplace\Ui\Component\ExportButton">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="selectProvider" xsi:type="string">marketplace_order_list.marketplace_order_list.marketplace_order_columns.ids</item>
@@ -143,10 +143,10 @@
                 </item>
             </argument>
         </column>
-        <column name="magepro_name" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Orderprodetails">
+        <column name="magepro_name" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Orderprodetails">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/link</item>
+                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/link</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Product Name</item>
                     <item name="sortOrder" xsi:type="number">3</item>
@@ -234,7 +234,7 @@
         </column>
         <column name="paid_status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Order\Source\Status</item>
+                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Order\Source\Status</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
@@ -247,7 +247,7 @@
         </column>
         <column name="is_withdrawal_requested">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Order\Source\Withdrawal</item>
+                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Order\Source\Withdrawal</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
@@ -258,7 +258,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\OrderviewAction">
+        <actionsColumn name="actions" class="Webkul\Marketplace\Ui\Component\Listing\Columns\OrderviewAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">order_id</item>
@@ -269,10 +269,10 @@
                 </item>
             </argument>
         </actionsColumn>
-        <actionsColumn name="pay" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Paylink">
+        <actionsColumn name="pay" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Paylink">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/sellerpay</item>
+                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/sellerpay</item>
                     <item name="indexField" xsi:type="string">seller_id</item>
                     <item name="sortable" xsi:type="boolean">false</item>
                     <item name="label" xsi:type="string" translate="true">Pay</item>

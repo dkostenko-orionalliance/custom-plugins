@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \OrionAlliance\NewModule\Block\Account\Editprofile */
+/** @var $block \Webkul\Marketplace\Block\Account\Editprofile */
 $viewModel = $block->getViewModel();
 $helper = $viewModel->getHelper();
 $partner = $block->getPersistentData();
@@ -21,9 +21,9 @@ $formPostUrl = $block->getUrl(
     'marketplace/account/editProfilePost',
     ["_secure" => $block->getRequest()->isSecure()]
 );
-$questIcon = $block->getViewFileUrl('OrionAlliance_NewModule::images/quest.png');
-$deleteIcon = $block->getViewFileUrl('OrionAlliance_NewModule::images/deleteIcon.png');
-$countryflag = $block->getViewFileUrl('OrionAlliance_NewModule::images/country/countryflags/');
+$questIcon = $block->getViewFileUrl('Webkul_Marketplace::images/quest.png');
+$deleteIcon = $block->getViewFileUrl('Webkul_Marketplace::images/deleteIcon.png');
+$countryflag = $block->getViewFileUrl('Webkul_Marketplace::images/country/countryflags/');
 ?>
 <form action="<?= $escaper->escapeUrl($formPostUrl) ?>" 
     enctype="multipart/form-data" 
@@ -828,7 +828,7 @@ $formData = [
     'countryImgPrevSelector' => '.country_img_prev',
     'countryLatitudeSelector' => '#country-latitude',
     'countryLongitudeSelector' => '#country-longitude',
-    'countryImgPrev' => $block->getViewFileUrl("OrionAlliance_NewModule::images/country/countryflags/"),
+    'countryImgPrev' => $block->getViewFileUrl("Webkul_Marketplace::images/country/countryflags/"),
     'backgroundWidthSelector' => '#background_width',
     'logoPicSelector' => '#logo-pic',
     'bannerPicSelector' => '#banner-pic',

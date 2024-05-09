@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Plugin\CatalogSearch\Model\Search\SelectContainer;
+namespace Webkul\Marketplace\Plugin\CatalogSearch\Model\Search\SelectContainer;
 
 class SelectContainer
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $_mpHelper;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
      */
     protected $_mpProductCollectionFactory;
 
@@ -35,14 +35,14 @@ class SelectContainer
     /**
      * Initialize dependencies
      *
-     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
      * @param \Magento\Framework\App\ResourceConnection $resource
      * @param \Magento\Framework\App\RequestInterface $request
      */
     public function __construct(
-        \OrionAlliance\NewModule\Helper\Data $mpHelper,
-        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
+        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
         \Magento\Framework\App\ResourceConnection $resource,
         \Magento\Framework\App\RequestInterface $request
     ) {

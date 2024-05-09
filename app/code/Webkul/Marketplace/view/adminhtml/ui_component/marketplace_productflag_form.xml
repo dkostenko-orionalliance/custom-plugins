@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -20,10 +20,10 @@
     </argument>
     <settings>
         <buttons>
-            <button name="save_and_continue" class="OrionAlliance\NewModule\Block\Adminhtml\ProductFlagReason\Edit\SaveAndContinueButton"/>
-            <button name="save" class="OrionAlliance\NewModule\Block\Adminhtml\ProductFlagReason\Edit\SaveButton"/>
-            <button name="delete" class="OrionAlliance\NewModule\Block\Adminhtml\ProductFlagReason\Edit\DeleteButton"/>
-            <button name="back" class="OrionAlliance\NewModule\Block\Adminhtml\ProductFlagReason\Edit\BackButton"/>
+            <button name="save_and_continue" class="Webkul\Marketplace\Block\Adminhtml\ProductFlagReason\Edit\SaveAndContinueButton"/>
+            <button name="save" class="Webkul\Marketplace\Block\Adminhtml\ProductFlagReason\Edit\SaveButton"/>
+            <button name="delete" class="Webkul\Marketplace\Block\Adminhtml\ProductFlagReason\Edit\DeleteButton"/>
+            <button name="back" class="Webkul\Marketplace\Block\Adminhtml\ProductFlagReason\Edit\BackButton"/>
         </buttons>
         <namespace>marketplace_productflag_form</namespace>
         <dataScope>data</dataScope>
@@ -40,7 +40,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider class="OrionAlliance\NewModule\Model\ProductFlagReason\DataProvider" name="productflag_form_data_source">
+        <dataProvider class="Webkul\Marketplace\Model\ProductFlagReason\DataProvider" name="productflag_form_data_source">
             <settings>
                 <requestFieldName>entity_id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>

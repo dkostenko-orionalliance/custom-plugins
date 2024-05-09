@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\ResourceModel\OrderPendingMails;
+namespace Webkul\Marketplace\Model\ResourceModel\OrderPendingMails;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 
 /**
  * Webkul Marketplace ResourceModel OrderPendingMails collection
@@ -31,8 +31,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\OrderPendingMails::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\OrderPendingMails::class
+            \Webkul\Marketplace\Model\OrderPendingMails::class,
+            \Webkul\Marketplace\Model\ResourceModel\OrderPendingMails::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
         $this->_map['fields']['created_at'] = 'main_table.created_at';

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab;
 
 class Commission extends \Magento\Config\Block\System\Config\Form\Field
 {
@@ -29,14 +29,14 @@ class Commission extends \Magento\Config\Block\System\Config\Form\Field
      *
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Backend\Block\Widget\Context $context
-     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
+     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
      * @param array $data
      * @param \Magento\Framework\Pricing\Helper\Data|null $pricingHelper
      */
     public function __construct(
         \Magento\Framework\Registry $registry,
         \Magento\Backend\Block\Widget\Context $context,
-        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
+        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = [],
         \Magento\Framework\Pricing\Helper\Data $pricingHelper = null
     ) {

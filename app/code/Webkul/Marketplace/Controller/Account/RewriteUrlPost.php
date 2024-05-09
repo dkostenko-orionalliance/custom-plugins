@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Account;
+namespace Webkul\Marketplace\Controller\Account;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Customer\Model\Session;
@@ -18,9 +18,9 @@ use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
 use Magento\Framework\App\RequestInterface;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Data as HelperData;
 use Magento\Customer\Model\Url as CustomerUrl;
-use OrionAlliance\NewModule\Model\SellerFactory;
+use Webkul\Marketplace\Model\SellerFactory;
 use Magento\UrlRewrite\Model\UrlRewriteFactory;
 
 /**

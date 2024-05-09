@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 /**
  * SaleslistRepository CRUD Interface
@@ -20,7 +20,7 @@ interface SaleslistRepositoryInterface
      * Get record by id.
      *
      * @param int $id
-     * @return \OrionAlliance\NewModule\Model\Saleslist
+     * @return \Webkul\Marketplace\Model\Saleslist
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getById($id);
@@ -28,10 +28,10 @@ interface SaleslistRepositoryInterface
     /**
      * Save record.
      *
-     * @param \OrionAlliance\NewModule\Model\Saleslist $subject
-     * @return \OrionAlliance\NewModule\Model\Saleslist
+     * @param \Webkul\Marketplace\Model\Saleslist $subject
+     * @return \Webkul\Marketplace\Model\Saleslist
      */
-    public function save(\OrionAlliance\NewModule\Model\Saleslist $subject);
+    public function save(\Webkul\Marketplace\Model\Saleslist $subject);
 
     /**
      * Get list.
@@ -44,10 +44,10 @@ interface SaleslistRepositoryInterface
     /**
      * Delete record.
      *
-     * @param \OrionAlliance\NewModule\Model\Saleslist $subject
+     * @param \Webkul\Marketplace\Model\Saleslist $subject
      * @return boolean
      */
-    public function delete(\OrionAlliance\NewModule\Model\Saleslist $subject);
+    public function delete(\Webkul\Marketplace\Model\Saleslist $subject);
 
     /**
      * Delete record by id.

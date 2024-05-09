@@ -7,7 +7,7 @@ define(
             defaults:{
                 templates: {
                     record: {  
-                        component: 'OrionAlliance_NewModule/js/grid/editing/record', 
+                        component: 'Webkul_Marketplace/js/grid/editing/record', 
                     }
                 }
             }

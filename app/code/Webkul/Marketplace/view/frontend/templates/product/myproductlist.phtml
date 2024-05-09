@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \OrionAlliance\NewModule\Block\Product\Productlist */
+/** @var $block \Webkul\Marketplace\Block\Product\Productlist */
 
 $helper = $block->getHelper();
 $paramData = $block->getRequest()->getParams();
@@ -312,7 +312,7 @@ $websiteNames = $block->getWebsiteNames();
                                         <td>
                                             <span class="label wk-action">
                                                 <img src="<?= $escaper->escapeUrl($block
-                                                ->getViewFileUrl('OrionAlliance_NewModule::images/icon-edit.png')); ?>" 
+                                                ->getViewFileUrl('Webkul_Marketplace::images/icon-edit.png')); ?>" 
                                                 data-url="<?= $escaper->escapeUrl($block
                                                 ->getUrl('marketplace/product/edit', ['id'=>$product->getId(),
                                                  '_secure' => $block
@@ -349,7 +349,7 @@ $websiteNames = $block->getWebsiteNames();
 <script type="text/x-magento-init">
     {
         "*": {
-            "OrionAlliance_NewModule/js/product/product-date-range": {}
+            "Webkul_Marketplace/js/product/product-date-range": {}
         }
     }
 </script>
@@ -360,7 +360,7 @@ $websiteNames = $block->getWebsiteNames();
                     "components": {
                         "product-list-component": {
                             "component": "sellerProductList",
-                            "template" : "OrionAlliance_NewModule/product-list"
+                            "template" : "Webkul_Marketplace/product-list"
                         }
                     }
                 }

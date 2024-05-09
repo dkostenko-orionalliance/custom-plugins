@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
+namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
 use Magento\Catalog\Model\Indexer\Product\Price\Processor;
 use Magento\Catalog\Model\Product\Action as ProductAction;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
 
 /**
  * Class MassDisapprove used to multiple seller disapproved.
@@ -76,7 +76,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
     protected $mpEmailHelper;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ProductFactory
+     * @var \Webkul\Marketplace\Model\ProductFactory
      */
     protected $productModel;
 
@@ -99,7 +99,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
     * @param ProductAction $productAction
     * @param MpHelper $mpHelper
     * @param MpEmailHelper $mpEmailHelper
-    * @param \OrionAlliance\NewModule\Model\ProductFactory $productModel
+    * @param \Webkul\Marketplace\Model\ProductFactory $productModel
     * @param \Magento\Customer\Model\CustomerFactory $customerModel
     */
     public function __construct(
@@ -114,7 +114,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
         ProductAction $productAction,
         MpHelper $mpHelper,
         MpEmailHelper $mpEmailHelper,
-        \OrionAlliance\NewModule\Model\ProductFactory $productModel,
+        \Webkul\Marketplace\Model\ProductFactory $productModel,
         \Magento\Customer\Model\CustomerFactory $customerModel
     ) {
         $this->filter = $filter;
@@ -143,7 +143,7 @@ class MassDisapprove extends \Magento\Backend\App\Action
     {
         $allStores = $this->_storeManager->getStores();
         $status = \Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_DISABLED;
-        $sellerStatus = \OrionAlliance\NewModule\Model\Seller::STATUS_DISABLED;
+        $sellerStatus = \Webkul\Marketplace\Model\Seller::STATUS_DISABLED;
         $customerModel = $this->customerModel->create();
         $helper = $this->mpHelper;
         $sellerIds = [];
@@ -243,6 +243,6 @@ class MassDisapprove extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

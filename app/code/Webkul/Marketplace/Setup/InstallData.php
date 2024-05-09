@@ -1,5 +1,5 @@
 <?php
-namespace OrionAlliance\NewModule\Setup;
+namespace Webkul\Marketplace\Setup;
 
 use Magento\Customer\Setup\CustomerSetupFactory;
   use Magento\Customer\Model\Customer;

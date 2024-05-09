@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Order\Invoice\Create;
+namespace Webkul\Marketplace\Block\Order\Invoice\Create;
 
-class Items extends \OrionAlliance\NewModule\Block\Order\Items
+class Items extends \Webkul\Marketplace\Block\Order\Items
 {
 
     /**

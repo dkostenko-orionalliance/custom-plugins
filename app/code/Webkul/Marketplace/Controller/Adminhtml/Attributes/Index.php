@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Attributes;
+namespace Webkul\Marketplace\Controller\Adminhtml\Attributes;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -47,7 +47,7 @@ class Index extends Action
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('OrionAlliance_NewModule::configattributes');
+        $resultPage->setActiveMenu('Webkul_Marketplace::configattributes');
         $resultPage->getConfig()->getTitle()->prepend(__('Manage Configurable Attributes'));
         return $resultPage;
     }
@@ -59,6 +59,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::configattributes');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::configattributes');
     }
 }

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \OrionAlliance\NewModule\Block\Account\Becomeseller */
+/** @var $block \Webkul\Marketplace\Block\Account\Becomeseller */
 $viewModel = $block->getViewModel();
 $helper = $viewModel->getHelper();
 $jsonHelper = $viewModel->getJsonHelper();
@@ -57,7 +57,7 @@ $sellerStatusText  = isset($allSellerStatus[$sellerStatus]) ? $allSellerStatus[$
                         <?php
                         if ($helper->getProfileHintStatus() && $helper->getProfileHintShopurl()) {?>
                             <img src="<?= /* @noEscape */
-                            $block->getViewFileUrl('OrionAlliance_NewModule::images/quest.png'); ?>" 
+                            $block->getViewFileUrl('Webkul_Marketplace::images/quest.png'); ?>" 
                             class='questimg' title="<?= /* @noEscape */ $helper->getProfileHintShopurl()?>"/>
                             <?php
                         } ?>
@@ -68,7 +68,7 @@ $sellerStatusText  = isset($allSellerStatus[$sellerStatus]) ? $allSellerStatus[$
                              placeholder="<?= /* @noEscape */ __("Please enter shop URL")?>"/>
                             <div id="wk-load" class="no-display">
                                 <img src="<?= /* @noEscape */
-                                $block->getViewFileUrl('OrionAlliance_NewModule::images/ajax-loader-tr.gif'); ?>"
+                                $block->getViewFileUrl('Webkul_Marketplace::images/ajax-loader-tr.gif'); ?>"
                                  height="16px" width="16px"/>
                             </div>
                         </div>

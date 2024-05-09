@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\ResourceModel\Feedback;
+namespace Webkul\Marketplace\Model\ResourceModel\Feedback;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 use Magento\Framework\DB\Select as DBSelect;
 
 /**
@@ -31,8 +31,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\Feedback::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\Feedback::class
+            \Webkul\Marketplace\Model\Feedback::class,
+            \Webkul\Marketplace\Model\ResourceModel\Feedback::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

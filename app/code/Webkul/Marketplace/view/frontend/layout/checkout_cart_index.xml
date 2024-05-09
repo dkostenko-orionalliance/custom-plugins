@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -13,14 +13,14 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="additional.product.info">
-            <block class="OrionAlliance\NewModule\Block\Sellerblock" name="marketplace_seller_cart_item"/>
+            <block class="Webkul\Marketplace\Block\Sellerblock" name="marketplace_seller_cart_item"/>
         </referenceContainer>
         <referenceBlock name="marketplace_seller_cart_item">
             <action method="setTemplate" ifconfig="marketplace/profile_settings/seller_profile_display">
-                <argument name="template" xsi:type="string">OrionAlliance_NewModule::checkout/cart/item/default.phtml</argument>
+                <argument name="template" xsi:type="string">Webkul_Marketplace::checkout/cart/item/default.phtml</argument>
             </action>
             <arguments>
-                <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
             </arguments>
         </referenceBlock>
     </body>

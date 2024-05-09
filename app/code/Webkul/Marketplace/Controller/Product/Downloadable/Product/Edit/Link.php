@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Product\Downloadable\Product\Edit;
+namespace Webkul\Marketplace\Controller\Product\Downloadable\Product\Edit;
 
 use Magento\Downloadable\Helper\Download as DownloadableHelper;
 
-class Link extends \OrionAlliance\NewModule\Controller\Product\Edit
+class Link extends \Webkul\Marketplace\Controller\Product\Edit
 {
     /**
      * Seller Downloadable Product link action.

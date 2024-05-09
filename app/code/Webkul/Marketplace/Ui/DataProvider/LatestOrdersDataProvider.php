@@ -3,30 +3,30 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Ui\DataProvider;
+namespace Webkul\Marketplace\Ui\DataProvider;
 
-use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection as OrderColl;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
+use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Orders\Collection as OrderColl;
+use Webkul\Marketplace\Helper\Data as HelperData;
 
 class LatestOrdersDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
     /**
      * Collection for getting table name
      *
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection
      */
     protected $orderColl;
 
     /**
      * Saleslist Orders collection
      *
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection
      */
     protected $collection;
 

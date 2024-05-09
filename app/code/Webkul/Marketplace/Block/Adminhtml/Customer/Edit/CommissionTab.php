@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Controller\RegistryConstants;
 use Magento\Ui\Component\Layout\Tabs\TabInterface;
@@ -50,7 +50,7 @@ class CommissionTab extends Generic implements TabInterface
      * @param \Magento\Framework\Data\FormFactory $formFactory
      * @param \Magento\Store\Model\System\Store $systemStore
      * @param CountryModel $country
-     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
+     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
      * @param array $data
      */
     public function __construct(
@@ -59,7 +59,7 @@ class CommissionTab extends Generic implements TabInterface
         \Magento\Framework\Data\FormFactory $formFactory,
         \Magento\Store\Model\System\Store $systemStore,
         CountryModel $country,
-        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
+        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = []
     ) {
         $this->_coreRegistry = $registry;
@@ -274,7 +274,7 @@ class CommissionTab extends Generic implements TabInterface
     {
         $html = parent::getFormHtml();
         $html .= $this->getLayout()->createBlock(
-            \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Commission::class
+            \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Commission::class
         )->toHtml();
 
         return $html;

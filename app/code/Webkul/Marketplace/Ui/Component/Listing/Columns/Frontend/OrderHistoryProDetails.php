@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Ui\Component\Listing\Columns\Frontend;
+namespace Webkul\Marketplace\Ui\Component\Listing\Columns\Frontend;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory;
 use Magento\Sales\Model\Order\ItemRepository;
 use Magento\Sales\Model\OrderRepository;
 

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Grid;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Grid;
 
 use Magento\Customer\Controller\RegistryConstants;
 
@@ -26,7 +26,7 @@ class Product extends \Magento\Backend\Block\Widget\Grid\Extended
     protected $_productFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\Collection
      */
     protected $_sellerProduct;
 
@@ -40,7 +40,7 @@ class Product extends \Magento\Backend\Block\Widget\Grid\Extended
      * @param \Magento\Backend\Helper\Data                               $backendHelper
      * @param \Magento\Framework\Registry                                $coreRegistry
      * @param \Magento\Catalog\Model\ProductFactory                      $productFactory
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $sellerProduct
+     * @param \Webkul\Marketplace\Model\ResourceModel\Product\Collection $sellerProduct
      * @param \Magento\Framework\Json\EncoderInterface                   $jsonEncoder
      * @param array                                                      $data
      */
@@ -49,7 +49,7 @@ class Product extends \Magento\Backend\Block\Widget\Grid\Extended
         \Magento\Backend\Helper\Data $backendHelper,
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Catalog\Model\ProductFactory $productFactory,
-        \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $sellerProduct,
+        \Webkul\Marketplace\Model\ResourceModel\Product\Collection $sellerProduct,
         \Magento\Framework\Json\EncoderInterface $jsonEncoder,
         array $data = []
     ) {

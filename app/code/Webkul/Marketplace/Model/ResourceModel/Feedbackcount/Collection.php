@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount;
+namespace Webkul\Marketplace\Model\ResourceModel\Feedbackcount;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 
 /**
  * Webkul Marketplace ResourceModel Feedbackcount collection
@@ -30,8 +30,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\Feedbackcount::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount::class
+            \Webkul\Marketplace\Model\Feedbackcount::class,
+            \Webkul\Marketplace\Model\ResourceModel\Feedbackcount::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

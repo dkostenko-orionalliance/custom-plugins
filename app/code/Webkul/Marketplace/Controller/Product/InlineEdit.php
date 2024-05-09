@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Product;
+namespace Webkul\Marketplace\Controller\Product;
 
 class InlineEdit extends \Magento\Framework\App\Action\Action
 {
@@ -27,7 +27,7 @@ class InlineEdit extends \Magento\Framework\App\Action\Action
      */
     protected $_stockRegistry;
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $mpHelper;
     /**
@@ -42,7 +42,7 @@ class InlineEdit extends \Magento\Framework\App\Action\Action
      * @param \Magento\Framework\Controller\Result\JsonFactory $jsonFactory
      * @param \Magento\Catalog\Model\ProductRepository $productRepository
      * @param \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry
-     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
+     * @param \Webkul\Marketplace\Helper\Data $mpHelper
      * @param \Magento\Catalog\Model\Product\Action $productAction
      */
     public function __construct(
@@ -50,7 +50,7 @@ class InlineEdit extends \Magento\Framework\App\Action\Action
         \Magento\Framework\Controller\Result\JsonFactory $jsonFactory,
         \Magento\Catalog\Model\ProductRepository $productRepository,
         \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry,
-        \OrionAlliance\NewModule\Helper\Data $mpHelper,
+        \Webkul\Marketplace\Helper\Data $mpHelper,
         \Magento\Catalog\Model\Product\Action $productAction
     ) {
         parent::__construct($context);

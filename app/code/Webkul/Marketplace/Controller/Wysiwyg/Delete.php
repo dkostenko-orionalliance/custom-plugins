@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Wysiwyg;
+namespace Webkul\Marketplace\Controller\Wysiwyg;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use OrionAlliance\NewModule\Api\Data\WysiwygImageInterfaceFactory;
+use Webkul\Marketplace\Api\Data\WysiwygImageInterfaceFactory;
 
 class Delete extends Action
 {
@@ -26,7 +26,7 @@ class Delete extends Action
      */
     protected $wysiwygImage;
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $mpHelper;
 
@@ -37,14 +37,14 @@ class Delete extends Action
      * @param \Magento\Framework\Controller\Result\JsonFactory $jsonResultFactory
      * @param WysiwygImageInterfaceFactory $wysiwygImage
      * @param PageFactory $resultPageFactory
-     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
+     * @param \Webkul\Marketplace\Helper\Data $mpHelper
      */
     public function __construct(
         Context $context,
         \Magento\Framework\Controller\Result\JsonFactory $jsonResultFactory,
         WysiwygImageInterfaceFactory $wysiwygImage,
         PageFactory $resultPageFactory,
-        \OrionAlliance\NewModule\Helper\Data $mpHelper
+        \Webkul\Marketplace\Helper\Data $mpHelper
     ) {
         $this->_resultPageFactory = $resultPageFactory;
         $this->wysiwygImage = $wysiwygImage;

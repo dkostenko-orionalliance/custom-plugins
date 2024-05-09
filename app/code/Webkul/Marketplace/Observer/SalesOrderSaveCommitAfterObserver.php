@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Observer;
+namespace Webkul\Marketplace\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelper;
-use OrionAlliance\NewModule\Model\OrdersFactory;
-use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
-use OrionAlliance\NewModule\Model\SaleslistFactory;
-use OrionAlliance\NewModule\Model\FeedbackcountFactory;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelper;
+use Webkul\Marketplace\Model\OrdersFactory;
+use Webkul\Marketplace\Model\SaleperpartnerFactory;
+use Webkul\Marketplace\Model\SaleslistFactory;
+use Webkul\Marketplace\Model\FeedbackcountFactory;
 
 /**
  * Webkul Marketplace SalesOrderSaveCommitAfterObserver Observer Model.
@@ -117,7 +117,7 @@ class SalesOrderSaveCommitAfterObserver implements ObserverInterface
             ->addFieldToFilter('order_id', $lastOrderId)
             ->addFieldToFilter(
                 'cpprostatus',
-                \OrionAlliance\NewModule\Model\Saleslist::PAID_STATUS_PENDING
+                \Webkul\Marketplace\Model\Saleslist::PAID_STATUS_PENDING
             );
             foreach ($ordercollection as $item) {
                 $sellerId = $item->getSellerId();
@@ -239,7 +239,7 @@ class SalesOrderSaveCommitAfterObserver implements ObserverInterface
                 }
                 $item->setUpdatedAt($this->_date->gmtDate());
                 $item->setCpprostatus(
-                    \OrionAlliance\NewModule\Model\Saleslist::PAID_STATUS_COMPLETE
+                    \Webkul\Marketplace\Model\Saleslist::PAID_STATUS_COMPLETE
                 )->save();
             }
         }

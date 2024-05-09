@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Account;
+namespace Webkul\Marketplace\Controller\Account;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -32,7 +32,7 @@ class Earning extends Action
     protected $_resultPageFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helperData;
 
@@ -45,14 +45,14 @@ class Earning extends Action
      * @param Context                         $context
      * @param PageFactory                     $resultPageFactory
      * @param \Magento\Customer\Model\Session $customerSession
-     * @param \OrionAlliance\NewModule\Helper\Data $helperData
+     * @param \Webkul\Marketplace\Helper\Data $helperData
      * @param CustomerUrl                     $customerUrl
      */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         \Magento\Customer\Model\Session $customerSession,
-        \OrionAlliance\NewModule\Helper\Data $helperData,
+        \Webkul\Marketplace\Helper\Data $helperData,
         CustomerUrl $customerUrl
     ) {
         $this->_customerSession = $customerSession;

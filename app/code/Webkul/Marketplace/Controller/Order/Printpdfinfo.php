@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order;
+namespace Webkul\Marketplace\Controller\Order;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
 use Magento\Framework\App\RequestInterface;
 use Magento\Customer\Model\Url as CustomerUrl;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Model\SellerFactory as MpSellerModel;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Model\SellerFactory as MpSellerModel;
 
 /**
  * Webkul Marketplace Order Print PDF Header Infomation Save Controller.

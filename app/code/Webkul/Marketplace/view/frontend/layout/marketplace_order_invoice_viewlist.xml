@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -20,11 +20,11 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Order\Invoice\History"  name="marketplace_order_invoice_viewlist" template="OrionAlliance_NewModule::order/invoice/list.phtml" cacheable="false"/>
+            <block class="Webkul\Marketplace\Block\Order\Invoice\History"  name="marketplace_order_invoice_viewlist" template="Webkul_Marketplace::order/invoice/list.phtml" cacheable="false"/>
         </referenceContainer>
         <referenceBlock name="marketplace_order_invoice_viewlist">
             <arguments>
-                <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
             </arguments>
         </referenceBlock>
     </body>

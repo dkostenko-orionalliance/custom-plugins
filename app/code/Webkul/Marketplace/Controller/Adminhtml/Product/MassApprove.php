@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Product;
+namespace Webkul\Marketplace\Controller\Adminhtml\Product;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Catalog\Model\Indexer\Product\Price\Processor;
 use Magento\Framework\Controller\ResultFactory;
 
@@ -37,7 +37,7 @@ class MassApprove extends \Magento\Backend\App\Action
     protected $storeManager;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
      */
     protected $collectionFactory;
 
@@ -47,7 +47,7 @@ class MassApprove extends \Magento\Backend\App\Action
     protected $productPriceIndexerProcessor;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ProductFactory
+     * @var \Webkul\Marketplace\Model\ProductFactory
      */
     protected $mpProductFactory;
 
@@ -77,17 +77,17 @@ class MassApprove extends \Magento\Backend\App\Action
     protected $categoryFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $mpHelper;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Email
+     * @var \Webkul\Marketplace\Helper\Email
      */
     protected $mpEmailHelper;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Notification
+     * @var \Webkul\Marketplace\Helper\Notification
      */
     protected $mpNotificationHelper;
 
@@ -97,15 +97,15 @@ class MassApprove extends \Magento\Backend\App\Action
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param CollectionFactory $collectionFactory
      * @param Processor $productPriceIndexerProcessor
-     * @param \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory
+     * @param \Webkul\Marketplace\Model\ProductFactory $mpProductFactory
      * @param \Magento\Catalog\Model\Product\Action $productAction
      * @param \Magento\Catalog\Model\Indexer\Product\Eav\Processor $eavProcessor
      * @param \Magento\Customer\Model\CustomerFactory $customerFactory
      * @param \Magento\Catalog\Model\ProductFactory $productFactory
      * @param \Magento\Catalog\Model\CategoryFactory $categoryFactory
-     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
-     * @param \OrionAlliance\NewModule\Helper\Email $mpEmailHelper
-     * @param \OrionAlliance\NewModule\Helper\Notification $mpNotificationHelper
+     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \Webkul\Marketplace\Helper\Email $mpEmailHelper
+     * @param \Webkul\Marketplace\Helper\Notification $mpNotificationHelper
      */
     public function __construct(
         Context $context,
@@ -113,15 +113,15 @@ class MassApprove extends \Magento\Backend\App\Action
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         CollectionFactory $collectionFactory,
         Processor $productPriceIndexerProcessor,
-        \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory,
+        \Webkul\Marketplace\Model\ProductFactory $mpProductFactory,
         \Magento\Catalog\Model\Product\Action $productAction,
         \Magento\Catalog\Model\Indexer\Product\Eav\Processor $eavProcessor,
         \Magento\Customer\Model\CustomerFactory $customerFactory,
         \Magento\Catalog\Model\ProductFactory $productFactory,
         \Magento\Catalog\Model\CategoryFactory $categoryFactory,
-        \OrionAlliance\NewModule\Helper\Data $mpHelper,
-        \OrionAlliance\NewModule\Helper\Email $mpEmailHelper,
-        \OrionAlliance\NewModule\Helper\Notification $mpNotificationHelper
+        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \Webkul\Marketplace\Helper\Email $mpEmailHelper,
+        \Webkul\Marketplace\Helper\Notification $mpNotificationHelper
     ) {
         parent::__construct($context);
         $this->filter = $filter;
@@ -172,7 +172,7 @@ class MassApprove extends \Magento\Backend\App\Action
         $this->productPriceIndexerProcessor->reindexList($productIds);
         $this->eavProcessor->reindexList($productIds);
 
-        $type = \OrionAlliance\NewModule\Model\Notification::TYPE_PRODUCT;
+        $type = \Webkul\Marketplace\Model\Notification::TYPE_PRODUCT;
         foreach ($collection as $item) {
             $this->mpNotificationHelper->saveNotification($type, $item->getId(), $item->getMageproductId());
             $pro = $this->mpProductFactory->create()->load($item->getId());
@@ -225,6 +225,6 @@ class MassApprove extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::product');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::product');
     }
 }

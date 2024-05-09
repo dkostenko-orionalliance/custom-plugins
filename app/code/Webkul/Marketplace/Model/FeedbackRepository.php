@@ -3,29 +3,29 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
-use OrionAlliance\NewModule\Api\Data\FeedbackSearchResultInterfaceFactory as SearchResultFactory;
+use Webkul\Marketplace\Api\Data\FeedbackSearchResultInterfaceFactory as SearchResultFactory;
 
 /**
  * Marketplace FeedbackRepository Class
  */
-class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackRepositoryInterface
+class FeedbackRepository implements \Webkul\Marketplace\Api\FeedbackRepositoryInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Model\SaleslistFactory
+     * @var \Webkul\Marketplace\Model\SaleslistFactory
      */
     protected $modelFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory
+     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory
      */
     protected $collectionFactory;
     /**
@@ -40,14 +40,14 @@ class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackReposit
     /**
      * FeedbackRepository constructor.
      *
-     * @param \OrionAlliance\NewModule\Model\FeedbackFactory $modelFactory
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory
+     * @param \Webkul\Marketplace\Model\FeedbackFactory $modelFactory
+     * @param \Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory
      * @param CollectionProcessorInterface $collectionProcessor
      * @param SearchResultFactory $searchResultFactory
      */
     public function __construct(
-        \OrionAlliance\NewModule\Model\FeedbackFactory $modelFactory,
-        \OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory,
+        \Webkul\Marketplace\Model\FeedbackFactory $modelFactory,
+        \Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory $collectionFactory,
         CollectionProcessorInterface $collectionProcessor,
         SearchResultFactory $searchResultFactory
     ) {
@@ -61,7 +61,7 @@ class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackReposit
      * Get by id
      *
      * @param int $id
-     * @return \OrionAlliance\NewModule\Model\Feedback
+     * @return \Webkul\Marketplace\Model\Feedback
      */
     public function getById($id)
     {
@@ -77,10 +77,10 @@ class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackReposit
     /**
      * Save record
      *
-     * @param \OrionAlliance\NewModule\Model\Feedback $subject
-     * @return \OrionAlliance\NewModule\Model\Feedback
+     * @param \Webkul\Marketplace\Model\Feedback $subject
+     * @return \Webkul\Marketplace\Model\Feedback
      */
-    public function save(\OrionAlliance\NewModule\Model\Feedback $subject)
+    public function save(\Webkul\Marketplace\Model\Feedback $subject)
     {
         try {
             $subject->save();
@@ -98,7 +98,7 @@ class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackReposit
      */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $creteria)
     {
-        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection $collection */
+        /** @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection $collection */
         $collection = $this->collectionFactory->create();
 
         $this->collectionProcessor->process($creteria, $collection);
@@ -116,10 +116,10 @@ class FeedbackRepository implements \OrionAlliance\NewModule\Api\FeedbackReposit
     /**
      * Delete record
      *
-     * @param \OrionAlliance\NewModule\Model\Feedback $subject
+     * @param \Webkul\Marketplace\Model\Feedback $subject
      * @return boolean
      */
-    public function delete(\OrionAlliance\NewModule\Model\Feedback $subject)
+    public function delete(\Webkul\Marketplace\Model\Feedback $subject)
     {
         try {
             $subject->delete();

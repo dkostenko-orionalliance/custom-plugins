@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml;
+namespace Webkul\Marketplace\Controller\Adminhtml;
 
 use Magento\Backend\App\Action;
 
@@ -24,6 +24,6 @@ abstract class Feedback extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::feedback');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::feedback');
     }
 }

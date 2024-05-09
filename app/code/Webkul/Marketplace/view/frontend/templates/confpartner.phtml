@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -17,7 +17,7 @@ $profile_hint_status = $helper->getProfileHintStatus();
     </label>
     <?php
     if ($profile_hint_status && $helper->getProfileHintBecomeSeller()) {?>
-        <img src="<?= /* @noEscape */ $block->getViewFileUrl('OrionAlliance_NewModule::images/quest.png'); ?>" 
+        <img src="<?= /* @noEscape */ $block->getViewFileUrl('Webkul_Marketplace::images/quest.png'); ?>" 
         class='questimg' title="<?= $escaper->escapeHtml($helper->getProfileHintBecomeSeller()) ?>"/>
         <?php
     }?>
@@ -37,7 +37,7 @@ $profile_hint_status = $helper->getProfileHintStatus();
                 <%- data.label %>
                 <?php
                 if ($helper->getProfileHintStatus() && $helper->getProfileHintShopurl()) {?>
-                    <img src="<?= /* @noEscape */ $block->getViewFileUrl('OrionAlliance_NewModule::images/quest.png'); ?>" 
+                    <img src="<?= /* @noEscape */ $block->getViewFileUrl('Webkul_Marketplace::images/quest.png'); ?>" 
                     class='questimg' title="<?= /* @noEscape */ $helper->getProfileHintShopurl()?>"/>
                     <?php
                 } ?>
@@ -62,7 +62,7 @@ $profile_hint_status = $helper->getProfileHintStatus();
 <?php
 $shopurl_hint = '';
 if ($profile_hint_status && $helper->getProfileHintShopurl()) {
-    $shopurl_hint = '<img src="'.$block->getViewFileUrl('OrionAlliance_NewModule::images/quest.png').'" 
+    $shopurl_hint = '<img src="'.$block->getViewFileUrl('Webkul_Marketplace::images/quest.png').'" 
     class="questimg" title="'.$helper->getProfileHintShopurl().'"/>';
 
 } else {
@@ -75,7 +75,7 @@ $formData = [
     ->getRequest()->isSecure()]),
     'successMessage' => __("Congratulations! Shop name is available."),
     'errorMessage' => __("Sorry! But this shop name is not available, please set another shop name."),
-    'loaderImage' => $block->getViewFileUrl('OrionAlliance_NewModule::images/ajax-loader-tr.gif'),
+    'loaderImage' => $block->getViewFileUrl('Webkul_Marketplace::images/ajax-loader-tr.gif'),
     'button' => 'button.submit'
 ];
 $serializedFormData = $viewModel->getJsonHelper()->jsonEncode($formData);

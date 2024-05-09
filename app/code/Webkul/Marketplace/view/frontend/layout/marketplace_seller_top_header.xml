@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,47 +12,47 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="OrionAlliance_NewModule::css/wk_block.css"/>
-        <css src="OrionAlliance_NewModule::css/style.css"/>
-        <css src="OrionAlliance_NewModule::css/collection.css"/>
-        <css src="OrionAlliance_NewModule::css/profile_page.css"/>
+        <css src="Webkul_Marketplace::css/wk_block.css"/>
+        <css src="Webkul_Marketplace::css/style.css"/>
+        <css src="Webkul_Marketplace::css/collection.css"/>
+        <css src="Webkul_Marketplace::css/profile_page.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_top_block" template="OrionAlliance_NewModule::seller/top-block-header.phtml">
+            <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_top_block" template="Webkul_Marketplace::seller/top-block-header.phtml">
             <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>
         <referenceBlock name="marketplace_seller_top_block">
-            <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_top_block_layout1" template="OrionAlliance_NewModule::seller/top-block.phtml">
+            <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_top_block_layout1" template="Webkul_Marketplace::seller/top-block.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-           <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_top_block_layout2" template="OrionAlliance_NewModule::seller/top-block-layout2.phtml">
+           <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_top_block_layout2" template="Webkul_Marketplace::seller/top-block-layout2.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceBlock name="marketplace_seller_top_block_layout1">
-            <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_profile_contact" template="OrionAlliance_NewModule::seller/contact.phtml">
+            <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_profile_contact" template="Webkul_Marketplace::seller/contact.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_profile_menu" template="OrionAlliance_NewModule::seller/menu.phtml" before="-">
+            <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_profile_menu" template="Webkul_Marketplace::seller/menu.phtml" before="-">
              <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceBlock name="marketplace_seller_top_block_layout2">
-            <block class="OrionAlliance\NewModule\Block\Profile" name="marketplace_seller_profile_contact" template="OrionAlliance_NewModule::seller/contact.phtml">
+            <block class="Webkul\Marketplace\Block\Profile" name="marketplace_seller_profile_contact" template="Webkul_Marketplace::seller/contact.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>

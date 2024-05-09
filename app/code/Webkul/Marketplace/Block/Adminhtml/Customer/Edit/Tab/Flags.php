@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab;
 
 class Flags extends \Magento\Backend\Block\Widget\Grid\Extended
 {
@@ -23,14 +23,14 @@ class Flags extends \Magento\Backend\Block\Widget\Grid\Extended
      * @param \Magento\Backend\Block\Template\Context $context
      * @param \Magento\Backend\Helper\Data $backendHelper
      * @param \Magento\Framework\Registry $coreRegistry
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\SellerFlags\CollectionFactory $flagsFactory
+     * @param \Webkul\Marketplace\Model\ResourceModel\SellerFlags\CollectionFactory $flagsFactory
      * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Backend\Helper\Data $backendHelper,
         \Magento\Framework\Registry $coreRegistry,
-        \OrionAlliance\NewModule\Model\ResourceModel\SellerFlags\CollectionFactory $flagsFactory,
+        \Webkul\Marketplace\Model\ResourceModel\SellerFlags\CollectionFactory $flagsFactory,
         array $data = []
     ) {
         $this->_coreRegistry = $coreRegistry;
@@ -57,7 +57,7 @@ class Flags extends \Magento\Backend\Block\Widget\Grid\Extended
      */
     protected function _prepareCollection()
     {
-        /** @var $collection \OrionAlliance\NewModule\Model\ResourceModel\SellerFlags\Collection */
+        /** @var $collection \Webkul\Marketplace\Model\ResourceModel\SellerFlags\Collection */
         $collection = $this->flagsFactory->create();
         if ($this->getCustomerId() || $this->getRequest()->getParam('customerId', false)) {
             $customerId = $this->getCustomerId();

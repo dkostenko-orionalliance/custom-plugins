@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Plugin\Block;
+namespace Webkul\Marketplace\Plugin\Block;
 
 use Magento\CatalogInventory\Api\StockRegistryInterface;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelperData;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelperData;
 
 class ProductView
 {

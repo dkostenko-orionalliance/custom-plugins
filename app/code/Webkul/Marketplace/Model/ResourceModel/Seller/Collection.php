@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\ResourceModel\Seller;
+namespace Webkul\Marketplace\Model\ResourceModel\Seller;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 use Magento\Store\Model\Store;
 use Magento\Framework\DB\Sql\Expression as SqlExpression;
 use Magento\Framework\DB\Select as DBSelect;
@@ -33,8 +33,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\Seller::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\Seller::class
+            \Webkul\Marketplace\Model\Seller::class,
+            \Webkul\Marketplace\Model\ResourceModel\Seller::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
         $this->_map['fields']['created_at'] = 'main_table.created_at';

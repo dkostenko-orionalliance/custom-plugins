@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\SaleperpartnerInterface;
+use Webkul\Marketplace\Api\Data\SaleperpartnerInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Saleperpartner Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Saleperpartner _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Saleperpartner getResource()
  */
 class Saleperpartner extends AbstractModel implements SaleperpartnerInterface, IdentityInterface
 {
@@ -51,7 +51,7 @@ class Saleperpartner extends AbstractModel implements SaleperpartnerInterface, I
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner::class
+            \Webkul\Marketplace\Model\ResourceModel\Saleperpartner::class
         );
     }
 
@@ -75,7 +75,7 @@ class Saleperpartner extends AbstractModel implements SaleperpartnerInterface, I
     /**
      * Load No-Route Saleperpartner.
      *
-     * @return \OrionAlliance\NewModule\Model\Saleperpartner
+     * @return \Webkul\Marketplace\Model\Saleperpartner
      */
     public function noRouteSaleperpartner()
     {
@@ -107,7 +107,7 @@ class Saleperpartner extends AbstractModel implements SaleperpartnerInterface, I
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\SaleperpartnerInterface
+     * @return \Webkul\Marketplace\Api\Data\SaleperpartnerInterface
      */
     public function setId($id)
     {

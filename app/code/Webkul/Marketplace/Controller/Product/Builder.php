@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Product;
+namespace Webkul\Marketplace\Controller\Product;
 
 /**
  * Webkul Marketplace Product Builder Controller Class.
@@ -41,13 +41,13 @@ class Builder
      *
      * @param \Magento\Catalog\Model\ProductFactory $productFactory
      * @param \Magento\Framework\Registry $registry
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param \Psr\Log\LoggerInterface $loggerInterface
      */
     public function __construct(
         \Magento\Catalog\Model\ProductFactory $productFactory,
         \Magento\Framework\Registry $registry,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         \Psr\Log\LoggerInterface $loggerInterface
     ) {
         $this->_productFactory = $productFactory;

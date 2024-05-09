@@ -3,16 +3,16 @@
  * Webkul Software
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag;
+namespace Webkul\Marketplace\Controller\Adminhtml\Sellerflag;
 
-class NewAction extends \OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag
+class NewAction extends \Webkul\Marketplace\Controller\Adminhtml\Sellerflag
 {
      /**
       * @var \Magento\Backend\Model\View\Result\ForwardFactory

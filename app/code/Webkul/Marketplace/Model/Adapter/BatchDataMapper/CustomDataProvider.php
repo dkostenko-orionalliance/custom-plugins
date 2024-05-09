@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
  
-namespace OrionAlliance\NewModule\Model\Adapter\BatchDataMapper;
+namespace Webkul\Marketplace\Model\Adapter\BatchDataMapper;
  
 use Magento\AdvancedSearch\Model\Adapter\DataMapper\AdditionalFieldsProviderInterface;
  
@@ -14,16 +14,16 @@ use Magento\AdvancedSearch\Model\Adapter\DataMapper\AdditionalFieldsProviderInte
 class CustomDataProvider implements AdditionalFieldsProviderInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
      */
     protected $mpProductCollectionFactory;
     /**
      * Construct
      *
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
      */
     public function __construct(
-        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
     ) {
         $this->mpProductCollectionFactory = $mpProductCollectionFactory;
     }

@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Exception\NoSuchEntityException;
-use OrionAlliance\NewModule\Api\Data\NotificationInterface;
-use OrionAlliance\NewModule\Model\ResourceModel\Notification\CollectionFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Notification as ResourceModelNotification;
+use Webkul\Marketplace\Api\Data\NotificationInterface;
+use Webkul\Marketplace\Model\ResourceModel\Notification\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Notification as ResourceModelNotification;
 
-class NotificationRepository implements \OrionAlliance\NewModule\Api\NotificationRepositoryInterface
+class NotificationRepository implements \Webkul\Marketplace\Api\NotificationRepositoryInterface
 {
     /**
      * @var NotificationFactory
@@ -103,7 +103,7 @@ class NotificationRepository implements \OrionAlliance\NewModule\Api\Notificatio
      */
     public function getList()
     {
-        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Notification\Collection $collection */
+        /** @var \Webkul\Marketplace\Model\ResourceModel\Notification\Collection $collection */
         $collection = $this->collectionFactory->create();
         $collection->load();
 

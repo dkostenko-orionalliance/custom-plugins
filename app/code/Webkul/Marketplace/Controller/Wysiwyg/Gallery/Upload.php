@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Wysiwyg\Gallery;
+namespace Webkul\Marketplace\Controller\Wysiwyg\Gallery;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
 use Magento\Store\Model\StoreManagerInterface;
-use OrionAlliance\NewModule\Api\Data\WysiwygImageInterfaceFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Api\Data\WysiwygImageInterfaceFactory;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 /**
  * Marketplace Wysiwyg Image Upload controller.

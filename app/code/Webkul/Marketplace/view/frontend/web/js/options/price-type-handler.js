@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'OrionAlliance_NewModule/catalog/type-events',
+    'Webkul_Marketplace/catalog/type-events',
     'notification',
     'mage/translate'
 ], function ($, productType) {

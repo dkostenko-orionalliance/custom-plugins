@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
+namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use OrionAlliance\NewModule\Model\SellerFactory;
+use Webkul\Marketplace\Model\SellerFactory;
 
 class Index extends Action
 {
@@ -63,7 +63,7 @@ class Index extends Action
         }
         
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('OrionAlliance_NewModule::seller');
+        $resultPage->setActiveMenu('Webkul_Marketplace::seller');
         $resultPage->getConfig()->getTitle()->prepend(__('Manage Sellers'));
         return $resultPage;
     }
@@ -88,6 +88,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

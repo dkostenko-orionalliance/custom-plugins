@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\Session as CustomerSession;
-use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Model\FeedbackcountFactory;
-use OrionAlliance\NewModule\Model\FeedbackFactory;
+use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\FeedbackcountFactory;
+use Webkul\Marketplace\Model\FeedbackFactory;
 
 /*
  * Webkul Marketplace Seller Feedbackcollection Block
@@ -45,7 +45,7 @@ class Feedbackcollection extends \Magento\Framework\View\Element\Template
     protected $feedback;
     /** @var MpHelper */
     protected $helper;
-    /** @var \OrionAlliance\NewModule\Model\Feedback */
+    /** @var \Webkul\Marketplace\Model\Feedback */
     protected $_feedbackList;
 
     /**
@@ -183,7 +183,7 @@ class Feedbackcollection extends \Magento\Framework\View\Element\Template
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {

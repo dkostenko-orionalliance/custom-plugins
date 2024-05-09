@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c)  Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\ResourceModel\VendorAttributeMapping;
+namespace Webkul\Marketplace\Model\ResourceModel\VendorAttributeMapping;
 
-use OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 
 class Collection extends AbstractCollection
 {
@@ -28,8 +28,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\VendorAttributeMapping::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\VendorAttributeMapping::class
+            \Webkul\Marketplace\Model\VendorAttributeMapping::class,
+            \Webkul\Marketplace\Model\ResourceModel\VendorAttributeMapping::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

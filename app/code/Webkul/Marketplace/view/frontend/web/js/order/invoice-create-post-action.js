@@ -2,12 +2,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
 require([
-    'OrionAlliance_NewModule/order/invoice-create-post-wrapper'
+    'Webkul_Marketplace/order/invoice-create-post-wrapper'
 ]);

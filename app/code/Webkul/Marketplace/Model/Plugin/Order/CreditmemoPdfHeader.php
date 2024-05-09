@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\Plugin\Order;
+namespace Webkul\Marketplace\Model\Plugin\Order;
 
 /**
  * Marketplace Order PDF CreditmemoPdfHeader Plugin.
@@ -32,12 +32,12 @@ class CreditmemoPdfHeader
     /**
      * Insert title and number for concrete document type.
      *
-     * @param \OrionAlliance\NewModule\Model\Order\Pdf\Creditmemo $pdfCreditmemo
+     * @param \Webkul\Marketplace\Model\Order\Pdf\Creditmemo $pdfCreditmemo
      * @param \Zend_Pdf_Page $page
      * @param string $text
      */
     public function beforeInsertDocumentNumber(
-        \OrionAlliance\NewModule\Model\Order\Pdf\Creditmemo $pdfCreditmemo,
+        \Webkul\Marketplace\Model\Order\Pdf\Creditmemo $pdfCreditmemo,
         $page,
         $text
     ) {

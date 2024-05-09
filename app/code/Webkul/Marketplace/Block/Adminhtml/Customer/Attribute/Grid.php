@@ -1,9 +1,9 @@
 <?php
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Attribute;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Attribute;
 
 use Magento\Backend\Block\Template;
 use Magento\Backend\Block\Template\Context;
-use OrionAlliance\NewModule\Model\CustomerAttributeFactory;
+use Webkul\Marketplace\Model\CustomerAttributeFactory;
 
 class Grid extends Template
 {

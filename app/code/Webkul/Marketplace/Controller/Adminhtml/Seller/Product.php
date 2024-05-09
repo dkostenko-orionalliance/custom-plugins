@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
+namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
 
 use Magento\Customer\Controller\RegistryConstants;
 
@@ -65,7 +65,7 @@ class Product extends \Magento\Backend\App\Action
         $resultRaw = $this->resultRawFactory->create();
         return $resultRaw->setContents(
             $this->layoutFactory->create()->createBlock(
-                \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Grid\Product::class,
+                \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Grid\Product::class,
                 'seller.product.grid'
             )->toHtml()
         );
@@ -94,6 +94,6 @@ class Product extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

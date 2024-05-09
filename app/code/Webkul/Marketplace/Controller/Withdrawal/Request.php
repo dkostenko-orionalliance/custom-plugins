@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Withdrawal;
+namespace Webkul\Marketplace\Controller\Withdrawal;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner\CollectionFactory;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Helper\Email as HelperEmail;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
+use Webkul\Marketplace\Model\ResourceModel\Saleperpartner\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Email as HelperEmail;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 
 /**

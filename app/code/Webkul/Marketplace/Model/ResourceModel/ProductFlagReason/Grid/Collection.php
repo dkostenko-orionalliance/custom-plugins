@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\Grid;
+namespace Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\Grid;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Search\AggregationInterface;
-use OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\Collection as ProductFlagReasonCollection;
+use Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\Collection as ProductFlagReasonCollection;
 
 /**
  * Class Collection

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Adminhtml;
+namespace Webkul\Marketplace\Block\Adminhtml;
 
 use Magento\Backend\Block\Template\Context;
 use Magento\Customer\Controller\RegistryConstants;
@@ -25,7 +25,7 @@ class FlagsTab extends TabWrapper
      */
     protected $coreRegistry = null;
     /**
-     * @var \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit
+     * @var \Webkul\Marketplace\Block\Adminhtml\Customer\Edit
      */
     protected $customerEdit;
     /**
@@ -33,13 +33,13 @@ class FlagsTab extends TabWrapper
      *
      * @param Context $context
      * @param Registry $registry
-     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
+     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
      * @param array $data
      */
     public function __construct(
         Context $context,
         Registry $registry,
-        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
+        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = []
     ) {
         $this->coreRegistry = $registry;

@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Account;
+namespace Webkul\Marketplace\Controller\Account;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Customer\Model\Session;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelper;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelper;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
 use Magento\Framework\Json\Helper\Data as JsonHelper;
 
 /**

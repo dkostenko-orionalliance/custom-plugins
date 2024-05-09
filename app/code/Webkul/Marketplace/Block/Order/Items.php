@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Order;
+namespace Webkul\Marketplace\Block\Order;
 
 use Magento\Sales\Model\Order;
 use Magento\Customer\Model\Customer;
@@ -19,7 +19,7 @@ use Magento\Downloadable\Model\Link\Purchased;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Downloadable\Model\ResourceModel\Link\Purchased\Item\CollectionFactory;
 
-class Items extends \OrionAlliance\NewModule\Block\Order\View
+class Items extends \Webkul\Marketplace\Block\Order\View
 {
 
     /**

@@ -3,28 +3,28 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Plugin;
+namespace Webkul\Marketplace\Plugin;
 
 class ElasticsearchFilterPlugin
 {
     /**
      *
-     * @var \OrionAlliance\NewModule\Model\SellerIdDataMapper $sellerIdDataMapper
+     * @var \Webkul\Marketplace\Model\SellerIdDataMapper $sellerIdDataMapper
      */
     protected $sellerIdDataMapper;
 
     /**
      * Initialization
      *
-     * @param \OrionAlliance\NewModule\Model\SellerIdDataMapper $sellerIdDataMapper
+     * @param \Webkul\Marketplace\Model\SellerIdDataMapper $sellerIdDataMapper
      */
     public function __construct(
-        \OrionAlliance\NewModule\Model\SellerIdDataMapper $sellerIdDataMapper
+        \Webkul\Marketplace\Model\SellerIdDataMapper $sellerIdDataMapper
     ) {
         $this->sellerIdDataMapper = $sellerIdDataMapper;
     }

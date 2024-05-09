@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\Feedback\Source;
+namespace Webkul\Marketplace\Model\Feedback\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -18,16 +18,16 @@ use Magento\Framework\Data\OptionSourceInterface;
 class Ratings implements OptionSourceInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Model\Feedback
+     * @var \Webkul\Marketplace\Model\Feedback
      */
     protected $marketplaceFeedback;
 
    /**
     * Construct
     *
-    * @param \OrionAlliance\NewModule\Model\Feedback $marketplaceFeedback
+    * @param \Webkul\Marketplace\Model\Feedback $marketplaceFeedback
     */
-    public function __construct(\OrionAlliance\NewModule\Model\Feedback $marketplaceFeedback)
+    public function __construct(\Webkul\Marketplace\Model\Feedback $marketplaceFeedback)
     {
         $this->marketplaceFeedback = $marketplaceFeedback;
     }

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Component;
+namespace Webkul\Marketplace\Block\Component;
 
 use Magento\Framework\View\Element\Template\Context;
 
@@ -20,7 +20,7 @@ class StepsWizard extends \Magento\Ui\Block\Component\StepsWizard
     /**
      * @var string
      */
-    protected $_template = 'OrionAlliance_NewModule::stepswizard.phtml';
+    protected $_template = 'Webkul_Marketplace::stepswizard.phtml';
 
     /**
      * @var \Magento\Framework\Json\Helper\Data

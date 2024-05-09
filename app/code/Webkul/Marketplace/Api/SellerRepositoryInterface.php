@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 /**
  * Seller CRUD interface.
@@ -19,15 +19,15 @@ interface SellerRepositoryInterface
      * Create Seller.
      *
      * @api
-     * @param \OrionAlliance\NewModule\Api\Data\SellerInterface $customer
+     * @param \Webkul\Marketplace\Api\Data\SellerInterface $customer
      * @param string $passwordHash
-     * @return \OrionAlliance\NewModule\Api\Data\SellerInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerInterface
      * @throws \Magento\Framework\Exception\InputException If bad input is provided
      * @throws \Magento\Framework\Exception\State\InputMismatchException
      * If the provided email is already used
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function save(\OrionAlliance\NewModule\Api\Data\SellerInterface $customer, $passwordHash = null);
+    public function save(\Webkul\Marketplace\Api\Data\SellerInterface $customer, $passwordHash = null);
 
     /**
      * Retrieve Seller.
@@ -35,7 +35,7 @@ interface SellerRepositoryInterface
      * @api
      * @param string $email
      * @param int|null $websiteId
-     * @return \OrionAlliance\NewModule\Api\Data\SellerInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * If customer with the specified email does not exist.
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -47,7 +47,7 @@ interface SellerRepositoryInterface
      *
      * @api
      * @param int $customerId
-     * @return \OrionAlliance\NewModule\Api\Data\SellerInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * If customer with the specified ID does not exist.
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -68,11 +68,11 @@ interface SellerRepositoryInterface
      * Delete Seller.
      *
      * @api
-     * @param \OrionAlliance\NewModule\Api\Data\SellerInterface $customer
+     * @param \Webkul\Marketplace\Api\Data\SellerInterface $customer
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function delete(\OrionAlliance\NewModule\Api\Data\SellerInterface $customer);
+    public function delete(\Webkul\Marketplace\Api\Data\SellerInterface $customer);
 
     /**
      * Delete Seller by ID.

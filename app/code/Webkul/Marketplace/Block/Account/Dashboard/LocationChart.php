@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Account\Dashboard;
+namespace Webkul\Marketplace\Block\Account\Dashboard;
 
-use OrionAlliance\NewModule\Model\SaleslistFactory;
+use Webkul\Marketplace\Model\SaleslistFactory;
 use Magento\Sales\Model\OrderFactory;
 use Magento\Framework\Locale\ListsInterface;
 use Magento\Directory\Model\RegionFactory;
@@ -63,7 +63,7 @@ class LocationChart extends \Magento\Framework\View\Element\Template
     protected $regionModel;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Dashboard\Data
+     * @var \Webkul\Marketplace\Helper\Dashboard\Data
      */
     protected $dashboardHelper;
 
@@ -76,7 +76,7 @@ class LocationChart extends \Magento\Framework\View\Element\Template
      * @param OrderFactory $orderFactory
      * @param ListsInterface $listsInterface
      * @param RegionFactory $regionModel
-     * @param \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper
+     * @param \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper
      * @param array $data
      */
     public function __construct(
@@ -86,7 +86,7 @@ class LocationChart extends \Magento\Framework\View\Element\Template
         OrderFactory $orderFactory,
         ListsInterface $listsInterface,
         RegionFactory $regionModel,
-        \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper,
+        \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper,
         array $data = []
     ) {
         $this->_customerSession = $customerSession;

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\Product\Source;
+namespace Webkul\Marketplace\Model\Product\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -18,22 +18,22 @@ use Magento\Framework\Data\OptionSourceInterface;
 class ProductStatus implements OptionSourceInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Model\Product
+     * @var \Webkul\Marketplace\Model\Product
      */
     protected $marketplaceProduct;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $marketplaceHelper;
 
     /**
-     * @param \OrionAlliance\NewModule\Model\Product $marketplaceProduct
-     * @param \OrionAlliance\NewModule\Helper\Data   $marketplaceHelper
+     * @param \Webkul\Marketplace\Model\Product $marketplaceProduct
+     * @param \Webkul\Marketplace\Helper\Data   $marketplaceHelper
      */
     public function __construct(
-        \OrionAlliance\NewModule\Model\Product $marketplaceProduct,
-        \OrionAlliance\NewModule\Helper\Data $marketplaceHelper
+        \Webkul\Marketplace\Model\Product $marketplaceProduct,
+        \Webkul\Marketplace\Helper\Data $marketplaceHelper
     ) {
         $this->marketplaceProduct = $marketplaceProduct;
         $this->marketplaceHelper = $marketplaceHelper;

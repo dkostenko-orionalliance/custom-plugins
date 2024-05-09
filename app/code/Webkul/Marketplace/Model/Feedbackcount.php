@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\FeedbackcountInterface;
+use Webkul\Marketplace\Api\Data\FeedbackcountInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Feedbackcount Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Feedbackcount _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Feedbackcount getResource()
  */
 class Feedbackcount extends AbstractModel implements FeedbackcountInterface, IdentityInterface
 {
@@ -52,7 +52,7 @@ class Feedbackcount extends AbstractModel implements FeedbackcountInterface, Ide
      */
     protected function _construct()
     {
-        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount::class);
+        $this->_init(\Webkul\Marketplace\Model\ResourceModel\Feedbackcount::class);
     }
 
     /**
@@ -75,7 +75,7 @@ class Feedbackcount extends AbstractModel implements FeedbackcountInterface, Ide
     /**
      * Load No-Route Feedbackcount.
      *
-     * @return \OrionAlliance\NewModule\Model\Feedbackcount
+     * @return \Webkul\Marketplace\Model\Feedbackcount
      */
     public function noRouteFeedbackcount()
     {
@@ -107,7 +107,7 @@ class Feedbackcount extends AbstractModel implements FeedbackcountInterface, Ide
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\FeedbackcountInterface
+     * @return \Webkul\Marketplace\Api\Data\FeedbackcountInterface
      */
     public function setId($id)
     {

@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -13,7 +13,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="seller-login" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="marketplace_styles"/>
     <head>
-        <css src="OrionAlliance_NewModule::css/login.css"/>
+        <css src="Webkul_Marketplace::css/login.css"/>
     </head>
     <body>
         <move element="messages" destination="seller.login.content" before="-"/>
@@ -22,9 +22,9 @@
         <referenceContainer name="seller.login.content">
             <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
             <container name="customer.login.container" label="Vendor Login Container" htmlTag="div" htmlClass="wk-mp-login-container">
-                <block class="Magento\Customer\Block\Form\Login" name="seller_form_login" template="OrionAlliance_NewModule::account/login.phtml">
+                <block class="Magento\Customer\Block\Form\Login" name="seller_form_login" template="Webkul_Marketplace::account/login.phtml">
                     <arguments>
-                        <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                        <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                     </arguments>
                     <container name="form.additional.info" as="form_additional_info"/>
                     <container name="form.additional.buttons" label="Form Additional Buttons"/>

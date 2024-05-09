@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Order\Totals;
+namespace Webkul\Marketplace\Block\Order\Totals;
 
 use Magento\Sales\Model\Order;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection;
 
 class Cod extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -37,13 +37,13 @@ class Cod extends \Magento\Framework\View\Element\Template
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \OrionAlliance\NewModule\Helper\Data                  $helper
+     * @param \Webkul\Marketplace\Helper\Data                  $helper
      * @param Collection                                       $orderCollection
      * @param array                                            $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         Collection $orderCollection,
         array $data = []
     ) {

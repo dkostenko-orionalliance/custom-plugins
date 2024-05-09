@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Helper;
+namespace Webkul\Marketplace\Helper;
 
 use Magento\Framework\Session\SessionManager;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner\CollectionFactory as SalePerPartnerCollection;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as SalesListCollection;
-use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollection;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
+use Webkul\Marketplace\Model\ResourceModel\Saleperpartner\CollectionFactory as SalePerPartnerCollection;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as SalesListCollection;
+use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollection;
 use Magento\Sales\Model\Order\Payment\Transaction;
 
 /**

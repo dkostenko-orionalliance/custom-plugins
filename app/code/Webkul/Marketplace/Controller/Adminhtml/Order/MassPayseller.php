@@ -3,24 +3,24 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Order;
+namespace Webkul\Marketplace\Controller\Adminhtml\Order;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
-use OrionAlliance\NewModule\Model\SellertransactionFactory;
-use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
-use OrionAlliance\NewModule\Model\OrdersFactory;
-use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Model\SellertransactionFactory;
+use Webkul\Marketplace\Model\SaleperpartnerFactory;
+use Webkul\Marketplace\Model\OrdersFactory;
+use Webkul\Marketplace\Helper\Notification as NotificationHelper;
 
 /**
  * Class MassPayseller used to mass Payseller.
@@ -270,7 +270,7 @@ class MassPayseller extends \Magento\Backend\App\Action
                     $transid = $sellerTrans->getId();
                     $transactionNumber = $sellerTrans->getTransactionId();
                     $this->notificationHelper->saveNotification(
-                        \OrionAlliance\NewModule\Model\Notification::TYPE_TRANSACTION,
+                        \Webkul\Marketplace\Model\Notification::TYPE_TRANSACTION,
                         $transid,
                         $transid
                     );
@@ -390,6 +390,6 @@ class MassPayseller extends \Magento\Backend\App\Action
      */
     public function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

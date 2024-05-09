@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Seller;
+namespace Webkul\Marketplace\Controller\Seller;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Customer\Model\Session;
 use Magento\Customer\Model\Customer;
 use Magento\Catalog\Model\Product;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Helper\Email as MpEmailData;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Email as MpEmailData;
 use Magento\Framework\Json\Helper\Data as JsonHelper;
 
 /**
@@ -46,7 +46,7 @@ class Reportflag extends Action
     protected $date;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\SellerFlagsFactory
+     * @var \Webkul\Marketplace\Model\SellerFlagsFactory
      */
     protected $sellerFlags;
 
@@ -58,7 +58,7 @@ class Reportflag extends Action
     * @param MpEmailData $mpEmailHelper
     * @param JsonHelper $jsonHelper
     * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
-    * @param \OrionAlliance\NewModule\Model\SellerFlagsFactory $sellerFlags
+    * @param \Webkul\Marketplace\Model\SellerFlagsFactory $sellerFlags
     */
     public function __construct(
         Context $context,
@@ -66,7 +66,7 @@ class Reportflag extends Action
         MpEmailData $mpEmailHelper,
         JsonHelper $jsonHelper,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
-        \OrionAlliance\NewModule\Model\SellerFlagsFactory $sellerFlags
+        \Webkul\Marketplace\Model\SellerFlagsFactory $sellerFlags
     ) {
         $this->helper = $helper;
         $this->mpEmailHelper = $mpEmailHelper;

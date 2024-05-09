@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -13,12 +13,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
     <head>
-        <css src="OrionAlliance_NewModule::css/style.css"/>
+        <css src="Webkul_Marketplace::css/style.css"/>
     </head>
     <body>
         <referenceBlock name="menu">
             <action method="setActive">
-                <argument name="itemId" xsi:type="string">OrionAlliance_NewModule::order</argument>
+                <argument name="itemId" xsi:type="string">Webkul_Marketplace::order</argument>
             </action>
         </referenceBlock>
         <referenceBlock name="page.title">
@@ -27,12 +27,12 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Adminhtml\Orders\Pay" name="masspayseller" />
+            <block class="Webkul\Marketplace\Block\Adminhtml\Orders\Pay" name="masspayseller" />
             <uiComponent name="marketplace_order_list"/>
         </referenceContainer>
         <referenceBlock name="masspayseller">
             <arguments>
-                <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
             </arguments>
         </referenceBlock>
     </body>

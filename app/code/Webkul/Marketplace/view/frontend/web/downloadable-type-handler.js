@@ -1,8 +1,8 @@
 /*jshint browser:true jquery:true expr:true*/
 define([
     'jquery',
-    'OrionAlliance_NewModule/js/product/weight-handler',
-    'OrionAlliance_NewModule/catalog/type-events'
+    'Webkul_Marketplace/js/product/weight-handler',
+    'Webkul_Marketplace/catalog/type-events'
 ], function ($, weight, productType) {
     'use strict';
 
@@ -32,7 +32,7 @@ define([
          * Constructor component
          * @param {Object} data - this backend data
          */
-        'OrionAlliance_NewModule/downloadable-type-handler': function (data) {
+        'Webkul_Marketplace/downloadable-type-handler': function (data) {
             this.$tab = $('[data-tab=' + data.tabId + ']');
             this.isDownloadable = data.isDownloadable;
             this.bindAll();

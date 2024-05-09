@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 use Magento\Catalog\Model\Category;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 class Sellercategory extends \Magento\Framework\View\Element\Template
 {
@@ -21,14 +21,14 @@ class Sellercategory extends \Magento\Framework\View\Element\Template
     protected $category;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data $helper
+     * @var \Webkul\Marketplace\Helper\Data $helper
      */
     protected $helper;
 
     /**
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param Category $category
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param array $data
      */
     public function __construct(
@@ -57,7 +57,7 @@ class Sellercategory extends \Magento\Framework\View\Element\Template
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit;
+namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit;
 
 class Js extends \Magento\Config\Block\System\Config\Form\Field
 {

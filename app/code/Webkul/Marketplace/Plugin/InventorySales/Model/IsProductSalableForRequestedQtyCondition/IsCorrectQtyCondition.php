@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Plugin\InventorySales\Model\IsProductSalableForRequestedQtyCondition;
+namespace Webkul\Marketplace\Plugin\InventorySales\Model\IsProductSalableForRequestedQtyCondition;
 
 use Magento\InventorySalesApi\Api\Data\ProductSalableResultInterface;
 use Magento\InventorySalesApi\Api\Data\ProductSalabilityErrorInterfaceFactory;
 use Magento\InventorySalesApi\Api\Data\ProductSalableResultInterfaceFactory;
 use Magento\Framework\Phrase;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelperData;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelperData;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 
 class IsCorrectQtyCondition

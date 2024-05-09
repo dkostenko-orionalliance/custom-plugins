@@ -4,16 +4,16 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Productflag;
+namespace Webkul\Marketplace\Controller\Adminhtml\Productflag;
 
-use OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterfaceFactory;
+use Webkul\Marketplace\Api\Data\ProductFlagReasonInterfaceFactory;
 
-class Edit extends \OrionAlliance\NewModule\Controller\Adminhtml\Productflag
+class Edit extends \Webkul\Marketplace\Controller\Adminhtml\Productflag
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -85,7 +85,7 @@ class Edit extends \OrionAlliance\NewModule\Controller\Adminhtml\Productflag
      */
     public function initPage($resultPage)
     {
-        $resultPage->setActiveMenu('OrionAlliance_NewModule::productflag');
+        $resultPage->setActiveMenu('Webkul_Marketplace::productflag');
         return $resultPage;
     }
 }

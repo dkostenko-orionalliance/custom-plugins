@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\Seller\Source;
+namespace Webkul\Marketplace\Model\Seller\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -18,16 +18,16 @@ use Magento\Framework\Data\OptionSourceInterface;
 class Status implements OptionSourceInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Model\Seller
+     * @var \Webkul\Marketplace\Model\Seller
      */
     protected $marketplaceSeller;
 
     /**
      * Construct
      *
-     * @param \OrionAlliance\NewModule\Model\Seller $marketplaceSeller
+     * @param \Webkul\Marketplace\Model\Seller $marketplaceSeller
      */
-    public function __construct(\OrionAlliance\NewModule\Model\Seller $marketplaceSeller)
+    public function __construct(\Webkul\Marketplace\Model\Seller $marketplaceSeller)
     {
         $this->marketplaceSeller = $marketplaceSeller;
     }

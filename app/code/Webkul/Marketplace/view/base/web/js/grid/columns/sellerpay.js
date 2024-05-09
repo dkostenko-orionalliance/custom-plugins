@@ -2,7 +2,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -11,7 +11,7 @@ define([
     './column',
     'jquery',
     'mage/template',
-    'text!OrionAlliance_NewModule/templates/grid/cells/deny/sellerpay.html',
+    'text!Webkul_Marketplace/templates/grid/cells/deny/sellerpay.html',
     'Magento_Ui/js/modal/modal'
 ], function (Column, $, mageTemplate, denyPreviewTemplate) {
     'use strict';

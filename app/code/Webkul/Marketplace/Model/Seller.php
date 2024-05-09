@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\SellerInterface;
+use Webkul\Marketplace\Api\Data\SellerInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Seller Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Seller _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Seller getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Seller _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Seller getResource()
  */
 class Seller extends AbstractModel implements SellerInterface, IdentityInterface
 {
@@ -61,7 +61,7 @@ class Seller extends AbstractModel implements SellerInterface, IdentityInterface
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Seller::class
+            \Webkul\Marketplace\Model\ResourceModel\Seller::class
         );
     }
 
@@ -85,7 +85,7 @@ class Seller extends AbstractModel implements SellerInterface, IdentityInterface
     /**
      * Load No-Route Seller.
      *
-     * @return \OrionAlliance\NewModule\Model\Seller
+     * @return \Webkul\Marketplace\Model\Seller
      */
     public function noRouteSeller()
     {
@@ -133,7 +133,7 @@ class Seller extends AbstractModel implements SellerInterface, IdentityInterface
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\SellerInterface
+     * @return \Webkul\Marketplace\Api\Data\SellerInterface
      */
     public function setId($id)
     {

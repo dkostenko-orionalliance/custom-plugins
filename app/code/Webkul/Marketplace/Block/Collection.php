@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Catalog\Api\CategoryRepositoryInterface;
 use Magento\Catalog\Block\Product\ProductList\Toolbar;
 use Magento\Catalog\Model\ResourceModel\Product\Collection as ProductCollection;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Model\ProductFactory as MpProductModel;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\ProductFactory as MpProductModel;
 
 /**
  * Seller Product's Collection Block.
@@ -275,7 +275,7 @@ class Collection extends \Magento\Catalog\Block\Product\ListProduct
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {

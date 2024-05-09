@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Order\Invoice;
+namespace Webkul\Marketplace\Controller\Order\Invoice;
 
 use Magento\Framework\Exception\LocalizedException;
 
 /**
  * Webkul Marketplace Order Invoice UpdateQty Controller.
  */
-class UpdateQty extends \OrionAlliance\NewModule\Controller\Order
+class UpdateQty extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Invoice Create UpdateQty Action.

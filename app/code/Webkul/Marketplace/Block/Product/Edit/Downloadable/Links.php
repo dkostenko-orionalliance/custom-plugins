@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Product\Edit\Downloadable;
+namespace Webkul\Marketplace\Block\Product\Edit\Downloadable;
 
 use Magento\Downloadable\Model\Product\Type;
 
 class Links extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $_marketplaceHelper;
 
@@ -49,7 +49,7 @@ class Links extends \Magento\Framework\View\Element\Template
      * Construct
      *
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \OrionAlliance\NewModule\Helper\Data $marketplaceHelper
+     * @param \Webkul\Marketplace\Helper\Data $marketplaceHelper
      * @param \Magento\Framework\DataObject $dataObject
      * @param \Magento\Framework\Json\Helper\Data $jsonHelperData
      * @param \Magento\Downloadable\Helper\File $downloadableHelperFile
@@ -59,7 +59,7 @@ class Links extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \OrionAlliance\NewModule\Helper\Data $marketplaceHelper,
+        \Webkul\Marketplace\Helper\Data $marketplaceHelper,
         \Magento\Framework\DataObject $dataObject,
         \Magento\Framework\Json\Helper\Data $jsonHelperData,
         \Magento\Downloadable\Helper\File $downloadableHelperFile,

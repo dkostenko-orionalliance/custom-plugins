@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Plugin\Elasticsearch7\SearchAdapter;
+namespace Webkul\Marketplace\Plugin\Elasticsearch7\SearchAdapter;
 
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 use Magento\Framework\Search\RequestInterface;
 use Magento\Elasticsearch\SearchAdapter\Aggregation\Builder as AggregationBuilder;
 use Magento\Elasticsearch\SearchAdapter\ConnectionManager;
@@ -37,7 +37,7 @@ class Adapter
     private $aggregationBuilder;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
     /**
@@ -56,7 +56,7 @@ class Adapter
     protected $request;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\Collection
      */
     protected $collection;
     /**
@@ -95,9 +95,9 @@ class Adapter
      * @param AggregationBuilder $aggregationBuilder
      * @param Mapper $mapper
      * @param QueryContainerFactory $queryContainerFactory
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param \Magento\Framework\App\RequestInterface $request
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $collection
+     * @param \Webkul\Marketplace\Model\ResourceModel\Product\Collection $collection
      * @param \Magento\Framework\App\ResourceConnection $resource
      */
     public function __construct(
@@ -106,9 +106,9 @@ class Adapter
         AggregationBuilder $aggregationBuilder,
         Mapper $mapper,
         QueryContainerFactory $queryContainerFactory,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         \Magento\Framework\App\RequestInterface $request,
-        \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $collection,
+        \Webkul\Marketplace\Model\ResourceModel\Product\Collection $collection,
         \Magento\Framework\App\ResourceConnection $resource
     ) {
         $this->connectionManager = $connectionManager;
@@ -226,7 +226,7 @@ class Adapter
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {

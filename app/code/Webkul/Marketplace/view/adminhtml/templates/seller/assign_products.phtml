@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 ?>
 <?php
-    /** @var \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Product $block */
+    /** @var \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Product $block */
 
-    /** @var \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Grid\Product $blockGrid */
+    /** @var \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Grid\Product $blockGrid */
     $blockGrid = $block->getBlockGrid();
     $gridJsObjectName = $blockGrid->getJsObjectName();
 ?>
@@ -20,7 +20,7 @@
 <script type="text/x-magento-init">
     {
         "*": {
-            "OrionAlliance_NewModule/js/seller/assign-products": {
+            "Webkul_Marketplace/js/seller/assign-products": {
                 "selectedProducts": <?= /* @noEscape */ $block->getSellerAssignedProductsJson(); ?>,
                 "gridJsObjectName": <?= /* @escapeNotVerified */ '"' . $gridJsObjectName . '"' ?: '{}'; ?>
             }

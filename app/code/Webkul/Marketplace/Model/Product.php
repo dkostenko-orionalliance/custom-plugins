@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\ProductInterface;
+use Webkul\Marketplace\Api\Data\ProductInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Product Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Product _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Product getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Product _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Product getResource()
  */
 class Product extends AbstractModel implements ProductInterface, IdentityInterface
 {
@@ -60,7 +60,7 @@ class Product extends AbstractModel implements ProductInterface, IdentityInterfa
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Product::class
+            \Webkul\Marketplace\Model\ResourceModel\Product::class
         );
     }
 
@@ -84,7 +84,7 @@ class Product extends AbstractModel implements ProductInterface, IdentityInterfa
     /**
      * Load No-Route Product.
      *
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @return \Webkul\Marketplace\Model\Product
      */
     public function noRouteProduct()
     {
@@ -131,7 +131,7 @@ class Product extends AbstractModel implements ProductInterface, IdentityInterfa
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\ProductInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductInterface
      */
     public function setId($id)
     {

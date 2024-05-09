@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,32 +12,32 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="OrionAlliance_NewModule::css/wk_block.css"/>
-        <css src="OrionAlliance_NewModule::css/style.css"/>
-        <css src="OrionAlliance_NewModule::css/landingpage.css"/>
+        <css src="Webkul_Marketplace::css/wk_block.css"/>
+        <css src="Webkul_Marketplace::css/style.css"/>
+        <css src="Webkul_Marketplace::css/landingpage.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Marketplace" name="marketplace_landing_page" template="OrionAlliance_NewModule::marketplace.phtml">
+            <block class="Webkul\Marketplace\Block\Marketplace" name="marketplace_landing_page" template="Webkul_Marketplace::marketplace.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>
         <referenceBlock name="marketplace_landing_page">
-            <block class="OrionAlliance\NewModule\Block\Marketplace" name="landingPagelayout1" template="OrionAlliance_NewModule::marketplace/layout1.phtml">
+            <block class="Webkul\Marketplace\Block\Marketplace" name="landingPagelayout1" template="Webkul_Marketplace::marketplace/layout1.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="OrionAlliance\NewModule\Block\Marketplace" name="landingPagelayout2" template="OrionAlliance_NewModule::marketplace/layout2.phtml">
+            <block class="Webkul\Marketplace\Block\Marketplace" name="landingPagelayout2" template="Webkul_Marketplace::marketplace/layout2.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="OrionAlliance\NewModule\Block\Marketplace" name="landingPagelayout3" template="OrionAlliance_NewModule::marketplace/layout3.phtml">
+            <block class="Webkul\Marketplace\Block\Marketplace" name="landingPagelayout3" template="Webkul_Marketplace::marketplace/layout3.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
@@ -53,9 +53,9 @@
             </block>
         </referenceBlock>
         <referenceContainer name="form.additional.info.layout2">    
-            <block class="OrionAlliance\NewModule\Block\Sellerregistration" name="landing_page_seller_register" template="OrionAlliance_NewModule::marketplace/sellerregistration.phtml">
+            <block class="Webkul\Marketplace\Block\Sellerregistration" name="landing_page_seller_register" template="Webkul_Marketplace::marketplace/sellerregistration.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
             <block class="Magento\ReCaptchaUi\Block\ReCaptcha"
@@ -87,9 +87,9 @@
             </block>
         </referenceBlock>
         <referenceContainer name="form.additional.info.layout3">
-            <block class="OrionAlliance\NewModule\Block\Sellerregistration" name="landing_page_seller_registerlayout3" template="OrionAlliance_NewModule::marketplace/sellerregistration.phtml">
+            <block class="Webkul\Marketplace\Block\Sellerregistration" name="landing_page_seller_registerlayout3" template="Webkul_Marketplace::marketplace/sellerregistration.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
             <block class="Magento\ReCaptchaUi\Block\ReCaptcha"

@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Wysiwyg\Helper\Form\Gallery;
+namespace Webkul\Marketplace\Block\Wysiwyg\Helper\Form\Gallery;
 
-use OrionAlliance\NewModule\Api\Data\WysiwygImageInterfaceFactory;
+use Webkul\Marketplace\Api\Data\WysiwygImageInterfaceFactory;
 
 class Content extends \Magento\Framework\View\Element\Template
 {
@@ -26,7 +26,7 @@ class Content extends \Magento\Framework\View\Element\Template
     protected $wysiwygImage;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -34,14 +34,14 @@ class Content extends \Magento\Framework\View\Element\Template
      * @param \Magento\Backend\Block\Template\Context     $context
      * @param \Magento\Framework\File\Size                $fileSize
      * @param WysiwygImageInterfaceFactory                $wysiwygImage
-     * @param \OrionAlliance\NewModule\Helper\Data             $helper
+     * @param \Webkul\Marketplace\Helper\Data             $helper
      * @param array                                       $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Framework\File\Size $fileSize,
         WysiwygImageInterfaceFactory $wysiwygImage,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         array $data = []
     ) {
         $this->_fileSizeService = $fileSize;
@@ -61,7 +61,7 @@ class Content extends \Magento\Framework\View\Element\Template
     /**
      * SaveImageDesc function
      *
-     * @return \OrionAlliance\NewModule\Model\WysiwygImage
+     * @return \Webkul\Marketplace\Model\WysiwygImage
      */
     public function saveImageDesc()
     {

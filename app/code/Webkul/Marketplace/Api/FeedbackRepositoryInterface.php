@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 /**
  * FeedbackRepository CRUD Interface
@@ -20,7 +20,7 @@ interface FeedbackRepositoryInterface
      * Retrieve feedback by id.
      *
      * @param int $id
-     * @return \OrionAlliance\NewModule\Model\Feedback
+     * @return \Webkul\Marketplace\Model\Feedback
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
     public function getById($id);
@@ -28,10 +28,10 @@ interface FeedbackRepositoryInterface
     /**
      * Save Feedback.
      *
-     * @param \OrionAlliance\NewModule\Model\Feedback $subject
-     * @return \OrionAlliance\NewModule\Model\Feedback
+     * @param \Webkul\Marketplace\Model\Feedback $subject
+     * @return \Webkul\Marketplace\Model\Feedback
      */
-    public function save(\OrionAlliance\NewModule\Model\Feedback $subject);
+    public function save(\Webkul\Marketplace\Model\Feedback $subject);
 
     /**
      * Retrieve all feedbacks.
@@ -44,10 +44,10 @@ interface FeedbackRepositoryInterface
     /**
      * Delete feedback.
      *
-     * @param \OrionAlliance\NewModule\Model\Feedback $subject
+     * @param \Webkul\Marketplace\Model\Feedback $subject
      * @return boolean
      */
-    public function delete(\OrionAlliance\NewModule\Model\Feedback $subject);
+    public function delete(\Webkul\Marketplace\Model\Feedback $subject);
 
     /**
      * Delete feedback by id.

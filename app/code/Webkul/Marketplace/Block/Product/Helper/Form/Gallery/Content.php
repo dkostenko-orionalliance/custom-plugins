@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Product\Helper\Form\Gallery;
+namespace Webkul\Marketplace\Block\Product\Helper\Form\Gallery;
 
 use Magento\Catalog\Model\Product;
 

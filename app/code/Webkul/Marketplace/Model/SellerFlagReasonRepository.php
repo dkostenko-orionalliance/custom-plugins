@@ -3,26 +3,26 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Framework\Exception\NoSuchEntityException;
-use OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason as ResourceSellerFlagReason;
+use Webkul\Marketplace\Model\ResourceModel\SellerFlagReason as ResourceSellerFlagReason;
 use Magento\Framework\Exception\CouldNotSaveException;
-use OrionAlliance\NewModule\Api\Data\SellerFlagReasonSearchResultsInterfaceFactory;
-use OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterfaceFactory;
+use Webkul\Marketplace\Api\Data\SellerFlagReasonSearchResultsInterfaceFactory;
+use Webkul\Marketplace\Api\Data\SellerFlagReasonInterfaceFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Api\DataObjectHelper;
-use OrionAlliance\NewModule\Api\SellerFlagReasonRepositoryInterface;
+use Webkul\Marketplace\Api\SellerFlagReasonRepositoryInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason\CollectionFactory as SellerFlagReasonCollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\SellerFlagReason\CollectionFactory as SellerFlagReasonCollectionFactory;
 
 class SellerFlagReasonRepository implements SellerFlagReasonRepositoryInterface
 {
@@ -100,10 +100,10 @@ class SellerFlagReasonRepository implements SellerFlagReasonRepositoryInterface
     /**
      * Save
      *
-     * @param \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface $sellerFlagReason
+     * @param \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface $sellerFlagReason
      */
     public function save(
-        \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface $sellerFlagReason
+        \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface $sellerFlagReason
     ) {
         try {
             $this->resource->save($sellerFlagReason);
@@ -179,10 +179,10 @@ class SellerFlagReasonRepository implements SellerFlagReasonRepositoryInterface
     /**
      * Delete records
      *
-     * @param \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface $sellerFlagReason
+     * @param \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface $sellerFlagReason
      */
     public function delete(
-        \OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterface $sellerFlagReason
+        \Webkul\Marketplace\Api\Data\SellerFlagReasonInterface $sellerFlagReason
     ) {
         try {
             $this->resource->delete($sellerFlagReason);

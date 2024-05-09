@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\NotificationInterface;
+use Webkul\Marketplace\Api\Data\NotificationInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Notification Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Notification _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Notification getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Notification _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Notification getResource()
  */
 class Notification extends AbstractModel implements NotificationInterface, IdentityInterface
 {
@@ -61,7 +61,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Notification::class
+            \Webkul\Marketplace\Model\ResourceModel\Notification::class
         );
     }
 
@@ -100,7 +100,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
     /**
      * Load No-Route Notification.
      *
-     * @return \OrionAlliance\NewModule\Model\Notification
+     * @return \Webkul\Marketplace\Model\Notification
      */
     public function noRouteNotification()
     {
@@ -132,7 +132,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
+     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
      */
     public function setId($id)
     {
@@ -154,7 +154,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
      *
      * @param int $notificationId
      *
-     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
+     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
      */
     public function setNotificationId($notificationId)
     {
@@ -176,7 +176,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
      *
      * @param int $type
      *
-     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
+     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
      */
     public function setType($type)
     {
@@ -197,7 +197,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
      * Set Created Time
      *
      * @param string $createdAt
-     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
+     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
      */
     public function setCreatedAt($createdAt)
     {
@@ -218,7 +218,7 @@ class Notification extends AbstractModel implements NotificationInterface, Ident
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
+     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
      */
     public function setUpdatedAt($updatedAt)
     {

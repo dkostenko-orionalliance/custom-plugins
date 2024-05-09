@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 /*
  * Webkul Marketplace Seller Profile Block
@@ -17,12 +17,12 @@ namespace OrionAlliance\NewModule\Block;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\Session;
 use Magento\Catalog\Block\Product\AbstractProduct;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Model\FeedbackFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
-use OrionAlliance\NewModule\Model\ProductFactory as MpProductModel;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\FeedbackFactory;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
+use Webkul\Marketplace\Model\ProductFactory as MpProductModel;
 use Magento\Catalog\Model\ProductFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason\CollectionFactory as SellerFlagReason;
+use Webkul\Marketplace\Model\ResourceModel\SellerFlagReason\CollectionFactory as SellerFlagReason;
 
 class Profile extends AbstractProduct
 {
@@ -79,7 +79,7 @@ class Profile extends AbstractProduct
     protected $productFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\SellerFlagReason\Collection
      */
     protected $reasonCollection;
     /**
@@ -184,7 +184,7 @@ class Profile extends AbstractProduct
     /**
      * Get Seller Profile Details
      *
-     * @return \OrionAlliance\NewModule\Model\Seller | bool
+     * @return \Webkul\Marketplace\Model\Seller | bool
      */
     public function getProfileDetail()
     {
@@ -281,7 +281,7 @@ class Profile extends AbstractProduct
     /**
      * GetSellerFlagReasons is used to get the seller Flag Reasons
      *
-     * @return \OrionAlliance\NewModule\Model\ResourceModel\SellerFlagReason\Collection
+     * @return \Webkul\Marketplace\Model\ResourceModel\SellerFlagReason\Collection
      */
     public function getSellerFlagReasons()
     {

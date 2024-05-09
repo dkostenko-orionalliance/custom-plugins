@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Account\Dashboard;
+namespace Webkul\Marketplace\Block\Account\Dashboard;
 
-use OrionAlliance\NewModule\Model\SaleslistFactory;
+use Webkul\Marketplace\Model\SaleslistFactory;
 
 class Diagrams extends \Magento\Framework\View\Element\Template
 {
@@ -45,7 +45,7 @@ class Diagrams extends \Magento\Framework\View\Element\Template
     protected $saleslistFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Dashboard\Data
+     * @var \Webkul\Marketplace\Helper\Dashboard\Data
      */
     protected $dashboardHelper;
 
@@ -55,14 +55,14 @@ class Diagrams extends \Magento\Framework\View\Element\Template
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param SaleslistFactory $saleslistFactory
-     * @param \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper
+     * @param \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper
      * @param array $data
      */
     public function __construct(
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Framework\View\Element\Template\Context $context,
         SaleslistFactory $saleslistFactory,
-        \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper,
+        \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper,
         array $data = []
     ) {
         $this->_customerSession = $customerSession;

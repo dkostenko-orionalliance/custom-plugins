@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -13,7 +13,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="seller-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="marketplace_styles"/>
     <head>
-        <css src="OrionAlliance_NewModule::colorpicker/css/colorpicker.css"/>
+        <css src="Webkul_Marketplace::colorpicker/css/colorpicker.css"/>
     </head>
     <body>
         <referenceBlock name="seller.page.main.title">
@@ -22,9 +22,9 @@
             </action>
         </referenceBlock>
         <referenceContainer name="seller.content">
-            <block class="OrionAlliance\NewModule\Block\Account\Editprofile" name="marketplace_account_editprofile" template="OrionAlliance_NewModule::account/editprofile.phtml" cacheable="false">
+            <block class="Webkul\Marketplace\Block\Account\Editprofile" name="marketplace_account_editprofile" template="Webkul_Marketplace::account/editprofile.phtml" cacheable="false">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

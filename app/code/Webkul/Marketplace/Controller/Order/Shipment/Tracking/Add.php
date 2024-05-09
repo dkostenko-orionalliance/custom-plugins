@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Shipment\Tracking;
+namespace Webkul\Marketplace\Controller\Order\Shipment\Tracking;
 
-class Add extends \OrionAlliance\NewModule\Controller\Order
+class Add extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Add new tracking number action
@@ -63,7 +63,7 @@ class Add extends \OrionAlliance\NewModule\Controller\Order
                 $response = [
                     'error' => false,
                     'carrier' => $this->_objectManager->create(
-                        \OrionAlliance\NewModule\Block\Order\View::class
+                        \Webkul\Marketplace\Block\Order\View::class
                     )->getCarrierTitle($carrier),
                     'title' => $title,
                     'number' => $number,

@@ -2,7 +2,7 @@
     <update handle="styles"/>
     <body>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Adminhtml\Customer\Attribute\Grid" name="customer_attributes.grid" template="OrionAlliance_NewModule::customer/attribute/grid.phtml"/>
+            <block class="Webkul\Marketplace\Block\Adminhtml\Customer\Attribute\Grid" name="customer_attributes.grid" template="Webkul_Marketplace::customer/attribute/grid.phtml"/>
         </referenceContainer>
     </body>
 </page>

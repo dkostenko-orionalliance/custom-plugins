@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\ResourceModel\Orders;
+namespace Webkul\Marketplace\Model\ResourceModel\Orders;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 
 /**
  * Webkul Marketplace ResourceModel Orders Collection
@@ -41,8 +41,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\Orders::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\Orders::class
+            \Webkul\Marketplace\Model\Orders::class,
+            \Webkul\Marketplace\Model\ResourceModel\Orders::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
         $this->_map['fields']['created_at'] = 'main_table.created_at';

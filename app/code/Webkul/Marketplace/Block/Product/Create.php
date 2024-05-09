@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Product;
+namespace Webkul\Marketplace\Block\Product;
 
 /*
  * Webkul Marketplace Product Create Block
@@ -17,7 +17,7 @@ namespace OrionAlliance\NewModule\Block\Product;
 use Magento\Catalog\Model\Product;
 use Magento\Catalog\Model\Category;
 use Magento\GoogleOptimizer\Model\Code as ModelCode;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Data as HelperData;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Category\CollectionFactory;
 use Magento\Framework\DB\Helper as FrameworkDbHelper;

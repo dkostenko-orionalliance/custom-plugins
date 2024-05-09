@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Product;
+namespace Webkul\Marketplace\Controller\Product;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\RequestInterface;
-use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
-use OrionAlliance\NewModule\Model\Notification;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
+use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use Webkul\Marketplace\Model\Notification;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Customer\Model\Url as CustomerUrl;
 
 /**
@@ -36,7 +36,7 @@ class Productlist extends Action
     protected $_resultPageFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helperData;
 
@@ -59,7 +59,7 @@ class Productlist extends Action
      * @param Context                         $context
      * @param PageFactory                     $resultPageFactory
      * @param \Magento\Customer\Model\Session $customerSession
-     * @param \OrionAlliance\NewModule\Helper\Data $helperData
+     * @param \Webkul\Marketplace\Helper\Data $helperData
      * @param NotificationHelper              $notificationHelper
      * @param CollectionFactory               $collectionFactory
      * @param CustomerUrl                     $customerUrl
@@ -68,7 +68,7 @@ class Productlist extends Action
         Context $context,
         PageFactory $resultPageFactory,
         \Magento\Customer\Model\Session $customerSession,
-        \OrionAlliance\NewModule\Helper\Data $helperData,
+        \Webkul\Marketplace\Helper\Data $helperData,
         NotificationHelper $notificationHelper,
         CollectionFactory $collectionFactory,
         CustomerUrl $customerUrl

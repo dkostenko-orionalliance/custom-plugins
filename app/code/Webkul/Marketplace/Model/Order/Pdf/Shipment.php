@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\Order\Pdf;
+namespace Webkul\Marketplace\Model\Order\Pdf;
 
 use Magento\Customer\Model\Session;
 
@@ -19,7 +19,7 @@ use Magento\Customer\Model\Session;
 class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -29,14 +29,14 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
     protected $_string;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\OrdersFactory
+     * @var \Webkul\Marketplace\Model\OrdersFactory
      */
     protected $sellerOrders;
 
     /**
      * Construct
      *
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param \Magento\Payment\Helper\Data $paymentData
      * @param \Magento\Framework\Stdlib\StringUtils $string
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
@@ -50,10 +50,10 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Store\Model\App\Emulation $appEmulation
      * @param array $data
-     * @param \OrionAlliance\NewModule\Model\OrdersFactory|null $sellerOrders
+     * @param \Webkul\Marketplace\Model\OrdersFactory|null $sellerOrders
      */
     public function __construct(
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         \Magento\Payment\Helper\Data $paymentData,
         \Magento\Framework\Stdlib\StringUtils $string,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
@@ -67,12 +67,12 @@ class Shipment extends \Magento\Sales\Model\Order\Pdf\Shipment
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Store\Model\App\Emulation $appEmulation,
         array $data = [],
-        \OrionAlliance\NewModule\Model\OrdersFactory $sellerOrders = null
+        \Webkul\Marketplace\Model\OrdersFactory $sellerOrders = null
     ) {
         $this->helper = $helper;
         $this->_string = $string;
         $this->sellerOrders = $sellerOrders ?: \Magento\Framework\App\ObjectManager::getInstance()
-                                                ->create(\OrionAlliance\NewModule\Model\OrdersFactory::class);
+                                                ->create(\Webkul\Marketplace\Model\OrdersFactory::class);
         parent::__construct(
             $paymentData,
             $string,

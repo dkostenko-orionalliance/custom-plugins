@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Setup\Patch\Data;
+namespace Webkul\Marketplace\Setup\Patch\Data;
 
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
-use OrionAlliance\NewModule\Model\ControllersRepository;
+use Webkul\Marketplace\Model\ControllersRepository;
 
 class InsertEarningData implements DataPatchInterface
 {
@@ -50,7 +50,7 @@ class InsertEarningData implements DataPatchInterface
         $connection = $this->moduleDataSetup->getConnection();
         if (!count($this->controllersRepository->getByPath('marketplace/account/earning'))) {
             $data[] = [
-                'module_name' => 'OrionAlliance_NewModule',
+                'module_name' => 'Webkul_Marketplace',
                 'controller_path' => 'marketplace/account/earning',
                 'label' => 'Earnings',
                 'is_child' => '0',

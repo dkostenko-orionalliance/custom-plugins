@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 /*
  * Webkul Marketplace Landing Page Block
  */
 use Magento\Catalog\Model\Product;
 use Magento\Sales\Model\Order;
-use OrionAlliance\NewModule\Model\Seller;
+use Webkul\Marketplace\Model\Seller;
 use Magento\Customer\Model\Customer;
-use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollectionFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as MpSaleslistCollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as MpSaleslistCollectionFactory;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 
 class Marketplace extends \Magento\Framework\View\Element\Template
@@ -44,7 +44,7 @@ class Marketplace extends \Magento\Framework\View\Element\Template
     protected $entityAttribute;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -75,7 +75,7 @@ class Marketplace extends \Magento\Framework\View\Element\Template
      * @param \Magento\Cms\Model\Template\FilterProvider $filterProvider
      * @param \Magento\Framework\App\ResourceConnection $resource
      * @param \Magento\Eav\Model\ResourceModel\Entity\Attribute $entityAttribute
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param MpOrdersCollectionFactory $mpOrdersCollectionFactory
      * @param MpSaleslistCollectionFactory $mpSaleslistCollectionFactory
      * @param ProductCollectionFactory $productCollectionFactory
@@ -87,7 +87,7 @@ class Marketplace extends \Magento\Framework\View\Element\Template
         \Magento\Cms\Model\Template\FilterProvider $filterProvider,
         \Magento\Framework\App\ResourceConnection $resource,
         \Magento\Eav\Model\ResourceModel\Entity\Attribute $entityAttribute,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         MpOrdersCollectionFactory $mpOrdersCollectionFactory,
         MpSaleslistCollectionFactory $mpSaleslistCollectionFactory,
         ProductCollectionFactory $productCollectionFactory,

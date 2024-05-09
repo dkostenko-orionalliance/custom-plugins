@@ -8,7 +8,7 @@ define(
                 templates: {
                     fields: {
                         price: {
-                            component: 'OrionAlliance_NewModule/js/form/element/price',
+                            component: 'Webkul_Marketplace/js/form/element/price',
                             template: 'ui/form/element/input'
                         }
                     }

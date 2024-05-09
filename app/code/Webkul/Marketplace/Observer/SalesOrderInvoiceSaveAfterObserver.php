@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Observer;
+namespace Webkul\Marketplace\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Session\SessionManager;
@@ -17,15 +17,15 @@ use Magento\Quote\Model\QuoteRepository;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
-use OrionAlliance\NewModule\Helper\Data as MarketplaceHelper;
-use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
-use OrionAlliance\NewModule\Model\OrdersFactory;
-use OrionAlliance\NewModule\Model\SaleslistFactory;
+use Webkul\Marketplace\Helper\Data as MarketplaceHelper;
+use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
+use Webkul\Marketplace\Model\OrdersFactory;
+use Webkul\Marketplace\Model\SaleslistFactory;
 use Magento\Sales\Model\Order\AddressFactory;
 use Magento\Directory\Model\CountryFactory;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
-use OrionAlliance\NewModule\Helper\Orders as OrdersHelper;
-use OrionAlliance\NewModule\Model\ProductFactory;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Orders as OrdersHelper;
+use Webkul\Marketplace\Model\ProductFactory;
 
 /**
  * Webkul Marketplace SalesOrderInvoiceSaveAfterObserver Observer Model.

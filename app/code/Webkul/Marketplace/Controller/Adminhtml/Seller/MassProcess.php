@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
+namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
 use Magento\Customer\Model\CustomerFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
-use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use Webkul\Marketplace\Helper\Data as MpHelper;
+use Webkul\Marketplace\Helper\Email as MpEmailHelper;
 
 /**
  * Class MassProcess used to multiple seller process.
@@ -98,7 +98,7 @@ class MassProcess extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        $sellerStatus = \OrionAlliance\NewModule\Model\Seller::STATUS_PROCESSING;
+        $sellerStatus = \Webkul\Marketplace\Model\Seller::STATUS_PROCESSING;
         $customerModel = $this->customerFactory->create();
         $helper = $this->mpHelper;
         $collection = $this->filter->getCollection(
@@ -174,6 +174,6 @@ class MassProcess extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::seller');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::seller');
     }
 }

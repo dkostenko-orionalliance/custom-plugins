@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Productflag;
+namespace Webkul\Marketplace\Controller\Adminhtml\Productflag;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\CollectionFactory;
 
 /**
  * Class MassDelete used to multiple Productflag reason delete.
@@ -71,6 +71,6 @@ class MassDelete extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::productflag');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::productflag');
     }
 }

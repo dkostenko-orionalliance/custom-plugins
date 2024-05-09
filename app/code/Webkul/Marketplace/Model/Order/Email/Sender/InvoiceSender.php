@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace OrionAlliance\NewModule\Model\Order\Email\Sender;
+namespace Webkul\Marketplace\Model\Order\Email\Sender;
 
 use Magento\Sales\Model\Order\Invoice;
 use Magento\Framework\DataObject;

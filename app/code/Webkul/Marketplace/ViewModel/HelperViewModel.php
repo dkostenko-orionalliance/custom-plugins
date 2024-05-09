@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\ViewModel;
+namespace Webkul\Marketplace\ViewModel;
 
 class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentInterface
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     private $helperData;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Orders
+     * @var \Webkul\Marketplace\Helper\Orders
      */
     private $orderHelper;
 
@@ -61,7 +61,7 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
      */
     private $categoryhelper;
     /**
-     * @var \OrionAlliance\NewModule\Helper\Notification
+     * @var \Webkul\Marketplace\Helper\Notification
      */
     private $notificationHelper;
     /**
@@ -72,8 +72,8 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
     /**
      * Construct
      *
-     * @param \OrionAlliance\NewModule\Helper\Data $helperData
-     * @param \OrionAlliance\NewModule\Helper\Orders $orderHelper
+     * @param \Webkul\Marketplace\Helper\Data $helperData
+     * @param \Webkul\Marketplace\Helper\Orders $orderHelper
      * @param \Magento\Shipping\Helper\Data $shippingHelper
      * @param \Magento\Framework\Json\Helper\Data $jsonHelper
      * @param \Magento\Catalog\Helper\Output $catalogHelperOutput
@@ -82,12 +82,12 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
      * @param \Magento\Wishlist\Helper\Data $wishlistHelper
      * @param \Magento\Catalog\Helper\Product\Compare $catalogHelperProductCompare
      * @param \Magento\Catalog\Helper\Category $categoryhelper
-     * @param \OrionAlliance\NewModule\Helper\Notification $notificationHelper
+     * @param \Webkul\Marketplace\Helper\Notification $notificationHelper
      * @param \Zend\Uri\Http $zendUri
      */
     public function __construct(
-        \OrionAlliance\NewModule\Helper\Data $helperData,
-        \OrionAlliance\NewModule\Helper\Orders $orderHelper,
+        \Webkul\Marketplace\Helper\Data $helperData,
+        \Webkul\Marketplace\Helper\Orders $orderHelper,
         \Magento\Shipping\Helper\Data $shippingHelper,
         \Magento\Framework\Json\Helper\Data $jsonHelper,
         \Magento\Catalog\Helper\Output $catalogHelperOutput,
@@ -96,7 +96,7 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
         \Magento\Wishlist\Helper\Data $wishlistHelper,
         \Magento\Catalog\Helper\Product\Compare $catalogHelperProductCompare,
         \Magento\Catalog\Helper\Category $categoryhelper,
-        \OrionAlliance\NewModule\Helper\Notification $notificationHelper,
+        \Webkul\Marketplace\Helper\Notification $notificationHelper,
         \Zend\Uri\Http $zendUri
     ) {
         $this->helperData = $helperData;
@@ -126,7 +126,7 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
     /**
      * Get Helper Data
      *
-     * @return \OrionAlliance\NewModule\Helper\Data
+     * @return \Webkul\Marketplace\Helper\Data
      */
     public function getHelper()
     {
@@ -136,7 +136,7 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
     /**
      * Get Order Helper Data
      *
-     * @return \OrionAlliance\NewModule\Helper\Orders
+     * @return \Webkul\Marketplace\Helper\Orders
      */
     public function getOrderHelper()
     {
@@ -226,7 +226,7 @@ class HelperViewModel implements \Magento\Framework\View\Element\Block\ArgumentI
     /**
      * Get Notification Helper
      *
-     * @return \OrionAlliance\NewModule\Helper\Notification $notificationHelper
+     * @return \Webkul\Marketplace\Helper\Notification $notificationHelper
      */
     public function getNotificationHelper()
     {

@@ -3,26 +3,26 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Helper;
+namespace Webkul\Marketplace\Helper;
 
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Model\Product;
-use OrionAlliance\NewModule\Model\Notification as ModelNotification;
+use Webkul\Marketplace\Model\Notification as ModelNotification;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Model\Order;
-use OrionAlliance\NewModule\Model\ResourceModel\Notification\Collection as notificationColl;
-use OrionAlliance\NewModule\Model\ResourceModel\Notification\CollectionFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
-use OrionAlliance\NewModule\Model\Sellertransaction;
-use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory as FeedbackColl;
-use OrionAlliance\NewModule\Model\Feedback;
-use OrionAlliance\NewModule\Api\NotificationRepositoryInterface;
+use Webkul\Marketplace\Model\ResourceModel\Notification\Collection as notificationColl;
+use Webkul\Marketplace\Model\ResourceModel\Notification\CollectionFactory;
+use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as SaleslistColl;
+use Webkul\Marketplace\Model\Sellertransaction;
+use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory as FeedbackColl;
+use Webkul\Marketplace\Model\Feedback;
+use Webkul\Marketplace\Api\NotificationRepositoryInterface;
 
 /**
  * Marketplace helper Notification.
@@ -32,7 +32,7 @@ class Notification extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Collection for getting table name
      *
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Notification\Collection
+     * @var \Webkul\Marketplace\Model\ResourceModel\Notification\Collection
      */
     protected $notificationColl;
 
@@ -97,7 +97,7 @@ class Notification extends \Magento\Framework\App\Helper\AbstractHelper
     protected $notificationRepository;
 
     /**
-     * @var \OrionAlliance\NewModule\Logger\Logger
+     * @var \Webkul\Marketplace\Logger\Logger
      */
     protected $logger;
 
@@ -121,7 +121,7 @@ class Notification extends \Magento\Framework\App\Helper\AbstractHelper
      * @param Feedback                                    $feedback
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param NotificationRepositoryInterface             $notificationRepository
-     * @param \OrionAlliance\NewModule\Logger\Logger           $logger
+     * @param \Webkul\Marketplace\Logger\Logger           $logger
      * @param \Magento\Framework\Escaper                  $escaper
      */
     public function __construct(
@@ -139,7 +139,7 @@ class Notification extends \Magento\Framework\App\Helper\AbstractHelper
         Feedback $feedback,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         NotificationRepositoryInterface $notificationRepository,
-        \OrionAlliance\NewModule\Logger\Logger $logger,
+        \Webkul\Marketplace\Logger\Logger $logger,
         \Magento\Framework\Escaper $escaper
     ) {
         $this->notificationColl = $notificationColl;

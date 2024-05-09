@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Block\Account\Dashboard;
+namespace Webkul\Marketplace\Block\Account\Dashboard;
 
 use Magento\Framework\View\Element\Template\Context;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Helper\Dashboard\Data as HelperDashboard;
-use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Helper\Dashboard\Data as HelperDashboard;
+use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
 
 class ReviewChart extends \Magento\Framework\View\Element\Template
 {

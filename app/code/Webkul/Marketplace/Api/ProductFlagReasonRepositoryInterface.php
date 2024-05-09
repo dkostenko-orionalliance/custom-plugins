@@ -3,13 +3,13 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Api;
+namespace Webkul\Marketplace\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -18,19 +18,19 @@ interface ProductFlagReasonRepositoryInterface
     /**
      * Save ProductFlag
      *
-     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface $productFlagReason
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @param \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface $productFlagReason
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface $productFlagReason
+        \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface $productFlagReason
     );
 
     /**
      * Retrieve ProductFlag
      *
      * @param int $entityId
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getById($entityId);
@@ -39,7 +39,7 @@ interface ProductFlagReasonRepositoryInterface
      * Retrieve ProductFlag matching the specified criteria.
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagSearchResultsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -49,12 +49,12 @@ interface ProductFlagReasonRepositoryInterface
     /**
      * Delete ProductFlag
      *
-     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface $productFlagReason
+     * @param \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface $productFlagReason
      * @return bool
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface $productFlagReason
+        \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface $productFlagReason
     );
 
     /**

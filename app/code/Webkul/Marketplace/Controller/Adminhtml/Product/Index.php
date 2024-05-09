@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Product;
+namespace Webkul\Marketplace\Controller\Adminhtml\Product;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use OrionAlliance\NewModule\Model\ProductFactory;
+use Webkul\Marketplace\Model\ProductFactory;
 
 class Index extends Action
 {
@@ -63,7 +63,7 @@ class Index extends Action
         }
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('OrionAlliance_NewModule::product');
+        $resultPage->setActiveMenu('Webkul_Marketplace::product');
         $resultPage->getConfig()->getTitle()->prepend(__("Manage Seller's Product"));
         return $resultPage;
     }
@@ -71,7 +71,7 @@ class Index extends Action
     /**
      * Updated all notification as read.
      *
-     * @param   \OrionAlliance\NewModule\Model\Product $collection
+     * @param   \Webkul\Marketplace\Model\Product $collection
      */
     protected function _updateNotification($collection)
     {
@@ -88,6 +88,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OrionAlliance_NewModule::product');
+        return $this->_authorization->isAllowed('Webkul_Marketplace::product');
     }
 }

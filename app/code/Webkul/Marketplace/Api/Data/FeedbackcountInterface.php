@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Api\Data;
+namespace Webkul\Marketplace\Api\Data;
 
 /**
  * Marketplace Feedbackcount Interface
@@ -33,7 +33,7 @@ interface FeedbackcountInterface
      * Set ID
      *
      * @param int $id
-     * @return \OrionAlliance\NewModule\Api\Data\FeedbackcountInterface
+     * @return \Webkul\Marketplace\Api\Data\FeedbackcountInterface
      */
     public function setId($id);
 }

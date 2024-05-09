@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
-use OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface;
+use Webkul\Marketplace\Api\Data\ProductFlagReasonInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\MailException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -43,7 +43,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      */
     protected function _construct()
     {
-        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason::class);
+        $this->_init(\Webkul\Marketplace\Model\ResourceModel\ProductFlagReason::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      * Set entity_id
      *
      * @param string $entityId
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      */
     public function setEntityId($entityId)
     {
@@ -81,7 +81,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      * Set reason
      *
      * @param string $reason
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      */
     public function setReason($reason)
     {
@@ -102,7 +102,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      * Set CreatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      */
     public function setCreatedAt($timestamp)
     {
@@ -123,7 +123,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      * Set UpdatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      */
     public function setUpdatedAt($timestamp)
     {
@@ -144,7 +144,7 @@ class ProductFlagReason extends \Magento\Framework\Model\AbstractModel implement
      * Set status
      *
      * @param int $status
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface
      */
     public function setStatus($status)
     {

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model\Plugin\Customer;
+namespace Webkul\Marketplace\Model\Plugin\Customer;
 
 /**
  * Marketplace Customer Session Plugin.
@@ -17,7 +17,7 @@ namespace OrionAlliance\NewModule\Model\Plugin\Customer;
 class Session
 {
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $_helper;
 
@@ -32,23 +32,23 @@ class Session
     protected $typeProcessor;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\ControllersRepository
+     * @var \Webkul\Marketplace\Model\ControllersRepository
      */
     private $controllersRepository;
 
     /**
      * Construct
      *
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \Webkul\Marketplace\Helper\Data $helper
      * @param \Magento\Framework\UrlInterface $urlBuilder
      * @param \Magento\Framework\Reflection\TypeProcessor $typeProcessor
-     * @param \OrionAlliance\NewModule\Model\ControllersRepository $controllersRepository
+     * @param \Webkul\Marketplace\Model\ControllersRepository $controllersRepository
      */
     public function __construct(
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         \Magento\Framework\UrlInterface $urlBuilder,
         \Magento\Framework\Reflection\TypeProcessor $typeProcessor,
-        \OrionAlliance\NewModule\Model\ControllersRepository $controllersRepository
+        \Webkul\Marketplace\Model\ControllersRepository $controllersRepository
     ) {
         $this->_helper = $helper;
         $this->_urlBuilder = $urlBuilder;

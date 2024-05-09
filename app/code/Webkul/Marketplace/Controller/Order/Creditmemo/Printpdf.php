@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Creditmemo;
+namespace Webkul\Marketplace\Controller\Order\Creditmemo;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
  * Webkul Marketplace Order Creditmemo Print pdf Controller.
  */
-class Printpdf extends \OrionAlliance\NewModule\Controller\Order
+class Printpdf extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Print pdf

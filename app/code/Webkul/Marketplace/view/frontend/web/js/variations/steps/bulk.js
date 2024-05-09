@@ -11,7 +11,7 @@ define([
     'Magento_Ui/js/modal/alert',
     'jquery/file-uploader',
     'mage/translate',
-    'OrionAlliance_NewModule/js/variations/variations'
+    'Webkul_Marketplace/js/variations/variations'
 ], function (Component, $, ko, _, Collapsible, mageTemplate, alert) {
     'use strict';
 

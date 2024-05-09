@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Creditmemo;
+namespace Webkul\Marketplace\Controller\Order\Creditmemo;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -19,13 +19,13 @@ use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\InputException;
 use Magento\Customer\Model\Url as CustomerUrl;
-use OrionAlliance\NewModule\Helper\Data as HelperData;
-use OrionAlliance\NewModule\Model\SaleslistFactory;
+use Webkul\Marketplace\Helper\Data as HelperData;
+use Webkul\Marketplace\Model\SaleslistFactory;
 
 /**
  * Webkul Marketplace Order Creditmemo Create Controller.
  */
-class Create extends \OrionAlliance\NewModule\Controller\Order
+class Create extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Initialize order model instance.

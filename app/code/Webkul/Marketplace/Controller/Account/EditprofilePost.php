@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Account;
+namespace Webkul\Marketplace\Controller\Account;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Customer\Model\Session;
@@ -20,7 +20,7 @@ use Magento\Framework\Filesystem;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Customer\Model\Url as CustomerUrl;
-use OrionAlliance\NewModule\Model\SellerFactory;
+use Webkul\Marketplace\Model\SellerFactory;
 
 /**
  * Webkul Marketplace Account EditprofilePost Controller.
@@ -55,7 +55,7 @@ class EditprofilePost extends Action
     protected $_fileUploaderFactory;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
 
@@ -86,7 +86,7 @@ class EditprofilePost extends Action
      * @param \Magento\Framework\Stdlib\DateTime\DateTime      $date
      * @param Filesystem                                       $filesystem
      * @param \Magento\MediaStorage\Model\File\UploaderFactory $fileUploaderFactory
-     * @param \OrionAlliance\NewModule\Helper\Data                  $helper
+     * @param \Webkul\Marketplace\Helper\Data                  $helper
      * @param DataPersistorInterface                           $dataPersistor
      * @param CustomerUrl                                      $customerUrl
      * @param SellerFactory                                    $sellerModel
@@ -99,7 +99,7 @@ class EditprofilePost extends Action
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         Filesystem $filesystem,
         \Magento\MediaStorage\Model\File\UploaderFactory $fileUploaderFactory,
-        \OrionAlliance\NewModule\Helper\Data $helper,
+        \Webkul\Marketplace\Helper\Data $helper,
         DataPersistorInterface $dataPersistor,
         CustomerUrl $customerUrl,
         SellerFactory $sellerModel,

@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -92,7 +92,7 @@ $getPriceFormat = $viewModel->getJsonHelper()->jsonEncode(
       require.config({
         map: {
             '*': {
-                'Magento_Ui/js/grid/columns/multiselect':  'OrionAlliance_NewModule/js/grid/columns/multiselect'
+                'Magento_Ui/js/grid/columns/multiselect':  'Webkul_Marketplace/js/grid/columns/multiselect'
             }
         }
       });
@@ -103,8 +103,8 @@ $getPriceFormat = $viewModel->getJsonHelper()->jsonEncode(
             "Magento_Ui/js/core/app": {
                 "components": {
                     "sellerpay": {
-                        "component": "OrionAlliance_NewModule/js/grid/columns/multiselect",
-                        "template" : "OrionAlliance_NewModule/pay",
+                        "component": "Webkul_Marketplace/js/grid/columns/multiselect",
+                        "template" : "Webkul_Marketplace/pay",
                         "priceFormat" : <?= /* @noEscape */ $getPriceFormat?>
                     }
                 }

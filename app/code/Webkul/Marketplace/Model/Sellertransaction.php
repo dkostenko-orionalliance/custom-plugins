@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use OrionAlliance\NewModule\Api\Data\SellertransactionInterface;
+use Webkul\Marketplace\Api\Data\SellertransactionInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Sellertransaction Model.
  *
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction _getResource()
- * @method \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Sellertransaction _getResource()
+ * @method \Webkul\Marketplace\Model\ResourceModel\Sellertransaction getResource()
  */
 class Sellertransaction extends AbstractModel implements SellertransactionInterface, IdentityInterface
 {
@@ -51,7 +51,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction::class
+            \Webkul\Marketplace\Model\ResourceModel\Sellertransaction::class
         );
     }
 
@@ -75,7 +75,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
     /**
      * Load No-Route Sellertransaction.
      *
-     * @return \OrionAlliance\NewModule\Model\Sellertransaction
+     * @return \Webkul\Marketplace\Model\Sellertransaction
      */
     public function noRouteSellertransaction()
     {
@@ -107,7 +107,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
      *
      * @param int $id
      *
-     * @return \OrionAlliance\NewModule\Api\Data\SellertransactionInterface
+     * @return \Webkul\Marketplace\Api\Data\SellertransactionInterface
      */
     public function setId($id)
     {

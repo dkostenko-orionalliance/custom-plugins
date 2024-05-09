@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction;
+namespace Webkul\Marketplace\Model\ResourceModel\Sellertransaction;
 
-use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
+use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
 
 /**
  * Webkul Marketplace ResourceModel Sellertransaction collection
@@ -30,8 +30,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \OrionAlliance\NewModule\Model\Sellertransaction::class,
-            \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction::class
+            \Webkul\Marketplace\Model\Sellertransaction::class,
+            \Webkul\Marketplace\Model\ResourceModel\Sellertransaction::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

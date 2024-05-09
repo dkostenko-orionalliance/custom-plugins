@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
 use Magento\Framework\App\ResourceConnection;
 
@@ -22,11 +22,11 @@ class SellerIdDataMapper
     protected $resource;
 
     /**
-     * @var \OrionAlliance\NewModule\Helper\Data
+     * @var \Webkul\Marketplace\Helper\Data
      */
     protected $helper;
     /**
-     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
+     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
      */
     protected $mpProductCollectionFactory;
 
@@ -34,13 +34,13 @@ class SellerIdDataMapper
      * Initialization
      *
      * @param ResourceConnection $resource
-     * @param \OrionAlliance\NewModule\Helper\Data $helper
-     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
      */
     public function __construct(
         ResourceConnection $resource,
-        \OrionAlliance\NewModule\Helper\Data $helper,
-        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+        \Webkul\Marketplace\Helper\Data $helper,
+        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
     ) {
         $this->resource = $resource;
         $this->helper = $helper;

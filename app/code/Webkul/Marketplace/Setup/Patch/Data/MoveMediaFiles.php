@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Setup\Patch\Data;
+namespace Webkul\Marketplace\Setup\Patch\Data;
 
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
-use OrionAlliance\NewModule\Model\ControllersRepository;
+use Webkul\Marketplace\Model\ControllersRepository;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 class MoveMediaFiles implements DataPatchInterface
@@ -66,7 +66,7 @@ class MoveMediaFiles implements DataPatchInterface
             $this->createDirectories();
             $directory = $this->filesystem->getDirectoryRead(DirectoryList::MEDIA);
             $ds = "/";
-            $baseModulePath = $this->reader->getModuleDir('', 'OrionAlliance_NewModule');
+            $baseModulePath = $this->reader->getModuleDir('', 'Webkul_Marketplace');
             $mediaDetails = [
                 "avatar" => [
                     "view/base/web/images/avatar" => [

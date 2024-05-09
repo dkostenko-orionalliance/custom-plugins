@@ -1,5 +1,5 @@
 <?php
-namespace OrionAlliance\NewModule\Block;
+namespace Webkul\Marketplace\Block;
 
 use Magento\Customer\Model\Session;
 use Magento\Customer\Api\Data\CustomerInterfaceFactory;

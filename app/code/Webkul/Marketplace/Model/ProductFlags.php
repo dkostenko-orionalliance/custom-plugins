@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
-use OrionAlliance\NewModule\Api\Data\ProductFlagsInterface;
+use Webkul\Marketplace\Api\Data\ProductFlagsInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\MailException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -43,7 +43,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      */
     protected function _construct()
     {
-        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\ProductFlags::class);
+        $this->_init(\Webkul\Marketplace\Model\ResourceModel\ProductFlags::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set Entity Id
      *
      * @param string $entityId
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setEntityId($entityId)
     {
@@ -81,7 +81,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set Product Id
      *
      * @param string $productId
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setProductId($productId)
     {
@@ -102,7 +102,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set reason
      *
      * @param string $reason
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setReason($reason)
     {
@@ -123,7 +123,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set Name
      *
      * @param string $name
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setName($name)
     {
@@ -144,7 +144,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set Email
      *
      * @param string $email
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setEmail($email)
     {
@@ -165,7 +165,7 @@ class ProductFlags extends \Magento\Framework\Model\AbstractModel implements Pro
      * Set CreatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
      */
     public function setCreatedAt($timestamp)
     {

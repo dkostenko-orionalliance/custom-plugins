@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -15,7 +15,7 @@
     <body>
         <referenceBlock name="menu">
             <action method="setActive">
-                <argument name="itemId" xsi:type="string">OrionAlliance_NewModule::product</argument>
+                <argument name="itemId" xsi:type="string">Webkul_Marketplace::product</argument>
             </action>
         </referenceBlock>
         <referenceBlock name="page.title">

@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -176,10 +176,10 @@
                 </item>
             </argument>
         </column>
-        <column name="name" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Customerlink">
+        <column name="name" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Customerlink">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/link</item>
+                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/link</item>
                     <item name="filter" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Seller Name</item>
                     <item name="sortOrder" xsi:type="number">3</item>
@@ -197,7 +197,7 @@
         </column>
         <column name="is_seller">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Seller\Source\Status</item>
+                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Seller\Source\Status</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
@@ -208,10 +208,10 @@
                 </item>
             </argument>
         </column>
-        <column name="flagcount" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Flaglink">
+        <column name="flagcount" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Flaglink">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/link</item>
+                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/link</item>
                     <item name="filter" xsi:type="string">false</item>
                     <item name="label" xsi:type="string" translate="true">Flags</item>
                     <item name="sortOrder" xsi:type="number">6</item>
@@ -283,7 +283,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\ViewAction">
+        <actionsColumn name="actions" class="Webkul\Marketplace\Ui\Component\Listing\Columns\ViewAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">seller_id</item>
@@ -293,10 +293,10 @@
                 </item>
             </argument>
         </actionsColumn>
-        <actionsColumn name="pro_deny" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Sellerdeny">
+        <actionsColumn name="pro_deny" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Sellerdeny">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/sellerdeny</item>
+                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/sellerdeny</item>
                     <item name="indexField" xsi:type="string">seller_id</item>
                     <item name="sortable" xsi:type="boolean">false</item>
                     <item name="label" xsi:type="string" translate="true">Deny</item>

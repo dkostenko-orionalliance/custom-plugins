@@ -3,17 +3,17 @@
  * Webkul Software
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag;
+namespace Webkul\Marketplace\Controller\Adminhtml\Sellerflag;
 
-use OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterfaceFactory;
+use Webkul\Marketplace\Api\Data\SellerFlagReasonInterfaceFactory;
 
-class Delete extends \OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag
+class Delete extends \Webkul\Marketplace\Controller\Adminhtml\Sellerflag
 {
 
     /**

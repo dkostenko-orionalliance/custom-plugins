@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Model;
+namespace Webkul\Marketplace\Model;
 
-use OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface;
+use Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\MailException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -43,7 +43,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      */
     protected function _construct()
     {
-        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\VendorAttributeMapping::class);
+        $this->_init(\Webkul\Marketplace\Model\ResourceModel\VendorAttributeMapping::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      * Set Entity Id
      *
      * @param string $entityId
-     * @return \OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface
+     * @return \Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface
      */
     public function setEntityId($entityId)
     {
@@ -81,7 +81,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      * Set Seller Id
      *
      * @param string $sellerId
-     * @return \OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface
+     * @return \Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface
      */
     public function setSellerId($sellerId)
     {
@@ -102,7 +102,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      * Set attribute id
      *
      * @param string $attributeId
-     * @return \OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface
+     * @return \Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface
      */
     public function setAttributeId($attributeId)
     {
@@ -123,7 +123,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      * Set CreatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface
+     * @return \Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface
      */
     public function setCreatedAt($timestamp)
     {
@@ -144,7 +144,7 @@ class VendorAttributeMapping extends \Magento\Framework\Model\AbstractModel impl
      * Set UpdatedAt
      *
      * @param string $timestamp
-     * @return \OrionAlliance\NewModule\Api\Data\VendorAttributeMappingInterface
+     * @return \Webkul\Marketplace\Api\Data\VendorAttributeMappingInterface
      */
     public function setUpdatedAt($timestamp)
     {

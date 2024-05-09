@@ -3,27 +3,27 @@
  * Webkul Software
  *
  * @category Webkul
- * @package OrionAlliance_NewModule
+ * @package Webkul_Marketplace
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Api\Data;
+namespace Webkul\Marketplace\Api\Data;
 
 interface ProductFlagReasonSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
     /**
      * Get ProductFlag list.
      *
-     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface[]
+     * @return \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface[]
      */
     public function getItems();
 
     /**
      * Set ProductFlag list.
      *
-     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagReasonInterface[] $items
+     * @param \Webkul\Marketplace\Api\Data\ProductFlagReasonInterface[] $items
      * @return $this
      */
     public function setItems(array $items);

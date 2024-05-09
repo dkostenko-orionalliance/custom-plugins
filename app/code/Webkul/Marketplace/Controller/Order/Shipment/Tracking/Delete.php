@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Controller\Order\Shipment\Tracking;
+namespace Webkul\Marketplace\Controller\Order\Shipment\Tracking;
 
-class Delete extends \OrionAlliance\NewModule\Controller\Order
+class Delete extends \Webkul\Marketplace\Controller\Order
 {
     /**
      * Add new tracking number action

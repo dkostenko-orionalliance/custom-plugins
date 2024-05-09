@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,14 +12,14 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="OrionAlliance_NewModule::css/wk_block.css"/>
-        <css src="OrionAlliance_NewModule::css/style.css"/>
+        <css src="Webkul_Marketplace::css/wk_block.css"/>
+        <css src="Webkul_Marketplace::css/style.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="OrionAlliance\NewModule\Block\Sellerlist" name="marketplace_sellerlist" template="OrionAlliance_NewModule::sellerlist.phtml">
+            <block class="Webkul\Marketplace\Block\Sellerlist" name="marketplace_sellerlist" template="Webkul_Marketplace::sellerlist.phtml">
             <arguments>
-                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

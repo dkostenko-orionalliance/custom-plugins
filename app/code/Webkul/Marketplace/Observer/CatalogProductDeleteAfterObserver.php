@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace OrionAlliance\NewModule\Observer;
+namespace Webkul\Marketplace\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
-use OrionAlliance\NewModule\Model\ProductFactory as MpProductFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
+use Webkul\Marketplace\Model\ProductFactory as MpProductFactory;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 /**
  * Webkul Marketplace CatalogProductDeleteAfterObserver Observer.

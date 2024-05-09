@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   OrionAlliance_NewModule
+ * @package   Webkul_Marketplace
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace OrionAlliance\NewModule\Block\Account;
+namespace Webkul\Marketplace\Block\Account;
 
-use OrionAlliance\NewModule\Model\ProductFactory;
-use OrionAlliance\NewModule\Model\OrdersFactory;
-use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
-use OrionAlliance\NewModule\Model\SellertransactionFactory;
-use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use Webkul\Marketplace\Model\ProductFactory;
+use Webkul\Marketplace\Model\OrdersFactory;
+use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
+use Webkul\Marketplace\Model\SellertransactionFactory;
+use Webkul\Marketplace\Helper\Data as MpHelper;
 
 /**
  * Marketplace Navigation link
@@ -78,7 +78,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     protected $orderModel;
 
     /**
-     * @var \OrionAlliance\NewModule\Model\SaleslistFactory
+     * @var \Webkul\Marketplace\Model\SaleslistFactory
      */
     protected $saleslistModel;
 
@@ -106,7 +106,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
      * @param SellertransactionFactory $sellertransaction
      * @param \Magento\Catalog\Model\ProductFactory $productModel
      * @param \Magento\Sales\Model\OrderFactory $orderModel
-     * @param \OrionAlliance\NewModule\Model\SaleslistFactory $saleslistModel
+     * @param \Webkul\Marketplace\Model\SaleslistFactory $saleslistModel
      * @param \Magento\Shipping\Model\Config $shipconfig
      * @param \Magento\Payment\Model\Config $paymentConfig
      * @param MpHelper $mpHelper
@@ -122,7 +122,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
         SellertransactionFactory $sellertransaction,
         \Magento\Catalog\Model\ProductFactory $productModel,
         \Magento\Sales\Model\OrderFactory $orderModel,
-        \OrionAlliance\NewModule\Model\SaleslistFactory $saleslistModel,
+        \Webkul\Marketplace\Model\SaleslistFactory $saleslistModel,
         \Magento\Shipping\Model\Config $shipconfig,
         \Magento\Payment\Model\Config $paymentConfig,
         MpHelper $mpHelper,
@@ -164,7 +164,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     /**
      * Get all marketplce product collection seller wise.
      *
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @return \Webkul\Marketplace\Model\Product
      */
     public function getProductCollection()
     {
@@ -183,7 +183,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     /**
      * Get all marketplce product collection seller wise.
      *
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @return \Webkul\Marketplace\Model\Product
      */
     public function getMarketplaceOrderCollection()
     {
@@ -210,7 +210,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     /**
      * Get all transaction for seller.
      *
-     * @return \OrionAlliance\NewModule\Model\Product
+     * @return \Webkul\Marketplace\Model\Product
      */
     public function getTransactionCollection()
     {
@@ -420,7 +420,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     public function getTransactionNotifyTitle($transactionId)
     {
         $transactionBlock = $this->getLayout()->createBlock(
-            \OrionAlliance\NewModule\Block\Transaction\View::class
+            \Webkul\Marketplace\Block\Transaction\View::class
         );
         $details = $transactionBlock->sellertransactionOrderDetails($transactionId);
         $orderId = $details->getFirstItem()->getMagerealorderId();
@@ -437,7 +437,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
     public function getTransactionNotifyDesc($id)
     {
         $transactionBlock = $this->getLayout()->createBlock(
-            \OrionAlliance\NewModule\Block\Transaction\View::class
+            \Webkul\Marketplace\Block\Transaction\View::class
         );
         $sellerTransation = $this->sellertransactionDetails($id);
         $details = $transactionBlock->sellertransactionOrderDetails($id);
@@ -453,7 +453,7 @@ class Navigation extends \Magento\Framework\View\Element\Html\Link
      * SellertransactionDetails is used to get the Seller Transaction table data by Id
      *
      * @param  int $id
-     * @return \OrionAlliance\NewModule\Model\Sellertransaction
+     * @return \Webkul\Marketplace\Model\Sellertransaction
      */
     public function sellertransactionDetails($id)
     {
