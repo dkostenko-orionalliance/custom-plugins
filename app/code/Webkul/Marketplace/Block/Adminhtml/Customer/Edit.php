@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Adminhtml\Customer;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer;
 
 use Magento\Customer\Model\CustomerFactory;
-use Webkul\Marketplace\Model\SellerFactory;
-use Webkul\Marketplace\Model\SaleperpartnerFactory;
-use Webkul\Marketplace\Model\SaleslistFactory;
-use Webkul\Marketplace\Model\ProductFactory;
+use OrionAlliance\NewModule\Model\SellerFactory;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Model\ProductFactory;
 
 use Magento\Directory\Model\ResourceModel\Country\Collection as CountryCollection;
 
@@ -32,7 +32,7 @@ class Edit extends \Magento\Backend\Block\Widget
     protected $_country;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $_helper;
 
@@ -73,7 +73,7 @@ class Edit extends \Magento\Backend\Block\Widget
      * @param \Magento\Framework\Registry $registry
      * @param CountryCollection $country
      * @param \Magento\Directory\Model\Currency $currency
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      * @param CustomerFactory $customerModel
      * @param SellerFactory $sellerModel
      * @param SaleperpartnerFactory $saleperpartner
@@ -86,7 +86,7 @@ class Edit extends \Magento\Backend\Block\Widget
         \Magento\Framework\Registry $registry,
         CountryCollection $country,
         \Magento\Directory\Model\Currency $currency,
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         CustomerFactory $customerModel,
         SellerFactory $sellerModel,
         SaleperpartnerFactory $saleperpartner,
@@ -189,7 +189,7 @@ class Edit extends \Magento\Backend\Block\Widget
     /**
      * Get sales partner getCollection
      *
-     * @return Webkul\Marketplace\Model\Saleperpartner
+     * @return OrionAlliance\NewModule\Model\Saleperpartner
      */
     public function getSalesPartnerCollection()
     {
@@ -204,7 +204,7 @@ class Edit extends \Magento\Backend\Block\Widget
     /**
      * Get saleslist
      *
-     * @return Webkul\Marketplace\Model\Saleslist
+     * @return OrionAlliance\NewModule\Model\Saleslist
      */
     public function getSalesListCollection()
     {
@@ -239,7 +239,7 @@ class Edit extends \Magento\Backend\Block\Widget
     /**
      * Get product collection
      *
-     * @return Webkul\Marketplace\Model\Product
+     * @return OrionAlliance\NewModule\Model\Product
      */
     public function getProductCollection()
     {
@@ -255,7 +255,7 @@ class Edit extends \Magento\Backend\Block\Widget
     /**
      * Get marketplace user collection
      *
-     * @return Webkul\Marketplace\Model\Seller
+     * @return OrionAlliance\NewModule\Model\Seller
      */
     public function getMarketplaceUserCollection()
     {
@@ -271,7 +271,7 @@ class Edit extends \Magento\Backend\Block\Widget
     /**
      * Get marketplace seller collection
      *
-     * @return Webkul\Marketplace\Model\Seller
+     * @return OrionAlliance\NewModule\Model\Seller
      */
     public function getMarketplaceSellerCollection()
     {

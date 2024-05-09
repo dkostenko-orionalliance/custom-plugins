@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,7 +12,7 @@
 /**
  * Marketplace Product variations matrix block.
  */
-namespace Webkul\Marketplace\Block\Product\Edit\Variations\Config;
+namespace OrionAlliance\NewModule\Block\Product\Edit\Variations\Config;
 
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable;
 use Magento\ConfigurableProduct\Model\Product\Type\VariationMatrix;

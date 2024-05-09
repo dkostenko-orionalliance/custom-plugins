@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\CustomerData\Rewrite\Checkout;
+namespace OrionAlliance\NewModule\CustomerData\Rewrite\Checkout;
 
 /**
  * Cart source
@@ -16,7 +16,7 @@ namespace Webkul\Marketplace\CustomerData\Rewrite\Checkout;
 class Cart extends \Magento\Checkout\CustomerData\Cart
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $_marketplaceHelper;
 
@@ -27,7 +27,7 @@ class Cart extends \Magento\Checkout\CustomerData\Cart
      * @param \Magento\Checkout\Helper\Data $checkoutHelper
      * @param \Magento\Checkout\CustomerData\ItemPoolInterface $itemPoolInterface
      * @param \Magento\Framework\View\LayoutInterface $layout
-     * @param \Webkul\Marketplace\Helper\Data $marketplaceHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $marketplaceHelper
      * @param array $data
      */
     public function __construct(
@@ -37,7 +37,7 @@ class Cart extends \Magento\Checkout\CustomerData\Cart
         \Magento\Checkout\Helper\Data $checkoutHelper,
         \Magento\Checkout\CustomerData\ItemPoolInterface $itemPoolInterface,
         \Magento\Framework\View\LayoutInterface $layout,
-        \Webkul\Marketplace\Helper\Data $marketplaceHelper,
+        \OrionAlliance\NewModule\Helper\Data $marketplaceHelper,
         array $data = []
     ) {
         $this->_marketplaceHelper = $marketplaceHelper;

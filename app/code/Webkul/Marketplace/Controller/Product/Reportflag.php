@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Product;
+namespace OrionAlliance\NewModule\Controller\Product;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Helper\Email as MpEmailData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Email as MpEmailData;
 use Magento\Framework\Json\Helper\Data as JsonHelper;
 
 /**
@@ -43,7 +43,7 @@ class Reportflag extends Action
     protected $date;
 
     /**
-     * @var \Webkul\Marketplace\Model\ProductFlagsFactory
+     * @var \OrionAlliance\NewModule\Model\ProductFlagsFactory
      */
     protected $productFlags;
 
@@ -55,7 +55,7 @@ class Reportflag extends Action
      * @param MpEmailData $mpEmailHelper
      * @param JsonHelper $jsonHelper
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
-     * @param \Webkul\Marketplace\Model\ProductFlagsFactory $productFlags
+     * @param \OrionAlliance\NewModule\Model\ProductFlagsFactory $productFlags
      */
     public function __construct(
         Context $context,
@@ -63,7 +63,7 @@ class Reportflag extends Action
         MpEmailData $mpEmailHelper,
         JsonHelper $jsonHelper,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
-        \Webkul\Marketplace\Model\ProductFlagsFactory $productFlags
+        \OrionAlliance\NewModule\Model\ProductFlagsFactory $productFlags
     ) {
         $this->helper = $helper;
         $this->mpEmailHelper = $mpEmailHelper;

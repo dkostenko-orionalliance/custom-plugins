@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Ui\Component\Listing\Columns;
+namespace OrionAlliance\NewModule\Ui\Component\Listing\Columns;
 
 class ProductStatus extends \Magento\Ui\Component\Listing\Columns\Column
 {

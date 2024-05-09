@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Transaction;
+namespace OrionAlliance\NewModule\Block\Transaction;
 
-use Webkul\Marketplace\Model\ResourceModel\Sellertransaction\CollectionFactory;
-use Webkul\Marketplace\Model\ResourceModel\Saleperpartner\CollectionFactory as SalePerPartnerCollectionFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner\CollectionFactory as SalePerPartnerCollectionFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 
 class History extends \Magento\Framework\View\Element\Template
 {
@@ -98,7 +98,7 @@ class History extends \Magento\Framework\View\Element\Template
     /**
      * Get all transaction
      *
-     * @return bool|\Webkul\Marketplace\Model\ResourceModel\Sellertransaction\Collection
+     * @return bool|\OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction\Collection
      */
     public function getAllTransaction()
     {

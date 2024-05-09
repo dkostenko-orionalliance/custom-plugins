@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Account;
+namespace OrionAlliance\NewModule\Controller\Account;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -25,17 +25,17 @@ class Chart extends \Magento\Framework\App\Action\Action
     protected $_customerSession;
 
     /**
-     * @var \Webkul\Marketplace\Block\Account\Dashboard\Diagrams
+     * @var \OrionAlliance\NewModule\Block\Account\Dashboard\Diagrams
      */
     protected $diagrams;
 
     /**
-     * @var \Webkul\Marketplace\Block\Account\Dashboard\LocationChart
+     * @var \OrionAlliance\NewModule\Block\Account\Dashboard\LocationChart
      */
     protected $locationChart;
 
     /**
-     * @var \Webkul\Marketplace\Block\Account\Dashboard\CategoryChart
+     * @var \OrionAlliance\NewModule\Block\Account\Dashboard\CategoryChart
      */
     protected $categoryChart;
 
@@ -46,17 +46,17 @@ class Chart extends \Magento\Framework\App\Action\Action
     /**
      * @param Context                                                     $context
      * @param Session                                                     $customerSession
-     * @param \Webkul\Marketplace\Block\Account\Dashboard\Diagrams        $diagrams
-     * @param \Webkul\Marketplace\Block\Account\Dashboard\LocationChart   $locationChart
-     * @param \Webkul\Marketplace\Block\Account\Dashboard\CategoryChart   $categoryChart
+     * @param \OrionAlliance\NewModule\Block\Account\Dashboard\Diagrams        $diagrams
+     * @param \OrionAlliance\NewModule\Block\Account\Dashboard\LocationChart   $locationChart
+     * @param \OrionAlliance\NewModule\Block\Account\Dashboard\CategoryChart   $categoryChart
      * @param \Magento\Framework\Json\Helper\Data                         $jsonHelper
      */
     public function __construct(
         Context $context,
         Session $customerSession,
-        \Webkul\Marketplace\Block\Account\Dashboard\Diagrams $diagrams,
-        \Webkul\Marketplace\Block\Account\Dashboard\LocationChart $locationChart,
-        \Webkul\Marketplace\Block\Account\Dashboard\CategoryChart $categoryChart,
+        \OrionAlliance\NewModule\Block\Account\Dashboard\Diagrams $diagrams,
+        \OrionAlliance\NewModule\Block\Account\Dashboard\LocationChart $locationChart,
+        \OrionAlliance\NewModule\Block\Account\Dashboard\CategoryChart $categoryChart,
         \Magento\Framework\Json\Helper\Data $jsonHelper
     ) {
         $this->_customerSession = $customerSession;

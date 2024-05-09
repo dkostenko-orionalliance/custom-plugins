@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Controller\RegistryConstants;
 use Magento\Ui\Component\Layout\Tabs\TabInterface;
@@ -31,14 +31,14 @@ class AssignCategoryTab extends Generic implements TabInterface
      * @param \Magento\Backend\Block\Template\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Framework\Data\FormFactory $formFactory
-     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
+     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
      * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
-        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
+        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = []
     ) {
         $this->_coreRegistry = $registry;
@@ -188,7 +188,7 @@ class AssignCategoryTab extends Generic implements TabInterface
         $html = parent::getFormHtml();
         $html .= $this->getLayout()
                     ->createBlock(
-                        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\AssignCategory::class
+                        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\AssignCategory::class
                     )->toHtml();
 
         return $html;

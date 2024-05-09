@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Ui\Component\Listing\Columns;
+namespace OrionAlliance\NewModule\Ui\Component\Listing\Columns;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory;
-use Webkul\Marketplace\Helper\Orders as HelperOrders;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Orders as HelperOrders;
 
 class Orderprodetails extends Column
 {

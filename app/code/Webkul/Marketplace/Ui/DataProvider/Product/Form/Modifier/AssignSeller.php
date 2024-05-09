@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Ui\DataProvider\Product\Form\Modifier;
+namespace OrionAlliance\NewModule\Ui\DataProvider\Product\Form\Modifier;
 
 use Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\AbstractModifier;
 use Magento\Ui\Component\Form\Fieldset;
@@ -24,18 +24,18 @@ class AssignSeller extends AbstractModifier
     protected $coreRegistry;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
     /**
      * Construct
      *
      * @param \Magento\Framework\Registry $coreRegistry
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      */
     public function __construct(
         \Magento\Framework\Registry  $coreRegistry,
-        \Webkul\Marketplace\Helper\Data $helper
+        \OrionAlliance\NewModule\Helper\Data $helper
     ) {
         $this->coreRegistry = $coreRegistry;
         $this->helper = $helper;

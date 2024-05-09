@@ -3,24 +3,24 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Webkul\Marketplace\Api\Data\OrdersInterface;
+use OrionAlliance\NewModule\Api\Data\OrdersInterface;
 use Magento\Framework\DataObject\IdentityInterface;
-use Webkul\Marketplace\Model\Saleslist;
+use OrionAlliance\NewModule\Model\Saleslist;
 
 /**
  * Marketplace Orders Model.
  *
- * @method \Webkul\Marketplace\Model\ResourceModel\Orders _getResource()
- * @method \Webkul\Marketplace\Model\ResourceModel\Orders getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Orders _getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Orders getResource()
  */
 class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
 {
@@ -52,7 +52,7 @@ class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\Orders::class
+            \OrionAlliance\NewModule\Model\ResourceModel\Orders::class
         );
     }
 
@@ -76,7 +76,7 @@ class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
     /**
      * Load No-Route Orders.
      *
-     * @return \Webkul\Marketplace\Model\Orders
+     * @return \OrionAlliance\NewModule\Model\Orders
      */
     public function noRouteOrders()
     {
@@ -124,7 +124,7 @@ class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
      *
      * @param int $id
      *
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setId($id)
     {
@@ -145,7 +145,7 @@ class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
      * Set Created Time
      *
      * @param string $createdAt
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setCreatedAt($createdAt)
     {
@@ -166,7 +166,7 @@ class Orders extends AbstractModel implements OrdersInterface, IdentityInterface
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setUpdatedAt($updatedAt)
     {

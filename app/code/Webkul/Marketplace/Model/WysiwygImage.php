@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
-use Webkul\Marketplace\Api\Data\WysiwygImageInterface;
+use OrionAlliance\NewModule\Api\Data\WysiwygImageInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 use Magento\Framework\Model\AbstractModel;
 
@@ -34,7 +34,7 @@ class WysiwygImage extends AbstractModel implements WysiwygImageInterface, Ident
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\WysiwygImage::class
+            \OrionAlliance\NewModule\Model\ResourceModel\WysiwygImage::class
         );
     }
 

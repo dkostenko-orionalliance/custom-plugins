@@ -3,28 +3,28 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
-use Webkul\Marketplace\Api\Data\ProductSearchResultInterfaceFactory as SearchResultFactory;
+use OrionAlliance\NewModule\Api\Data\ProductSearchResultInterfaceFactory as SearchResultFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 
 /**
  * Marketplace ProductRepository Class
  */
-class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInterface
+class ProductRepository implements \OrionAlliance\NewModule\Api\ProductRepositoryInterface
 {
     /**
-     * @var \Webkul\Marketplace\Model\SaleslistFactory
+     * @var \OrionAlliance\NewModule\Model\SaleslistFactory
      */
     protected $modelFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory
      */
     protected $collectionFactory;
     /**
@@ -38,14 +38,14 @@ class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInte
 
     /**
      * ProductRepository constructor.
-     * @param \Webkul\Marketplace\Model\ProductFactory $modelFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $collectionFactory
+     * @param \OrionAlliance\NewModule\Model\ProductFactory $modelFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $collectionFactory
      * @param SearchResultFactory $searchResultFactory
      * @param CollectionProcessorInterface $collectionProcessor
      */
     public function __construct(
-        \Webkul\Marketplace\Model\ProductFactory $modelFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
+        \OrionAlliance\NewModule\Model\ProductFactory $modelFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
         SearchResultFactory $searchResultFactory,
         CollectionProcessorInterface $collectionProcessor
     ) {
@@ -59,7 +59,7 @@ class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInte
      * Get marketplace product by id
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Model\Product
+     * @return \OrionAlliance\NewModule\Model\Product
      */
     public function getById($id)
     {
@@ -75,10 +75,10 @@ class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInte
     /**
      * Save marketplace product
      *
-     * @param \Webkul\Marketplace\Model\Product $product
-     * @return \Webkul\Marketplace\Model\Product
+     * @param \OrionAlliance\NewModule\Model\Product $product
+     * @return \OrionAlliance\NewModule\Model\Product
      */
-    public function save(\Webkul\Marketplace\Model\Product $product)
+    public function save(\OrionAlliance\NewModule\Model\Product $product)
     {
         try {
             $product->save();
@@ -98,7 +98,7 @@ class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInte
      */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $creteria)
     {
-        /** @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection $collection */
+        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection $collection */
         $collection = $this->collectionFactory->create();
 
         $this->collectionProcessor->process($creteria, $collection);
@@ -116,10 +116,10 @@ class ProductRepository implements \Webkul\Marketplace\Api\ProductRepositoryInte
     /**
      * Delete product
      *
-     * @param \Webkul\Marketplace\Model\Product $product
+     * @param \OrionAlliance\NewModule\Model\Product $product
      * @return boolean
      */
-    public function delete(\Webkul\Marketplace\Model\Product $product)
+    public function delete(\OrionAlliance\NewModule\Model\Product $product)
     {
         try {
             $product->delete();

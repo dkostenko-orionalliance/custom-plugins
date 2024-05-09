@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \Webkul\Marketplace\Block\Account\Dashboard */
+/** @var $block \OrionAlliance\NewModule\Block\Account\Dashboard */
 $viewModel = $block->getViewModel();
 $helper = $viewModel->getHelper();
 $captchaEnableStatus = $helper->getCaptchaEnable();
@@ -35,6 +35,12 @@ $block->getTopSaleCategories();
         padding: 4px 15px;
     }
 </style>
+<div>
+    Hi Dmitrii,
+</div>
+<div>
+    Welcome to SpecialistsGrid Vendor dashboard!
+</div>
 <div class="wk-mp-page-title page-title">
     <button class="button askque" id="askque"><span><?= /* @noEscape */ __('Ask Question to Admin') ?></span></button>
 </div>

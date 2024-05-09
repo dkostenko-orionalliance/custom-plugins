@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Transaction;
+namespace OrionAlliance\NewModule\Controller\Transaction;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\RequestInterface;
-use Webkul\Marketplace\Model\Sellertransaction;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
-use Webkul\Marketplace\Model\Notification;
+use OrionAlliance\NewModule\Model\Sellertransaction;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\Notification;
 use Magento\Customer\Model\Url as CustomerUrl;
 
 /**

@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Order\Creditmemo\Totals;
+namespace OrionAlliance\NewModule\Block\Order\Creditmemo\Totals;
 
-class Cod extends \Webkul\Marketplace\Block\Order\Totals\Cod
+class Cod extends \OrionAlliance\NewModule\Block\Order\Totals\Cod
 {
     /**
      * Add Cod total string

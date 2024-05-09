@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Product\Gallery;
+namespace OrionAlliance\NewModule\Controller\Product\Gallery;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;

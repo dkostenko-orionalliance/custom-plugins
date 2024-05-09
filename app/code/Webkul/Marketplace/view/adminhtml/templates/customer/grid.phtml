@@ -1,0 +1,21 @@
+<table class="data grid" id="customer_custom_attributes_grid">
+    <thead>
+        <tr>
+            <th><?= __('Attribute Code') ?></th>
+            <th><?= __('Attribute Label') ?></th>
+            <th><?= __('Actions') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($customAttributes as $attribute): ?>
+            <tr>
+                <td><?= $attribute->getAttributeCode() ?></td>
+                <td><?= $attribute->getAttributeLabel() ?></td>
+                <td>
+                    <a href="<?= $block->getUrl('customer_attributes/edit', ['id' => $attribute->getId()]) ?>"><?= __('Edit') ?></a> | 
+                    <a href="<?= $block->getUrl('customer_attributes/delete', ['id' => $attribute->getId()]) ?>" onclick="return confirm('Are you sure you want to delete this attribute?')"><?= __('Delete') ?></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

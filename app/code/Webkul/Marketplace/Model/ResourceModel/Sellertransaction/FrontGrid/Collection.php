@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\Sellertransaction\FrontGrid;
+namespace OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction\FrontGrid;
 
 use Magento\Framework\Api\Search\SearchResultInterface as ApiSearchResultInterface;
-use Webkul\Marketplace\Model\ResourceModel\Sellertransaction\Collection as SellertransactionCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction\Collection as SellertransactionCollection;
 use Magento\Framework\Search\AggregationInterface as SearchAggregationInterface;
 use Magento\Framework\Data\Collection\EntityFactoryInterface;
 use Psr\Log\LoggerInterface;
@@ -21,10 +21,10 @@ use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Event\ManagerInterface as EventManagerInterface;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb as ResourceModelAbstractDb;
 
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 /**
- * Webkul\Marketplace\Model\ResourceModel\Sellertransaction\Grid\Collection Class
+ * OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction\Grid\Collection Class
  * Collection for displaying grid of marketplace sellertransaction.
  */
 class Collection extends SellertransactionCollection implements ApiSearchResultInterface

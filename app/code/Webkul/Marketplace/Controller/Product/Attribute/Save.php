@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Product\Attribute;
+namespace OrionAlliance\NewModule\Controller\Product\Attribute;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
@@ -16,12 +16,12 @@ use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\DB\Select as DBSelect;
 use Magento\Framework\Encryption\EncryptorInterface;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 use Magento\Catalog\Model\ResourceModel\Product\Attribute\Collection as AttributeCollection;
 use Magento\Catalog\Model\ResourceModel\Eav\Attribute as EavAttribute;
 use Magento\Catalog\Model\Product\Url as ProductUrl;
 use Magento\Eav\Model\Entity as EntityModel;
-use Webkul\Marketplace\Model\VendorAttributeMappingFactory as VendorAttrMappingFactory;
+use OrionAlliance\NewModule\Model\VendorAttributeMappingFactory as VendorAttrMappingFactory;
 
 /**
  * Webkul Marketplace Product Attribute Save controller.

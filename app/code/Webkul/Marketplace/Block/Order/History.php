@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Order;
+namespace OrionAlliance\NewModule\Block\Order;
 
 /*
  * Webkul Marketplace Order History Block
  */
 use Magento\Sales\Model\OrderFactory;
 use Magento\Customer\Model\Customer;
-use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory;
-use Webkul\Marketplace\Model\SaleslistFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\OrdersFactory as MpOrderModel;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\OrdersFactory as MpOrderModel;
 
 class History extends \Magento\Framework\View\Element\Template
 {
@@ -55,7 +55,7 @@ class History extends \Magento\Framework\View\Element\Template
     /** @var SaleslistFactory */
     public $saleslistModel;
 
-    /** @var Webkul\Marketplace\Helper\Orders */
+    /** @var OrionAlliance\NewModule\Helper\Orders */
     public $ordersHelper;
     /**
      * @var MpHelper
@@ -71,7 +71,7 @@ class History extends \Magento\Framework\View\Element\Template
      * @param \Magento\Sales\Model\OrderRepository             $orderRepository
      * @param \Magento\Catalog\Model\ProductRepository         $productRepository
      * @param SaleslistFactory                                 $saleslistModel
-     * @param \Webkul\Marketplace\Helper\Orders                $ordersHelper
+     * @param \OrionAlliance\NewModule\Helper\Orders                $ordersHelper
      * @param MpHelper                                         $mpHelper
      * @param MpOrderModel                                     $mpOrderModel
      * @param array                                            $data
@@ -85,7 +85,7 @@ class History extends \Magento\Framework\View\Element\Template
         \Magento\Sales\Model\OrderRepository $orderRepository,
         \Magento\Catalog\Model\ProductRepository $productRepository,
         SaleslistFactory $saleslistModel,
-        \Webkul\Marketplace\Helper\Orders $ordersHelper,
+        \OrionAlliance\NewModule\Helper\Orders $ordersHelper,
         MpHelper $mpHelper,
         MpOrderModel $mpOrderModel,
         array $data = []
@@ -128,7 +128,7 @@ class History extends \Magento\Framework\View\Element\Template
     /**
      * Get all sales order
      *
-     * @return bool|\Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection
+     * @return bool|\OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection
      */
     public function getAllSalesOrder()
     {

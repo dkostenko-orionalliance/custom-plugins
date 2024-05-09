@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Order\Additional;
+namespace OrionAlliance\NewModule\Block\Order\Additional;
 
 class Info extends \Magento\Framework\View\Element\Template
 {

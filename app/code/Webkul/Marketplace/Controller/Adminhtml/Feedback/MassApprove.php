@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Adminhtml\Feedback;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Feedback;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
 
 /**
  * Class MassApprove used to multiple feedback approved.
@@ -43,7 +43,7 @@ class MassApprove extends \Magento\Backend\App\Action
     protected $dateTime;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -57,7 +57,7 @@ class MassApprove extends \Magento\Backend\App\Action
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param \Magento\Framework\Stdlib\DateTime          $dateTime
      * @param CollectionFactory                           $collectionFactory
-     * @param \Webkul\Marketplace\Helper\Data             $helper
+     * @param \OrionAlliance\NewModule\Helper\Data             $helper
      * @param NotificationHelper                          $notificationHelper
      */
     public function __construct(
@@ -66,7 +66,7 @@ class MassApprove extends \Magento\Backend\App\Action
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\Stdlib\DateTime $dateTime,
         CollectionFactory $collectionFactory,
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         NotificationHelper $notificationHelper
     ) {
         $this->filter = $filter;
@@ -96,7 +96,7 @@ class MassApprove extends \Magento\Backend\App\Action
             $item->save();
             $reviewId = $item->getId();
             $this->notificationHelper->saveNotification(
-                \Webkul\Marketplace\Model\Notification::TYPE_REVIEW,
+                \OrionAlliance\NewModule\Model\Notification::TYPE_REVIEW,
                 $reviewId,
                 $reviewId
             );
@@ -124,6 +124,6 @@ class MassApprove extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::feedback');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::feedback');
     }
 }

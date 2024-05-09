@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Ui\DataProvider\Product;
+namespace OrionAlliance\NewModule\Ui\DataProvider\Product;
 
 use Magento\Catalog\Ui\DataProvider\Product\Related\AbstractDataProvider as CatalogAbstractDataProvider;
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -21,8 +21,8 @@ use Magento\Framework\App\RequestInterface;
 use Magento\Catalog\Api\ProductLinkRepositoryInterface;
 use Magento\Store\Api\Data\StoreInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
-use Webkul\Marketplace\Model\ProductFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\ProductFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 
 /**
  * Class AbstractDataProvider

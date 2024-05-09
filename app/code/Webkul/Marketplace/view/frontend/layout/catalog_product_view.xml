@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,19 +12,19 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Webkul_Marketplace::css/wk_block.css"/>
-        <css src="Webkul_Marketplace::css/style.css"/>
+        <css src="OrionAlliance_NewModule::css/wk_block.css"/>
+        <css src="OrionAlliance_NewModule::css/style.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Webkul\Marketplace\Block\Sellerblock" name="marketplace_sellerprofile22"/>
+            <block class="OrionAlliance\NewModule\Block\Sellerblock" name="marketplace_sellerprofile22"/>
         </referenceContainer>
         <referenceBlock name="marketplace_sellerprofile22">
             <action method="setTemplate" ifconfig="marketplace/profile_settings/seller_profile_display">
-                <argument name="template" xsi:type="string">Webkul_Marketplace::wk_block.phtml</argument>
+                <argument name="template" xsi:type="string">OrionAlliance_NewModule::wk_block.phtml</argument>
             </action>
             <arguments>
-                <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
             </arguments>
         </referenceBlock>
     </body>

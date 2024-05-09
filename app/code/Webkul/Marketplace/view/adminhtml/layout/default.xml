@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,18 +12,18 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Webkul_Marketplace::css/style.css"/>
-        <css src="Webkul_Marketplace::css/configtab.css"/>
+        <css src="OrionAlliance_NewModule::css/style.css"/>
+        <css src="OrionAlliance_NewModule::css/configtab.css"/>
     </head>
     <body>
         <referenceContainer name="root">
-            <block class="Webkul\Marketplace\Block\Adminhtml\Notification" name="notification_template" after="-" template="Webkul_Marketplace::notification/notification.phtml">
+            <block class="OrionAlliance\NewModule\Block\Adminhtml\Notification" name="notification_template" after="-" template="OrionAlliance_NewModule::notification/notification.phtml">
                 <!-- call js file using js component -->
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
                             <item name="notification-content" xsi:type="array">
-                                <item name="component" xsi:type="string">Webkul_Marketplace/js/notification</item>
+                                <item name="component" xsi:type="string">OrionAlliance_NewModule/js/notification</item>
                             </item>
                         </item>
                     </argument>

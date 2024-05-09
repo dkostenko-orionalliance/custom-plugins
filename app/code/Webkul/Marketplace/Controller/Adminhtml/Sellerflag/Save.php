@@ -3,12 +3,12 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Sellerflag;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag;
 
 use Magento\Framework\Exception\LocalizedException;
 
@@ -16,12 +16,12 @@ class Save extends \Magento\Backend\App\Action
 {
 
     /**
-     * @var \Webkul\Marketplace\Model\SellerFlagReasonFactory
+     * @var \OrionAlliance\NewModule\Model\SellerFlagReasonFactory
      */
     protected $sellerFlagFactory;
 
     /**
-     * @var \Webkul\Marketplace\Api\SellerFlagReasonRepositoryInterface
+     * @var \OrionAlliance\NewModule\Api\SellerFlagReasonRepositoryInterface
      */
     protected $sellerFlagRepository;
 
@@ -38,15 +38,15 @@ class Save extends \Magento\Backend\App\Action
     * Construct
     *
     * @param \Magento\Backend\App\Action\Context $context
-    * @param \Webkul\Marketplace\Model\SellerFlagReasonFactory $sellerFlagFactory
-    * @param \Webkul\Marketplace\Api\SellerFlagReasonRepositoryInterface $sellerFlagRepository
+    * @param \OrionAlliance\NewModule\Model\SellerFlagReasonFactory $sellerFlagFactory
+    * @param \OrionAlliance\NewModule\Api\SellerFlagReasonRepositoryInterface $sellerFlagRepository
     * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
     * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
     */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Webkul\Marketplace\Model\SellerFlagReasonFactory $sellerFlagFactory,
-        \Webkul\Marketplace\Api\SellerFlagReasonRepositoryInterface $sellerFlagRepository,
+        \OrionAlliance\NewModule\Model\SellerFlagReasonFactory $sellerFlagFactory,
+        \OrionAlliance\NewModule\Api\SellerFlagReasonRepositoryInterface $sellerFlagRepository,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
     ) {
@@ -110,6 +110,6 @@ class Save extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::sellerflag');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::sellerflag');
     }
 }

@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Webkul\Marketplace\Api\Data\OrderPendingMailsInterface;
+use OrionAlliance\NewModule\Api\Data\OrderPendingMailsInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace OrderPendingMails Model.
  *
- * @method \Webkul\Marketplace\Model\ResourceModel\OrderPendingMails _getResource()
- * @method \Webkul\Marketplace\Model\ResourceModel\OrderPendingMails getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\OrderPendingMails _getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\OrderPendingMails getResource()
  */
 class OrderPendingMails extends AbstractModel implements OrderPendingMailsInterface, IdentityInterface
 {
@@ -60,7 +60,7 @@ class OrderPendingMails extends AbstractModel implements OrderPendingMailsInterf
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\OrderPendingMails::class
+            \OrionAlliance\NewModule\Model\ResourceModel\OrderPendingMails::class
         );
     }
 
@@ -84,7 +84,7 @@ class OrderPendingMails extends AbstractModel implements OrderPendingMailsInterf
     /**
      * Load No-Route OrderPendingMails.
      *
-     * @return \Webkul\Marketplace\Model\OrderPendingMails
+     * @return \OrionAlliance\NewModule\Model\OrderPendingMails
      */
     public function noRouteOrderPendingMails()
     {
@@ -116,7 +116,7 @@ class OrderPendingMails extends AbstractModel implements OrderPendingMailsInterf
      *
      * @param int $id
      *
-     * @return \Webkul\Marketplace\Api\Data\OrderPendingMailsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrderPendingMailsInterface
      */
     public function setId($id)
     {

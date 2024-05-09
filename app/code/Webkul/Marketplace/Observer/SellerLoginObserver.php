@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Observer;
+namespace OrionAlliance\NewModule\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 
 class SellerLoginObserver implements ObserverInterface
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $_helper;
 
@@ -37,13 +37,13 @@ class SellerLoginObserver implements ObserverInterface
     protected $_urlBuilder;
 
     /**
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Customer\Model\Url $customerUrl
      * @param \Magento\Framework\UrlInterface $urlBuilder
      */
     public function __construct(
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Customer\Model\Url $customerUrl,
         \Magento\Framework\UrlInterface $urlBuilder

@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\ResourceModel\Saleperpartner;
+namespace OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner;
 
-use \Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
+use \OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
 
 /**
  * Webkul Marketplace ResourceModel Saleperpartner collection
@@ -30,8 +30,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\Saleperpartner::class,
-            \Webkul\Marketplace\Model\ResourceModel\Saleperpartner::class
+            \OrionAlliance\NewModule\Model\Saleperpartner::class,
+            \OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

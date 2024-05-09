@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Plugin\Order;
+namespace OrionAlliance\NewModule\Model\Plugin\Order;
 
 /**
  * Marketplace Order PDF InvoicePdfHeader Plugin
@@ -21,7 +21,7 @@ class InvoicePdfHeader
     protected $invoiceModel;
 
     /**
-     * @var Webkul\Marketplace\Helper\Data
+     * @var OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -29,11 +29,11 @@ class InvoicePdfHeader
      * Construct
      *
      * @param \Magento\Sales\Model\Order\InvoiceFactory $invoiceModel
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      */
     public function __construct(
         \Magento\Sales\Model\Order\InvoiceFactory $invoiceModel,
-        \Webkul\Marketplace\Helper\Data $helper
+        \OrionAlliance\NewModule\Helper\Data $helper
     ) {
         $this->invoiceModel = $invoiceModel;
         $this->helper = $helper;
@@ -41,12 +41,12 @@ class InvoicePdfHeader
     /**
      * Insert title and number for concrete document type
      *
-     * @param \Webkul\Marketplace\Model\Order\Pdf\Invoice $pdfInvoice
+     * @param \OrionAlliance\NewModule\Model\Order\Pdf\Invoice $pdfInvoice
      * @param \Zend_Pdf_Page $page
      * @param string $text
      * @return void
      */
-    public function beforeInsertDocumentNumber(\Webkul\Marketplace\Model\Order\Pdf\Invoice $pdfInvoice, $page, $text)
+    public function beforeInsertDocumentNumber(\OrionAlliance\NewModule\Model\Order\Pdf\Invoice $pdfInvoice, $page, $text)
     {
         $invoiceArr = explode(__('Invoice # '), $text);
         $invoiceIncrementedId = $invoiceArr[1];

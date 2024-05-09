@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Account;
+namespace OrionAlliance\NewModule\Block\Account;
 
-use Webkul\Marketplace\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
 
 class Earnings extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $mpHelper;
     /**
@@ -28,13 +28,13 @@ class Earnings extends \Magento\Framework\View\Element\Template
      *
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param SaleslistFactory $saleslistFactory
-     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
      * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         SaleslistFactory $saleslistFactory,
-        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \OrionAlliance\NewModule\Helper\Data $mpHelper,
         array $data = []
     ) {
         $this->mpHelper = $mpHelper;

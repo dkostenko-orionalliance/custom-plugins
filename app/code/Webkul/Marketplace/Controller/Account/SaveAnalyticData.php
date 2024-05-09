@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Account;
+namespace OrionAlliance\NewModule\Controller\Account;
 
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
 use Magento\Framework\App\RequestInterface;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 use Magento\Customer\Model\Url as CustomerUrl;
-use Webkul\Marketplace\Model\SaleperpartnerFactory as MpSalesPartner;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory as MpSalesPartner;
 
 /**
  * Webkul Marketplace Account Save Google Anaylytic Informartion Controller.

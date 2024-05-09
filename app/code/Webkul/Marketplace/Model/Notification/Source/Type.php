@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Notification\Source;
+namespace OrionAlliance\NewModule\Model\Notification\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
-use Webkul\Marketplace\Model\Notification;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Model\Notification;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 /**
  * Class Type is used tp get the Notification types

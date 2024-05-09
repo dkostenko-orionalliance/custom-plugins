@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Helper\Product;
+namespace OrionAlliance\NewModule\Helper\Product;
 
 use Magento\Framework\View\Result\Page as ResultPage;
 
 class View extends \Magento\Catalog\Helper\Product\View
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Product
+     * @var \OrionAlliance\NewModule\Helper\Product
      */
     protected $mpProductHelper;
 
@@ -29,7 +29,7 @@ class View extends \Magento\Catalog\Helper\Product\View
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Framework\Message\ManagerInterface $messageManager
      * @param \Magento\CatalogUrlRewrite\Model\CategoryUrlPathGenerator $categoryUrlPathGenerator
-     * @param \Webkul\Marketplace\Helper\Product $mpProductHelper
+     * @param \OrionAlliance\NewModule\Helper\Product $mpProductHelper
      * @param \Magento\Framework\Stdlib\StringUtils $string
      * @param array $messageGroups
      */
@@ -41,7 +41,7 @@ class View extends \Magento\Catalog\Helper\Product\View
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Framework\Message\ManagerInterface $messageManager,
         \Magento\CatalogUrlRewrite\Model\CategoryUrlPathGenerator $categoryUrlPathGenerator,
-        \Webkul\Marketplace\Helper\Product $mpProductHelper,
+        \OrionAlliance\NewModule\Helper\Product $mpProductHelper,
         \Magento\Framework\Stdlib\StringUtils $string,
         array $messageGroups = []
     ) {

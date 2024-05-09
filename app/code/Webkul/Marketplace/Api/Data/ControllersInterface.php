@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api\Data;
+namespace OrionAlliance\NewModule\Api\Data;
 
 /**
  * Marketplace Controllers interface.
@@ -47,7 +47,7 @@ interface ControllersInterface
      * Set ID
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setId($id);
 
@@ -62,7 +62,7 @@ interface ControllersInterface
      * Set Module Name
      *
      * @param int $modulename
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setModuleName($modulename);
 
@@ -77,7 +77,7 @@ interface ControllersInterface
      * Set controller path
      *
      * @param int $controllerPath
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setControllerPath($controllerPath);
 
@@ -92,7 +92,7 @@ interface ControllersInterface
      * Set Label
      *
      * @param int $label
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setLabel($label);
 
@@ -107,7 +107,7 @@ interface ControllersInterface
      * Set Is Child value
      *
      * @param int $isChild
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setIsChild($isChild);
 
@@ -122,7 +122,7 @@ interface ControllersInterface
      * Set Parent Id
      *
      * @param int $parentId
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setParentId($parentId);
 
@@ -137,7 +137,7 @@ interface ControllersInterface
      * Set Created Time
      *
      * @param string $createdAt
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setCreatedAt($createdAt);
 
@@ -152,7 +152,7 @@ interface ControllersInterface
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function setUpdatedAt($updatedAt);
 }

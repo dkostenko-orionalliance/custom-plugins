@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Adminhtml\Seller;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Seller;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
-use Webkul\Marketplace\Helper\Data as MpDataHelper;
+use OrionAlliance\NewModule\Helper\Data as MpDataHelper;
 
 /**
  * Marketplace Seller Shop URL Verify controller.
@@ -32,7 +32,7 @@ class Usernameverify extends Action
     protected $_jsonHelper;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory
      */
     protected $_sellerCollectionFactory;
 
@@ -42,13 +42,13 @@ class Usernameverify extends Action
      * @param Context $context
      * @param PageFactory $resultPageFactory
      * @param \Magento\Framework\Json\Helper\Data $jsonHelper
-     * @param \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
      */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         \Magento\Framework\Json\Helper\Data $jsonHelper,
-        \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
+        \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->_jsonHelper = $jsonHelper;

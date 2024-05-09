@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api\Data;
+namespace OrionAlliance\NewModule\Api\Data;
 
 /**
  * Marketplace Saleslist Interface.
@@ -33,7 +33,7 @@ interface SaleslistInterface
      * Set ID
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Api\Data\SaleslistInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SaleslistInterface
      */
     public function setId($id);
 }

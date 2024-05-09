@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -136,10 +136,10 @@
                 </item>
             </argument>
         </column>
-        <column name="name" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Customerlink">
+        <column name="name" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Customerlink">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/link</item>
+                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/link</item>
                     <item name="filter" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Seller Name</item>
                     <item name="viewUrlPath" xsi:type="string">customer/view</item>

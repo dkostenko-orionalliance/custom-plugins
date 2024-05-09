@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Plugin\Quote\Model;
+namespace OrionAlliance\NewModule\Plugin\Quote\Model;
 
-use Webkul\Marketplace\Helper\Data as MarketplaceHelperData;
-use Webkul\Marketplace\Model\SaleperpartnerFactory as MpSalesPartner;
+use OrionAlliance\NewModule\Helper\Data as MarketplaceHelperData;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory as MpSalesPartner;
 
 class Quote
 {

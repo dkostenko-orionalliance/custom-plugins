@@ -1,6 +1,6 @@
 {
-    "name": "webkul/module-marketplace",
-    "description": "Webkul Magento2 Marketplace Multi Vendor Module",
+    "name": "orionalliance/module-marketplace",
+    "description": "Webkul Magento2 Marketplace Multi Vendor Module (changed)",
     "require": {
         "magento/module-config": "101.2.*",
         "magento/module-backend": "102.0.*",
@@ -17,7 +17,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Webkul\\Marketplace\\": ""
+            "OrionAlliance\\NewModule\\": ""
         }
     }
 }

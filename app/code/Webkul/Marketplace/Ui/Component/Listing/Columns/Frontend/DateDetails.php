@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Ui\Component\Listing\Columns\Frontend;
+namespace OrionAlliance\NewModule\Ui\Component\Listing\Columns\Frontend;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 use Magento\Framework\Locale\Bundle\DataBundle;
 use Magento\Framework\Stdlib\DateTime\DateTimeFormatterInterface;
 

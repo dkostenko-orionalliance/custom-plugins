@@ -4,7 +4,7 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Category;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Category;
 
 use Magento\Customer\Controller\RegistryConstants;
 
@@ -71,7 +71,7 @@ class CategoriesJson extends \Magento\Backend\App\Action
         $resultJson = $this->resultJsonFactory->create();
         return $resultJson->setJsonData(
             $this->layoutFactory->create()
-            ->createBlock(\Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Categories::class)
+            ->createBlock(\OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Categories::class)
                 ->getTreeJson($category)
         );
     }

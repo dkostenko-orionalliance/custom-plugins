@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Order\Creditmemo;
+namespace OrionAlliance\NewModule\Block\Order\Creditmemo;
 
 /**
  * Webkul Marketplace Order Creditmemo History Block.
@@ -37,7 +37,7 @@ class History extends \Magento\Framework\View\Element\Template
     protected $_customerSession;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $ordersHelper;
 
@@ -59,7 +59,7 @@ class History extends \Magento\Framework\View\Element\Template
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Webkul\Marketplace\Helper\Orders $ordersHelper
+     * @param \OrionAlliance\NewModule\Helper\Orders $ordersHelper
      * @param Creditmemo $creditmemoModel
      * @param array $data
      */
@@ -69,7 +69,7 @@ class History extends \Magento\Framework\View\Element\Template
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Framework\View\Element\Template\Context $context,
-        \Webkul\Marketplace\Helper\Orders $ordersHelper,
+        \OrionAlliance\NewModule\Helper\Orders $ordersHelper,
         Creditmemo $creditmemoModel,
         array $data = []
     ) {

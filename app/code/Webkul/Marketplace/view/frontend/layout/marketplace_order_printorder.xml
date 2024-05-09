@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -15,17 +15,17 @@
     <update handle="print" />
     <body>
         <referenceBlock name="page.main.title">
-            <block class="Webkul\Marketplace\Block\Order\View" name="marketplace.order.status" template="Webkul_Marketplace::order/order_status.phtml">
+            <block class="OrionAlliance\NewModule\Block\Order\View" name="marketplace.order.status" template="OrionAlliance_NewModule::order/order_status.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Webkul\Marketplace\Block\Order\View" name="marketplace_order_printorder" template="Webkul_Marketplace::order/print.phtml" cacheable="false">
-                <block class="Webkul\Marketplace\Block\Order\Items" name="marketplace_order_items" template="Webkul_Marketplace::order/items.phtml" />
+            <block class="OrionAlliance\NewModule\Block\Order\View" name="marketplace_order_printorder" template="OrionAlliance_NewModule::order/print.phtml" cacheable="false">
+                <block class="OrionAlliance\NewModule\Block\Order\Items" name="marketplace_order_items" template="OrionAlliance_NewModule::order/items.phtml" />
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

@@ -1,17 +1,17 @@
 <?php
 /**
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Productflag;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Productflag;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\CollectionFactory;
 use Magento\Framework\App\ResourceConnection;
 
 /**
@@ -126,6 +126,6 @@ class MassStatus extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::productflag');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::productflag');
     }
 }

@@ -3,32 +3,32 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Helper;
+namespace OrionAlliance\NewModule\Helper;
 
 use Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory;
-use Webkul\Marketplace\Model\Product as SellerProduct;
+use OrionAlliance\NewModule\Model\Product as SellerProduct;
 use Magento\Framework\App\Http\Context as HttpContext;
 use Magento\Customer\Model\Context as CustomerContext;
 use Magento\Store\Model\ScopeInterface;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
-use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory as MpFeedbackCollection;
-use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory as SellerCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory as MpFeedbackCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory as SellerCollection;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollection;
-use Webkul\Marketplace\Model\ResourceModel\VendorAttributeMapping\CollectionFactory as VendorMappingCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\VendorAttributeMapping\CollectionFactory as VendorMappingCollection;
 use Magento\Framework\DB\Sql\Expression as SqlExpression;
 use Magento\Framework\DB\Select as DBSelect;
 use Magento\Cms\Model\Wysiwyg\Config;
 use Magento\Catalog\Model\Product\Visibility;
-use Webkul\Marketplace\Model\ControllersRepository;
+use OrionAlliance\NewModule\Model\ControllersRepository;
 use Magento\UrlRewrite\Model\UrlRewriteFactory;
 use Magento\Framework\App\ObjectManager;
-use Webkul\Marketplace\Model\SaleperpartnerFactory as MpSalesPartner;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory as MpSalesPartner;
 
 /**
  * Webkul Marketplace Helper Data.
@@ -101,7 +101,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     private $file;
 
     /**
-     * @var \Webkul\Marketplace\Model\Seller
+     * @var \OrionAlliance\NewModule\Model\Seller
      */
     protected $marketplaceSeller;
 
@@ -131,7 +131,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     protected $urlRewriteFactory;
 
     /**
-     * @var \Webkul\Marketplace\Logger\Logger
+     * @var \OrionAlliance\NewModule\Logger\Logger
      */
     protected $logger;
 
@@ -204,13 +204,13 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     * @param \Magento\Framework\Locale\FormatInterface $localeFormat
     * @param \Magento\Framework\Filesystem\Driver\File $file
     * @param \Magento\Indexer\Model\IndexerFactory $indexerFactory
-    * @param \Webkul\Marketplace\Model\Seller $marketplaceSeller
+    * @param \OrionAlliance\NewModule\Model\Seller $marketplaceSeller
     * @param \Magento\Indexer\Model\Indexer\CollectionFactory $indexerCollectionFactory
     * @param \Magento\Customer\Model\CustomerFactory $customerModel
     * @param Visibility $visibility
     * @param ControllersRepository $controllersRepository
     * @param UrlRewriteFactory $urlRewriteFactory
-    * @param \Webkul\Marketplace\Logger\Logger $logger
+    * @param \OrionAlliance\NewModule\Logger\Logger $logger
     * @param MpSalesPartner|null $mpSalesPartner
     * @param VendorMappingCollection $mappingColl
     * @param \Magento\Framework\Module\Manager|null $moduleManager
@@ -235,13 +235,13 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         \Magento\Framework\Locale\FormatInterface $localeFormat,
         \Magento\Framework\Filesystem\Driver\File $file,
         \Magento\Indexer\Model\IndexerFactory $indexerFactory,
-        \Webkul\Marketplace\Model\Seller $marketplaceSeller,
+        \OrionAlliance\NewModule\Model\Seller $marketplaceSeller,
         \Magento\Indexer\Model\Indexer\CollectionFactory $indexerCollectionFactory,
         \Magento\Customer\Model\CustomerFactory $customerModel,
         Visibility $visibility,
         ControllersRepository $controllersRepository,
         UrlRewriteFactory $urlRewriteFactory,
-        \Webkul\Marketplace\Logger\Logger $logger,
+        \OrionAlliance\NewModule\Logger\Logger $logger,
         MpSalesPartner $mpSalesPartner = null,
         VendorMappingCollection $mappingColl,
         \Magento\Framework\Module\Manager $moduleManager = null
@@ -362,7 +362,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Return the seller Data.
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerData()
     {
@@ -374,7 +374,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Return the seller Product Data.
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Product\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
      */
     public function getSellerProductData()
     {
@@ -388,7 +388,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the seller product data by product id.
      *
      * @param int $productId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Product\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
      */
     public function getSellerProductDataByProductId($productId = '')
     {
@@ -403,7 +403,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the seller data by seller id.
      *
      * @param int $sellerId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerDataBySellerId($sellerId = '')
     {
@@ -417,7 +417,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the seller data by seller shop url.
      *
      * @param string $shopUrl
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerDataByShopUrl($shopUrl = '')
     {
@@ -687,7 +687,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Return the Seller existing status.
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function isSellerExist()
     {
@@ -699,7 +699,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Return the Seller data by customer Id stored in the session.
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSeller()
     {
@@ -743,7 +743,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the Seller Model Collection Object.
      *
      * @param int $sellerId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerCollectionObj($sellerId)
     {
@@ -795,7 +795,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the Seller Model Collection Object.
      *
      * @param string $shopUrl
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerCollectionObjByShop($shopUrl)
     {
@@ -3223,7 +3223,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the seller data by seller id.
      *
      * @param int $sellerId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerInfo($sellerId)
     {
@@ -3257,7 +3257,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param int $sellerId
      * @param int $productId
      * @param int $productCount
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerProductCollection($sellerId, $productId = 0, $productCount = 0)
     {
@@ -3354,7 +3354,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @param string $type
      *
-     * @return \Webkul\Marketplace\Model\Seller | bool
+     * @return \OrionAlliance\NewModule\Model\Seller | bool
      */
     public function getProfileDetail($type = self::URL_TYPE_PROFILE)
     {
@@ -3469,7 +3469,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get Seller Collection
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Seller\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Seller\Collection
      */
     public function getSellerCollection()
     {

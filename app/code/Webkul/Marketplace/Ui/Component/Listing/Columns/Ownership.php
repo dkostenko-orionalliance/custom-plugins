@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Ui\Component\Listing\Columns;
+namespace OrionAlliance\NewModule\Ui\Component\Listing\Columns;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 class Ownership extends Column
 {

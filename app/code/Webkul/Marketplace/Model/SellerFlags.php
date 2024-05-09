@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
-use Webkul\Marketplace\Api\Data\SellerFlagsInterface;
+use OrionAlliance\NewModule\Api\Data\SellerFlagsInterface;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Framework\Exception\MailException;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -43,7 +43,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      */
     protected function _construct()
     {
-        $this->_init(\Webkul\Marketplace\Model\ResourceModel\SellerFlags::class);
+        $this->_init(\OrionAlliance\NewModule\Model\ResourceModel\SellerFlags::class);
     }
 
     /**
@@ -60,7 +60,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set Entity Id
      *
      * @param string $entityId
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setEntityId($entityId)
     {
@@ -81,7 +81,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set Seller Id
      *
      * @param string $sellerId
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setSellerId($sellerId)
     {
@@ -102,7 +102,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set reason
      *
      * @param string $reason
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setReason($reason)
     {
@@ -123,7 +123,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set Name
      *
      * @param string $name
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setName($name)
     {
@@ -144,7 +144,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set Email
      *
      * @param string $email
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setEmail($email)
     {
@@ -165,7 +165,7 @@ class SellerFlags extends \Magento\Framework\Model\AbstractModel implements Sell
      * Set CreatedAt
      *
      * @param string $timestamp
-     * @return \Webkul\Marketplace\Api\Data\SellerFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface
      */
     public function setCreatedAt($timestamp)
     {

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Product\Source;
+namespace OrionAlliance\NewModule\Model\Product\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -18,17 +18,17 @@ use Magento\Framework\Data\OptionSourceInterface;
 class AttributeSets implements OptionSourceInterface
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $marketplaceHelper;
 
     /**
      * Constructor
      *
-     * @param \Webkul\Marketplace\Helper\Data $marketplaceHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $marketplaceHelper
      */
     public function __construct(
-        \Webkul\Marketplace\Helper\Data $marketplaceHelper
+        \OrionAlliance\NewModule\Helper\Data $marketplaceHelper
     ) {
         $this->marketplaceHelper = $marketplaceHelper;
     }

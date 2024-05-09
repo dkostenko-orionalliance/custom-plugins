@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Layer\Filter;
+namespace OrionAlliance\NewModule\Model\Layer\Filter;
 
 use Magento\Catalog\Model\Layer;
 use Magento\Framework\Registry;
@@ -57,7 +57,7 @@ class Seller extends \Magento\Catalog\Model\Layer\Filter\AbstractFilter
      */
     protected $_resource;
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
      */
     protected $_mpProductCollectionFactory;
     /**
@@ -65,7 +65,7 @@ class Seller extends \Magento\Catalog\Model\Layer\Filter\AbstractFilter
      */
     protected $_request;
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $mpHelper;
 
@@ -79,9 +79,9 @@ class Seller extends \Magento\Catalog\Model\Layer\Filter\AbstractFilter
      * @param \Magento\Framework\Escaper $escaper
      * @param CategoryFactory $categoryDataProviderFactory
      * @param \Magento\Framework\App\ResourceConnection $resource
-     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
      * @param \Magento\Framework\App\RequestInterface $request
-     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
      * @param array $data
      */
     public function __construct(
@@ -92,9 +92,9 @@ class Seller extends \Magento\Catalog\Model\Layer\Filter\AbstractFilter
         \Magento\Framework\Escaper $escaper,
         CategoryFactory $categoryDataProviderFactory,
         \Magento\Framework\App\ResourceConnection $resource,
-        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
         \Magento\Framework\App\RequestInterface $request,
-        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \OrionAlliance\NewModule\Helper\Data $mpHelper,
         array $data = []
     ) {
         parent::__construct($filterItemFactory, $storeManager, $layer, $itemDataBuilder, $data);

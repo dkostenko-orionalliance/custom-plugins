@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api\Data;
+namespace OrionAlliance\NewModule\Api\Data;
 
 /**
  * Marketplace Notification interface.
@@ -41,7 +41,7 @@ interface NotificationInterface
      * Set ID
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function setId($id);
     
@@ -56,7 +56,7 @@ interface NotificationInterface
      * Set Notification ID
      *
      * @param int $notificationId
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function setNotificationId($notificationId);
         
@@ -71,7 +71,7 @@ interface NotificationInterface
      * Set Type
      *
      * @param int $type
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function setType($type);
 
@@ -86,7 +86,7 @@ interface NotificationInterface
      * Set Created Time
      *
      * @param int $createdAt
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function setCreatedAt($createdAt);
 
@@ -101,7 +101,7 @@ interface NotificationInterface
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function setUpdatedAt($updatedAt);
 }

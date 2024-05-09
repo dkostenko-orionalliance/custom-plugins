@@ -23,7 +23,7 @@ define([
             attributes: [],
             attributesName: [$.mage.__('Images'), $.mage.__('SKU'), $.mage.__('Quantity'), $.mage.__('Price')],
             sections: [],
-            gridTemplate: 'Webkul_Marketplace/variations/steps/summary-grid'
+            gridTemplate: 'OrionAlliance_NewModule/variations/steps/summary-grid'
         },
         initObservable: function () {
             this._super().observe('gridExisting gridNew gridDeleted attributes sections');

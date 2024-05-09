@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Order;
+namespace OrionAlliance\NewModule\Controller\Order;
 
 /**
  * Webkul Marketplace Sold Product Order Details Controller.
  */
-class Salesdetail extends \Webkul\Marketplace\Controller\Order
+class Salesdetail extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Webkul Marketplace Sold Product Order Details page.

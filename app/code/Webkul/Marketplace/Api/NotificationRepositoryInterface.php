@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api;
+namespace OrionAlliance\NewModule\Api;
 
 /**
  * Notification CRUD interface.
@@ -20,7 +20,7 @@ interface NotificationRepositoryInterface
      *
      * @api
      * @param string $id
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -31,7 +31,7 @@ interface NotificationRepositoryInterface
      *
      * @api
      * @param int $type
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -43,7 +43,7 @@ interface NotificationRepositoryInterface
      * @api
      * @param int $type
      * @param int $notificationId
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -53,7 +53,7 @@ interface NotificationRepositoryInterface
      * Retrieve all notification.
      *
      * @api
-     * @return \Webkul\Marketplace\Api\Data\NotificationInterface
+     * @return \OrionAlliance\NewModule\Api\Data\NotificationInterface
      */
     public function getList();
 
@@ -65,7 +65,7 @@ interface NotificationRepositoryInterface
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    public function delete(\Webkul\Marketplace\Api\Data\NotificationInterface $notification);
+    public function delete(\OrionAlliance\NewModule\Api\Data\NotificationInterface $notification);
 
     /**
      * Delete Seller Notification by ID.

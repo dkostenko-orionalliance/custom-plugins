@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\Saleslist\Grid;
+namespace OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Grid;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Search\AggregationInterface;
-use Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection as SaleslistCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection as SaleslistCollection;
 
 /**
  * Collection for displaying grid of marketplace saleslist

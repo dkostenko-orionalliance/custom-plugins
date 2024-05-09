@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -158,7 +158,7 @@
         </column>
         <column name="status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Config\Source\Enabledisable</item>
+                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Config\Source\Enabledisable</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
@@ -191,7 +191,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Webkul\Marketplace\Ui\Component\Listing\Columns\SellerFlagAction">
+        <actionsColumn name="actions" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\SellerFlagAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">entity_id</item>

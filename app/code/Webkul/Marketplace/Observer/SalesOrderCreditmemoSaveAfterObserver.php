@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Observer;
+namespace OrionAlliance\NewModule\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
-use Webkul\Marketplace\Model\Saleslist;
-use Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory as SalesListCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
+use OrionAlliance\NewModule\Model\Saleslist;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory as SalesListCollection;
 use Magento\Framework\Session\SessionManager;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\OrdersFactory;
-use Webkul\Marketplace\Model\SaleperpartnerFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\OrdersFactory;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
 
 /**
  * Webkul Marketplace SalesOrderCreditmemoSaveAfterObserver Observer.

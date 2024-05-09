@@ -3,16 +3,16 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c)  Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Ui\DataProvider\Product;
+namespace OrionAlliance\NewModule\Ui\DataProvider\Product;
 
-use Webkul\Marketplace\Model\ResourceModel\VendorAttributeMapping\CollectionFactory as VendorMappingCollection;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Model\ResourceModel\VendorAttributeMapping\CollectionFactory as VendorMappingCollection;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 class Attributes extends \Magento\Ui\DataProvider\AbstractDataProvider
 {

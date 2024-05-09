@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -32,7 +32,7 @@ if (!$helper->getIsSeparatePanel()) {
         <div class="title block-collapsible-nav-title" 
         data-mage-init='{"toggleAdvanced": {"toggleContainers": "#block-collapsible-nav-seller", 
             "selectorsToggleClass": "active"}}'>
-            <strong><?= /* @noEscape */ __('Marketplace'); ?></strong>
+            <strong><?= /* @noEscape */ __('Marketplace12345'); ?></strong>
         </div>
         <div class="content block-collapsible-nav-content" id="block-collapsible-nav-seller">
             <nav class="account-nav">
@@ -65,21 +65,38 @@ if (!$helper->getIsSeparatePanel()) {
                                 strpos($magentoCurrentUrl, 'marketplace/account/editprofile')? "current":"";?>">
                                     <?php if (strpos($magentoCurrentUrl, 'marketplace/account/editprofile') !== false) {
                                         ?>
-                                        <strong><?= /* @noEscape */ __('Seller Profile') ?></strong>
+                                        <strong><?= /* @noEscape */ __('Vendor Profile') ?></strong>
                                         <?php
                                     } else { ?>
                                         <a href="<?= $escaper->escapeUrl($block
                                         ->getUrl('marketplace/account/editprofile', ['_secure' => $block
                                         ->getRequest()->isSecure()])); ?>">
-                                            <?= /* @noEscape */__('Seller Profile') ?>
+                                            <?= /* @noEscape */__('Vendor Profile') ?>
                                         </a>
                                         <?php
                                     } ?>
                                 </li>
                             <?php } ?>
                         <?php } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/product_attribute/new'))
-                         || !$isSellerGroup) {
+                        <?php if (($isSellerGroup /*&& $helper->isAllowedAction('marketplace/account/customer')*/)
+                         || !$isSellerGroup) { ?>
+                            <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
+                                <li class="nav item notification-link <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'customer/account')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'customer/account') !== false) { ?>
+                                        <strong><?= /* @noEscape */ __('Account') ?></strong>
+                                    <?php } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('customer/account', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */ __('Account') ?>
+                                        </a>
+                                    <?php } ?>
+                                </li>
+                            <?php } ?>
+                        <?php } ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/product_attribute/new'))
+                         || !$isSellerGroup) && false) {
     if (strpos($allow_pro_type, 'configurable') !== false) { ?>
                                 <li class="nav item <?= /* @noEscape */
                                 strpos($magentoCurrentUrl, 'marketplace/product_attribute/new')? "current":"";?>">
@@ -96,8 +113,8 @@ if (!$helper->getIsSeparatePanel()) {
                                 <?php
     }
                         } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/product/add'))
-                         || !$isSellerGroup) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/product/add'))
+                         || !$isSellerGroup) && false) { ?>
                             <li class="nav item <?= /* @noEscape */
                             (strpos($magentoCurrentUrl, 'marketplace/product/add')
                             || strpos($magentoCurrentUrl, 'marketplace/product/create'))? "current":"";?>">
@@ -121,19 +138,19 @@ if (!$helper->getIsSeparatePanel()) {
                             <li class="nav item notification-link <?= /* @noEscape */
                             strpos($magentoCurrentUrl, 'marketplace/product/productlist')? "current":"";?>">
                             <?php if (strpos($magentoCurrentUrl, 'marketplace/product/productlist') !== false) { ?>
-                                <strong><?= /* @noEscape */ __('My Products List') ?></strong>
+                                <strong><?= /* @noEscape */ __('My Services') ?></strong>
                                 <?php } else { ?>
                                     <a href="<?= $escaper->escapeUrl($block
                                     ->getUrl('marketplace/product/productlist', ['_secure' => $block
                                     ->getRequest()->isSecure()])); ?>">
-                                        <?= /* @noEscape */ __('My Products List') ?>
+                                        <?= /* @noEscape */ __('My Services') ?>
                                     </a>
                                     <!-- Product Notification -->
                                     <?php if ($block->getProductCollection()->getSize()) { ?>
                                     <div class="notification-block">
                                         <a href="" class="notifications-action marketplace-dropdown">
                                             <img height="20" width="20" src="<?= $escaper->escapeUrl($block
-                                            ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png')); ?>"
+                                            ->getViewFileUrl('OrionAlliance_NewModule::images/icons_notifications.png')); ?>"
                                              class="notifications-img" />
                                             <?php if ($productNotificationCount > 5): ?>
                                                 <span class="notification-count">5+</span>
@@ -192,8 +209,8 @@ if (!$helper->getIsSeparatePanel()) {
                                 <?php } ?>
                             </li>
                         <?php } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/transaction/history'))
-                         || !$isSellerGroup) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/transaction/history'))
+                         || !$isSellerGroup) && false) { ?>
                             <li class="nav item notification-link <?= /* @noEscape */
                             strpos($magentoCurrentUrl, 'marketplace/transaction/history')? "current":"";?>">
                                 <?php
@@ -210,7 +227,7 @@ if (!$helper->getIsSeparatePanel()) {
                                     <div class="notification-block">
                                         <a href="" class="notifications-action marketplace-dropdown">
                                             <img height="20" width="20" src="<?= $escaper->escapeUrl($block
-                                            ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png')); ?>"
+                                            ->getViewFileUrl('OrionAlliance_NewModule::images/icons_notifications.png')); ?>"
                                              class="notifications-img" />
                                         <?php if ($transactionCount > 5): ?>
                                             <span class="notification-count">5+</span>
@@ -275,8 +292,8 @@ if (!$helper->getIsSeparatePanel()) {
                                 } ?>
                             </li>
                         <?php } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/account/earning'))
-                         || !$isSellerGroup) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/account/earning'))
+                         || !$isSellerGroup) && false) { ?>
                             <li class="nav item <?= /* @noEscape */
                             strpos($magentoCurrentUrl, 'marketplace/account/earning')? "current":"";?>">
                                 <?php
@@ -294,8 +311,8 @@ if (!$helper->getIsSeparatePanel()) {
                             </li>
                             <?php
                         } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/order/shipping'))
-                         || !$isSellerGroup) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/order/shipping'))
+                         || !$isSellerGroup) && false) { ?>
                             <?php if ($helper->getIsOrderManage()=="1") {?>
                             <li class="nav item <?= /* @noEscape */
                             strpos($magentoCurrentUrl, 'marketplace/order/shipping/')? "current":"";?>">
@@ -322,20 +339,20 @@ if (!$helper->getIsSeparatePanel()) {
                             (!strpos($magentoCurrentUrl, 'marketplace/order/shipping/'))? "current":"";?>">
                                 <?php
                                 if (strpos($magentoCurrentUrl, 'marketplace/order/history') !== false) { ?>
-                                    <strong><?= /* @noEscape */ __('My Order History') ?></strong>
+                                    <strong><?= /* @noEscape */ __('My Applications') ?></strong>
                                     <?php
                                 } else { ?>
                                     <a href="<?= $escaper->escapeUrl($block
                                     ->getUrl('marketplace/order/history', ['_secure' => $block
                                     ->getRequest()->isSecure()])); ?>">
-                                        <?= /* @noEscape */ __('My Order History') ?>
+                                        <?= /* @noEscape */ __('My Applications') ?>
                                     </a>
                                     <?php if ($block->getMarketplaceOrderCollection()->getSize()) { ?>
                                     <!-- Orders Notification -->
                                     <div class="notification-block">
                                         <a href="" class="notifications-action marketplace-dropdown">
                                             <img height="20" width="20" src="<?= /* @noEscape */ $block
-                                            ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png'); ?>"
+                                            ->getViewFileUrl('OrionAlliance_NewModule::images/icons_notifications.png'); ?>"
                                              class="notifications-img" />
                                             <?php if ($orderNotificationCount > 5): ?>
                                             <span class="notification-count">5+</span>
@@ -399,8 +416,25 @@ if (!$helper->getIsSeparatePanel()) {
                                 } ?>
                             </li>
                         <?php } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/account/customer'))
+                        <?php if (($isSellerGroup /*&& $helper->isAllowedAction('marketplace/account/customer')*/)
                          || !$isSellerGroup) { ?>
+                            <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
+                                <li class="nav item notification-link <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'vault/cards/listaction')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'vault/cards/listaction') !== false) { ?>
+                                        <strong><?= /* @noEscape */ __('Billing & Payment') ?></strong>
+                                    <?php } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('vault/cards/listaction', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */ __('Billing & Payment') ?>
+                                        </a>
+                                    <?php } ?>
+                                </li>
+                            <?php } ?>
+                        <?php } ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/account/customer'))
+                         || !$isSellerGroup) && false) { ?>
                             <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
                                 <li class="nav item notification-link <?= /* @noEscape */
                                 strpos($magentoCurrentUrl, 'marketplace/account/customer')? "current":"";?>">
@@ -416,8 +450,8 @@ if (!$helper->getIsSeparatePanel()) {
                                 </li>
                             <?php } ?>
                         <?php } ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/account/review'))
-                         || !$isSellerGroup) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/account/review'))
+                         || !$isSellerGroup) && false) { ?>
                             <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
                                 <li class="nav item notification-link <?= /* @noEscape */
                                 strpos($magentoCurrentUrl, 'marketplace/account/review')? "current":"";?>">
@@ -438,7 +472,7 @@ if (!$helper->getIsSeparatePanel()) {
                                         <div class="notification-block">
                                             <a href="" class="notifications-action marketplace-dropdown">
                                                 <img height="20" width="20" src="<?= /* @noEscape */ $block
-                                                ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png');
+                                                ->getViewFileUrl('OrionAlliance_NewModule::images/icons_notifications.png');
                                                 ?>"
                                                  class="notifications-img" />
                                                 <?php if ($notificationCount > 5): ?>

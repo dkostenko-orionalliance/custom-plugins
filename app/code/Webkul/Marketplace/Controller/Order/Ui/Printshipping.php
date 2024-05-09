@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Ui;
+namespace OrionAlliance\NewModule\Controller\Order\Ui;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Ui\Component\MassAction\Filter;
@@ -18,14 +18,14 @@ use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\Request\InvalidRequestException;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 use Magento\Customer\Model\Url as CustomerUrl;
-use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory as MpOrdersCollection;
 use Magento\Sales\Model\ResourceModel\Order\Shipment\Collection as ShipmentCollection;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Framework\App\Response\Http\FileFactory;
 use Magento\Framework\App\Filesystem\DirectoryList;
-use Webkul\Marketplace\Model\Order\Pdf\Shipment as ShipmentPdf;
+use OrionAlliance\NewModule\Model\Order\Pdf\Shipment as ShipmentPdf;
 
 /**
  * Webkul Marketplace Order Printshipping controller.

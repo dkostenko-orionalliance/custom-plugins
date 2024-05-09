@@ -3,16 +3,16 @@
  * Webkul Software
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\ViewModel;
+namespace OrionAlliance\NewModule\ViewModel;
 
-use Webkul\Marketplace\Model\SaleslistFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 
 class Profile implements \Magento\Framework\View\Element\Block\ArgumentInterface
 {

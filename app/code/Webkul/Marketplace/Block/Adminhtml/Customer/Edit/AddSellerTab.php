@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Controller\RegistryConstants;
 use Magento\Ui\Component\Layout\Tabs\TabInterface;
@@ -50,7 +50,7 @@ class AddSellerTab extends Generic implements TabInterface
     * @param \Magento\Framework\Data\FormFactory $formFactory
     * @param \Magento\Store\Model\System\Store $systemStore
     * @param \Magento\Directory\Model\ResourceModel\Country\Collection $country
-    * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
+    * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
     * @param array $data
     */
     public function __construct(
@@ -59,7 +59,7 @@ class AddSellerTab extends Generic implements TabInterface
         \Magento\Framework\Data\FormFactory $formFactory,
         \Magento\Store\Model\System\Store $systemStore,
         \Magento\Directory\Model\ResourceModel\Country\Collection $country,
-        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
+        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = []
     ) {
         $this->_coreRegistry = $registry;
@@ -243,7 +243,7 @@ class AddSellerTab extends Generic implements TabInterface
     {
         $html = parent::getFormHtml();
         $html .= $this->getLayout()->createBlock(
-            \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\AddSellerJs::class
+            \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\AddSellerJs::class
         )->toHtml();
 
         return $html;

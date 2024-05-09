@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Webkul\Marketplace\Api\Data\SaleslistInterface;
+use OrionAlliance\NewModule\Api\Data\SaleslistInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Saleslist Model.
  *
- * @method \Webkul\Marketplace\Model\ResourceModel\Saleslist _getResource()
- * @method \Webkul\Marketplace\Model\ResourceModel\Saleslist getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Saleslist _getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Saleslist getResource()
  */
 class Saleslist extends AbstractModel implements SaleslistInterface, IdentityInterface
 {
@@ -60,7 +60,7 @@ class Saleslist extends AbstractModel implements SaleslistInterface, IdentityInt
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\Saleslist::class
+            \OrionAlliance\NewModule\Model\ResourceModel\Saleslist::class
         );
     }
 
@@ -84,7 +84,7 @@ class Saleslist extends AbstractModel implements SaleslistInterface, IdentityInt
     /**
      * Load No-Route Saleslist.
      *
-     * @return \Webkul\Marketplace\Model\Saleslist
+     * @return \OrionAlliance\NewModule\Model\Saleslist
      */
     public function noRouteSaleslist()
     {
@@ -116,7 +116,7 @@ class Saleslist extends AbstractModel implements SaleslistInterface, IdentityInt
      *
      * @param int $id
      *
-     * @return \Webkul\Marketplace\Api\Data\SaleslistInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SaleslistInterface
      */
     public function setId($id)
     {

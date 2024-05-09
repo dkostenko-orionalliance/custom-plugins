@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order;
+namespace OrionAlliance\NewModule\Controller\Order;
 
-class Cancel extends \Webkul\Marketplace\Controller\Order
+class Cancel extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Default customer account page.
@@ -28,7 +28,7 @@ class Cancel extends \Webkul\Marketplace\Controller\Order
                     $sellerId = $this->_customerSession->getCustomerId();
                     $flag = $this->orderHelper->cancelorder($order, $sellerId);
                     if ($flag) {
-                        $paidCanceledStatus = \Webkul\Marketplace\Model\Saleslist::PAID_STATUS_CANCELED;
+                        $paidCanceledStatus = \OrionAlliance\NewModule\Model\Saleslist::PAID_STATUS_CANCELED;
                         $paymentCode = '';
                         $paymentMethod = '';
                         if ($order->getPayment()) {

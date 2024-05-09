@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api\Data;
+namespace OrionAlliance\NewModule\Api\Data;
 
 /**
  * Marketplace Orders interface.
@@ -33,7 +33,7 @@ interface OrdersInterface
      * Set ID
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setId($id);
 
@@ -48,7 +48,7 @@ interface OrdersInterface
      * Set Created Time
      *
      * @param int $createdAt
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setCreatedAt($createdAt);
 
@@ -63,7 +63,7 @@ interface OrdersInterface
      * Set Updated Time
      *
      * @param int $updatedAt
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function setUpdatedAt($updatedAt);
 }

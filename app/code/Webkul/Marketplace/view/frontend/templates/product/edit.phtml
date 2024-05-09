@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \Webkul\Marketplace\Block\Product\Create */
+/** @var $block \OrionAlliance\NewModule\Block\Product\Create */
 
 $viewModel = $block->getViewModel();
 $helper = $viewModel->getHelper();
@@ -80,7 +80,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintCategory()) {?>
                     <img src="<?= $escaper->escapeUrl($block->
-                    getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg'
+                    getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg'
                      title="<?= $escaper->escapeHtml($helper->getProductHintCategory()) ?>"/>
                     <?php
                 } ?>
@@ -96,8 +96,8 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                                 "Magento_Ui/js/core/app": {
                                     "components": {
                                         "sellerCategory": {
-                                            "component": "Webkul_Marketplace/js/product/seller-category-tree",
-                                            "template" : "Webkul_Marketplace/seller-category-tree",
+                                            "component": "OrionAlliance_NewModule/js/product/seller-category-tree",
+                                            "template" : "OrionAlliance_NewModule/seller-category-tree",
                                             "filterOptions": true,
                                             "levelsVisibility": "1",
                                             "options": <?= /* @noEscape */ $block->getCategoriesTree()?>,
@@ -209,7 +209,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintName()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg'
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg'
                      title="<?= $escaper->escapeHtml($helper->getProductHintName()) ?>"/>
                     <?php
                 } ?>
@@ -223,7 +223,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintDesc()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>"
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>"
                      class='questimg' title="<?= $escaper->escapeHtml($helper->getProductHintDesc()) ?>"/>
                     <?php
                 } ?>
@@ -263,7 +263,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintShortDesc()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                     title="<?= /* @noEscape */ $helper->getProductHintShortDesc() ?>"/>
                     <?php
                 } ?>
@@ -310,7 +310,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                     <?php
                     if ($product_hint_status && $helper->getProductHintEnable()) {?>
                         <img src="<?= $escaper->escapeUrl($block
-                        ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                        ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                         title="<?= $escaper->escapeHtml($helper->getProductHintStatus()) ?>"/>
                         <?php
                     } ?>
@@ -332,7 +332,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                     <?php
                     if ($product_hint_status && $helper->getProductHintSku()) {?>
                         <img src="<?= $escaper->escapeUrl($block
-                        ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg'
+                        ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg'
                          title="<?= $escaper->escapeHtml($helper->getProductHintSku()) ?>"/>
                         <?php
                     } ?>
@@ -357,7 +357,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintPrice()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>"
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>"
                      class='questimg' title="<?= $escaper->escapeHtml($helper->getProductHintPrice()) ?>"/>
                     <?php
                 } ?>
@@ -377,7 +377,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                     <?php
                     if ($product_hint_status && $helper->getProductHintSpecialPrice()) {?>
                         <img src="<?= $escaper->escapeUrl($block
-                        ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                        ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                         title="<?= $escaper->escapeHtml($helper->getProductHintSpecialPrice()) ?>"/>
                         <?php
                     } ?>
@@ -392,7 +392,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                     <?php
                     if ($product_hint_status && $helper->getProductHintStartDate()) {?>
                         <img src="<?= $escaper->escapeUrl($block
-                        ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                        ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                         title="<?= $escaper->escapeHtml($helper->getProductHintStartDate()) ?>"/>
                         <?php
                     } ?>
@@ -412,7 +412,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                     <?php
                     if ($product_hint_status && $helper->getProductHintEndDate()) {?>
                         <img src="<?= $escaper->escapeUrl($block
-                        ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                        ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                         title="<?= $escaper->escapeHtml($helper->getProductHintEndDate()) ?>"/>
                         <?php
                     } ?>
@@ -437,7 +437,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintQty()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                     title="<?= $escaper->escapeHtml($helper->getProductHintQty()) ?>"/>
                     <?php
                 } ?>
@@ -452,7 +452,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintStock()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                     title="<?= $escaper->escapeHtml($helper->getProductHintStock()) ?>"/>
                     <?php
                 } ?>
@@ -491,7 +491,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintTax()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg'
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg'
                      title="<?= $escaper->escapeHtml($helper->getProductHintTax()) ?>"/>
                     <?php
                 } ?>
@@ -518,7 +518,7 @@ id="edit-product" data-form="edit-product" data-mage-init='{"validation":{}}'>
                 <?php
                 if ($product_hint_status && $helper->getProductHintWeight()) {?>
                     <img src="<?= $escaper->escapeUrl($block
-                    ->getViewFileUrl('Webkul_Marketplace::images/quest.png')); ?>" class='questimg' 
+                    ->getViewFileUrl('OrionAlliance_NewModule::images/quest.png')); ?>" class='questimg' 
                     title="<?= $escaper->escapeHtml($helper->getProductHintWeight()) ?>"/>
                     <?php
                 } ?>
@@ -646,7 +646,7 @@ $serializedFormData = $viewModel->getJsonHelper()->jsonEncode($formData);
 <script>
     require([
         "jquery",
-        "Webkul_Marketplace/catalog/type-events"
+        "OrionAlliance_NewModule/catalog/type-events"
     ], function($, TypeSwitcher){
         var $form = $('[data-form=edit-product]');
         $form.data('typeSwitcher', TypeSwitcher.init());
@@ -655,8 +655,8 @@ $serializedFormData = $viewModel->getJsonHelper()->jsonEncode($formData);
 <script type="text/x-magento-init">
     {
         "*": {
-            "Webkul_Marketplace/js/product/weight-handler": {},
-            "Webkul_Marketplace/catalog/apply-to-type-switcher": {}
+            "OrionAlliance_NewModule/js/product/weight-handler": {},
+            "OrionAlliance_NewModule/catalog/apply-to-type-switcher": {}
         }
     }
 </script>

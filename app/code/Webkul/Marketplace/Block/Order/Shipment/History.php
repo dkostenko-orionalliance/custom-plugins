@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Order\Shipment;
+namespace OrionAlliance\NewModule\Block\Order\Shipment;
 
 /**
  * Webkul Marketplace Order Shipment History Block.
@@ -17,7 +17,7 @@ use Magento\Sales\Model\Order;
 use Magento\Customer\Model\Customer;
 use Magento\Framework\UrlInterface;
 use Magento\Sales\Model\Order\Shipment;
-use Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection;
 
 class History extends \Magento\Framework\View\Element\Template
 {
@@ -37,7 +37,7 @@ class History extends \Magento\Framework\View\Element\Template
     protected $customerSession;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $ordersHelper;
 
@@ -64,7 +64,7 @@ class History extends \Magento\Framework\View\Element\Template
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Webkul\Marketplace\Helper\Orders $ordersHelper
+     * @param \OrionAlliance\NewModule\Helper\Orders $ordersHelper
      * @param Shipment $shipmentModel
      * @param Collection $saleslistCollection
      * @param array $data
@@ -75,7 +75,7 @@ class History extends \Magento\Framework\View\Element\Template
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Framework\View\Element\Template\Context $context,
-        \Webkul\Marketplace\Helper\Orders $ordersHelper,
+        \OrionAlliance\NewModule\Helper\Orders $ordersHelper,
         Shipment $shipmentModel,
         Collection $saleslistCollection,
         array $data = []

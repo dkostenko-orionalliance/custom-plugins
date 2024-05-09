@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Adminhtml\Orders;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Orders;
 
 class Pay extends \Magento\Backend\Block\Template
 {

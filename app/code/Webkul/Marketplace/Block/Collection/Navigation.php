@@ -1,5 +1,5 @@
 <?php
-namespace Webkul\Marketplace\Block\Collection;
+namespace OrionAlliance\NewModule\Block\Collection;
 
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Catalog\Model\Layer\Resolver as LayerResolver;

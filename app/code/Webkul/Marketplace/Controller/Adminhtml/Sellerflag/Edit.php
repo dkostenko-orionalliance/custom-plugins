@@ -4,16 +4,16 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Sellerflag;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag;
 
-use Webkul\Marketplace\Api\Data\SellerFlagReasonInterfaceFactory;
+use OrionAlliance\NewModule\Api\Data\SellerFlagReasonInterfaceFactory;
 
-class Edit extends \Webkul\Marketplace\Controller\Adminhtml\Sellerflag
+class Edit extends \OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -85,7 +85,7 @@ class Edit extends \Webkul\Marketplace\Controller\Adminhtml\Sellerflag
      */
     public function initPage($resultPage)
     {
-        $resultPage->setActiveMenu('Webkul_Marketplace::sellerflag');
+        $resultPage->setActiveMenu('OrionAlliance_NewModule::sellerflag');
         return $resultPage;
     }
 }

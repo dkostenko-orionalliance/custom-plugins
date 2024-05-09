@@ -28,7 +28,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <dataProvider class="Webkul\Marketplace\Ui\DataProvider\Product\Attributes" name="product_attributes_grid_data_source">
+        <dataProvider class="OrionAlliance\NewModule\Ui\DataProvider\Product\Attributes" name="product_attributes_grid_data_source">
             <settings>
                 <requestFieldName>id</requestFieldName>
                 <primaryFieldName>attribute_id</primaryFieldName>
@@ -38,7 +38,7 @@
     <listingToolbar name="listing_top">
         <bookmark name="bookmarks"/>
         <columnsControls name="columns_controls"/>
-        <filters name="listing_filters" component="Webkul_Marketplace/js/grid/filters/filter">
+        <filters name="listing_filters" component="OrionAlliance_NewModule/js/grid/filters/filter">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="statefull" xsi:type="array">
@@ -119,10 +119,10 @@
                 <label translate="true">Comparable</label>
             </settings>
         </column>
-         <actionsColumn name="actions" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Frontend\AttributeAction">
+         <actionsColumn name="actions" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Frontend\AttributeAction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <!-- <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/actionlink</item> -->
+                    <!-- <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/actionlink</item> -->
                     <item name="sortable" xsi:type="boolean">false</item>
                     <item name="label" xsi:type="string" translate="true">Action</item>
                     <item name="sortOrder" xsi:type="number">120</item>

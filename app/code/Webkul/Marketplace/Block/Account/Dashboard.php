@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Account;
+namespace OrionAlliance\NewModule\Block\Account;
 
-use Webkul\Marketplace\Model\ResourceModel\Saleperpartner\CollectionFactory as SalesPartnerCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleperpartner\CollectionFactory as SalesPartnerCollection;
 
 class Dashboard extends \Magento\Framework\View\Element\Template
 {
@@ -46,22 +46,22 @@ class Dashboard extends \Magento\Framework\View\Element\Template
     protected $categoryRepository;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $orderHelper;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory
      */
     protected $mpSaleslistCollectionFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory
      */
     protected $mpOrderCollectionFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory
      */
     protected $mpProductCollectionFactory;
 
@@ -71,12 +71,12 @@ class Dashboard extends \Magento\Framework\View\Element\Template
     protected $mpSalePerPartnerCollectionFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory
      */
     protected $mpFeedbackCollectionFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Order\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Order\CollectionFactory
      */
     protected $orderCollectionFactory;
 
@@ -90,12 +90,12 @@ class Dashboard extends \Magento\Framework\View\Element\Template
      * @param \Magento\Sales\Model\Order\ItemRepository $orderItemRepository
      * @param \Magento\Catalog\Model\ProductRepository $productRepository
      * @param \Magento\Catalog\Model\CategoryRepository $categoryRepository
-     * @param \Webkul\Marketplace\Helper\Orders $orderHelper
-     * @param \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory $mpSaleslistCollectionFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory $mpOrderCollectionFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
+     * @param \OrionAlliance\NewModule\Helper\Orders $orderHelper
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory $mpSaleslistCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory $mpOrderCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory
      * @param SalesPartnerCollection $mpSalePerPartnerCollectionFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory $mpFeedbackCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory $mpFeedbackCollectionFactory
      * @param \Magento\Sales\Model\ResourceModel\Order\CollectionFactory $orderCollectionFactory
      * @param array $data
      */
@@ -107,12 +107,12 @@ class Dashboard extends \Magento\Framework\View\Element\Template
         \Magento\Sales\Model\Order\ItemRepository $orderItemRepository,
         \Magento\Catalog\Model\ProductRepository $productRepository,
         \Magento\Catalog\Model\CategoryRepository $categoryRepository,
-        \Webkul\Marketplace\Helper\Orders $orderHelper,
-        \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory $mpSaleslistCollectionFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory $mpOrderCollectionFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
+        \OrionAlliance\NewModule\Helper\Orders $orderHelper,
+        \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory $mpSaleslistCollectionFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory $mpOrderCollectionFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory $mpProductCollectionFactory,
         SalesPartnerCollection $mpSalePerPartnerCollectionFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory $mpFeedbackCollectionFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory $mpFeedbackCollectionFactory,
         \Magento\Sales\Model\ResourceModel\Order\CollectionFactory $orderCollectionFactory,
         array $data = []
     ) {
@@ -166,7 +166,7 @@ class Dashboard extends \Magento\Framework\View\Element\Template
     /**
      * Get Collection
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection
      */
     public function getCollection()
     {

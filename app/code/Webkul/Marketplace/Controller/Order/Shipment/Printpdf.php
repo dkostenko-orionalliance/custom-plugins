@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Shipment;
+namespace OrionAlliance\NewModule\Controller\Order\Shipment;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
  * Webkul Marketplace Order Shipment PDF Print Controller.
  */
-class Printpdf extends \Webkul\Marketplace\Controller\Order
+class Printpdf extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Print shipment pdf
@@ -31,7 +31,7 @@ class Printpdf extends \Webkul\Marketplace\Controller\Order
             if ($shipment = $this->_initShipment()) {
                 try {
                     $pdf = $this->_objectManager->create(
-                        \Webkul\Marketplace\Model\Order\Pdf\Shipment::class
+                        \OrionAlliance\NewModule\Model\Order\Pdf\Shipment::class
                     )->getPdf(
                         [$shipment]
                     );

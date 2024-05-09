@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Product;
+namespace OrionAlliance\NewModule\Controller\Product;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\RequestInterface;
 use Magento\Customer\Model\Url as CustomerUrl;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 /**
  * Webkul Marketplace Product Add Controller.
@@ -47,13 +47,13 @@ class Add extends Action
      */
     protected $helper;
     /**
-     * @var \Webkul\Marketplace\Controller\Product\Builder
+     * @var \OrionAlliance\NewModule\Controller\Product\Builder
      */
     protected $productBuilder;
 
     /**
      * @param Context                                       $context
-     * @param Webkul\Marketplace\Controller\Product\Builder $productBuilder
+     * @param OrionAlliance\NewModule\Controller\Product\Builder $productBuilder
      * @param \Magento\Framework\View\Result\PageFactory    $resultPageFactory
      * @param \Magento\Customer\Model\Session               $customerSession
      * @param CustomerUrl                                   $customerUrl
@@ -61,7 +61,7 @@ class Add extends Action
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Webkul\Marketplace\Controller\Product\Builder $productBuilder,
+        \OrionAlliance\NewModule\Controller\Product\Builder $productBuilder,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \Magento\Customer\Model\Session $customerSession,
         CustomerUrl $customerUrl,

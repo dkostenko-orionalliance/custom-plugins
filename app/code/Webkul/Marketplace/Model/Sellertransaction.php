@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Webkul\Marketplace\Api\Data\SellertransactionInterface;
+use OrionAlliance\NewModule\Api\Data\SellertransactionInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Sellertransaction Model.
  *
- * @method \Webkul\Marketplace\Model\ResourceModel\Sellertransaction _getResource()
- * @method \Webkul\Marketplace\Model\ResourceModel\Sellertransaction getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction _getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction getResource()
  */
 class Sellertransaction extends AbstractModel implements SellertransactionInterface, IdentityInterface
 {
@@ -51,7 +51,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\Sellertransaction::class
+            \OrionAlliance\NewModule\Model\ResourceModel\Sellertransaction::class
         );
     }
 
@@ -75,7 +75,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
     /**
      * Load No-Route Sellertransaction.
      *
-     * @return \Webkul\Marketplace\Model\Sellertransaction
+     * @return \OrionAlliance\NewModule\Model\Sellertransaction
      */
     public function noRouteSellertransaction()
     {
@@ -107,7 +107,7 @@ class Sellertransaction extends AbstractModel implements SellertransactionInterf
      *
      * @param int $id
      *
-     * @return \Webkul\Marketplace\Api\Data\SellertransactionInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellertransactionInterface
      */
     public function setId($id)
     {

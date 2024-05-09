@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -19,15 +19,15 @@
             </action>
         </referenceBlock>
         <referenceContainer name="seller.content">
-            <block class="Webkul\Marketplace\Block\Order\View"  name="marketplace_order_creditmemo_create" template="Webkul_Marketplace::order/creditmemo/new.phtml" cacheable="false">
-                <block class="Webkul\Marketplace\Block\Order\Items" name="marketplace_order_new_creditmemo_items" template="Webkul_Marketplace::order/creditmemo/new/items.phtml">
+            <block class="OrionAlliance\NewModule\Block\Order\View"  name="marketplace_order_creditmemo_create" template="OrionAlliance_NewModule::order/creditmemo/new.phtml" cacheable="false">
+                <block class="OrionAlliance\NewModule\Block\Order\Items" name="marketplace_order_new_creditmemo_items" template="OrionAlliance_NewModule::order/creditmemo/new/items.phtml">
                     <block class="Magento\Theme\Block\Html\Pager" name="marketplace_order_item_pager"/>
                     <arguments>
-                        <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                        <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                     </arguments>
                 </block>
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

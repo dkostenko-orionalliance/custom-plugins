@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Product;
+namespace OrionAlliance\NewModule\Controller\Product;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\RequestInterface;
 use Magento\Customer\Model\Url as CustomerUrl;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
 
 /**
  * Webkul Marketplace Product Edit Controller.
@@ -80,7 +80,7 @@ class Edit extends Action
      */
     protected $linkModel;
     /**
-     * @var \Webkul\Marketplace\Controller\Product\Builder
+     * @var \OrionAlliance\NewModule\Controller\Product\Builder
      */
     protected $productBuilder;
 
@@ -88,7 +88,7 @@ class Edit extends Action
      * Construct
      *
      * @param \Magento\Framework\App\Action\Context $context
-     * @param \Webkul\Marketplace\Controller\Product\Builder $productBuilder
+     * @param \OrionAlliance\NewModule\Controller\Product\Builder $productBuilder
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      * @param \Magento\Customer\Model\Session $customerSession
      * @param CustomerUrl $customerUrl
@@ -102,7 +102,7 @@ class Edit extends Action
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Webkul\Marketplace\Controller\Product\Builder $productBuilder,
+        \OrionAlliance\NewModule\Controller\Product\Builder $productBuilder,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \Magento\Customer\Model\Session $customerSession,
         CustomerUrl $customerUrl,
@@ -203,7 +203,7 @@ class Edit extends Action
                         1
                     );
                     if ($collection->getSize()) {
-                        $type = \Webkul\Marketplace\Model\Notification::TYPE_PRODUCT;
+                        $type = \OrionAlliance\NewModule\Model\Notification::TYPE_PRODUCT;
                         $this->notificationHelper->updateNotificationCollection(
                             $collection,
                             $type

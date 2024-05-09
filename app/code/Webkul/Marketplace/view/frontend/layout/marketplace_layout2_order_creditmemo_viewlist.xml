@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -19,9 +19,9 @@
             </action>
         </referenceBlock>
         <referenceContainer name="seller.content">
-            <block class="Webkul\Marketplace\Block\Order\Creditmemo\History"  name="marketplace_order_creditmemo_view" template="Webkul_Marketplace::order/creditmemo/list.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Order\Creditmemo\History"  name="marketplace_order_creditmemo_view" template="OrionAlliance_NewModule::order/creditmemo/list.phtml" cacheable="false">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

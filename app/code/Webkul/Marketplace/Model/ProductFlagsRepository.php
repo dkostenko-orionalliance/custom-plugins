@@ -3,26 +3,26 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Webkul\Marketplace\Model\ResourceModel\ProductFlags as ResourceProductFlags;
+use OrionAlliance\NewModule\Model\ResourceModel\ProductFlags as ResourceProductFlags;
 use Magento\Framework\Exception\CouldNotSaveException;
-use Webkul\Marketplace\Api\Data\ProductFlagsSearchResultsInterfaceFactory;
-use Webkul\Marketplace\Api\Data\ProductFlagsInterfaceFactory;
+use OrionAlliance\NewModule\Api\Data\ProductFlagsSearchResultsInterfaceFactory;
+use OrionAlliance\NewModule\Api\Data\ProductFlagsInterfaceFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Api\DataObjectHelper;
-use Webkul\Marketplace\Api\ProductFlagsRepositoryInterface;
+use OrionAlliance\NewModule\Api\ProductFlagsRepositoryInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use Webkul\Marketplace\Model\ResourceModel\ProductFlags\CollectionFactory as ProductFlagsCollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\ProductFlags\CollectionFactory as ProductFlagsCollectionFactory;
 
 class ProductFlagsRepository implements ProductFlagsRepositoryInterface
 {
@@ -100,10 +100,10 @@ class ProductFlagsRepository implements ProductFlagsRepositoryInterface
     /**
      * Save
      *
-     * @param \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
      */
     public function save(
-        \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+        \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
     ) {
         try {
             $this->resource->save($productFlags);
@@ -180,10 +180,10 @@ class ProductFlagsRepository implements ProductFlagsRepositoryInterface
     /**
      * Delete Records
      *
-     * @param \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
      */
     public function delete(
-        \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+        \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
     ) {
         try {
             $this->resource->delete($productFlags);

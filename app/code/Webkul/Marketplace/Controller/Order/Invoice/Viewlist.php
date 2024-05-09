@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Invoice;
+namespace OrionAlliance\NewModule\Controller\Order\Invoice;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -18,7 +18,7 @@ use Magento\Framework\App\RequestInterface;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\InputException;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 use Magento\Customer\Model\Url as CustomerUrl;
 
 /**
@@ -57,7 +57,7 @@ class Viewlist extends Action
     protected $customerUrl;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $orderHelper;
 
@@ -71,7 +71,7 @@ class Viewlist extends Action
      * @param \Magento\Customer\Model\Session $customerSession
      * @param HelperData $helper
      * @param CustomerUrl $customerUrl
-     * @param \Webkul\Marketplace\Helper\Orders $orderHelper
+     * @param \OrionAlliance\NewModule\Helper\Orders $orderHelper
      */
     public function __construct(
         Context $context,
@@ -81,7 +81,7 @@ class Viewlist extends Action
         \Magento\Customer\Model\Session $customerSession,
         HelperData $helper,
         CustomerUrl $customerUrl,
-        \Webkul\Marketplace\Helper\Orders $orderHelper
+        \OrionAlliance\NewModule\Helper\Orders $orderHelper
     ) {
         $this->_coreRegistry = $coreRegistry;
         $this->_orderRepository = $orderRepository;

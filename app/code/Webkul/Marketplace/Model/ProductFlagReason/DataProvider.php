@@ -3,14 +3,14 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\ProductFlagReason;
+namespace OrionAlliance\NewModule\Model\ProductFlagReason;
 
-use Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider

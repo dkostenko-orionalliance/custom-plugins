@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Notification;
+namespace OrionAlliance\NewModule\Model\Notification;
 
 use Magento\Customer\Api\CustomerRepositoryInterface as CustomerRepository;
 use Magento\Customer\Model\Context as CustomerContext;
@@ -68,12 +68,12 @@ class MarketplaceConfigProvider
     protected $date;
 
      /**
-      * @var \Webkul\Marketplace\Model\ProductFactory
+      * @var \OrionAlliance\NewModule\Model\ProductFactory
       */
     protected $productModel;
 
      /**
-      * @var \Webkul\Marketplace\Model\SellerFactory
+      * @var \OrionAlliance\NewModule\Model\SellerFactory
       */
     protected $sellerModel;
 
@@ -88,7 +88,7 @@ class MarketplaceConfigProvider
     protected $productFactory;
 
      /**
-      * @var \Webkul\Marketplace\Model\FeedbackFactory
+      * @var \OrionAlliance\NewModule\Model\FeedbackFactory
       */
     protected $feedbackFactory;
     /**
@@ -96,7 +96,7 @@ class MarketplaceConfigProvider
      */
     protected $adminHelper;
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $orderHelper;
 
@@ -108,16 +108,16 @@ class MarketplaceConfigProvider
      * @param ScopeConfigInterface $scopeConfig
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param UrlInterface $urlBuilder
-     * @param \Webkul\Marketplace\Helper\Data $helper
-     * @param \Webkul\Marketplace\Helper\Orders $orderHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Orders $orderHelper
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param \Magento\Framework\View\Asset\Repository $viewFileSystem
      * @param \Magento\Backend\Helper\Data $adminHelper
-     * @param \Webkul\Marketplace\Model\ProductFactory $productModel
-     * @param \Webkul\Marketplace\Model\SellerFactory $sellerModel
+     * @param \OrionAlliance\NewModule\Model\ProductFactory $productModel
+     * @param \OrionAlliance\NewModule\Model\SellerFactory $sellerModel
      * @param \Magento\Customer\Model\CustomerFactory $customerModel
      * @param \Magento\Catalog\Model\ProductFactory $productFactory
-     * @param \Webkul\Marketplace\Model\FeedbackFactory $feedbackFactory
+     * @param \OrionAlliance\NewModule\Model\FeedbackFactory $feedbackFactory
      */
     public function __construct(
         \Magento\Backend\Model\Auth\Session $authSession,
@@ -125,16 +125,16 @@ class MarketplaceConfigProvider
         ScopeConfigInterface $scopeConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         UrlInterface $urlBuilder,
-        \Webkul\Marketplace\Helper\Data $helper,
-        \Webkul\Marketplace\Helper\Orders $orderHelper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Orders $orderHelper,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\View\Asset\Repository $viewFileSystem,
         \Magento\Backend\Helper\Data $adminHelper,
-        \Webkul\Marketplace\Model\ProductFactory $productModel,
-        \Webkul\Marketplace\Model\SellerFactory $sellerModel,
+        \OrionAlliance\NewModule\Model\ProductFactory $productModel,
+        \OrionAlliance\NewModule\Model\SellerFactory $sellerModel,
         \Magento\Customer\Model\CustomerFactory $customerModel,
         \Magento\Catalog\Model\ProductFactory $productFactory,
-        \Webkul\Marketplace\Model\FeedbackFactory $feedbackFactory
+        \OrionAlliance\NewModule\Model\FeedbackFactory $feedbackFactory
     ) {
         $this->authSession = $authSession;
         $this->formKey = $formKey;
@@ -162,7 +162,7 @@ class MarketplaceConfigProvider
         $output = [];
         if ($this->isAdminLoggedIn()) {
             $defaultImageUrl = $this->viewFileSystem->getUrlWithParams(
-                'Webkul_Marketplace::images/icons_notifications.png',
+                'OrionAlliance_NewModule::images/icons_notifications.png',
                 []
             );
             $output['formKey'] = $this->formKey->getFormKey();

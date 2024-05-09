@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order;
+namespace OrionAlliance\NewModule\Controller\Order;
 
 /**
  * Webkul Marketplace Order Email Controller.
  */
-class Email extends \Webkul\Marketplace\Controller\Order
+class Email extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Marketplace send order email to buyer controller.

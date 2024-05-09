@@ -1,8 +1,8 @@
 define([
     'jquery',
-    'Webkul_Marketplace/catalog/type-events',
-    'Webkul_Marketplace/js/advanced-pricing-handler',
-    'Webkul_Marketplace/js/options/price-type-handler',
+    'OrionAlliance_NewModule/catalog/type-events',
+    'OrionAlliance_NewModule/js/advanced-pricing-handler',
+    'OrionAlliance_NewModule/js/options/price-type-handler',
     'collapsible',
     'Magento_Ui/js/modal/modal',
     'mage/translate',
@@ -104,7 +104,7 @@ define([
          * Constructor component
          * @param {Object} data - this backend data
          */
-        'Webkul_Marketplace/js/configurable-type-handler': function (data) {
+        'OrionAlliance_NewModule/js/configurable-type-handler': function (data) {
             this.$block = $(data.blockId + ' input[name="attributes[]"]');
             this.hasVariations = data.hasVariations;
 

@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 ?>
 <?php
-/** @var $block \Webkul\Marketplace\Block\Product\Edit\Tab\Variations\Config */
+/** @var $block \OrionAlliance\NewModule\Block\Product\Edit\Tab\Variations\Config */
 $viewModel = $block->getViewModel();
 $helper = $viewModel->getHelper();
 $productType = $block->getRequest()->getParam('type');
@@ -81,7 +81,7 @@ if (in_array($type, $allowedtypes) && ($productType == 'simple'
         "Magento_Ui/js/core/app": {
             "components": {
                 "configurableProductGrid": {
-                    "component": "Webkul_Marketplace/js/variations/product-grid",
+                    "component": "OrionAlliance_NewModule/js/variations/product-grid",
                     "productsFilter": "configurable_associated_product_listing.configurable_associated_product_listing.listing_top.listing_filters",
                     "productsProvider": "configurable_associated_product_listing.data_source",
                     "productsMassAction": "configurable_associated_product_listing.configurable_associated_product_listing.product_columns.ids",
@@ -93,7 +93,7 @@ if (in_array($type, $allowedtypes) && ($productType == 'simple'
                 }
             }
         },
-        "Webkul_Marketplace/js/configurable-type-handler": {
+        "OrionAlliance_NewModule/js/configurable-type-handler": {
             "blockId": "#super_config",
             "tabId": "super_config",
             "hasVariations": "<?= $isConfigurableProduct ? 'true' : 'false' ?>"

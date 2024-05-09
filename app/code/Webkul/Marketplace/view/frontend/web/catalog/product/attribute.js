@@ -1,7 +1,7 @@
 define([
     'jquery',
     'jquery/ui',
-    'Webkul_Marketplace/catalog/product-attributes'
+    'OrionAlliance_NewModule/catalog/product-attributes'
 ], function ($) {
     'use strict';
 

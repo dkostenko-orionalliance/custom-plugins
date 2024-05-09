@@ -3,28 +3,28 @@
  * Webkul Software.
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
-use Webkul\Marketplace\Api\Data\SaleslistSearchResultInterfaceFactory as SearchResultFactory;
+use OrionAlliance\NewModule\Api\Data\SaleslistSearchResultInterfaceFactory as SearchResultFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 
 /**
  * Marketplace SaleslistRepository Class
  */
-class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepositoryInterface
+class SaleslistRepository implements \OrionAlliance\NewModule\Api\SaleslistRepositoryInterface
 {
     /**
-     * @var \Webkul\Marketplace\Model\SaleslistFactory
+     * @var \OrionAlliance\NewModule\Model\SaleslistFactory
      */
     protected $modelFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory
      */
     protected $collectionFactory;
     /**
@@ -39,14 +39,14 @@ class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepository
     /**
      * SaleslistRepository constructor.
      *
-     * @param \Webkul\Marketplace\Model\SaleslistFactory $modelFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory $collectionFactory
+     * @param \OrionAlliance\NewModule\Model\SaleslistFactory $modelFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory $collectionFactory
      * @param SearchResultFactory $searchResultFactory
      * @param CollectionProcessorInterface $collectionProcessor
      */
     public function __construct(
-        \Webkul\Marketplace\Model\SaleslistFactory $modelFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Saleslist\CollectionFactory $collectionFactory,
+        \OrionAlliance\NewModule\Model\SaleslistFactory $modelFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\CollectionFactory $collectionFactory,
         SearchResultFactory $searchResultFactory,
         CollectionProcessorInterface $collectionProcessor
     ) {
@@ -60,7 +60,7 @@ class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepository
      * Get saleslist by id
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Model\Saleslist
+     * @return \OrionAlliance\NewModule\Model\Saleslist
      */
     public function getById($id)
     {
@@ -76,10 +76,10 @@ class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepository
     /**
      * Save record
      *
-     * @param \Webkul\Marketplace\Model\Saleslist $subject
-     * @return \Webkul\Marketplace\Model\Saleslist
+     * @param \OrionAlliance\NewModule\Model\Saleslist $subject
+     * @return \OrionAlliance\NewModule\Model\Saleslist
      */
-    public function save(\Webkul\Marketplace\Model\Saleslist $subject)
+    public function save(\OrionAlliance\NewModule\Model\Saleslist $subject)
     {
         try {
             $subject->save();
@@ -99,7 +99,7 @@ class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepository
      */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $creteria)
     {
-        /** @var \Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection $collection */
+        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection $collection */
         $collection = $this->collectionFactory->create();
 
         $this->collectionProcessor->process($creteria, $collection);
@@ -117,10 +117,10 @@ class SaleslistRepository implements \Webkul\Marketplace\Api\SaleslistRepository
     /**
      * Delete record
      *
-     * @param \Webkul\Marketplace\Model\Saleslist $subject
+     * @param \OrionAlliance\NewModule\Model\Saleslist $subject
      * @return boolean
      */
-    public function delete(\Webkul\Marketplace\Model\Saleslist $subject)
+    public function delete(\OrionAlliance\NewModule\Model\Saleslist $subject)
     {
         try {
             $subject->delete();

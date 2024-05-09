@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Adminhtml\Product;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Product;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Catalog\Model\Indexer\Product\Price\Processor;
-use Webkul\Marketplace\Model\ProductFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\ProductFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
 use Magento\Catalog\Model\CategoryFactory;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
 
 /**
  * Class Deny used to deny the product.
@@ -165,7 +165,7 @@ class Deny extends \Magento\Backend\App\Action
             $productIds = [$data['mageproduct_id']];
             $allStores = $this->_storeManager->getStores();
             $status = \Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_DISABLED;
-            $sellerProductStatus = \Webkul\Marketplace\Model\Product::STATUS_DENIED;
+            $sellerProductStatus = \OrionAlliance\NewModule\Model\Product::STATUS_DENIED;
 
             $sellerProduct = $this->productModel->create()->getCollection();
 
@@ -192,7 +192,7 @@ class Deny extends \Magento\Backend\App\Action
             foreach ($collection as $item) {
                 $id = $item->getId();
                 $this->notificationHelper->saveNotification(
-                    \Webkul\Marketplace\Model\Notification::TYPE_PRODUCT,
+                    \OrionAlliance\NewModule\Model\Notification::TYPE_PRODUCT,
                     $id,
                     $data['mageproduct_id']
                 );
@@ -261,6 +261,6 @@ class Deny extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::product');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::product');
     }
 }

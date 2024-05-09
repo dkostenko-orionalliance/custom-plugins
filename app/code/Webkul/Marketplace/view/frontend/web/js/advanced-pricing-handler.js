@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'Webkul_Marketplace/catalog/type-events'
+    'OrionAlliance_NewModule/catalog/type-events'
 ], function ($, productType) {
     'use strict';
 

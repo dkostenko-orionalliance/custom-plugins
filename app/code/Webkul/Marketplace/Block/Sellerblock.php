@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block;
+namespace OrionAlliance\NewModule\Block;
 
 /*
  * Webkul Marketplace Sellerblock Block
@@ -17,7 +17,7 @@ namespace Webkul\Marketplace\Block;
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\Session;
 use Magento\Catalog\Model\Product;
-use Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\CollectionFactory;
 
 class Sellerblock extends \Magento\Framework\View\Element\Template
 {
@@ -40,12 +40,12 @@ class Sellerblock extends \Magento\Framework\View\Element\Template
     protected $Session;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $mpHelper;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\Collection
      */
     protected $reasonCollection;
 
@@ -61,7 +61,7 @@ class Sellerblock extends \Magento\Framework\View\Element\Template
      * @param \Magento\Framework\Registry $registry
      * @param Customer $customer
      * @param \Magento\Customer\Model\Session $session
-     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
      * @param array $data
      * @param CollectionFactory|null $reasonCollection
      */
@@ -70,7 +70,7 @@ class Sellerblock extends \Magento\Framework\View\Element\Template
         \Magento\Framework\Registry $registry,
         Customer $customer,
         \Magento\Customer\Model\Session $session,
-        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \OrionAlliance\NewModule\Helper\Data $mpHelper,
         array $data = [],
         CollectionFactory $reasonCollection = null
     ) {
@@ -100,7 +100,7 @@ class Sellerblock extends \Magento\Framework\View\Element\Template
     /**
      * GetProductFlagReasons is used to get the product Flag Reasons
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\ProductFlagReason\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\ProductFlagReason\Collection
      */
     public function getProductFlagReasons()
     {

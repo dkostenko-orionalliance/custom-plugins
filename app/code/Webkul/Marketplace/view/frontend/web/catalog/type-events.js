@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'Webkul_Marketplace/js/product/weight-handler'
+    'OrionAlliance_NewModule/js/product/weight-handler'
 ], function ($, weight) {
     'use strict';
 

@@ -3,22 +3,22 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Page;
+namespace OrionAlliance\NewModule\Block\Page;
 
 class Header extends \Magento\Theme\Block\Html\Header\Logo
 {
     /**
      * @var string
      */
-    protected $_template = 'Webkul_Marketplace::layout2/page/header.phtml';
+    protected $_template = 'OrionAlliance_NewModule::layout2/page/header.phtml';
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -26,13 +26,13 @@ class Header extends \Magento\Theme\Block\Html\Header\Logo
      * Construct
      *
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      * @param \Magento\MediaStorage\Helper\File\Storage\Database $fileStorageHelper
      * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         \Magento\MediaStorage\Helper\File\Storage\Database $fileStorageHelper,
         array $data = []
     ) {
@@ -98,7 +98,7 @@ class Header extends \Magento\Theme\Block\Html\Header\Logo
     /**
      * Get Helper Data
      *
-     * @return \Webkul\Marketplace\Helper\Data
+     * @return \OrionAlliance\NewModule\Helper\Data
      */
     public function getHelper()
     {

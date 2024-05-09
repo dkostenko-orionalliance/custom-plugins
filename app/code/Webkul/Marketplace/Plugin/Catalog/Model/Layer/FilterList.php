@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Plugin\Catalog\Model\Layer;
+namespace OrionAlliance\NewModule\Plugin\Catalog\Model\Layer;
 
 class FilterList
 {
@@ -18,7 +18,7 @@ class FilterList
     protected $_objectManager;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $_mpHelper;
     /**
@@ -31,13 +31,13 @@ class FilterList
      *
      * @param \Magento\Catalog\Block\Product\Context $context
      * @param \Magento\Framework\ObjectManagerInterface $objectManager
-     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
      * @param \Magento\Framework\App\Request\Http $request
      */
     public function __construct(
         \Magento\Catalog\Block\Product\Context $context,
         \Magento\Framework\ObjectManagerInterface $objectManager,
-        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \OrionAlliance\NewModule\Helper\Data $mpHelper,
         \Magento\Framework\App\Request\Http $request
     ) {
         $this->_objectManager = $objectManager;
@@ -64,7 +64,7 @@ class FilterList
             $this->request->getFullActionName() != 'marketplace_seller_profile'
         ) {
             $result[] = $this->_objectManager->create(
-                \Webkul\Marketplace\Model\Layer\Filter\Seller::class,
+                \OrionAlliance\NewModule\Model\Layer\Filter\Seller::class,
                 ['layer' => $layer]
             );
         }

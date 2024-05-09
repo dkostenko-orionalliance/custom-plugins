@@ -3,13 +3,13 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Api;
+namespace OrionAlliance\NewModule\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -18,19 +18,19 @@ interface ProductFlagsRepositoryInterface
     /**
      * Save ProductFlag
      *
-     * @param \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
-     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
+     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
+     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+        \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
     );
 
     /**
      * Retrieve ProductFlag
      *
      * @param int $entityId
-     * @return \Webkul\Marketplace\Api\Data\ProductFlagsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getById($entityId);
@@ -39,7 +39,7 @@ interface ProductFlagsRepositoryInterface
      * Retrieve ProductFlag matching the specified criteria.
      *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \Webkul\Marketplace\Api\Data\ProductFlagsSearchResultsInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ProductFlagsSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -49,12 +49,12 @@ interface ProductFlagsRepositoryInterface
     /**
      * Delete ProductFlag
      *
-     * @param \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+     * @param \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
      * @return bool
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \Webkul\Marketplace\Api\Data\ProductFlagsInterface $productFlags
+        \OrionAlliance\NewModule\Api\Data\ProductFlagsInterface $productFlags
     );
 
     /**

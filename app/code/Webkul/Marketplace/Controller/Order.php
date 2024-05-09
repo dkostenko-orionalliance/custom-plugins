@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller;
+namespace OrionAlliance\NewModule\Controller;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -27,16 +27,16 @@ use Magento\Sales\Api\OrderManagementInterface;
 use Magento\CatalogInventory\Api\StockConfigurationInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\InputException;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
-use Webkul\Marketplace\Model\Notification;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\Notification;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
 use Magento\Customer\Model\Url as CustomerUrl;
 use Magento\Framework\Stdlib\DateTime\DateTime;
 use Magento\Framework\App\Response\Http\FileFactory;
-use Webkul\Marketplace\Model\OrdersFactory as MpOrdersModel;
+use OrionAlliance\NewModule\Model\OrdersFactory as MpOrdersModel;
 use Magento\Sales\Model\ResourceModel\Order\Invoice\Collection as InvoiceCollection;
-use Webkul\Marketplace\Model\SellerFactory as MpSellerModel;
+use OrionAlliance\NewModule\Model\SellerFactory as MpSellerModel;
 use Magento\Sales\Model\Service\InvoiceService;
 use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\Result\RawFactory;
@@ -114,7 +114,7 @@ abstract class Order extends Action
     protected $_orderManagement;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $orderHelper;
 
@@ -154,12 +154,12 @@ abstract class Order extends Action
     protected $fileFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\Order\Pdf\Creditmemo
+     * @var \OrionAlliance\NewModule\Model\Order\Pdf\Creditmemo
      */
     protected $creditmemoPdf;
 
     /**
-     * @var \Webkul\Marketplace\Model\Order\Pdf\Invoice
+     * @var \OrionAlliance\NewModule\Model\Order\Pdf\Invoice
      */
     protected $invoicePdf;
 
@@ -224,7 +224,7 @@ abstract class Order extends Action
      * @param OrderManagementInterface                         $orderManagement
      * @param \Magento\Framework\Registry                      $coreRegistry
      * @param \Magento\Customer\Model\Session                  $customerSession
-     * @param \Webkul\Marketplace\Helper\Orders                $orderHelper
+     * @param \OrionAlliance\NewModule\Helper\Orders                $orderHelper
      * @param NotificationHelper                               $notificationHelper
      * @param HelperData                                       $helper
      * @param \Magento\Sales\Api\CreditmemoManagementInterface $creditmemoManagement
@@ -232,8 +232,8 @@ abstract class Order extends Action
      * @param CustomerUrl                                      $customerUrl
      * @param DateTime                                         $date
      * @param FileFactory                                      $fileFactory
-     * @param \Webkul\Marketplace\Model\Order\Pdf\Creditmemo   $creditmemoPdf
-     * @param \Webkul\Marketplace\Model\Order\Pdf\Invoice      $invoicePdf
+     * @param \OrionAlliance\NewModule\Model\Order\Pdf\Creditmemo   $creditmemoPdf
+     * @param \OrionAlliance\NewModule\Model\Order\Pdf\Invoice      $invoicePdf
      * @param MpOrdersModel                                    $mpOrdersModel
      * @param InvoiceCollection                                $invoiceCollection
      * @param \Magento\Sales\Api\InvoiceManagementInterface    $invoiceManagement
@@ -260,7 +260,7 @@ abstract class Order extends Action
         OrderManagementInterface $orderManagement,
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Customer\Model\Session $customerSession,
-        \Webkul\Marketplace\Helper\Orders $orderHelper,
+        \OrionAlliance\NewModule\Helper\Orders $orderHelper,
         NotificationHelper $notificationHelper,
         HelperData $helper,
         \Magento\Sales\Api\CreditmemoManagementInterface $creditmemoManagement,
@@ -268,8 +268,8 @@ abstract class Order extends Action
         CustomerUrl $customerUrl,
         DateTime $date,
         FileFactory $fileFactory,
-        \Webkul\Marketplace\Model\Order\Pdf\Creditmemo $creditmemoPdf,
-        \Webkul\Marketplace\Model\Order\Pdf\Invoice $invoicePdf,
+        \OrionAlliance\NewModule\Model\Order\Pdf\Creditmemo $creditmemoPdf,
+        \OrionAlliance\NewModule\Model\Order\Pdf\Invoice $invoicePdf,
         MpOrdersModel $mpOrdersModel,
         InvoiceCollection $invoiceCollection,
         \Magento\Sales\Api\InvoiceManagementInterface $invoiceManagement,

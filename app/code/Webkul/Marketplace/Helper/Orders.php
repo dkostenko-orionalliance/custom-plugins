@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Helper;
+namespace OrionAlliance\NewModule\Helper;
 
 use Magento\Sales\Model\Order\Status as OrderStatus;
-use Webkul\Marketplace\Model\OrdersFactory as MpOrdersFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\SaleslistFactory;
-use Webkul\Marketplace\Model\SaleperpartnerFactory;
-use Webkul\Marketplace\Model\SellertransactionFactory;
-use Webkul\Marketplace\Model\FeedbackcountFactory;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\OrdersFactory as MpOrdersFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory;
+use OrionAlliance\NewModule\Model\SellertransactionFactory;
+use OrionAlliance\NewModule\Model\FeedbackcountFactory;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
 use Magento\Framework\Data\Form\FormKey;
 
 /**
@@ -177,7 +177,7 @@ class Orders extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Return the Customer seller status.
      *
-     * @return \Webkul\Marketplace\Api\Data\SellerInterface
+     * @return \OrionAlliance\NewModule\Api\Data\SellerInterface
      */
     public function getOrderStatusData()
     {
@@ -190,7 +190,7 @@ class Orders extends \Magento\Framework\App\Helper\AbstractHelper
      * Return the seller Order data.
      *
      * @param int $orderId
-     * @return \Webkul\Marketplace\Api\Data\OrdersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\OrdersInterface
      */
     public function getOrderinfo($orderId = '')
     {
@@ -638,7 +638,7 @@ class Orders extends \Magento\Framework\App\Helper\AbstractHelper
                 $transid = $sellerTrans->getId();
                 $transactionNumber = $sellerTrans->getTransactionId();
                 $this->notificationHelper->saveNotification(
-                    \Webkul\Marketplace\Model\Notification::TYPE_TRANSACTION,
+                    \OrionAlliance\NewModule\Model\Notification::TYPE_TRANSACTION,
                     $transid,
                     $transid
                 );
@@ -815,7 +815,7 @@ class Orders extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get Order Product Option Data Method.
      *
-     * @param \Webkul\Marketplace\Model\Saleslist $res
+     * @param \OrionAlliance\NewModule\Model\Saleslist $res
      * @param string $productName
      * @param bool $wrap
      * @return array

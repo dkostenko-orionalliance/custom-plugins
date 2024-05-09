@@ -3,24 +3,24 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Ui\DataProvider;
+namespace OrionAlliance\NewModule\Ui\DataProvider;
 
-use Webkul\Marketplace\Model\Notification;
-use Webkul\Marketplace\Model\ResourceModel\Notification\CollectionFactory;
-use Webkul\Marketplace\Helper\Data as HelperData;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\Notification;
+use OrionAlliance\NewModule\Model\ResourceModel\Notification\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
 
 class NotificationDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
     /**
      * Notification collection
      *
-     * @var \Webkul\Marketplace\Model\ResourceModel\Notification\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Notification\Collection
      */
     protected $collection;
 

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Account;
+namespace OrionAlliance\NewModule\Controller\Account;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Customer\Model\Session;
@@ -18,7 +18,7 @@ use Magento\Framework\Data\Form\FormKey\Validator as FormKeyValidator;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
 use Magento\Framework\App\RequestInterface;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
 use Magento\Customer\Model\Url as CustomerUrl;
 use Magento\Backend\Model\Url as BackendUrl;
 
@@ -43,17 +43,17 @@ class BecomesellerPost extends Action
     protected $_date;
 
     /**
-     * @var  \Webkul\Marketplace\Model\SellerFactory
+     * @var  \OrionAlliance\NewModule\Model\SellerFactory
      */
     protected $_sellerFactory;
 
     /**
-     * @var  \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory
+     * @var  \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory
      */
     protected $_sellerCollectionFactory;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $_helper;
 
@@ -77,9 +77,9 @@ class BecomesellerPost extends Action
      * @param Session $customerSession
      * @param FormKeyValidator $formKeyValidator
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
-     * @param \Webkul\Marketplace\Model\SellerFactory $sellerFactory
-     * @param \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
-     * @param \Webkul\Marketplace\Helper\Data $helper
+     * @param \OrionAlliance\NewModule\Model\SellerFactory $sellerFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory
+     * @param \OrionAlliance\NewModule\Helper\Data $helper
      * @param MpEmailHelper $mpEmailHelper
      * @param CustomerUrl $customerUrl
      * @param BackendUrl $backendUrl
@@ -89,9 +89,9 @@ class BecomesellerPost extends Action
         Session $customerSession,
         FormKeyValidator $formKeyValidator,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
-        \Webkul\Marketplace\Model\SellerFactory $sellerFactory,
-        \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory,
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Model\SellerFactory $sellerFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerCollectionFactory,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         MpEmailHelper $mpEmailHelper,
         CustomerUrl $customerUrl,
         BackendUrl $backendUrl

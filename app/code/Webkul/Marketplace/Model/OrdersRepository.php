@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Exception\NoSuchEntityException;
-use Webkul\Marketplace\Api\Data\OrdersInterface;
-use Webkul\Marketplace\Model\ResourceModel\Orders\CollectionFactory;
+use OrionAlliance\NewModule\Api\Data\OrdersInterface;
+use OrionAlliance\NewModule\Model\ResourceModel\Orders\CollectionFactory;
 
-class OrdersRepository implements \Webkul\Marketplace\Api\OrdersRepositoryInterface
+class OrdersRepository implements \OrionAlliance\NewModule\Api\OrdersRepositoryInterface
 {
     /**
      * @var OrdersFactory
@@ -47,7 +47,7 @@ class OrdersRepository implements \Webkul\Marketplace\Api\OrdersRepositoryInterf
      * Get by id
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Model\Orders
+     * @return \OrionAlliance\NewModule\Model\Orders
      */
     public function getById($id)
     {
@@ -65,7 +65,7 @@ class OrdersRepository implements \Webkul\Marketplace\Api\OrdersRepositoryInterf
      * Get by sellerid
      *
      * @param int||null $sellerId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Orders\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection
      */
     public function getBySellerId($sellerId = null)
     {
@@ -80,7 +80,7 @@ class OrdersRepository implements \Webkul\Marketplace\Api\OrdersRepositoryInterf
      * Get by orderid
      *
      * @param int $orderId
-     * @return \Webkul\Marketplace\Model\ResourceModel\Orders\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection
      */
     public function getByOrderId($orderId)
     {
@@ -94,11 +94,11 @@ class OrdersRepository implements \Webkul\Marketplace\Api\OrdersRepositoryInterf
     /**
      * Get Collection
      *
-     * @return \Webkul\Marketplace\Model\ResourceModel\Orders\Collection
+     * @return \OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection
      */
     public function getList()
     {
-        /** @var \Webkul\Marketplace\Model\ResourceModel\Orders\Collection $collection */
+        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Orders\Collection $collection */
         $collection = $this->collectionFactory->create();
         $collection->load();
 

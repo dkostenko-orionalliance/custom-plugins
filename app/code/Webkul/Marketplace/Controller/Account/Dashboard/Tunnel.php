@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Account\Dashboard;
+namespace OrionAlliance\NewModule\Controller\Account\Dashboard;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Controller\Result;
 use Magento\Framework\Encryption\Helper\Security;
-use Webkul\Marketplace\Helper\Dashboard\Data as MpDashboardHelper;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Dashboard\Data as MpDashboardHelper;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 use Laminas\Http\Request;
 
 /**
@@ -90,7 +90,7 @@ class Tunnel extends Action
         /** @var \Magento\Framework\Controller\Result\Raw $resultRaw */
         $resultRaw = $this->_resultRawFactory->create();
         if ($getEncodedParamData && $getEncryptedHashData) {
-            /** @var $helper \Webkul\Marketplace\Helper\Dashboard\Data */
+            /** @var $helper \OrionAlliance\NewModule\Helper\Dashboard\Data */
             $helper = $this->mpDashboardHelper;
             $newEncryptedHashData = $helper->getChartEncryptedHashData($getEncodedParamData);
             if (Security::compareStrings($newEncryptedHashData, $getEncryptedHashData)) {
@@ -106,7 +106,7 @@ class Tunnel extends Action
                         $httpZendClient = $this->httpZendClient;
                         
                         $httpZendClient->setUri(
-                            \Webkul\Marketplace\Block\Account\Dashboard\Diagrams::GOOGLE_API_URL
+                            \OrionAlliance\NewModule\Block\Account\Dashboard\Diagrams::GOOGLE_API_URL
                         )->setParameterGet(
                             $params
                         )

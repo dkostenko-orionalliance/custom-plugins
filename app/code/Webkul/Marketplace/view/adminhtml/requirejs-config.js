@@ -2,20 +2,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
  var config = {
     'shim': {
-        'Webkul_Marketplace/js/extjs/ext-tree-checkboxCategory': [
+        'OrionAlliance_NewModule/js/extjs/ext-tree-checkboxCategory': [
             'extjs/defaults'
         ],
     },
     "map": {
         "*": {
-            sellerCheckboxTree : "Webkul_Marketplace/js/extjs/ext-tree-checkboxCategory"
+            sellerCheckboxTree : "OrionAlliance_NewModule/js/extjs/ext-tree-checkboxCategory"
         }
     },
 };

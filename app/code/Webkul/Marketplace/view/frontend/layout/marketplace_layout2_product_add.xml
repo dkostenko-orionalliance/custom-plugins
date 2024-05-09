@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -21,24 +21,24 @@
             </action>
         </referenceBlock>
         <referenceContainer name="seller.content">
-            <block class="Webkul\Marketplace\Block\Product\Create" name="marketplace_product_add" template="Webkul_Marketplace::product/add.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Create" name="marketplace_product_add" template="OrionAlliance_NewModule::product/add.phtml" cacheable="false">
             <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Create" name="marketplace_product_related_product" template="Webkul_Marketplace::product/related_product.phtml" ifconfig="marketplace/product_settings/allow_related_product" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Create" name="marketplace_product_related_product" template="OrionAlliance_NewModule::product/related_product.phtml" ifconfig="marketplace/product_settings/allow_related_product" cacheable="false">
              <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Create" name="marketplace_product_upsell_product" template="Webkul_Marketplace::product/upsell_product.phtml" ifconfig="marketplace/product_settings/allow_upsell_product" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Create" name="marketplace_product_upsell_product" template="OrionAlliance_NewModule::product/upsell_product.phtml" ifconfig="marketplace/product_settings/allow_upsell_product" cacheable="false">
             <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Create" name="marketplace_product_crosssell_product" template="Webkul_Marketplace::product/crosssell_product.phtml" ifconfig="marketplace/product_settings/allow_crosssell_product" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Create" name="marketplace_product_crosssell_product" template="OrionAlliance_NewModule::product/crosssell_product.phtml" ifconfig="marketplace/product_settings/allow_crosssell_product" cacheable="false">
              <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>
@@ -52,62 +52,62 @@
             <uiComponent name="marketplace_crosssell_product_listing"/>
         </referenceContainer>
         <referenceContainer name="marketplace_product_add">
-            <block class="Webkul\Marketplace\Block\Product\Create" ifconfig="google/analytics/active" name="product_view_optimization" template="Webkul_Marketplace::/product-view-optimization.phtml" cacheable="false"/>
-            <block class="Webkul\Marketplace\Block\Product\Create" name="marketplace_product_cart_limit" template="Webkul_Marketplace::product/allow_product_limit.phtml" ifconfig="marketplace/product_settings/allow_product_limit" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Create" ifconfig="google/analytics/active" name="product_view_optimization" template="OrionAlliance_NewModule::/product-view-optimization.phtml" cacheable="false"/>
+            <block class="OrionAlliance\NewModule\Block\Product\Create" name="marketplace_product_cart_limit" template="OrionAlliance_NewModule::product/allow_product_limit.phtml" ifconfig="marketplace/product_settings/allow_product_limit" cacheable="false">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Helper\Form\Gallery\Content" name="marketplace_product_add_gallery" template="Webkul_Marketplace::product/helper/gallery.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Helper\Form\Gallery\Content" name="marketplace_product_add_gallery" template="OrionAlliance_NewModule::product/helper/gallery.phtml" cacheable="false">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Edit\Downloadable" name="marketplace_product_add_downloadable" template="Webkul_Marketplace::product/edit/downloadable.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\Downloadable" name="marketplace_product_add_downloadable" template="OrionAlliance_NewModule::product/edit/downloadable.phtml" cacheable="false">
              <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Edit\Variations\Config" name="marketplace_product_add_configurable" template="Webkul_Marketplace::product/edit/super/config.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\Variations\Config" name="marketplace_product_add_configurable" template="OrionAlliance_NewModule::product/edit/super/config.phtml" cacheable="false">
             <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>
         <referenceBlock name="marketplace_product_add_gallery">
-            <block class="Webkul\Marketplace\Block\Product\Edit\NewVideo" name="new-video" template="Webkul_Marketplace::product/edit/video.phtml" cacheable="false"/>
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\NewVideo" name="new-video" template="OrionAlliance_NewModule::product/edit/video.phtml" cacheable="false"/>
         </referenceBlock>
         <referenceBlock name="marketplace_product_add_downloadable">
-            <block class="Webkul\Marketplace\Block\Product\Edit\Downloadable\Links" name="marketplace_product_add_downloadable_links" template="Webkul_Marketplace::product/edit/downloadable/links.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\Downloadable\Links" name="marketplace_product_add_downloadable_links" template="OrionAlliance_NewModule::product/edit/downloadable/links.phtml" cacheable="false">
             <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\Product\Edit\Downloadable\Samples" name="marketplace_product_add_downloadable_samples" template="Webkul_Marketplace::product/edit/downloadable/samples.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\Downloadable\Samples" name="marketplace_product_add_downloadable_samples" template="OrionAlliance_NewModule::product/edit/downloadable/samples.phtml" cacheable="false">
              <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceBlock name="marketplace_product_add_configurable">
-            <block class="Webkul\Marketplace\Block\Product\Edit\Variations\Config\Matrix" name="sellermatrix" template="Webkul_Marketplace::product/edit/super/matrix.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Product\Edit\Variations\Config\Matrix" name="sellermatrix" template="OrionAlliance_NewModule::product/edit/super/matrix.phtml" cacheable="false">
             <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceBlock>
         <referenceBlock name="sellermatrix">
-            <block class="Webkul\Marketplace\Block\Component\StepsWizard" name="variation-steps-wizard">
-                <block class="Webkul\Marketplace\Block\Product\Steps\SelectAttributes" name="step1" template="Webkul_Marketplace::product/edit/attribute/steps/select_attributes.phtml">
+            <block class="OrionAlliance\NewModule\Block\Component\StepsWizard" name="variation-steps-wizard">
+                <block class="OrionAlliance\NewModule\Block\Product\Steps\SelectAttributes" name="step1" template="OrionAlliance_NewModule::product/edit/attribute/steps/select_attributes.phtml">
                     <uiComponent name="marketplace_product_attributes_listing"/>
                 </block>
-                <block class="Webkul\Marketplace\Block\Product\Steps\AttributeValues" name="step2" template="Webkul_Marketplace::product/edit/attribute/steps/attributes_values.phtml"/>
-                <block class="Webkul\Marketplace\Block\Product\Steps\Bulk" name="step3" template="Webkul_Marketplace::product/edit/attribute/steps/bulk.phtml">
+                <block class="OrionAlliance\NewModule\Block\Product\Steps\AttributeValues" name="step2" template="OrionAlliance_NewModule::product/edit/attribute/steps/attributes_values.phtml"/>
+                <block class="OrionAlliance\NewModule\Block\Product\Steps\Bulk" name="step3" template="OrionAlliance_NewModule::product/edit/attribute/steps/bulk.phtml">
                     <arguments>
-                        <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                        <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                     </arguments>
                 </block>
-                <block class="Webkul\Marketplace\Block\Product\Steps\Summary" name="step4" template="Webkul_Marketplace::product/edit/attribute/steps/summary.phtml"/>
+                <block class="OrionAlliance\NewModule\Block\Product\Steps\Summary" name="step4" template="OrionAlliance_NewModule::product/edit/attribute/steps/summary.phtml"/>
             </block>
         </referenceBlock>
     </body>

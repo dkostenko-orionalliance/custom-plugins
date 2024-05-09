@@ -4,12 +4,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-/** @var $block \Webkul\Marketplace\Block\Component\StepsWizard */
+/** @var $block \OrionAlliance\NewModule\Block\Component\StepsWizard */
 ?>
 <div data-role="steps-wizard-main" class="steps-wizard <?= /* @noEscape */
 $block->getData('config/dataScope')?>" 
@@ -68,7 +68,7 @@ data-bind="scope: '<?= /* @noEscape */  $block->getComponentName()?>'">
             "Magento_Ui/js/core/app": {
                 "components": {
                         "<?= /* @noEscape */  $block->getComponentName()?>": {
-                            "component": "Webkul_Marketplace/js/lib/step-wizard",
+                            "component": "OrionAlliance_NewModule/js/lib/step-wizard",
                             "initData": <?= /* @noEscape */  $block->jsonEncode($block->getInitData()) ?>,
                             "stepsNames": <?= /* @noEscape */  $block->jsonEncode($block->getStepComponents()) ?>,
                             "modalClass": "<?= /* @noEscape */ $block->getData('config/dataScope')?>"

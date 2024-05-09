@@ -3,21 +3,21 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit;
 
 use Magento\Customer\Controller\RegistryConstants;
 use Magento\Ui\Component\Layout\Tabs\TabInterface;
 use Magento\Backend\Block\Widget\Form;
 use Magento\Backend\Block\Widget\Form\Generic;
 use Magento\Customer\Model\CustomerFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\SellerFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\SellerFactory;
 
 /**
  * Customer Seller form block.
@@ -79,7 +79,7 @@ class Tabs extends Generic implements TabInterface
      * @param \Magento\Store\Model\System\Store $systemStore
      * @param \Magento\Directory\Model\ResourceModel\Country\Collection $country
      * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig
-     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit
+     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit
      * @param CustomerFactory $customerModel
      * @param \Magento\Store\Ui\Component\Listing\Column\Store\Options $options
      * @param MpHelper $mpHelper
@@ -93,7 +93,7 @@ class Tabs extends Generic implements TabInterface
         \Magento\Store\Model\System\Store $systemStore,
         \Magento\Directory\Model\ResourceModel\Country\Collection $country,
         \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig,
-        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
+        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
         CustomerFactory $customerModel,
         \Magento\Store\Ui\Component\Listing\Column\Store\Options $options,
         MpHelper $mpHelper,
@@ -674,7 +674,7 @@ class Tabs extends Generic implements TabInterface
     {
         $html = parent::getFormHtml();
         $html .= $this->getLayout()->createBlock(
-            \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Js::class
+            \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Js::class
         )->toHtml();
 
         return $html;

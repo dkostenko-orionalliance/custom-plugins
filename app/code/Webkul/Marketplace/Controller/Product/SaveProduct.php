@@ -3,26 +3,26 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Product;
+namespace OrionAlliance\NewModule\Controller\Product;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
-use Webkul\Marketplace\Helper\Data as MarketplaceHelperData;
-use Webkul\Marketplace\Model\Product as SellerProduct;
+use OrionAlliance\NewModule\Helper\Data as MarketplaceHelperData;
+use OrionAlliance\NewModule\Model\Product as SellerProduct;
 use Magento\Downloadable\Api\Data\SampleInterfaceFactory as SampleFactory;
 use Magento\Downloadable\Api\Data\LinkInterfaceFactory as LinkFactory;
 use Magento\Catalog\Api\CategoryLinkManagementInterface;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
 use Magento\CatalogInventory\Model\Spi\StockRegistryProviderInterface;
 use Magento\CatalogInventory\Api\StockConfigurationInterface;
 use Magento\Customer\Model\CustomerFactory;
 use Magento\Catalog\Model\CategoryFactory;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
 use Magento\Catalog\Api\Data\ProductCustomOptionInterfaceFactory;
 use Magento\Framework\Filter\FilterInput;
 
@@ -161,7 +161,7 @@ class SaveProduct
      */
     protected $_linkResolver;
     /**
-     * @var \Webkul\Marketplace\Model\ProductFactory
+     * @var \OrionAlliance\NewModule\Model\ProductFactory
      */
     protected $_mpProductFactory;
     /**
@@ -201,7 +201,7 @@ class SaveProduct
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Catalog\Model\Product\Copier $productCopier
      * @param \Magento\Framework\Message\ManagerInterface $messageManager
-     * @param \Webkul\Marketplace\Model\ProductFactory $mpProductFactory
+     * @param \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory
      * @param MpProductCollection $mpProductCollectionFactory
      * @param StockRegistryProviderInterface $stockRegistryProvider
      * @param StockConfigurationInterface $stockConfiguration
@@ -234,7 +234,7 @@ class SaveProduct
         \Magento\Framework\Registry $registry,
         \Magento\Catalog\Model\Product\Copier $productCopier,
         \Magento\Framework\Message\ManagerInterface $messageManager,
-        \Webkul\Marketplace\Model\ProductFactory $mpProductFactory,
+        \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory,
         MpProductCollection $mpProductCollectionFactory,
         StockRegistryProviderInterface $stockRegistryProvider,
         StockConfigurationInterface $stockConfiguration,

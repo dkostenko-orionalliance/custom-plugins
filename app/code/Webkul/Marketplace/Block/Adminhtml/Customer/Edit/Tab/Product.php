@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab;
 
 use Magento\Customer\Controller\RegistryConstants;
 
@@ -23,7 +23,7 @@ class Product extends \Magento\Backend\Block\Template
     protected $_template = 'seller/assign_products.phtml';
 
     /**
-     * @var \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Grid\Product
+     * @var \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Grid\Product
      */
     protected $blockGrid;
 
@@ -38,7 +38,7 @@ class Product extends \Magento\Backend\Block\Template
     protected $_productFactory;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Product\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
      */
     protected $_sellerProduct;
 
@@ -50,17 +50,17 @@ class Product extends \Magento\Backend\Block\Template
     /**
      * @param \Magento\Backend\Block\Template\Context                    $context
      * @param \Magento\Framework\Registry                                $coreRegistry
-     * @param \Webkul\Marketplace\Model\ResourceModel\Product\Collection $sellerProduct
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $sellerProduct
      * @param \Magento\Framework\Json\EncoderInterface                   $jsonEncoder
-     * @param \Webkul\Marketplace\Block\Adminhtml\Customer\Edit          $customerEdit
+     * @param \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit          $customerEdit
      * @param array                                                      $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\Registry $coreRegistry,
-        \Webkul\Marketplace\Model\ResourceModel\Product\Collection $sellerProduct,
+        \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection $sellerProduct,
         \Magento\Framework\Json\EncoderInterface $jsonEncoder,
-        \Webkul\Marketplace\Block\Adminhtml\Customer\Edit $customerEdit,
+        \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit $customerEdit,
         array $data = []
     ) {
         $this->_coreRegistry = $coreRegistry;
@@ -81,7 +81,7 @@ class Product extends \Magento\Backend\Block\Template
     {
         if (null === $this->blockGrid) {
             $this->blockGrid = $this->getLayout()->createBlock(
-                \Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Grid\Product::class,
+                \OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Grid\Product::class,
                 'seller.product.grid'
             );
         }

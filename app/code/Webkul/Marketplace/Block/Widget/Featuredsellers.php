@@ -3,17 +3,17 @@
  * webkul
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Widget;
+namespace OrionAlliance\NewModule\Block\Widget;
 
-use Webkul\Marketplace\Model\SellerFactory;
+use OrionAlliance\NewModule\Model\SellerFactory;
 use Magento\Framework\View\Element\Template\Context;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 use Magento\Framework\View\Asset\Repository;
 
 class Featuredsellers extends \Magento\Framework\View\Element\Template implements \Magento\Widget\Block\BlockInterface
@@ -127,7 +127,7 @@ class Featuredsellers extends \Magento\Framework\View\Element\Template implement
         $storeId = $helper->getCurrentStoreId();
         $collection = $this->sellerFactory->create()
                         ->getCollection()
-                        ->addFieldToFilter('is_seller', \Webkul\Marketplace\Model\Seller::STATUS_ENABLED)
+                        ->addFieldToFilter('is_seller', \OrionAlliance\NewModule\Model\Seller::STATUS_ENABLED)
                         ->addFieldToFilter(
                             ['store_id','store_id'],
                             [

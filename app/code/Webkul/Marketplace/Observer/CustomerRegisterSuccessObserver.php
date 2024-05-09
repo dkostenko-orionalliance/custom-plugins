@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Observer;
+namespace OrionAlliance\NewModule\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use Webkul\Marketplace\Model\SellerFactory as MpSellerFactory;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\SellerFactory as MpSellerFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 use Magento\UrlRewrite\Model\UrlRewriteFactory;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
 
 /**
  * Webkul Marketplace CustomerRegisterSuccessObserver Observer.

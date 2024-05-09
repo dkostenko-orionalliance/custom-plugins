@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Invoice;
+namespace OrionAlliance\NewModule\Controller\Order\Invoice;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
  * Webkul Marketplace Order Invoice PDF Print Controller.
  */
-class Printpdf extends \Webkul\Marketplace\Controller\Order
+class Printpdf extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Print invoice pdf

@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -16,12 +16,12 @@
     <body>
         <referenceBlock name="marketplace_order_invoice_items">
             <block class="Magento\Theme\Block\Html\Pager" name="marketplace_order_item_pager"/>
-            <block class="Webkul\Marketplace\Block\Order\Invoice\Totals" name="marketplace_order_invoice_totals" template="Webkul_Marketplace::order/invoice/totals.phtml">
+            <block class="OrionAlliance\NewModule\Block\Order\Invoice\Totals" name="marketplace_order_invoice_totals" template="OrionAlliance_NewModule::order/invoice/totals.phtml">
                 <arguments>
                     <argument name="label_properties" xsi:type="string">colspan="6" class="mark"</argument>
                     <argument name="value_properties" xsi:type="string">class="amount"</argument>
                 </arguments>
-                <block class="Webkul\Marketplace\Block\Order\Invoice\Totals\Cod" name="marketplace_invoice_cod"/>
+                <block class="OrionAlliance\NewModule\Block\Order\Invoice\Totals\Cod" name="marketplace_invoice_cod"/>
             </block>
         </referenceBlock>
     </body>

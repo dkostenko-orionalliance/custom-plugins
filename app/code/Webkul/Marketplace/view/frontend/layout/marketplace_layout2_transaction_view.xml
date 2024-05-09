@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -18,9 +18,9 @@
             </action>
         </referenceBlock>
         <referenceContainer name="seller.content">
-            <block class="Webkul\Marketplace\Block\Transaction\View" name="marketplace_transaction_view" template="Webkul_Marketplace::transaction/view.phtml" cacheable="false">
+            <block class="OrionAlliance\NewModule\Block\Transaction\View" name="marketplace_transaction_view" template="OrionAlliance_NewModule::transaction/view.phtml" cacheable="false">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

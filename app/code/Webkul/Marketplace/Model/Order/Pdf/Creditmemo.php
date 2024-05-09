@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Order\Pdf;
+namespace OrionAlliance\NewModule\Model\Order\Pdf;
 
 use Magento\Customer\Model\Session;
 
@@ -19,7 +19,7 @@ use Magento\Customer\Model\Session;
 class Creditmemo extends \Magento\Sales\Model\Order\Pdf\Creditmemo
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -29,7 +29,7 @@ class Creditmemo extends \Magento\Sales\Model\Order\Pdf\Creditmemo
     protected $_string;
 
     /**
-     * @param \Webkul\Marketplace\Helper\Data                      $helper
+     * @param \OrionAlliance\NewModule\Helper\Data                      $helper
      * @param \Magento\Payment\Helper\Data                         $paymentData
      * @param \Magento\Framework\Stdlib\StringUtils                $string
      * @param \Magento\Framework\App\Config\ScopeConfigInterface   $scopeConfig
@@ -46,7 +46,7 @@ class Creditmemo extends \Magento\Sales\Model\Order\Pdf\Creditmemo
      *
      */
     public function __construct(
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         \Magento\Payment\Helper\Data $paymentData,
         \Magento\Framework\Stdlib\StringUtils $string,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,

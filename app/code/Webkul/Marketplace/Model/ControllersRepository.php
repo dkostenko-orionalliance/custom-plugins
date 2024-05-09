@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Exception\NoSuchEntityException;
-use Webkul\Marketplace\Api\Data\ControllersInterface;
-use Webkul\Marketplace\Model\ResourceModel\Controllers\CollectionFactory;
+use OrionAlliance\NewModule\Api\Data\ControllersInterface;
+use OrionAlliance\NewModule\Model\ResourceModel\Controllers\CollectionFactory;
 
-class ControllersRepository implements \Webkul\Marketplace\Api\ControllersRepositoryInterface
+class ControllersRepository implements \OrionAlliance\NewModule\Api\ControllersRepositoryInterface
 {
     /**
      * @var ControllersFactory
@@ -52,7 +52,7 @@ class ControllersRepository implements \Webkul\Marketplace\Api\ControllersReposi
     public function getById($controllersId)
     {
         $controllersData = $this->_controllersFactory->create();
-        /* @var \Webkul\Marketplace\Model\ResourceModel\Controllers\Collection $controllersData */
+        /* @var \OrionAlliance\NewModule\Model\ResourceModel\Controllers\Collection $controllersData */
         $controllersData->load($controllersId);
         if (!$controllersData->getId()) {
             // seller controller does not exist
@@ -101,7 +101,7 @@ class ControllersRepository implements \Webkul\Marketplace\Api\ControllersReposi
     */
     public function getList()
     {
-        /** @var \Webkul\Marketplace\Model\ResourceModel\Controllers\Collection $collection */
+        /** @var \OrionAlliance\NewModule\Model\ResourceModel\Controllers\Collection $collection */
         $collection = $this->_collectionFactory->create();
         $collection->load();
 

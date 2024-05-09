@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\Feedbackcount\Grid;
+namespace OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount\Grid;
 
 use Magento\Framework\Api\Search\SearchResultInterface as ApiSearchResultInterface;
-use Webkul\Marketplace\Model\ResourceModel\Feedbackcount\Collection as FeedbackcountCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount\Collection as FeedbackcountCollection;
 use Magento\Framework\Search\AggregationInterface as SearchAggregationInterface;
 use Magento\Framework\Data\Collection\EntityFactoryInterface;
 use Psr\Log\LoggerInterface;
@@ -22,7 +22,7 @@ use Magento\Framework\Event\ManagerInterface as EventManagerInterface;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb as ResourceModelAbstractDb;
 
 /**
- * Webkul\Marketplace\Model\ResourceModel\Feedbackcount\Grid\Collection Class
+ * OrionAlliance\NewModule\Model\ResourceModel\Feedbackcount\Grid\Collection Class
  * Collection for displaying grid of marketplace feedbackcount.
  */
 class Collection extends FeedbackcountCollection implements ApiSearchResultInterface

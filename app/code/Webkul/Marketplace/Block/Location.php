@@ -3,25 +3,25 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block;
+namespace OrionAlliance\NewModule\Block;
 
 /*
  * Webkul Marketplace Seller Location Block
  */
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Model\Session;
-use Webkul\Marketplace\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
 
 class Location extends \Magento\Framework\View\Element\Template
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -44,7 +44,7 @@ class Location extends \Magento\Framework\View\Element\Template
     * Construct
     *
     * @param \Magento\Framework\View\Element\Template\Context $context
-    * @param \Webkul\Marketplace\Helper\Data $helper
+    * @param \OrionAlliance\NewModule\Helper\Data $helper
     * @param Customer $customer
     * @param \Magento\Customer\Model\Session $session
     * @param \Magento\Framework\Stdlib\StringUtils $stringUtils
@@ -52,7 +52,7 @@ class Location extends \Magento\Framework\View\Element\Template
     */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         Customer $customer,
         \Magento\Customer\Model\Session $session,
         \Magento\Framework\Stdlib\StringUtils $stringUtils,
@@ -111,7 +111,7 @@ class Location extends \Magento\Framework\View\Element\Template
     /**
      * Get Seller Profile Details
      *
-     * @return \Webkul\Marketplace\Model\Seller | bool
+     * @return \OrionAlliance\NewModule\Model\Seller | bool
      */
     public function getProfileDetail()
     {

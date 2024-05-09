@@ -3,15 +3,15 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c)  Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\ProductFlags;
+namespace OrionAlliance\NewModule\Model\ResourceModel\ProductFlags;
 
-use Webkul\Marketplace\Model\ResourceModel\AbstractCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\AbstractCollection;
 
 class Collection extends AbstractCollection
 {
@@ -28,8 +28,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ProductFlags::class,
-            \Webkul\Marketplace\Model\ResourceModel\ProductFlags::class
+            \OrionAlliance\NewModule\Model\ProductFlags::class,
+            \OrionAlliance\NewModule\Model\ResourceModel\ProductFlags::class
         );
     }
 }

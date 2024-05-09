@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -21,7 +21,7 @@
         </referenceBlock>
         <referenceContainer name="content">
             <uiComponent name="marketplace_products_listing"/>
-            <block class="Magento\Framework\View\Element\Template" name="marketplace_product_list_js" template="Webkul_Marketplace::layout2/product/list/js.phtml" cacheable="false" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="marketplace_product_list_js" template="OrionAlliance_NewModule::layout2/product/list/js.phtml" cacheable="false" before="-"/>
         
         </referenceContainer>
     </body>

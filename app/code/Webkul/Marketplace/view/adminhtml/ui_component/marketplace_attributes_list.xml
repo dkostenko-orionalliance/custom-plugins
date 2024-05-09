@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -33,7 +33,7 @@
     </settings>
     <dataSource name="marketplace_attributes_list_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Webkul\Marketplace\Ui\DataProvider\Attributes</argument>
+            <argument name="class" xsi:type="string">OrionAlliance\NewModule\Ui\DataProvider\Attributes</argument>
             <argument name="name" xsi:type="string">marketplace_attributes_list_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">attribute_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
@@ -150,7 +150,7 @@
                 <label translate="true">Attribute Label</label>
             </settings>
         </column>
-          <column name="seller_id" class="Webkul\Marketplace\Ui\Component\Listing\Columns\Ownership">
+          <column name="seller_id" class="OrionAlliance\NewModule\Ui\Component\Listing\Columns\Ownership">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="sortable" xsi:type="boolean">false</item>

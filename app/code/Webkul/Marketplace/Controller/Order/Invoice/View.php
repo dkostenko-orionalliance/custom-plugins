@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Invoice;
+namespace OrionAlliance\NewModule\Controller\Order\Invoice;
 
 /**
  * Webkul Marketplace Order Invoice View Controller.
  */
-class View extends \Webkul\Marketplace\Controller\Order
+class View extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Webkul Marketplace Order Invoice View Action.

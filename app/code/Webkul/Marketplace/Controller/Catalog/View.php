@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Catalog;
+namespace OrionAlliance\NewModule\Controller\Catalog;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -64,7 +64,7 @@ class View extends \Magento\Catalog\Controller\Product\View
             // Render page
             try {
                 $page = $this->resultPageFactory->create();
-                $this->viewHelper = $this->_objectManager->create(\Webkul\Marketplace\Helper\Product\View::class);
+                $this->viewHelper = $this->_objectManager->create(\OrionAlliance\NewModule\Helper\Product\View::class);
                 $this->viewHelper->prepareAndRender($page, $productId, $this, $params);
                 return $page;
             } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {

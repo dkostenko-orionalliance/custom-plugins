@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Order\Pdf;
+namespace OrionAlliance\NewModule\Model\Order\Pdf;
 
 /**
  * Marketplace Order PDF Invoice model.
@@ -17,7 +17,7 @@ namespace Webkul\Marketplace\Model\Order\Pdf;
 class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
 {
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -31,7 +31,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
      */
     protected $appEmulation;
     /**
-     * @param \Webkul\Marketplace\Helper\Data                      $helper
+     * @param \OrionAlliance\NewModule\Helper\Data                      $helper
      * @param \Magento\Payment\Helper\Data                         $paymentData
      * @param \Magento\Framework\Stdlib\StringUtils                $string
      * @param \Magento\Framework\App\Config\ScopeConfigInterface   $scopeConfig
@@ -48,7 +48,7 @@ class Invoice extends \Magento\Sales\Model\Order\Pdf\Invoice
      *
      */
     public function __construct(
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         \Magento\Payment\Helper\Data $paymentData,
         \Magento\Framework\Stdlib\StringUtils $string,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,

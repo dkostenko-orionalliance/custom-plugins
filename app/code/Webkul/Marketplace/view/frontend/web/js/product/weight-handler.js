@@ -78,7 +78,7 @@ define([
         /**
          * Constructor component
          */
-        'Webkul_Marketplace/js/product/weight-handler': function () {
+        'OrionAlliance_NewModule/js/product/weight-handler': function () {
             this.bindAll();
             this.switchWeight();
         },

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Mui\Export;
+namespace OrionAlliance\NewModule\Controller\Mui\Export;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Ui\Model\Export\ConvertToCsv;

@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Account\Navigation;
+namespace OrionAlliance\NewModule\Block\Account\Navigation;
 
 /**
  * Marketplace Navigation link
  *
  */
-class PaymentMenu extends \Webkul\Marketplace\Block\Account\Navigation
+class PaymentMenu extends \OrionAlliance\NewModule\Block\Account\Navigation
 {
     /**
      * IsPaymentAvlForSeller

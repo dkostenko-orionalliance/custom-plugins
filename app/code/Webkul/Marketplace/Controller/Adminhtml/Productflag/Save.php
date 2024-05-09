@@ -3,12 +3,12 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Productflag;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Productflag;
 
 use Magento\Framework\Exception\LocalizedException;
 
@@ -21,12 +21,12 @@ class Save extends \Magento\Backend\App\Action
     protected $dataPersistor;
 
     /**
-     * @var \Webkul\Marketplace\Model\ProductFlagReasonFactory
+     * @var \OrionAlliance\NewModule\Model\ProductFlagReasonFactory
      */
     protected $productFlagFactory;
 
     /**
-     * @var \Webkul\Marketplace\Api\ProductFlagReasonRepositoryInterface
+     * @var \OrionAlliance\NewModule\Api\ProductFlagReasonRepositoryInterface
      */
     protected $productFlagRepository;
 
@@ -39,15 +39,15 @@ class Save extends \Magento\Backend\App\Action
      * Construct
      *
      * @param \Magento\Backend\App\Action\Context $context
-     * @param \Webkul\Marketplace\Model\ProductFlagReasonFactory $productFlagReasonFactory
-     * @param \Webkul\Marketplace\Api\ProductFlagReasonRepositoryInterface $productFlagReasonRepository
+     * @param \OrionAlliance\NewModule\Model\ProductFlagReasonFactory $productFlagReasonFactory
+     * @param \OrionAlliance\NewModule\Api\ProductFlagReasonRepositoryInterface $productFlagReasonRepository
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
-        \Webkul\Marketplace\Model\ProductFlagReasonFactory $productFlagReasonFactory,
-        \Webkul\Marketplace\Api\ProductFlagReasonRepositoryInterface $productFlagReasonRepository,
+        \OrionAlliance\NewModule\Model\ProductFlagReasonFactory $productFlagReasonFactory,
+        \OrionAlliance\NewModule\Api\ProductFlagReasonRepositoryInterface $productFlagReasonRepository,
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
     ) {
@@ -111,6 +111,6 @@ class Save extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::productflag');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::productflag');
     }
 }

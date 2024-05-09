@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Product;
+namespace OrionAlliance\NewModule\Block\Product;
 
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Framework\Pricing\PriceCurrencyInterface;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
-use Webkul\Marketplace\Model\SaleslistFactory as MpSalesList;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory as MpProductCollection;
+use OrionAlliance\NewModule\Model\SaleslistFactory as MpSalesList;
 
 class Productlist extends \Magento\Framework\View\Element\Template
 {
@@ -411,7 +411,7 @@ class Productlist extends \Magento\Framework\View\Element\Template
                         ->getCollection()
                         ->addFieldToFilter(
                             'cpprostatus',
-                            \Webkul\Marketplace\Model\Saleslist::PAID_STATUS_COMPLETE
+                            \OrionAlliance\NewModule\Model\Saleslist::PAID_STATUS_COMPLETE
                         )
                         ->addFieldToFilter(
                             'mageproduct_id',

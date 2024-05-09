@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block;
+namespace OrionAlliance\NewModule\Block;
 
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Model\ProductFactory;
-use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Model\ProductFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
 
 /**
  * Webkul Marketplace Sellerlist Block.
@@ -26,11 +26,11 @@ class Sellerlist extends \Magento\Framework\View\Element\Template
     protected $_filterProvider;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory
      */
     protected $_sellerlistCollectionFactory;
 
-    /** @var \Webkul\Marketplace\Model\Seller */
+    /** @var \OrionAlliance\NewModule\Model\Seller */
     protected $sellerList;
 
     /**
@@ -53,7 +53,7 @@ class Sellerlist extends \Magento\Framework\View\Element\Template
      *
      * @param \Magento\Cms\Model\Template\FilterProvider $filterProvider
      * @param \Magento\Catalog\Block\Product\Context $context
-     * @param \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerlistCollectionFactory
+     * @param \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerlistCollectionFactory
      * @param MpHelper $mpHelper
      * @param ProductFactory $productModel
      * @param CollectionFactory $sellerCollection
@@ -62,7 +62,7 @@ class Sellerlist extends \Magento\Framework\View\Element\Template
     public function __construct(
         \Magento\Cms\Model\Template\FilterProvider $filterProvider,
         \Magento\Catalog\Block\Product\Context $context,
-        \Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory $sellerlistCollectionFactory,
+        \OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory $sellerlistCollectionFactory,
         MpHelper $mpHelper,
         ProductFactory $productModel,
         CollectionFactory $sellerCollection,

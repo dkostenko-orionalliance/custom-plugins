@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Rewrite\Backend\View\Result;
+namespace OrionAlliance\NewModule\Model\Rewrite\Backend\View\Result;
 
 class Redirect extends \Magento\Backend\Model\View\Result\Redirect
 {

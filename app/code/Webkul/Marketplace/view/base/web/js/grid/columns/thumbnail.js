@@ -2,7 +2,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -11,7 +11,7 @@
     './column',
     'jquery',
     'mage/template',
-    'text!Webkul_Marketplace/templates/grid/cells/thumbnail/preview.html',
+    'text!OrionAlliance_NewModule/templates/grid/cells/thumbnail/preview.html',
     'Magento_Ui/js/modal/modal'
 ], function (Column, $, mageTemplate, thumbnailPreviewTemplate) {
     'use strict';

@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Order;
+namespace OrionAlliance\NewModule\Block\Order;
 
 /*
  * Webkul Marketplace Order Salesdetail Block
  */
 use Magento\Sales\Model\OrderFactory;
-use Webkul\Marketplace\Model\SaleslistFactory;
-use Webkul\Marketplace\Model\OrdersFactory as MpOrderModel;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Model\OrdersFactory as MpOrderModel;
 use Magento\Catalog\Model\ProductFactory;
 
 class Salesdetail extends \Magento\Framework\View\Element\Template
@@ -30,7 +30,7 @@ class Salesdetail extends \Magento\Framework\View\Element\Template
      * @var Session
      */
     protected $customerSession;
-    /** @var \Webkul\Marketplace\Model\Saleslist */
+    /** @var \OrionAlliance\NewModule\Model\Saleslist */
     protected $salesLists;
 
     /**
@@ -98,7 +98,7 @@ class Salesdetail extends \Magento\Framework\View\Element\Template
     /**
      * Get collection
      *
-     * @return bool|\Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection
+     * @return bool|\OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection
      */
     public function getCollection()
     {

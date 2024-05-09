@@ -5,7 +5,7 @@ define([
     'mage/translate',
     'mage/backend/tree-suggest',
     'mage/backend/validation',
-    'Webkul_Marketplace/js/get-video-information'
+    'OrionAlliance_NewModule/js/get-video-information'
 ], function ($) {
     'use strict';
 

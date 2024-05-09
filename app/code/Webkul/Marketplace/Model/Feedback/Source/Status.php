@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Model\Feedback\Source;
+namespace OrionAlliance\NewModule\Model\Feedback\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -18,16 +18,16 @@ use Magento\Framework\Data\OptionSourceInterface;
 class Status implements OptionSourceInterface
 {
     /**
-     * @var \Webkul\Marketplace\Model\Feedback
+     * @var \OrionAlliance\NewModule\Model\Feedback
      */
     protected $marketplaceFeedback;
 
     /**
      * Construct
      *
-     * @param \Webkul\Marketplace\Model\Feedback $marketplaceFeedback
+     * @param \OrionAlliance\NewModule\Model\Feedback $marketplaceFeedback
      */
-    public function __construct(\Webkul\Marketplace\Model\Feedback $marketplaceFeedback)
+    public function __construct(\OrionAlliance\NewModule\Model\Feedback $marketplaceFeedback)
     {
         $this->marketplaceFeedback = $marketplaceFeedback;
     }

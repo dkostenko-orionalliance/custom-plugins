@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Order;
+namespace OrionAlliance\NewModule\Block\Order;
 
 /*
  * Webkul Marketplace Order View Block
@@ -23,10 +23,10 @@ use Magento\Downloadable\Model\Link\Purchased;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Downloadable\Model\ResourceModel\Link\Purchased\Item\CollectionFactory;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Webkul\Marketplace\Model\OrdersFactory as MpOrderModel;
+use OrionAlliance\NewModule\Model\OrdersFactory as MpOrderModel;
 use Magento\Sales\Model\Order\Creditmemo;
 use Magento\Sales\Model\Order\InvoiceFactory;
-use Webkul\Marketplace\Model\SaleslistFactory;
+use OrionAlliance\NewModule\Model\SaleslistFactory;
 use Magento\Catalog\Api\ProductRepositoryInterfaceFactory;
 use Magento\Sales\Model\ResourceModel\Order\Item\CollectionFactory as OrderItemCollection;
 
@@ -108,7 +108,7 @@ class View extends \Magento\Framework\View\Element\Template
     protected $saleslistModel;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Orders
+     * @var \OrionAlliance\NewModule\Helper\Orders
      */
     protected $ordersHelper;
 
@@ -149,7 +149,7 @@ class View extends \Magento\Framework\View\Element\Template
     * @param \Magento\Sales\Model\Order\Creditmemo\ItemFactory $creditmemoItem
     * @param InvoiceFactory $invoiceModel
     * @param SaleslistFactory $saleslistModel
-    * @param \Webkul\Marketplace\Helper\Orders $ordersHelper
+    * @param \OrionAlliance\NewModule\Helper\Orders $ordersHelper
     * @param ProductRepositoryInterfaceFactory $productRepository
     * @param \Magento\Shipping\Model\Config $shippingConfig
     * @param \Magento\Shipping\Model\CarrierFactory $carrierFactory
@@ -171,7 +171,7 @@ class View extends \Magento\Framework\View\Element\Template
         \Magento\Sales\Model\Order\Creditmemo\ItemFactory $creditmemoItem,
         InvoiceFactory $invoiceModel,
         SaleslistFactory $saleslistModel,
-        \Webkul\Marketplace\Helper\Orders $ordersHelper,
+        \OrionAlliance\NewModule\Helper\Orders $ordersHelper,
         ProductRepositoryInterfaceFactory $productRepository,
         \Magento\Shipping\Model\Config $shippingConfig,
         \Magento\Shipping\Model\CarrierFactory $carrierFactory,

@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab;
 
 use Magento\Framework\Registry;
 use Magento\Customer\Controller\RegistryConstants;
 use Magento\Catalog\Helper\Category as CategoryHelper;
-use Webkul\Marketplace\Model\SellerFactory;
+use OrionAlliance\NewModule\Model\SellerFactory;
 
 class AssignCategory extends \Magento\Config\Block\System\Config\Form\Field
 {
@@ -37,7 +37,7 @@ class AssignCategory extends \Magento\Config\Block\System\Config\Form\Field
     public $categoryHelper;
 
     /**
-     * @var \Webkul\Marketplace\Model\SellerFactory
+     * @var \OrionAlliance\NewModule\Model\SellerFactory
      */
 
     public $sellerFactory;
@@ -76,7 +76,7 @@ class AssignCategory extends \Magento\Config\Block\System\Config\Form\Field
     {
         parent::_prepareLayout();
         $childBlock = $this->getLayout()
-        ->createBlock(\Webkul\Marketplace\Block\Adminhtml\Customer\Edit\Tab\Categories::class);
+        ->createBlock(\OrionAlliance\NewModule\Block\Adminhtml\Customer\Edit\Tab\Categories::class);
         $this->setChild("seller_edit_categories_tab_view", $childBlock);
         if (!$this->getTemplate()) {
             $this->setTemplate(static::ASSIGN_CATEGORY_TEMPLATE);

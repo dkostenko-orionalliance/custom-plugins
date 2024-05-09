@@ -53,7 +53,7 @@ define([
             pickerDefaultDateFormat: 'MM/dd/y', // ICU Date Format
             pickerDefaultTimeFormat: 'h:mm a', // ICU Time Format
 
-            elementTmpl: 'Webkul_Marketplace/form/element/date',
+            elementTmpl: 'OrionAlliance_NewModule/form/element/date',
 
             /**
              * Format needed by moment timezone for conversion

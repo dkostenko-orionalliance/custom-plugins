@@ -3,24 +3,24 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Observer;
+namespace OrionAlliance\NewModule\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use Webkul\Marketplace\Model\ResourceModel\Seller\CollectionFactory;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory as ProductCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Seller\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory as ProductCollection;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Filesystem;
-use Webkul\Marketplace\Model\Product as ProductStatus;
-use Webkul\Marketplace\Model\SaleperpartnerFactory as MpSalesPartner;
-use Webkul\Marketplace\Model\SellerFactory as MpSeller;
-use Webkul\Marketplace\Helper\Data as MpHelper;
-use Webkul\Marketplace\Helper\Email as MpEmailHelper;
+use OrionAlliance\NewModule\Model\Product as ProductStatus;
+use OrionAlliance\NewModule\Model\SaleperpartnerFactory as MpSalesPartner;
+use OrionAlliance\NewModule\Model\SellerFactory as MpSeller;
+use OrionAlliance\NewModule\Helper\Data as MpHelper;
+use OrionAlliance\NewModule\Helper\Email as MpEmailHelper;
 use Magento\Catalog\Model\ProductFactory as ProductModel;
 use Magento\Framework\Filesystem\Io\File as FilesystemIo;
 
@@ -64,7 +64,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
     private $_messageManager;
 
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Product\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
      */
     protected $_sellerProduct;
 
@@ -99,7 +99,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
     protected $mpEmailHelper;
 
     /**
-     * @var \Webkul\Marketplace\Model\ProductFactory
+     * @var \OrionAlliance\NewModule\Model\ProductFactory
      */
     protected $mpProductFactory;
 
@@ -144,7 +144,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
      * @param \Magento\Customer\Model\CustomerFactory $customerFactory
      * @param MpHelper $mpHelper
      * @param MpEmailHelper $mpEmailHelper
-     * @param \Webkul\Marketplace\Model\ProductFactory $mpProductFactory
+     * @param \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory
      * @param \Magento\Framework\Module\Dir\Reader $reader
      * @param ProductModel $productModel
      * @param FilesystemIo|null $filesystemFile
@@ -164,7 +164,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
         \Magento\Customer\Model\CustomerFactory $customerFactory,
         MpHelper $mpHelper,
         MpEmailHelper $mpEmailHelper,
-        \Webkul\Marketplace\Model\ProductFactory $mpProductFactory,
+        \OrionAlliance\NewModule\Model\ProductFactory $mpProductFactory,
         \Magento\Framework\Module\Dir\Reader $reader,
         ProductModel $productModel,
         FilesystemIo $filesystemFile = null
@@ -727,12 +727,12 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 $this->_filesystemFile->mkdir($mediaAvatarFullPath, 0777, true);
                 $avatarBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/avatar/banner-image.png';
                 $this->_filesystemFile->cp($avatarBannerImage, $mediaAvatarFullPath.'/banner-image.png');
                 $avatarNoImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/avatar/noimage.png';
                 $this->_filesystemFile->cp($avatarNoImage, $mediaAvatarFullPath.'/noimage.png');
             }
@@ -751,7 +751,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 $this->_filesystemFile->mkdir($mediaMarketplaceBannerFullPath, 0777, true);
                 $marketplaceBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/marketplace/banner/sell-page-banner.png';
                 $this->_filesystemFile->cp(
                     $marketplaceBannerImage,
@@ -760,7 +760,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 // for landing page layout 2
                 $marketplaceBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage1/banner/sell-page-1-hero-banner.jpg';
                 $this->_filesystemFile->cp(
                     $marketplaceBannerImage,
@@ -769,7 +769,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 // for landing page layout 3
                 $marketplaceBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/banner/sell-page-2-hero-banner.jpg';
                 $this->_filesystemFile->cp(
                     $marketplaceBannerImage,
@@ -784,7 +784,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 $this->_filesystemFile->mkdir($mediaMarketplaceIconFullPath, 0777, true);
                 $icon1BannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/marketplace/icon/icon-add-products.png';
                 $this->_filesystemFile->cp(
                     $icon1BannerImage,
@@ -793,7 +793,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
 
                 $icon2BannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/marketplace/icon/icon-collect-revenues.png';
                 $this->_filesystemFile->cp(
                     $icon2BannerImage,
@@ -802,7 +802,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
 
                 $icon3BannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/marketplace/icon/icon-register-yourself.png';
                 $this->_filesystemFile->cp(
                     $icon3BannerImage,
@@ -811,7 +811,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
 
                 $icon4BannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/marketplace/icon/icon-start-selling.png';
                 $this->_filesystemFile->cp(
                     $icon4BannerImage,
@@ -821,7 +821,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 // for landing page layout 3
                 $iconBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/icon/sell-page-2-setup-1.png';
                 $this->_filesystemFile->cp(
                     $iconBannerImage,
@@ -829,7 +829,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 );
                 $iconBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/icon/sell-page-2-setup-2.png';
                 $this->_filesystemFile->cp(
                     $iconBannerImage,
@@ -837,7 +837,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 );
                 $iconBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/icon/sell-page-2-setup-3.png';
                 $this->_filesystemFile->cp(
                     $iconBannerImage,
@@ -845,7 +845,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 );
                 $iconBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/icon/sell-page-2-setup-4.png';
                 $this->_filesystemFile->cp(
                     $iconBannerImage,
@@ -853,7 +853,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 );
                 $iconBannerImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/landingpage2/icon/sell-page-2-setup-5.png';
                 $this->_filesystemFile->cp(
                     $iconBannerImage,
@@ -868,7 +868,7 @@ class AdminhtmlCustomerSaveAfterObserver implements ObserverInterface
                 $this->_filesystemFile->mkdir($mediaPlaceholderFullPath, 0777, true);
                 $placeholderImage = $reader->getModuleDir(
                     '',
-                    'Webkul_Marketplace'
+                    'OrionAlliance_NewModule'
                 ).'/view/base/web/images/placeholder/image.jpg';
                 $this->_filesystemFile->cp(
                     $placeholderImage,

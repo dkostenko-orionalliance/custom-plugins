@@ -3,23 +3,23 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Webkul\Marketplace\Api\Data\FeedbackInterface;
+use OrionAlliance\NewModule\Api\Data\FeedbackInterface;
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**
  * Marketplace Feedback Model
  *
- * @method \Webkul\Marketplace\Model\ResourceModel\Feedback _getResource()
- * @method \Webkul\Marketplace\Model\ResourceModel\Feedback getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Feedback _getResource()
+ * @method \OrionAlliance\NewModule\Model\ResourceModel\Feedback getResource()
  */
 class Feedback extends AbstractModel implements FeedbackInterface, IdentityInterface
 {
@@ -68,7 +68,7 @@ class Feedback extends AbstractModel implements FeedbackInterface, IdentityInter
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\ResourceModel\Feedback::class
+            \OrionAlliance\NewModule\Model\ResourceModel\Feedback::class
         );
     }
 
@@ -90,7 +90,7 @@ class Feedback extends AbstractModel implements FeedbackInterface, IdentityInter
     /**
      * Load No-Route Feedback
      *
-     * @return \Webkul\Marketplace\Model\Feedback
+     * @return \OrionAlliance\NewModule\Model\Feedback
      */
     public function noRouteFeedback()
     {
@@ -150,7 +150,7 @@ class Feedback extends AbstractModel implements FeedbackInterface, IdentityInter
      * Set ID
      *
      * @param int $id
-     * @return \Webkul\Marketplace\Api\Data\FeedbackInterface
+     * @return \OrionAlliance\NewModule\Api\Data\FeedbackInterface
      */
     public function setId($id)
     {

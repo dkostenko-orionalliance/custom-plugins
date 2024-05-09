@@ -4,7 +4,7 @@
 * Webkul Software.
 *
 * @category  Webkul
-* @package   Webkul_Marketplace
+* @package   OrionAlliance_NewModule
 * @author    Webkul
 * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
 * @license   https://store.webkul.com/license.html
@@ -20,7 +20,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Webkul\Marketplace\Block\Account\Earnings" name="marketplace_seller_earnings" template="Webkul_Marketplace::account/earnings.phtml" cacheable="false"/>
+            <block class="OrionAlliance\NewModule\Block\Account\Earnings" name="marketplace_seller_earnings" template="OrionAlliance_NewModule::account/earnings.phtml" cacheable="false"/>
             <uiComponent name="marketplace_earning_listing"/>
         </referenceContainer>
     </body>

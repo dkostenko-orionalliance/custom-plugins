@@ -3,13 +3,13 @@
  * Ratio.php
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Config\Source;
+namespace OrionAlliance\NewModule\Model\Config\Source;
 
 /**
  * Used in seller featured widget for getting seller logo ratio value.

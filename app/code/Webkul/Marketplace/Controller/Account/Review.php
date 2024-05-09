@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Account;
+namespace OrionAlliance\NewModule\Controller\Account;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\RequestInterface;
-use Webkul\Marketplace\Helper\Notification as NotificationHelper;
-use Webkul\Marketplace\Model\Notification;
-use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Notification as NotificationHelper;
+use OrionAlliance\NewModule\Model\Notification;
+use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
 use Magento\Customer\Model\Url as CustomerUrl;
 
 /**
@@ -35,7 +35,7 @@ class Review extends Action
     protected $_resultPageFactory;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helperData;
 
@@ -58,7 +58,7 @@ class Review extends Action
      * @param Context                         $context
      * @param PageFactory                     $resultPageFactory
      * @param \Magento\Customer\Model\Session $customerSession
-     * @param \Webkul\Marketplace\Helper\Data $helperData
+     * @param \OrionAlliance\NewModule\Helper\Data $helperData
      * @param NotificationHelper              $notificationHelper
      * @param CollectionFactory               $collectionFactory
      * @param CustomerUrl                     $customerUrl
@@ -67,7 +67,7 @@ class Review extends Action
         Context $context,
         PageFactory $resultPageFactory,
         \Magento\Customer\Model\Session $customerSession,
-        \Webkul\Marketplace\Helper\Data $helperData,
+        \OrionAlliance\NewModule\Helper\Data $helperData,
         NotificationHelper $notificationHelper,
         CollectionFactory $collectionFactory,
         CustomerUrl $customerUrl

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Account\Dashboard;
+namespace OrionAlliance\NewModule\Block\Account\Dashboard;
 
 class CategoryChart extends \Magento\Framework\View\Element\Template
 {
@@ -38,12 +38,12 @@ class CategoryChart extends \Magento\Framework\View\Element\Template
     protected $_customerSession;
 
     /**
-     * @var \Webkul\Marketplace\Block\Account\Dashboard
+     * @var \OrionAlliance\NewModule\Block\Account\Dashboard
      */
     protected $dashboard;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Dashboard\Data
+     * @var \OrionAlliance\NewModule\Helper\Dashboard\Data
      */
     protected $dashboardHelper;
 
@@ -52,15 +52,15 @@ class CategoryChart extends \Magento\Framework\View\Element\Template
      *
      * @param \Magento\Customer\Model\Session $customerSession
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Webkul\Marketplace\Block\Account\Dashboard $dashboard
-     * @param \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper
+     * @param \OrionAlliance\NewModule\Block\Account\Dashboard $dashboard
+     * @param \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper
      * @param array $data
      */
     public function __construct(
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Framework\View\Element\Template\Context $context,
-        \Webkul\Marketplace\Block\Account\Dashboard $dashboard,
-        \Webkul\Marketplace\Helper\Dashboard\Data $dashboardHelper,
+        \OrionAlliance\NewModule\Block\Account\Dashboard $dashboard,
+        \OrionAlliance\NewModule\Helper\Dashboard\Data $dashboardHelper,
         array $data = []
     ) {
         $this->_customerSession = $customerSession;

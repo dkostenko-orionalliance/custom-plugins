@@ -9,7 +9,7 @@
     </argument>
     <dataSource name="marketplace_product_attributes_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Webkul\Marketplace\Ui\DataProvider\Product\Attributes</argument>
+            <argument name="class" xsi:type="string">OrionAlliance\NewModule\Ui\DataProvider\Product\Attributes</argument>
             <argument name="name" xsi:type="string">marketplace_product_attributes_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">attribute_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>

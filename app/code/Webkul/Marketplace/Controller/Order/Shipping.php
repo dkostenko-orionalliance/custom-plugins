@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Order;
+namespace OrionAlliance\NewModule\Controller\Order;
 
 /**
  * Webkul Marketplace Order Print PDF Header Infomation View Controller.
  */
-class Shipping extends \Webkul\Marketplace\Controller\Order
+class Shipping extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
-     * Webkul\Marketplace\Controller\Order\Shipping.
+     * OrionAlliance\NewModule\Controller\Order\Shipping.
      *
      * @return \Magento\Framework\View\Result\Page
      */

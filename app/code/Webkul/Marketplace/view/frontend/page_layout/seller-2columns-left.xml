@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -69,7 +69,7 @@
     </referenceContainer>
     <!-- for seller page layout -->
     <referenceContainer name="seller.header.before.container">
-        <block class="Webkul\Marketplace\Block\Page\Switcher" name="seller.top.header.block" template="Webkul_Marketplace::/layout2/page/switcher.phtml"/>
+        <block class="OrionAlliance\NewModule\Block\Page\Switcher" name="seller.top.header.block" template="OrionAlliance_NewModule::/layout2/page/switcher.phtml"/>
     </referenceContainer>
     <referenceContainer name="seller.top.header.block">
         <block class="Magento\Store\Block\Switcher" name="seller_store_language" as="seller_store_language" template="Magento_Store::switch/languages.phtml">
@@ -81,33 +81,33 @@
         <block class="Magento\Directory\Block\Currency" name="seller_store_settings_currency" as="seller_store_settings_currency" template="Magento_Directory::currency.phtml"/>
     </referenceContainer>
     <referenceContainer name="seller.header">
-        <block class="Webkul\Marketplace\Block\Page\Header" name="seller.logo" before="-">
+        <block class="OrionAlliance\NewModule\Block\Page\Header" name="seller.logo" before="-">
             <arguments>
                 <argument name="show_part" xsi:type="string">logo</argument>
             </arguments>
         </block>
-        <block class="Webkul\Marketplace\Block\Page\Header" name="seller.user" after="-">
+        <block class="OrionAlliance\NewModule\Block\Page\Header" name="seller.user" after="-">
             <arguments>
                 <argument name="show_part" xsi:type="string">user</argument>
             </arguments>
         </block>
-        <block class="Webkul\Marketplace\Block\Page\Notifications" name="seller.notifications" after="-">
+        <block class="OrionAlliance\NewModule\Block\Page\Notifications" name="seller.notifications" after="-">
             <arguments>
                 <argument name="show_part" xsi:type="string">seller.notifications</argument>
             </arguments>
         </block>
-        <block class="Webkul\Marketplace\Block\Page\Header" name="seller.home" after="-">
+        <block class="OrionAlliance\NewModule\Block\Page\Header" name="seller.home" after="-">
             <arguments>
                 <argument name="show_part" xsi:type="string">seller.home</argument>
             </arguments>
         </block>
     </referenceContainer>
     <referenceContainer name="seller.page.menu">
-        <block class="Webkul\Marketplace\Block\Account\Navigation" name="layout2_seller_account_navigation_main" before="-" template="Webkul_Marketplace::/layout2/account/navigation.phtml">
-            <block class="Magento\Framework\View\Element\Template" name="layout2_seller_account_navigation" template="Webkul_Marketplace::/layout2/account/navigation/child_menu.phtml"/>
-            <block class="Webkul\Marketplace\Block\Account\Navigation" name="layout2_seller_account_navigation_settings_menu" template="Webkul_Marketplace::/layout2/account/navigation/settings_menu.phtml">
-                <block class="Webkul\Marketplace\Block\Account\Navigation\ShippingMenu" name="layout2_seller_account_navigation_shipping_menu" template="Webkul_Marketplace::/layout2/account/navigation/shipping_menu.phtml"/>
-                <block class="Webkul\Marketplace\Block\Account\Navigation\PaymentMenu" name="layout2_seller_account_navigation_payment_menu" template="Webkul_Marketplace::/layout2/account/navigation/payment_menu.phtml"/>
+        <block class="OrionAlliance\NewModule\Block\Account\Navigation" name="layout2_seller_account_navigation_main" before="-" template="OrionAlliance_NewModule::/layout2/account/navigation.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="layout2_seller_account_navigation" template="OrionAlliance_NewModule::/layout2/account/navigation/child_menu.phtml"/>
+            <block class="OrionAlliance\NewModule\Block\Account\Navigation" name="layout2_seller_account_navigation_settings_menu" template="OrionAlliance_NewModule::/layout2/account/navigation/settings_menu.phtml">
+                <block class="OrionAlliance\NewModule\Block\Account\Navigation\ShippingMenu" name="layout2_seller_account_navigation_shipping_menu" template="OrionAlliance_NewModule::/layout2/account/navigation/shipping_menu.phtml"/>
+                <block class="OrionAlliance\NewModule\Block\Account\Navigation\PaymentMenu" name="layout2_seller_account_navigation_payment_menu" template="OrionAlliance_NewModule::/layout2/account/navigation/payment_menu.phtml"/>
             </block>
         </block>
     </referenceContainer>

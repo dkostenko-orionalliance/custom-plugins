@@ -3,7 +3,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -29,13 +29,13 @@ if ($helper->getPageLayout() == 2) {
           title="<?= /* @noEscape */ __('Shop URL For Your Marketplace Shop');?>" value=""/>
         <div id="wk-load" class="no-display">
             <img height="16px" width="16px" src="<?= /* @noEscape */
-             $block->getViewFileUrl('Webkul_Marketplace::images/ajax-loader-tr.gif');?>" />
+             $block->getViewFileUrl('OrionAlliance_NewModule::images/ajax-loader-tr.gif');?>" />
         </div>
     </div>
 
     <div id="wk-load" class="no-display">
         <img height="16px" width="16px" src="<?= /* @noEscape */
-         $block->getViewFileUrl('Webkul_Marketplace::images/ajax-loader-tr.gif');?>" />
+         $block->getViewFileUrl('OrionAlliance_NewModule::images/ajax-loader-tr.gif');?>" />
     </div>
 </div>
 <div class="field required" id="wk-termsconditions-box">
@@ -68,7 +68,7 @@ $formData = [
     ->getRequest()->isSecure()]),
     'successMessage' => __("Congratulations! Shop name is available."),
     'errorMessage' => __("Sorry! But this shop name is not available, please set another shop name."),
-    'loaderImage' => $block->getViewFileUrl('Webkul_Marketplace::images/ajax-loader-tr.gif'),
+    'loaderImage' => $block->getViewFileUrl('OrionAlliance_NewModule::images/ajax-loader-tr.gif'),
     'button' => 'button.submit'
 ];
 $serializedFormData = $jsonHelper->jsonEncode($formData);

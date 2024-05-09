@@ -3,19 +3,19 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Transaction;
+namespace OrionAlliance\NewModule\Controller\Transaction;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\RequestInterface;
 use Magento\Customer\Model\Url as CustomerUrl;
-use Webkul\Marketplace\Model\SellertransactionFactory;
+use OrionAlliance\NewModule\Model\SellertransactionFactory;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**

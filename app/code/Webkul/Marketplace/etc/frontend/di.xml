@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -23,32 +23,32 @@
         </arguments>
     </type>
     <type name="\Magento\Catalog\Model\ResourceModel\Product\Collection">
-        <plugin name="Webkul_Marketplace::afterIsEnabledFlat"
-                type="Webkul\Marketplace\Model\Plugin\ResourceModel\Product\Collection"
+        <plugin name="OrionAlliance_NewModule::afterIsEnabledFlat"
+                type="OrionAlliance\NewModule\Model\Plugin\ResourceModel\Product\Collection"
                 sortOrder="12" />
     </type>
     <type name="Magento\Customer\CustomerData\Customer">
-        <plugin name="Webkul_Marketplace::customer_section_data"
-                type="Webkul\Marketplace\Plugin\CustomerData\Customer"
+        <plugin name="OrionAlliance_NewModule::customer_section_data"
+                type="OrionAlliance\NewModule\Plugin\CustomerData\Customer"
                 sortOrder="1" />
     </type>
     <type name="\Magento\Catalog\Model\Indexer\Category\Flat\State">
-        <plugin name="Webkul_Marketplace::afterIsFlatEnabled"
-                type="Webkul\Marketplace\Model\Plugin\Indexer\Category\Flat\State"
+        <plugin name="OrionAlliance_NewModule::afterIsFlatEnabled"
+                type="OrionAlliance\NewModule\Model\Plugin\Indexer\Category\Flat\State"
                 sortOrder="12" />
     </type>
     <type name="Magento\Framework\Search\AdapterInterface">
-        <plugin name="Webkul_Marketplace::aroundQuery"
-                type="Webkul\Marketplace\Plugin\Elasticsearch7\SearchAdapter\Adapter"
+        <plugin name="OrionAlliance_NewModule::aroundQuery"
+                type="OrionAlliance\NewModule\Plugin\Elasticsearch7\SearchAdapter\Adapter"
                 sortOrder="1" />
     </type>
     <type name="\Magento\CatalogSearch\Model\Adapter\Aggregation\Checker\Query\CatalogView">
-        <plugin name="Webkul_Marketplace::aroundQuery"
-                type="Webkul\Marketplace\Plugin\CatalogSearch\Model\Adapter\Aggregation\Checker\Query\CatalogView"
+        <plugin name="OrionAlliance_NewModule::aroundQuery"
+                type="OrionAlliance\NewModule\Plugin\CatalogSearch\Model\Adapter\Aggregation\Checker\Query\CatalogView"
                 sortOrder="1" />
     </type>
     
-    <virtualType name="Webkul\Marketplace\Block\Collection\Navigation\Category" type="Webkul\Marketplace\Block\Collection\Navigation">
+    <virtualType name="OrionAlliance\NewModule\Block\Collection\Navigation\Category" type="OrionAlliance\NewModule\Block\Collection\Navigation">
         <arguments>
             <argument name="filterList" xsi:type="object">categoryFilterList</argument>
         </arguments>
@@ -74,6 +74,6 @@
             </argument>
         </arguments>
     </type>
-    <preference for="Magento\Sales\Model\Order\Email\Sender\InvoiceSender" type="Webkul\Marketplace\Model\Order\Email\Sender\InvoiceSender"/>
+    <preference for="Magento\Sales\Model\Order\Email\Sender\InvoiceSender" type="OrionAlliance\NewModule\Model\Order\Email\Sender\InvoiceSender"/>
    
 </config>

@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Mui\Index;
+namespace OrionAlliance\NewModule\Controller\Mui\Index;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Ui\Controller\UiActionInterface;

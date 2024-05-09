@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -20,13 +20,13 @@
     </argument>
     <dataSource name="marketplace_review_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Webkul\Marketplace\Ui\DataProvider\ReviewDataProvider</argument>
+            <argument name="class" xsi:type="string">OrionAlliance\NewModule\Ui\DataProvider\ReviewDataProvider</argument>
             <argument name="name" xsi:type="string">marketplace_review_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/provider</item>
+                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/provider</item>
                     <item name="update_url" xsi:type="url" path="marketplace/mui_index/render"/>
                     <item name="storageConfig" xsi:type="array">
                         <item name="cacheRequests" xsi:type="boolean">false</item>
@@ -81,10 +81,10 @@
         </column>
         <column name="feed_price">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Feedback\Source\Ratings</item>
+                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Feedback\Source\Ratings</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/selectLink</item>
+                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/selectLink</item>
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Price Rating(in star)</item>
                     <item name="sortOrder" xsi:type="number">20</item>
@@ -93,10 +93,10 @@
         </column>
         <column name="feed_value">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Feedback\Source\Ratings</item>
+                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Feedback\Source\Ratings</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/selectLink</item>
+                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/selectLink</item>
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Value Rating(in star)</item>
                     <item name="sortOrder" xsi:type="number">30</item>
@@ -105,10 +105,10 @@
         </column>
         <column name="feed_quality">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Feedback\Source\Ratings</item>
+                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Feedback\Source\Ratings</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">Webkul_Marketplace/js/grid/columns/selectLink</item>
+                    <item name="component" xsi:type="string">OrionAlliance_NewModule/js/grid/columns/selectLink</item>
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Quality Rating(in star)</item>
                     <item name="sortOrder" xsi:type="number">40</item>
@@ -144,7 +144,7 @@
         </column>
         <column name="status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Webkul\Marketplace\Model\Feedback\Source\Status</item>
+                <item name="options" xsi:type="object">OrionAlliance\NewModule\Model\Feedback\Source\Status</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>

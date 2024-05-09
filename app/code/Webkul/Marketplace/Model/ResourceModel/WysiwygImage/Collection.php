@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\WysiwygImage;
+namespace OrionAlliance\NewModule\Model\ResourceModel\WysiwygImage;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
@@ -62,8 +62,8 @@ class Collection extends AbstractCollection
     protected function _construct()
     {
         $this->_init(
-            \Webkul\Marketplace\Model\WysiwygImage::class,
-            \Webkul\Marketplace\Model\ResourceModel\WysiwygImage::class
+            \OrionAlliance\NewModule\Model\WysiwygImage::class,
+            \OrionAlliance\NewModule\Model\ResourceModel\WysiwygImage::class
         );
         $this->_map['fields']['entity_id'] = 'main_table.entity_id';
     }

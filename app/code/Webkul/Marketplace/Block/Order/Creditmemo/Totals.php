@@ -3,14 +3,14 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Block\Order\Creditmemo;
+namespace OrionAlliance\NewModule\Block\Order\Creditmemo;
 
-use Webkul\Marketplace\Model\ResourceModel\Saleslist\Collection;
+use OrionAlliance\NewModule\Model\ResourceModel\Saleslist\Collection;
 
 class Totals extends \Magento\Sales\Block\Order\Totals
 {
@@ -20,7 +20,7 @@ class Totals extends \Magento\Sales\Block\Order\Totals
     protected $_coreRegistry = null;
 
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $helper;
 
@@ -40,14 +40,14 @@ class Totals extends \Magento\Sales\Block\Order\Totals
     protected $_totals;
 
     /**
-     * @param \Webkul\Marketplace\Helper\Data                   $helper
+     * @param \OrionAlliance\NewModule\Helper\Data                   $helper
      * @param \Magento\Framework\Registry                       $coreRegistry
      * @param Collection                                        $orderCollection
      * @param \Magento\Framework\View\Element\Template\Context  $context
      * @param array                                             $data
      */
     public function __construct(
-        \Webkul\Marketplace\Helper\Data $helper,
+        \OrionAlliance\NewModule\Helper\Data $helper,
         \Magento\Framework\Registry $coreRegistry,
         Collection $orderCollection,
         \Magento\Framework\View\Element\Template\Context $context,

@@ -3,26 +3,26 @@
  * Webkul Software
  *
  * @category Webkul
- * @package Webkul_Marketplace
+ * @package OrionAlliance_NewModule
  * @author Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model;
+namespace OrionAlliance\NewModule\Model;
 
 use Magento\Framework\Api\SortOrder;
 use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Webkul\Marketplace\Model\ResourceModel\SellerFlags as ResourceSellerFlags;
+use OrionAlliance\NewModule\Model\ResourceModel\SellerFlags as ResourceSellerFlags;
 use Magento\Framework\Exception\CouldNotSaveException;
-use Webkul\Marketplace\Api\Data\SellerFlagsSearchResultsInterfaceFactory;
-use Webkul\Marketplace\Api\Data\SellerFlagsInterfaceFactory;
+use OrionAlliance\NewModule\Api\Data\SellerFlagsSearchResultsInterfaceFactory;
+use OrionAlliance\NewModule\Api\Data\SellerFlagsInterfaceFactory;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Api\DataObjectHelper;
-use Webkul\Marketplace\Api\SellerFlagsRepositoryInterface;
+use OrionAlliance\NewModule\Api\SellerFlagsRepositoryInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use Webkul\Marketplace\Model\ResourceModel\SellerFlags\CollectionFactory as SellerFlagsCollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\SellerFlags\CollectionFactory as SellerFlagsCollectionFactory;
 
 class SellerFlagsRepository implements SellerFlagsRepositoryInterface
 {
@@ -100,10 +100,10 @@ class SellerFlagsRepository implements SellerFlagsRepositoryInterface
     /**
      * Save data
      *
-     * @param \Webkul\Marketplace\Api\Data\SellerFlagsInterface $sellerFlags
+     * @param \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface $sellerFlags
      */
     public function save(
-        \Webkul\Marketplace\Api\Data\SellerFlagsInterface $sellerFlags
+        \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface $sellerFlags
     ) {
         try {
             $this->resource->save($sellerFlags);
@@ -178,10 +178,10 @@ class SellerFlagsRepository implements SellerFlagsRepositoryInterface
     /**
      * Delete record
      *
-     * @param \Webkul\Marketplace\Api\Data\SellerFlagsInterface $sellerFlags
+     * @param \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface $sellerFlags
      */
     public function delete(
-        \Webkul\Marketplace\Api\Data\SellerFlagsInterface $sellerFlags
+        \OrionAlliance\NewModule\Api\Data\SellerFlagsInterface $sellerFlags
     ) {
         try {
             $this->resource->delete($sellerFlags);

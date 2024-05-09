@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Adminhtml\Product;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Product;
 
 class InlineEdit extends \Magento\Backend\App\Action
 {
@@ -27,7 +27,7 @@ class InlineEdit extends \Magento\Backend\App\Action
      */
     protected $_stockRegistry;
     /**
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $mpHelper;
     /**

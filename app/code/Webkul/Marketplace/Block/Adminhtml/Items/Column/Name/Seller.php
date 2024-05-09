@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Block\Adminhtml\Items\Column\Name;
+namespace OrionAlliance\NewModule\Block\Adminhtml\Items\Column\Name;
 
 class Seller extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
 {
     /**
-     * @var \Webkul\Marketplace\Model\SaleslistFactory
+     * @var \OrionAlliance\NewModule\Model\SaleslistFactory
      */
     protected $saleslistFactory;
 
@@ -34,7 +34,7 @@ class Seller extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
      * @param \Magento\CatalogInventory\Api\StockConfigurationInterface $stockConfiguration
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Catalog\Model\Product\OptionFactory $optionFactory
-     * @param \Webkul\Marketplace\Model\SaleslistFactory $saleslistFactory
+     * @param \OrionAlliance\NewModule\Model\SaleslistFactory $saleslistFactory
      * @param \Magento\Framework\UrlInterface $urlInterface
      * @param \Magento\Customer\Model\CustomerFactory $customerModel
      * @param array $data
@@ -45,7 +45,7 @@ class Seller extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
         \Magento\CatalogInventory\Api\StockConfigurationInterface $stockConfiguration,
         \Magento\Framework\Registry $registry,
         \Magento\Catalog\Model\Product\OptionFactory $optionFactory,
-        \Webkul\Marketplace\Model\SaleslistFactory $saleslistFactory,
+        \OrionAlliance\NewModule\Model\SaleslistFactory $saleslistFactory,
         \Magento\Framework\UrlInterface $urlInterface,
         \Magento\Customer\Model\CustomerFactory $customerModel,
         array $data = []

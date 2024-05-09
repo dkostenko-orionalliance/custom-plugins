@@ -3,18 +3,18 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Wysiwyg\Images;
+namespace OrionAlliance\NewModule\Controller\Wysiwyg\Images;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\LayoutFactory;
 
-class Index extends \Webkul\Marketplace\Controller\Wysiwyg\Images
+class Index extends \OrionAlliance\NewModule\Controller\Wysiwyg\Images
 {
     /**
      * @var \Magento\Framework\View\Result\LayoutFactory

@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Api;
+namespace OrionAlliance\NewModule\Api;
 
 /**
  * Controllers CRUD interface.
@@ -20,7 +20,7 @@ interface ControllersRepositoryInterface
      *
      * @api
      * @param string $controllersId
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -31,7 +31,7 @@ interface ControllersRepositoryInterface
      *
      * @api
      * @param int $moduleName
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -42,7 +42,7 @@ interface ControllersRepositoryInterface
      *
      * @api
      * @param int $controllerPath
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      * @throws \Magento\Framework\Exception\LocalizedException
      */
@@ -52,7 +52,7 @@ interface ControllersRepositoryInterface
      * Retrieve all controllers.
      *
      * @api
-     * @return \Webkul\Marketplace\Api\Data\ControllersInterface
+     * @return \OrionAlliance\NewModule\Api\Data\ControllersInterface
      */
     public function getList();
 }

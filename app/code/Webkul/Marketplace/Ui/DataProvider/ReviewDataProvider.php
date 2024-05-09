@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Ui\DataProvider;
+namespace OrionAlliance\NewModule\Ui\DataProvider;
 
-use Webkul\Marketplace\Model\ResourceModel\Feedback\CollectionFactory;
-use Webkul\Marketplace\Helper\Data as HelperData;
+use OrionAlliance\NewModule\Model\ResourceModel\Feedback\CollectionFactory;
+use OrionAlliance\NewModule\Helper\Data as HelperData;
 
 /**
  * Class Marketplace Ui DataProvider ReviewDataProvider
@@ -19,7 +19,7 @@ use Webkul\Marketplace\Helper\Data as HelperData;
 class ReviewDataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
     /**
-     * @var \Webkul\Marketplace\Model\ResourceModel\Feedback\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Feedback\Collection
      */
     protected $collection;
 

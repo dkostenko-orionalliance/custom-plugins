@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,26 +12,28 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" label="Dashboard" design_abstraction="custom">
     <head>
-        <css src="Webkul_Marketplace::css/style.css"/>
+        <css src="OrionAlliance_NewModule::css/style.css"/>
     </head>
     <body>
         <attribute name="class" value="account"/>
         <referenceContainer name="sidebar.main">
-            <block class="Webkul\Marketplace\Block\Account\Navigation"  name="seller_account_navigation"  before="-"/>
+            <block class="OrionAlliance\NewModule\Block\Account\Navigation"  name="seller_account_navigation"  before="-"/>
+            <block class="Magento\Customer\Block\Account\Navigation" name="customer_account_navigation" template="OrionAlliance_NewModule::account/collapsible.phtml"/>
         </referenceContainer>
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
         <referenceBlock name="seller_account_navigation">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Webkul_Marketplace::account/navigation.phtml</argument>
+                <argument name="template" xsi:type="string">OrionAlliance_NewModule::account/navigation.phtml</argument>
             </action>
             <arguments>
                 <argument name="jsLayout" xsi:type="array">
                     <item name="components" xsi:type="array">
                         <item name="notification-content" xsi:type="array">
-                            <item name="component" xsi:type="string">Webkul_Marketplace/js/account/notification-control</item>
+                            <item name="component" xsi:type="string">OrionAlliance_NewModule/js/account/notification-control</item>
                         </item>
                     </item>
                 </argument>
-                <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+                <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 
             </arguments>
         </referenceBlock>

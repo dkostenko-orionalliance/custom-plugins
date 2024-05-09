@@ -3,16 +3,16 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Rewrite\Catalog\ResourceModel\Product;
+namespace OrionAlliance\NewModule\Model\Rewrite\Catalog\ResourceModel\Product;
 
 use Magento\Framework\DB\Sql\Expression as SqlExpression;
-use Webkul\Marketplace\Model\Product as SellerProduct;
+use OrionAlliance\NewModule\Model\Product as SellerProduct;
 use Magento\Framework\DB\Select as DBSelect;
 
 class Collection extends \Magento\Catalog\Model\ResourceModel\Product\Collection

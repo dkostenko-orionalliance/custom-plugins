@@ -3,17 +3,17 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\ResourceModel\Product\FrontGrid;
+namespace OrionAlliance\NewModule\Model\ResourceModel\Product\FrontGrid;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Search\AggregationInterface;
-use Webkul\Marketplace\Model\ResourceModel\Product\Collection as ProductCollection;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\Collection as ProductCollection;
 
 /**
  * Class Collection
@@ -33,7 +33,7 @@ class Collection extends ProductCollection implements SearchResultInterface
 
     /**
      *
-     * @var \Webkul\Marketplace\Helper\Data
+     * @var \OrionAlliance\NewModule\Helper\Data
      */
     protected $mpHelper;
     /**
@@ -45,7 +45,7 @@ class Collection extends ProductCollection implements SearchResultInterface
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
      * @param \Magento\Framework\Event\ManagerInterface $eventManager
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param \Webkul\Marketplace\Helper\Data $mpHelper
+     * @param \OrionAlliance\NewModule\Helper\Data $mpHelper
      * @param string $mainTable
      * @param string $eventPrefix
      * @param string $eventObject
@@ -61,7 +61,7 @@ class Collection extends ProductCollection implements SearchResultInterface
         \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy,
         \Magento\Framework\Event\ManagerInterface $eventManager,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Webkul\Marketplace\Helper\Data $mpHelper,
+        \OrionAlliance\NewModule\Helper\Data $mpHelper,
         $mainTable,
         $eventPrefix,
         $eventObject,

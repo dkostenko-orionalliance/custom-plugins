@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,13 +12,15 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-           <css src="Webkul_Marketplace::css/wk_block.css"/>
+           <css src="OrionAlliance_NewModule::css/wk_block.css"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Webkul\Marketplace\Block\Sellerregistration" name="seller_form_register" template="Webkul_Marketplace::confpartner.phtml" ifconfig="marketplace/landingpage_settings/allow_seller_registration_block">
-            <arguments>
-                    <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
+            <referenceBlock name="customer_form_register" remove="true" />
+            <block class="OrionAlliance\NewModule\Block\RegistrationForm" name="registration_form" template="OrionAlliance_NewModule::registration_form.phtml"/>
+            <block class="OrionAlliance\NewModule\Block\Sellerregistration" name="seller_form_register" template="OrionAlliance_NewModule::confpartner.phtml" ifconfig="marketplace/landingpage_settings/allow_seller_registration_block">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">OrionAlliance\NewModule\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
         </referenceContainer>

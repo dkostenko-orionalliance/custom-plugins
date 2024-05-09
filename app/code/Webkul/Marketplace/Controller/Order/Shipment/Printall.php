@@ -3,20 +3,20 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Controller\Order\Shipment;
+namespace OrionAlliance\NewModule\Controller\Order\Shipment;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 /**
  * Webkul Marketplace Order Shipment Printall pdf Controller by date range.
  */
-class Printall extends \Webkul\Marketplace\Controller\Order
+class Printall extends \OrionAlliance\NewModule\Controller\Order
 {
     /**
      * Print all shipment
@@ -96,7 +96,7 @@ class Printall extends \Webkul\Marketplace\Controller\Order
                         );
                     }
                     $pdf = $this->_objectManager->create(
-                        \Webkul\Marketplace\Model\Order\Pdf\Shipment::class
+                        \OrionAlliance\NewModule\Model\Order\Pdf\Shipment::class
                     )->getPdf($shipments);
                     $date = $this->date->date('Y-m-d_H-i-s');
 

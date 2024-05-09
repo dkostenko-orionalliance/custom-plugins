@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -14,29 +14,30 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Webkul_Marketplace::marketplace" title="Marketplace Management" sortOrder="10" >
-                    <resource id="Webkul_Marketplace::menu" title="Menu" sortOrder="10">
-                        <resource id="Webkul_Marketplace::product" title="Manage Product" sortOrder="10" />
-                        <resource id="Webkul_Marketplace::seller" title="Manage Sellers" sortOrder="10" />
-                        <resource id="Webkul_Marketplace::commission" title="Manage Commission" sortOrder="11" />
-                        <resource id="Webkul_Marketplace::transaction" title="Manage Transaction" sortOrder="12" />
-                        <resource id="Webkul_Marketplace::feedback" title="Manage Feedback" sortOrder="13" />
-                        <resource id="Webkul_Marketplace::sellerflag" title="Seller Flag Reason" sortOrder="14" />
-                        <resource id="Webkul_Marketplace::productflag" title="Product Flag Reason" sortOrder="15" />
-                        <resource id="Webkul_Marketplace::configattributes" title="Vendor Attributes" sortOrder="30" />
+                <resource id="OrionAlliance_NewModule::marketplace" title="Marketplace Management" sortOrder="10" >
+                    <resource id="OrionAlliance_NewModule::menu" title="Menu" sortOrder="10">
+                        <resource id="OrionAlliance_NewModule::product" title="Manage Product" sortOrder="10" />
+                        <resource id="OrionAlliance_NewModule::seller" title="Manage Sellers" sortOrder="10" />
+                        <resource id="OrionAlliance_NewModule::commission" title="Manage Commission" sortOrder="11" />
+                        <resource id="OrionAlliance_NewModule::transaction" title="Manage Transaction" sortOrder="12" />
+                        <resource id="OrionAlliance_NewModule::feedback" title="Manage Feedback" sortOrder="13" />
+                        <resource id="OrionAlliance_NewModule::sellerflag" title="Seller Flag Reason" sortOrder="14" />
+                        <resource id="OrionAlliance_NewModule::productflag" title="Product Flag Reason" sortOrder="15" />
+                        <resource id="OrionAlliance_NewModule::customer_attributes" title="Customer Attributes" sortOrder="25" />
+                        <resource id="OrionAlliance_NewModule::configattributes" title="Vendor Attributes" sortOrder="30" />
                     </resource>
-                    <resource id="Webkul_Marketplace::marketplace_support" title="Support" sortOrder="20">
-                        <resource id="Webkul_Marketplace::marketplace_userguide" title="User Guide" sortOrder="10" />
-                        <resource id="Webkul_Marketplace::marketplace_extension" title="Store Extension" sortOrder="20" />
-                        <resource id="Webkul_Marketplace::marketplace_uvdesk" title="Ticket/Customisations" sortOrder="30" />
-                        <resource id="Webkul_Marketplace::marketplace_services" title="Services" sortOrder="40" />
-                        <resource id="Webkul_Marketplace::marketplace_reviews" title="Reviews" sortOrder="50" />
+                    <resource id="OrionAlliance_NewModule::marketplace_support" title="Support" sortOrder="20">
+                        <resource id="OrionAlliance_NewModule::marketplace_userguide" title="User Guide" sortOrder="10" />
+                        <resource id="OrionAlliance_NewModule::marketplace_extension" title="Store Extension" sortOrder="20" />
+                        <resource id="OrionAlliance_NewModule::marketplace_uvdesk" title="Ticket/Customisations" sortOrder="30" />
+                        <resource id="OrionAlliance_NewModule::marketplace_services" title="Services" sortOrder="40" />
+                        <resource id="OrionAlliance_NewModule::marketplace_reviews" title="Reviews" sortOrder="50" />
                     </resource>
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Webkul_Marketplace::config_marketplace" title="Marketplace Configuration Section" sortOrder="50" />
+                            <resource id="OrionAlliance_NewModule::config_marketplace" title="Marketplace Configuration Section" sortOrder="50" />
                         </resource>
                     </resource>
                 </resource>

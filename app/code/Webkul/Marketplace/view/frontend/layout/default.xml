@@ -4,7 +4,7 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
@@ -12,7 +12,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="Webkul_Marketplace::css/wk_block.css"/>
+        <css src="OrionAlliance_NewModule::css/wk_block.css"/>
     </head>
     <body>
         <referenceBlock name="header.links">
@@ -22,7 +22,7 @@
                     <argument name="path" xsi:type="string">marketplace</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\View\Html\SwitchLink" name="marketplace-account-switch-link" ifconfig="marketplace/layout_settings/is_separate_panel">
+            <block class="OrionAlliance\NewModule\Block\View\Html\SwitchLink" name="marketplace-account-switch-link" ifconfig="marketplace/layout_settings/is_separate_panel">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Vendor Dashboard</argument>
                     <argument name="path" xsi:type="string">marketplace\account\dashboard</argument>
@@ -36,7 +36,7 @@
                     <argument name="path" xsi:type="string">marketplace</argument>
                 </arguments>
             </block>
-            <block class="Webkul\Marketplace\Block\View\Html\Link" name="marketplace-vendor-login-link" ifconfig="marketplace/layout_settings/is_separate_panel">
+            <block class="OrionAlliance\NewModule\Block\View\Html\Link" name="marketplace-vendor-login-link" ifconfig="marketplace/layout_settings/is_separate_panel">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Vendor Login</argument>
                     <argument name="path" xsi:type="string">marketplace/account/dashboard</argument>

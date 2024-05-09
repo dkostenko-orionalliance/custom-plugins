@@ -3,12 +3,12 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Controller\Adminhtml\Sellerflag;
+namespace OrionAlliance\NewModule\Controller\Adminhtml\Sellerflag;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -47,7 +47,7 @@ class Index extends Action
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Webkul_Marketplace::sellerflag');
+        $resultPage->setActiveMenu('OrionAlliance_NewModule::sellerflag');
         $resultPage->getConfig()->getTitle()->prepend(__('Seller Flag Reason'));
         return $resultPage;
     }
@@ -59,6 +59,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Marketplace::sellerflag');
+        return $this->_authorization->isAllowed('OrionAlliance_NewModule::sellerflag');
     }
 }

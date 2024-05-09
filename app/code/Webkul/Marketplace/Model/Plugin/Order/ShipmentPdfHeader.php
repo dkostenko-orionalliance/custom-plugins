@@ -3,13 +3,13 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
 
-namespace Webkul\Marketplace\Model\Plugin\Order;
+namespace OrionAlliance\NewModule\Model\Plugin\Order;
 
 /**
  * Marketplace Order PDF ShipmentPdfHeader Plugin.
@@ -33,12 +33,12 @@ class ShipmentPdfHeader
     /**
      * Insert title and number for concrete document type.
      *
-     * @param \Webkul\Marketplace\Model\Order\Pdf\Shipment $pdfShipment
+     * @param \OrionAlliance\NewModule\Model\Order\Pdf\Shipment $pdfShipment
      * @param \Zend_Pdf_Page $page
      * @param string $text
      */
     public function beforeInsertDocumentNumber(
-        \Webkul\Marketplace\Model\Order\Pdf\Shipment $pdfShipment,
+        \OrionAlliance\NewModule\Model\Order\Pdf\Shipment $pdfShipment,
         $page,
         $text
     ) {

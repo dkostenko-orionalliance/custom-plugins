@@ -3,15 +3,15 @@
  * Webkul Software.
  *
  * @category  Webkul
- * @package   Webkul_Marketplace
+ * @package   OrionAlliance_NewModule
  * @author    Webkul
  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
  * @license   https://store.webkul.com/license.html
  */
-namespace Webkul\Marketplace\Ui\DataProvider\Backend;
+namespace OrionAlliance\NewModule\Ui\DataProvider\Backend;
 
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollection;
-use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
+use OrionAlliance\NewModule\Model\ResourceModel\Product\CollectionFactory;
 
 /**
  * Class Product  DataProvider
@@ -21,7 +21,7 @@ class ProductListDataProvider extends \Magento\Catalog\Ui\DataProvider\Product\P
     /**
      * Product collection
      *
-     * @var \Webkul\Marketplace\Model\ResourceModel\Product\Collection
+     * @var \OrionAlliance\NewModule\Model\ResourceModel\Product\Collection
      */
     protected $collection;
 
