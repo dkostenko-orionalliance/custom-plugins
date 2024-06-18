@@ -221,9 +221,9 @@ class EditprofilePost extends Action
     {
         $autoId = 0;
         $collection = $this->sellerModel->create()
-        ->getCollection()
-        ->addFieldToFilter('seller_id', $sellerId)
-        ->addFieldToFilter('store_id', $storeId);
+            ->getCollection()
+            ->addFieldToFilter('seller_id', $sellerId)
+            ->addFieldToFilter('store_id', $storeId);
         foreach ($collection as $value) {
             $autoId = $value->getId();
         }
@@ -232,9 +232,9 @@ class EditprofilePost extends Action
         if (!$autoId) {
             $sellerDefaultData = [];
             $collection = $this->sellerModel->create()
-            ->getCollection()
-            ->addFieldToFilter('seller_id', $sellerId)
-            ->addFieldToFilter('store_id', 0);
+                ->getCollection()
+                ->addFieldToFilter('seller_id', $sellerId)
+                ->addFieldToFilter('store_id', 0);
             foreach ($collection as $value) {
                 $sellerDefaultData = $value->getData();
             }
@@ -254,16 +254,16 @@ class EditprofilePost extends Action
         $value->setUpdatedAt($this->_date->gmtDate());
         $value->save();
 
-        if ($fields['company_description']) {
+        if (!empty($fields['company_description'])) {
             $fields['company_description'] = str_replace(
                 'script',
                 '',
                 $fields['company_description']
             );
+            $value->setCompanyDescription($fields['company_description']);
         }
-        $value->setCompanyDescription($fields['company_description']);
 
-        if (isset($fields['return_policy'])) {
+        if (!empty($fields['return_policy'])) {
             $fields['return_policy'] = preg_replace(
                 '#<script(.*?)>(.*?)</script>#is',
                 '',
@@ -271,8 +271,8 @@ class EditprofilePost extends Action
             );
             $value->setReturnPolicy($fields['return_policy']);
         }
-    
-        if (isset($fields['shipping_policy'])) {
+
+        if (!empty($fields['shipping_policy'])) {
             $fields['shipping_policy'] = preg_replace(
                 '#<script(.*?)>(.*?)</script>#is',
                 '',
@@ -280,8 +280,8 @@ class EditprofilePost extends Action
             );
             $value->setShippingPolicy($fields['shipping_policy']);
         }
-    
-        if (isset($fields['privacy_policy'])) {
+
+        if (!empty($fields['privacy_policy'])) {
             $fields['privacy_policy'] = preg_replace(
                 '#<script(.*?)>(.*?)</script>#is',
                 '',
@@ -290,12 +290,12 @@ class EditprofilePost extends Action
             $value->setPrivacyPolicy($fields['privacy_policy']);
         }
 
-        $value->setMetaDescription($fields['meta_description']);
+        // if (!empty($fields['meta_description'])) {
+        //     $value->setMetaDescription($fields['meta_description']);
+        // }
 
-        /**
-         * Set taxvat number for seller
-         */
-        if ($fields['taxvat']) {
+        // Set taxvat number for seller
+        if (isset($fields['taxvat'])) {
             $customer = $this->customerModel->create()->load($sellerId);
             $customer->setTaxvat($fields['taxvat']);
             $customer->setId($sellerId)->save();
@@ -303,38 +303,42 @@ class EditprofilePost extends Action
 
         $target = $this->_mediaDirectory->getAbsolutePath('avatar/');
         try {
-            
-            $uploader = $this->_fileUploaderFactory->create(
-                ['fileId' => 'banner_pic']
-            );
-            $uploader->setAllowedExtensions(['jpg', 'jpeg', 'gif', 'png']);
-            $uploader->setAllowRenameFiles(true);
-            $result = $uploader->save($target);
-            if ($result['file']) {
-                $value->setBannerPic($result['file']);
+            if (isset($_FILES['banner_pic']) && isset($_FILES['banner_pic']['name']) && $_FILES['banner_pic']['name'] != '') {
+                $uploader = $this->_fileUploaderFactory->create(
+                    ['fileId' => 'banner_pic']
+                );
+                $uploader->setAllowedExtensions(['jpg', 'jpeg', 'gif', 'png']);
+                $uploader->setAllowRenameFiles(true);
+                $result = $uploader->save($target);
+                if ($result['file']) {
+                    $value->setBannerPic($result['file']);
+                }
             }
         } catch (\Exception $e) {
             $this->helper->logDataInLogger(
-                "Controller_Account_EditProfilePost execute : ".$e->getMessage()
+                "Controller_Account_EditProfilePost execute : " . $e->getMessage()
             );
             if ($e->getMessage() != 'The file was not uploaded.') {
                 $this->messageManager->addError($e->getMessage());
                 $this->dataPersistor->set('seller_profile_data', $fields);
             }
         }
+
         try {
-            $uploaderLogo = $this->_fileUploaderFactory->create(
-                ['fileId' => 'logo_pic']
-            );
-            $uploaderLogo->setAllowedExtensions(['jpg', 'jpeg', 'png']);
-            $uploaderLogo->setAllowRenameFiles(true);
-            $resultLogo = $uploaderLogo->save($target);
-            if ($resultLogo['file']) {
-                $value->setLogoPic($resultLogo['file']);
+            if (isset($_FILES['logo_pic']) && isset($_FILES['logo_pic']['name']) && $_FILES['logo_pic']['name'] != '') {
+                $uploaderLogo = $this->_fileUploaderFactory->create(
+                    ['fileId' => 'logo_pic']
+                );
+                $uploaderLogo->setAllowedExtensions(['jpg', 'jpeg', 'png']);
+                $uploaderLogo->setAllowRenameFiles(true);
+                $resultLogo = $uploaderLogo->save($target);
+                if ($resultLogo['file']) {
+                    $value->setLogoPic($resultLogo['file']);
+                }
             }
         } catch (\Exception $e) {
             $this->helper->logDataInLogger(
-                "Controller_Account_EditProfilePost execute : ".$e->getMessage()
+                "Controller_Account_EditProfilePost execute : " . $e->getMessage()
             );
             if ($e->getMessage() != 'The file was not uploaded.') {
                 $this->messageManager->addError($e->getMessage());
@@ -345,6 +349,7 @@ class EditprofilePost extends Action
         if (array_key_exists('country_pic', $fields)) {
             $value->setCountryPic($fields['country_pic']);
         }
+
         $value->save();
 
         if (array_key_exists('country_pic', $fields)) {
@@ -373,11 +378,12 @@ class EditprofilePost extends Action
             );
         } catch (\Exception $e) {
             $this->helper->logDataInLogger(
-                "Controller_Account_EditProfilePost execute : ".$e->getMessage()
+                "Controller_Account_EditProfilePost execute : " . $e->getMessage()
             );
             $this->messageManager->addException($e, __('We can\'t save the customer.'));
         }
     }
+
 
     /**
      * Validate profiledata

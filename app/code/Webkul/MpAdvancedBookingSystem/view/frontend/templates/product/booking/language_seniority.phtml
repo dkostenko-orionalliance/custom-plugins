@@ -1,0 +1,22 @@
+<div class="admin__field">
+    <div class="admin__field-control">
+        <div data-bind="scope: 'languageSeniority'">
+            <input name="product[language_seniority]" data-bind="value: value" type="hidden"/>
+            <div data-bind="template: { name: 'Webkul_MpAdvancedBookingSystem/form/element/language-seniority' }"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "languageSeniority": {
+                    "component": "Webkul_MpAdvancedBookingSystem/js/form/element/language-seniority"
+                }
+            }
+        }
+    }
+}
+</script>

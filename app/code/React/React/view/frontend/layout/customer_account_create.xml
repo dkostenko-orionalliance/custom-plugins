@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="React_React::js/customer-reg.js" />
+        <css src="React_React::css/main.css" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="react.customer.registration" template="React_React::react-customer-registration.phtml"/>
+            <!-- <block class="Magento\Cms\Block\Widget\Block" name="custom.widget" template="widget/static_block/default.phtml">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">20</argument>
+                </arguments>
+            </block> -->
+        </referenceContainer>
+    </body>
+</page>

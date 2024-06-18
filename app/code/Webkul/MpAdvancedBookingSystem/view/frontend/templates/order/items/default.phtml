@@ -1,0 +1,50 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpAdvancedBookingSystem
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+$_item = $block->getParentBlock()->getItem();
+$viewModel = $block->getBookingViewModel();
+if ($viewModel === null) {
+    $viewModel = $block->getLayout()->createBlock(
+        \Webkul\MpAdvancedBookingSystem\Block\GetViewModel::class
+    )->getBookingViewModel();
+}
+$helper = $viewModel->getHelper();
+$cancellationAvail = $helper->getConfigData('mpadvancedbookingsystem/cancellation/cancellation_available');
+$cancelStatus = $helper->getCancellationStatus($_item->getOrderId(), $_item->getItemId());
+$cancellationInfo = $helper->getCancellationInfo($_item->getOrderId(), $_item->getItemId());
+?>
+
+<?php if (empty($cancellationInfo->getData())): ?>
+    <?php if ($helper->isCustomerLoggedIn()): ?>
+        <?php $cancelUrl = $block->getUrl('mpadvancebooking/cancellation/', [
+            'id' => $_item->getId(),
+            'order_id' => $_item->getOrderId()
+        ]) ?>
+    <?php else: ?>
+        <?php $cancelUrl = $block->getUrl('mpadvancebooking/cancellation/guestindex', [
+            'id' => $_item->getId(),
+            'order_id' => $_item->getOrderId()
+        ]) ?>
+    <?php endif; ?>
+    <?php if ($cancellationAvail && $_item->getIsCancellationAvailable()
+                && $_item->canRefund() && $cancelStatus): ?>
+        <a style="padding: 3px 7px; margin-top: 5px;" class="action primary"
+            href="<?= /** @escapeNotVerified */ $cancelUrl?>">
+            <?= $block->escapeHtml(__('Cancel Booking')) ?>
+        </a>
+    <?php endif; ?>
+<?php else: ?>
+    <?php if ($cancellationInfo->getStatus() == 1) { ?>
+        <?php $status = __('Cancellation completed') ?>
+    <?php } else { ?>
+        <?php $status = __('Cancellation request already created') ?>
+    <?php } ?>
+    <strong><?= /** @escapeNotVerified */ $status ?></strong>
+<?php endif; ?>

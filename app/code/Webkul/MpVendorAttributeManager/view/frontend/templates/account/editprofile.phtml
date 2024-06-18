@@ -1,0 +1,324 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpVendorAttributeManager
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+$helper = $block->getHelper();
+$mpHelper = $block->getMpHelper();
+$jsonHelper = $block->getJsonHelper();
+$partner = $block->getPersistentData();
+$isSeller = $mpHelper->isSeller();
+$mediaUrl = $mpHelper->getMediaUrl();
+$customer = $block->loadCustomer();
+$vendorAttributes = $block->getAttributeCollection($isSeller);
+if ($helper->getConfigData('group_display') && $customer->getIsVendorGroup()) {
+    $vendorAttributes = $block->getAttributeCollectionByGroup($customer->getIsVendorGroup(), $isSeller);
+}
+$profileUrl = 'marketplace/seller/profile/shop/'.$partner['shop_url'];
+
+if ($isSeller && $vendorAttributes):
+    ?>
+<div class="wkeditprofile">
+    <form id='edit-vendor-profile-attributes-form' action="<?= $block->escapeUrl($block->getActionUrl()); ?>"
+        enctype="multipart/form-data" method="post" data-role="form-profile-validate"
+        data-mage-init='{"validation":{}}'>
+        <?= /**@noEscape */ $block->getBlockHtml('formkey');?>
+        <?= /**@noEscape */ $block->getBlockHtml('seller.formkey')?>
+
+        <div class="wk-mp-design">
+            <fieldset class="fieldset info wk-mp-fieldset custom-fieldset">
+                <div class="wk-mp-page-title page-title">
+                    <!-- <button class="button wk-mp-btn" title="<?= /**@noEscape */ __('Save Attributes') ?>" type="submit" id="save-btn-vendor">
+                        <span><span><?= /**@noEscape */ __('Save Attributes') ?></span></span>
+                    </button> -->
+                    <!-- <legend class="legend"><span>
+                        <?= /**@noEscape */ $block->getConfigData('profile_label') ?>
+                    </span></legend> -->
+                </div>
+
+                <?php
+                foreach ($vendorAttributes as $vendorAttribute) {
+                    $attributeCode = $vendorAttribute->getAttributeCode();
+                    if (!in_array($attributeCode, ['wkv_vendor_specialization', 'wkv_vendor_languages', 'wkv_vendor_skills', 'wkv_industry_expertise', 'wkv_linkedin_profile_url'])) {
+                        continue;
+                    }
+                    $isRequired = $block->checkIfRequired($vendorAttribute->getId());
+                    ?>
+                    <div class="field profile <?= /**@noEscape */ $isRequired ? 'required' : '' ?>">
+                        <label for="<?= /**@noEscape */ $vendorAttribute->getStoreLabel(); ?>"
+                            class="label">
+                            <span><?= /**@noEscape */ $vendorAttribute->getStoreLabel(); ?></span>
+                        </label>
+                        <div class="control">
+                            <?php
+                            
+
+                            switch ($vendorAttribute->getFrontendInput()) {
+                                case "text":
+                                    ?>
+                                <input type="text" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                    id="<?= /**@noEscape */ $attributeCode; ?>"
+                                    value="<?= /**@noEscape */
+                                        $block->escapeHtml($customer->getData($attributeCode)); ?>"
+                                    <?= $isRequired ? 'data-validate="{required:true}"' : '' ?>
+                                    class="input-text validate-no-html-tags
+                                        <?= /**@noEscape */ $vendorAttribute->getFrontendClass(); ?>"
+                                    autocomplete="off" />
+                                    <?php
+                                    break;
+                                case "textarea":
+                                    $attributeValue = $customer->getData($attributeCode);
+                                    $textAreaValue = $block->getFilterData($attributeValue);
+                                    ?>
+                                <textarea name="<?= /**@noEscape */ $attributeCode; ?>"
+                                    id="<?= /**@noEscape */ $attributeCode; ?>"
+                                    <?= $isRequired ? 'data-validate="{required:true}"' : '' ?>
+                                    class="input-text validate-no-html-tags
+                                    <?= /**@noEscape */ $vendorAttribute->getFrontendClass(); ?>
+                                    "
+                                    ><?= /**@noEscape */ $textAreaValue; ?></textarea>
+                                    <?php
+                                    break;
+                                case "date":
+                                    $attributeValue = $customer->getData($attributeCode);
+                                    $dateValue = $attributeValue
+                                        ? $block->convertDateFormat($attributeValue)
+                                        : '';
+                                    ?>
+                                <input type="text" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                                    id="<?= /**@noEscape */ $attributeCode; ?>"
+                                                    value="<?= /**@noEscape */ $dateValue; ?>"
+                                                    class="dob_type validate-no-html-tags<?= /**@noEscape */
+                                                        $vendorAttribute->getFrontendClass(); ?>"
+                                                    <?= $isRequired ? 'data-validate="{required:true}"' : '' ?>
+                                                    autocomplete="off" />
+                                    <?php
+                                    break;
+                                case "boolean":
+                                    $value = $customer->getData($attributeCode);
+                                    ?>
+                                <input type="checkbox" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                                       id="<?= /**@noEscape */ $attributeCode; ?>"
+                                                       class="input-text <?= /**@noEscape */
+                                                        $vendorAttribute->getFrontendClass(); ?>"
+                                                       value="<?= /**@noEscape */
+                                                        $customer->getData($attributeCode); ?>"
+                                                       onchange="this.value = this.checked ? 1 : 0;"
+                                                       <?= $isRequired ? 'data-validate="{required:true}"': ''?>
+                                                       <?= /**@noEscape */
+                                                        $customer->getData($attributeCode) ? 'checked' : '' ; ?> />
+                                    <?php
+                                    break;
+
+                                case "multiselect":
+                                    $options = $vendorAttribute->getSource()->getAllOptions();
+                                    array_shift($options);
+                                    $selectedOptions = $customer->getData($attributeCode);
+                                    $reactAppConfigs[] = [
+                                        'attributeCode' => $attributeCode,
+                                        'options' => $options,
+                                        'selectedOptions' => $selectedOptions,
+                                        'isRequired' => $isRequired,
+                                    ];
+                                    ?>
+                                    <div id="<?= /**@noEscape */ $attributeCode; ?>"></div>
+                                    <script type="text/javascript">
+                                        window.reactAppConfigs = <?= json_encode($reactAppConfigs); ?>;
+                                    </script>
+                                    <script type="text/javascript" src="<?= $block->getViewFileUrl('Webkul_MpVendorAttributeManager/js/multiselect.js') ?>"></script>
+                                    <?php
+                                    break;
+                                    
+                                case "select":
+                                    $options = $vendorAttribute->getSource()->getAllOptions();
+                                    $selectedOption = $customer->getData($attributeCode);
+                                    ?>
+                                <select name="<?= /**@noEscape */ $attributeCode; ?>"
+                                        id="<?= /**@noEscape */ $attributeCode; ?>"
+                                        class="input-select <?= /**@noEscape */
+                                            $vendorAttribute->getFrontendClass(); ?>"
+                                        >
+                                        <?= $isRequired ? 'data-validate="{required:true}"' : '' ?>
+                                        <?php
+                                        foreach ($options as $option) {
+                                            $selected = ($option['value'] == $selectedOption) ? "selected" : ""; ?>
+                                        ?>
+                                            <option  value="<?= /**@noEscape */ $option['value'] ?>"
+                                            <?= /**@noEscape */ $selected; ?>>
+                                            <?= /**@noEscape */ $option['label'] ?></option>
+                                        <?php } ?>
+                                </select>
+                                    <?php
+                                    break;
+                                case "image":
+                                    $imageValue = $customer->getData($attributeCode);
+                                    if (isset($imageValue) && $imageValue != 1) {
+                                        $imageUrl = $mediaUrl."vendorfiles/image/".$imageValue;
+                                    }
+                                    $fieldId = "customfields_image_".$attributeCode;
+                                    ?>
+                                    <input type="file" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                        id="<?= /**@noEscape */ $attributeCode; ?>"
+                                        data-allowed="<?= /**@noEscape */
+                                            $helper->getConfigData('allowede_image_extension') ?>"
+                                        class="custom_file <?= /**@noEscape */ $attributeCode; ?>"
+                                        <?= /**@noEscape */
+                                            $isRequired && !isset($imageUrl) ? 'data-validate="{required:true}"' : ''?>
+                                        data-value="<?= /**@noEscape */ $imageValue; ?>" />
+
+                                    <?php if (isset($imageValue) && $imageValue != 1) { ?>
+                                    <a href="<?= /**@noEscape */ $imageUrl ?>"
+                                        onclick="imagePreview('<?= /**@noEscape */ $fieldId ?>'); return false;">
+                                        <img src="<?= /**@noEscape */ $imageUrl ?>"
+                                            id="<?= /**@noEscape */ $fieldId ?>"
+                                            title="<?= /**@noEscape */ __("Preview Image"); ?>"
+                                            height="22" width="22" class="small-image-preview v-middle">
+                                    </a>
+                                        <?php if (!$isRequired && isset($imageValue) && $imageValue != 1) { ?>
+                                    <span class="delete-image">
+                                        <input type="checkbox"
+                                            name="<?= /**@noEscape */ $attributeCode; ?>['delete']"
+                                            value="" onchange="this.value = this.checked ? 1 : 0;"
+                                            class="checkbox">
+                                        <label for="customfields_your_image_delete">
+                                            <?= /**@noEscape */ __('Delete Image') ?></label>
+                                    </span>
+                                    <input type="hidden"
+                                        name="customer['<?= /**@noEscape */ $attributeCode; ?>']"
+                                        value="<?= /**@noEscape */ $imageValue; ?>" />
+                                <?php } ?>
+                                <br/>
+                                <span class="note">
+                                        <?= /**@noEscape */ __("Allowed Extension's : "); ?>
+                                    <span><?= /**@noEscape */
+                                        $helper->getConfigData('allowede_image_extension') ?></span>
+                                </span>
+                                <?php } ?>
+                                    <?php
+                                    break;
+                                case "file":
+                                    $fileValue = $customer->getData($attributeCode);
+                                    if (isset($fileValue) && $fileValue != 1) {
+                                        $fileUrl = $mediaUrl."vendorfiles/file/".$fileValue;
+                                    }
+                                    ?>
+                                  <input type="file" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                                    id="<?= /**@noEscape */ $attributeCode; ?>"
+                                                    data-allowed="<?= /**@noEscape */
+                                                        $helper->getConfigData('allowede_file_extension') ?>"
+                                                    class="custom_file <?= /**@noEscape */ $attributeCode; ?> "
+                                                    <?= /**@noEscape */ $isRequired && !isset($fileUrl) ?
+                                                        'data-validate="{required:true}"' : '' ?>
+                                                    data-value="<?= /**@noEscape */ $fileValue; ?>" />
+                                    <?php if (!$isRequired && isset($fileValue) && $fileValue != 1) { ?>
+                                    <span class="delete-image">
+                                        <input type="checkbox"
+                                            name="<?= /**@noEscape */ $attributeCode; ?>['delete']"
+                                            value="" onchange="this.value = this.checked ? 1 : 0;"
+                                            class="checkbox">
+                                        <label for="customfields_your_image_delete"><?= /**@noEscape */
+                                             __('Delete File') ?></label>
+                                    </span>
+                                    <input type="hidden"
+                                        name="customer['<?= /**@noEscape */ $attributeCode; ?>']"
+                                        value="<?= /**@noEscape */ $fileValue; ?>" />
+                                <?php } ?>
+                                <br/>
+                                <span class="note">
+                                    <?= /**@noEscape */ __("Allowed Extension's : "); ?>
+                                    <span><?= /**@noEscape */
+                                        $helper->getConfigData('allowede_file_extension') ?>
+                                    </span>
+                                </span>
+                                <br>
+                                    <?php if (isset($fileValue) && $fileValue != 1) { ?>
+                                <a href="<?= /**@noEscape */ $fileUrl ?>">
+                                <img alt="Download" title="Download"
+                                    src="<?= /**@noEscape */
+                                         $block->getViewFileUrl(
+                                             'Webkul_MpVendorAttributeManager::images/download.gif'
+                                         ) ?>"
+                                    class="v-middle wk_download_link" style="float: left;width: 22px;" />
+                                        <?= /**@noEscape */ __('Download'); ?>
+                                </a>
+                                <?php } ?>
+                                    <?php
+                                    break;
+                                default:
+                                    ?>
+                                <input type="text" name="<?= /**@noEscape */ $attributeCode; ?>"
+                                            id="<?= /**@noEscape */ $attributeCode; ?>"
+                                            data-type= "<?= /**@noEscape */
+                                                $vendorAttribute->getFrontendType(); ?>"
+                                            value=""
+                                            class="input-text" autocomplete="off" />
+                                    <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                <?php } ?>
+                <div class="field profile wk-profile-links-container">
+                    <div class="wk-profile-links">
+                        <a class="btn-primary sg-orange-button" 
+                        href="<?= /* @noEscape */ $mpHelper->getRewriteUrl($profileUrl); ?>" 
+                        target="_blank"><?= /* @noEscape */ __('View Profile') ?></a>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<?php endif; ?>
+<?php
+    $optionData = [
+        'dateField'     => '.dob_type',
+        'dateFormat'     => 'yyyy-MM-dd',
+        'imageField'    => '.custom_file',
+        'wysiwygUrl'    => $block->getWysiwygUrl()
+    ];
+    $serializedData = $jsonHelper->jsonEncode($optionData);
+    ?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "editProfile": <?= /**@noEscape */ $serializedData; ?>
+    }
+}
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    var firstForm = document.getElementById('edit-vendor-profile-attributes-form');
+    var secondForm = document.getElementById('edit-vendor-profile-form');
+
+    if (firstForm && secondForm) {
+        secondForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Listen for the first form submission to complete
+            console.log('firstForm', firstForm)
+            var formData = new FormData(firstForm);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', firstForm.action, true);
+            xhr.onload = function () {
+                console.log('xhr.status === 200', xhr.status === 200)
+                if (xhr.status === 200 || xhr.status === 302) {
+                    // After the first form is successfully submitted, submit the second form
+                    secondForm.submit();
+                } else {
+                    // Handle the error
+                    console.error('An error occurred during the first form submission.');
+                }
+            };
+            xhr.send(formData);
+        });
+    }
+});
+</script>

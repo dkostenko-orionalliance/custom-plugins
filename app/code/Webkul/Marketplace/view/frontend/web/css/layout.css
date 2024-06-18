@@ -1728,6 +1728,18 @@ small.wk-mp-products-bottom {
     top: 15% !important;
 }
 
+.block-wishlist {
+    display: none !important;
+}
+
+.block-reorder {
+    display: none !important;
+}
+
 #block-collapsible-nav {
+    display: none;
+}
+
+.mpadvancebooking {
     display: none;
 }

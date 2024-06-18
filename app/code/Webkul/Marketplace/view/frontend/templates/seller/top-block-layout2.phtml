@@ -46,6 +46,11 @@ if ($partner['shop_url']):
     $locsearch = $escaper->escapeHtml($partner['company_locality']);
     $sellerProductCount = $helper->getSellerProCount($sellerId);
     $flagReasons = $block->getSellerFlagReasons();
+
+
+    
+
+
     if ($helper->getActiveColorPicker()):?>
         <style>
             .marketplace-seller-collection .wk-mp-collection-product-count-container,
@@ -56,124 +61,44 @@ if ($partner['shop_url']):
         </style>
     <?php endif ?>
     <?php  // starting of the div ?>
-    <div class="wk-mp-header-layout2">
-        <div class="wk-mp-header-container">
-            <div class="wk-mp-header-container-left">
-                
-                <a href="<?= /* @noEscape */ $helper->getRewriteUrl('marketplace/seller/profile/shop/'.$shopUrl);?>" >
-                    <img class="wk-mp-collection-logo" src="<?= /* @noEscape */ $logo;?>" />
-                </a>
-                <div class="wk-mp-left-seller-content">
-                    <span class="wk-mp-collection-seller-title wk-mp-collection-header-css">
-                        <a href="<?= /* @noEscape */ $helper
-                        ->getRewriteUrl('marketplace/seller/profile/shop/'.$shopUrl);?>">
-                            <?= $escaper->escapeHtml($shoptitle)?>
-                        </a>
-                    </span>
-                    <div class="description">
-                        <?= /* @noEscape */ $block->getFilterData($partner['company_description']);?>
-                    </div>
-                    <div class="wk-mp-loc-rating-container">
-                        <?php if ($locsearch) { ?>
-                            <div class="wk-mp-collection-seller-title wk-mp-collection-header-bottom">
-                                <a title="<?= $escaper->escapeHtml(__('Search')) ?>"
-                                href="<?= /* @noEscape */ $helper
-                                ->getRewriteUrl('marketplace/seller/location/shop/'.$shopUrl)
-                                    ."?loc=".$locsearch?>" target="_blank">
-                                    <span class="wk-mp-collection-location wk-mp-collection-header-bottom-txt">
-                                        <?= /* @noEscape */ __($locsearch); ?>
-                                    </span>
-                                </a>
-                            </div>
-                        <?php } ?>
-                        <div class="wk-mp-collection-count-txt">
-                                <span class="store-name">
-                                        <?= /* @noEscape */ $helper->getSelleRating($sellerId); ?>
-                                        <?= $escaper->escapeHtml(__('Rating'))?>
-                                    </span>
-                        </div>
-                    </div>
-                    <div class="social media link">
-                        <?php if ($partner->getFbActive()) { ?>
-                        <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                            <a href="//facebook.com/<?= $escaper->escapeHtml($partner->getFacebookId());?>"
-                             target="_blank">
-                                <span class="wk-mp-profile-icon-css wk-mp-profile-icon-fb" 
-                                title="<?= $escaper->escapeHtml(__('Check in Facebook'))?>"></span>
-                            </a>
-                        </div>
-                        <?php }
-                        if ($partner->getTwActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//twitter.com/<?= $escaper->escapeHtml($partner->getTwitterId());?>"
-                                 target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-tw" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Twitter'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        }
-                        if ($partner->getGplusActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//plus.google.com/<?= $escaper->escapeHtml($partner->getGplusId());?>"
-                                 target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-gplus" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Google+'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        }
-                        if ($partner->getVimeoActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//vimeo.com/<?= $escaper->escapeHtml($partner->getVimeoId());?>"
-                                 target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-vimeo" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Vimeo'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        }
-                        if ($partner->getYoutubeActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//www.youtube.com/c/<?= $escaper->escapeHtml($partner->getYoutubeId());?>"
-                                target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-youtube" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Youtube'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        }
-                        if ($partner->getInstagramActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//www.instagram.com/<?= $escaper->escapeHtml($partner->getInstagramId());?>"
-                                target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-instagram" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Instagram'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        }
-                        if ($partner->getPinterestActive()) { ?>
-                            <div class="wk-mp-seller-profile-box wk-mp-profile-icon-wrapper">
-                                <a href="//www.pinterest.com/<?= $escaper->escapeHtml($partner->getPinterestId());?>"
-                                target="_blank">
-                                    <span class="wk-mp-profile-icon-css wk-mp-profile-icon-pinterest" 
-                                    title="<?= $escaper->escapeHtml(__('Check in Pinterest'))?>"></span>
-                                </a>
-                            </div>
-                            <?php
-                        } ?>
-                        <?= $block->getChildHtml('seller_badges_top') ?>
-                        <?= $block->getChildHtml("marketplace_seller_profile_contact")?>
-                    </div>
-                </div>
-            </div>
-            <div class="wk-mp-header-container-right">
-                <?php if ($helper->isSellerSliderModuleInstalled()) {
-                    echo $block->getChildHtml("marketplace_seller_slider_block");
-                } ?>
-                <img class="wk-mp-banner-image" src="<?= /* @noEscape */ $bannerpic; ?>">
-            </div>
-        </div>
-    </div>
+    <?php
+        // $customer = $block->getCustomer('');
+        $customer = $partner->getData('customer_data');
+        // $customer = $block->getCustomer2($sellerId);
+        $isSeller = TRUE;       
+
+        $reactAppVendorConfig = [
+            'title' => $shoptitle,
+            'country' => $partner['country_pic'],
+            'short_description' => htmlspecialchars($partner->getCompanyDescription(), ENT_QUOTES, 'UTF-8'),
+            'short_description_1' => htmlspecialchars($partner['company_description'], ENT_QUOTES, 'UTF-8'),
+            // 'short_description_2' => htmlspecialchars($partner->getDescription(), ENT_QUOTES, 'UTF-8'),
+            'short_description_3' => $partner['company_description'],
+            'shop_url' => $partner['shop_url'],
+            'banner_pic' => $partner->getBannerPic(),
+            'media_url' => $helper->getMediaUrl(),
+            'shop_title' => $partner->getShopTitle(),
+            // 'short_description' => $partner->getShortDescription(),
+            'seller_rating' => $helper->getSelleRating($partner->getSellerId()),
+            'profile_hint_desc' => $helper->getProfileHintDesc(),
+            'logo' => $logo
+        ];
+
+        $vendorAttributes = $block->getAttributeCollection($isSeller);
+        foreach ($vendorAttributes as $vendorAttribute) {
+            $attributeCode = $vendorAttribute->getAttributeCode();
+            // $options = $vendorAttribute->getSource()->getAllOptions();
+            $selectedOptions = $customer->getData($attributeCode);
+            $reactAppVendorConfig['attributes'][] = [
+                'attributeCode' => $attributeCode,
+                // 'options' => $options,
+                'selectedOptions' => $selectedOptions
+            ];
+    ?>
+    <?php } ?>
+    <div id="vendor-profile"></div>
+    <script type="text/javascript">
+        window.reactAppVendorConfig = <?= json_encode($reactAppVendorConfig); ?>;
+    </script>
+    <script type="text/javascript" src="<?= $block->getViewFileUrl('Webkul_MpVendorAttributeManager/js/multiselect.js') ?>"></script>
 <?php endif ?>

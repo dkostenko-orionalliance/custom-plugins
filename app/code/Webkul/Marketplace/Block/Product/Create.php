@@ -26,6 +26,10 @@ use Magento\Framework\App\CacheInterface;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Serialize\SerializerInterface;
+use Magento\Eav\Model\Entity\AttributeFactory;
+use Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory as OptionCollectionFactory;
+use Webkul\MpAdvancedBookingSystem\Helper\Data as BookingHelper;
+
 
 class Create extends \Magento\Framework\View\Element\Template
 {
@@ -98,6 +102,15 @@ class Create extends \Magento\Framework\View\Element\Template
      */
     protected $currency;
 
+
+    protected $logger;
+
+    protected $_attributeFactory;
+
+    protected $_optionCollectionFactory;
+
+    protected $bookingHelper;
+
     /**
      * Construct
      *
@@ -132,6 +145,10 @@ class Create extends \Magento\Framework\View\Element\Template
         \Magento\Cms\Helper\Wysiwyg\Images $wysiwygImages = null,
         CacheInterface $cacheInterface = null,
         \Magento\Directory\Model\Currency $currency,
+        AttributeFactory $attributeFactory,
+        OptionCollectionFactory $optionCollectionFactory,
+        \Psr\Log\LoggerInterface $logger,
+        \Webkul\MpAdvancedBookingSystem\Helper\Data $bookingHelper,
         array $data = []
     ) {
         $this->_product = $product;
@@ -150,6 +167,10 @@ class Create extends \Magento\Framework\View\Element\Template
                                     ->create(CacheInterface::class);
         $this->currency = $currency ?: \Magento\Framework\App\ObjectManager::getInstance()
                                     ->create(Magento\Directory\Model\Currency::class);
+        $this->_attributeFactory = $attributeFactory;
+        $this->_optionCollectionFactory = $optionCollectionFactory;
+        $this->logger = $logger;
+        $this->bookingHelper = $bookingHelper;
         parent::__construct($context, $data);
     }
 
@@ -162,6 +183,30 @@ class Create extends \Magento\Framework\View\Element\Template
     public function getProduct($id)
     {
         return $this->_product->load($id);
+    }
+
+    public function getLanguageSeniorityPairs($productId)
+    {
+        $product = $this->getProduct($productId);
+        return $product ? $product->getData('language_seniority') : '';
+    }
+
+    public function getSkillSeniorityPairs($productId)
+    {
+        $product = $this->getProduct($productId);
+        return $product ? $product->getData('skill_seniority') : '';
+    }
+
+    public function getCountry($productId)
+    {
+        $product = $this->getProduct($productId);
+        return $product ? $product->getData('country_pic') : '';
+    }
+
+    public function getIndustryExpertise($productId)
+    {
+        $product = $this->getProduct($productId);
+        return $product ? $product->getData('industry_expertise') : '';
     }
 
     /**
@@ -424,5 +469,49 @@ class Create extends \Magento\Framework\View\Element\Template
     public function getAllowedProductType()
     {
         return explode(',', $this->_helperData->getAllowedProductType());
+    }
+
+
+    public function getLanguagesOptions()
+    {
+        $options = $this->getOptionsJson('language_options');
+        $this->logger->info('Languages Options: ' . print_r($options, true));
+        return $options;
+    }
+
+
+    public function getSkillsOptions()
+    {
+        $options = $this->getOptionsJson('skill_options');
+        $this->logger->info('Skills Options: ' . print_r($options, true));
+        return $options;
+    }
+
+    public function getLanguageSenioritiesOptions()
+    {
+        $options = $this->getOptionsJson('language_seniority_options');
+        $this->logger->info('Language Seniorities Options: ' . print_r($options, true));
+        return $options;
+    }
+
+
+    public function getSkillSenioritiesOptions()
+    {
+        $options = $this->getOptionsJson('skill_seniority_options');
+        $this->logger->info('Skill Seniorities Options: ' . print_r($options, true));
+        return $options;
+    }
+
+    protected function getOptionsJson($attributeCode)
+    {
+        $attribute = $this->_attributeFactory->create()->loadByCode(\Magento\Catalog\Model\Product::ENTITY, $attributeCode);
+        $this->logger->info('Attribute: ' . print_r($attribute->getData(), true));
+        $options = $this->_optionCollectionFactory->create()->setAttributeFilter($attribute->getId())->setStoreFilter()->load();
+        $this->logger->info('Options: ' . print_r($options->getData(), true));
+        $result = [];
+        foreach ($options as $option) {
+            $result[] = ['label' => $option->getValue(), 'value' => $option->getValue()];
+        }
+        return json_encode($result);
     }
 }

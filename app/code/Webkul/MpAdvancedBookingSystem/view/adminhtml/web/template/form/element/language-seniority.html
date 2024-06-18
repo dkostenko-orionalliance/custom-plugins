@@ -1,0 +1,16 @@
+<div>
+    <!-- ko foreach: pairs -->
+    <div class="admin__field">
+        <div class="admin__field-control">
+            <div style="display: flex; flex-direction: row; gap: 10px; align-items: center;">
+                <select data-bind="value: language, options: $parent.languages, optionsText: 'label', optionsValue: 'value'"></select>
+                <select data-bind="value: seniority, options: $parent.seniorities, optionsText: 'label', optionsValue: 'value'"></select>
+                <!-- <button type="button" data-bind="click: $parent.removePair">Remove</button> -->
+                <!-- ko if: $index() === 0 -->
+                <button type="button" data-bind="click: $parent.addPair">Add</button>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

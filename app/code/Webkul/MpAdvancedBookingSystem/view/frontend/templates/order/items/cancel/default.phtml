@@ -1,0 +1,438 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpAdvancedBookingSystem
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+$viewModel = $block->getBookingViewModel();
+if ($viewModel === null) {
+    $viewModel = $block->getLayout()->createBlock(
+        \Webkul\MpAdvancedBookingSystem\Block\GetViewModel::class
+    )->getBookingViewModel();
+}
+$helper = $viewModel->getHelper();
+$itemId = $block->getRequest()->getParam('id');
+$_item = $helper->getOrderItem($itemId);
+$_invoiceItem = $helper->getInvoiceItemByOrderItemId($itemId);
+$block = $block->getLayout()->createBlock(\Magento\Sales\Block\Order\Item\Renderer\DefaultRenderer::class);
+$invoiceBlock = clone $block;
+$orderBlock = $block->getLayout()->createBlock(\Magento\Sales\Block\Adminhtml\Order\AbstractOrder::class);
+$order = $orderBlock->getOrder();
+$block->setItem($_item);
+$invoiceBlock->setItem($_invoiceItem);
+$cancelCharge = $helper->getConfigData('mpadvancedbookingsystem/cancellation/cancellation_charge');
+$cancellationInfo = $helper->getCancellationInfo($order->getId(), $_item->getId());
+$cancelAmount = 0;
+
+// For MP_GST_INDIA module
+$totalAmount = $invoiceBlock->getTotalAmount($_invoiceItem);
+$gstAmount = 0;
+$showGst = false;
+if ($helper->isMpGstModuleInstalled()) {
+    $gstAmount = $_invoiceItem->getGst();
+    $totalAmount += $gstAmount;
+    $showGst = true;
+}
+
+?>
+<div class="order-details-items">
+    <div class="table-wrapper order-items">
+        <table class="data table table-order-items">
+            <thead>
+                <tr>
+                    <th class="col name"><?= $block->escapeHtml(__('Product Name')) ?></th>
+                    <th class="col sku"><?= $block->escapeHtml(__('SKU')) ?></th>
+                    <th class="col price"><?= $block->escapeHtml(__('Price')) ?></th>
+                    <th class="col qty"><?= $block->escapeHtml(__('Qty')) ?></th>
+                    <?php if ($showGst): ?>
+                        <th class="col cgst">
+                            <table class="gsttable" >
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td colspan="2" style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */ __('CGST') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Rate') ?>
+                                            </span>
+                                        </td>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Amount') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </th>
+                        <th class="col sgst">
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td colspan="2" style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */ __('SGST') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Rate') ?>
+                                            </span>
+                                        </td>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Amount') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </th>
+                        <th class="col igst" >
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td colspan="2" style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */ __('IGST') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Rate') ?>
+                                            </span>
+                                        </td>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Amount') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </th>
+                        <th class="col ugst" >
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td colspan="2" style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */ __('UGST') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Rate') ?>
+                                            </span>
+                                        </td>
+                                        <td style="border-style: none !important;">
+                                            <span>
+                                                <?= /* @noEscape */  __('Amount') ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </th>
+                    <?php endif; ?>
+                    <th class="col subtotal"><?= $block->escapeHtml(__('Subtotal')) ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="order-item-row-<?= /** @escapeNotVerified */ $_item->getId() ?>">
+                    <td class="col name" data-th="<?= $block->escapeHtml(__('Product Name')) ?>">
+                        <strong class="product name product-item-name">
+                            <?= $block->escapeHtml($_item->getName()) ?>
+                        </strong>
+                        <?php if ($_options = $block->getItemOptions()): ?>
+                        <dl class="item-options">
+                            <?php foreach ($_options as $_option): ?>
+                                <dt><?= $block->escapeHtml($_option['label']) ?></dt>
+                                <?php if (!$block->getPrintStatus()): ?>
+                                    <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
+                                    <dd>
+                                        <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                                            <?= $block->escapeHtml($_formatedOptionValue['full_view'], ['a']) ?>
+                                        <?php else: ?>
+                                            <?= $block->escapeHtml($_formatedOptionValue['value'], ['a']) ?>
+                                        <?php endif; ?>
+                                    </dd>
+                                <?php else: ?>
+                                    <dd>
+                                        <?php if (!empty($_option['print_value'])) { ?>
+                                            <?= /** @escapeNotVerified */ nl2br($_option['print_value']); ?>
+                                        <?php } else { ?>
+                                            <?= /** @escapeNotVerified */ nl2br($_option['value']); ?>
+                                        <?php } ?>
+                                    </dd>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </dl>
+                        <?php endif; ?>
+                    
+                        <?php $addtInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
+                        <?php if ($addtInfoBlock):?>
+                            <?= $addtInfoBlock->setItem($_item)->toHtml() ?>
+                        <?php endif; ?>
+                        <?= $block->escapeHtml($_item->getDescription()) ?>
+                    </td>
+                    <td class="col sku" data-th="<?= $block->escapeHtml(__('SKU')) ?>">
+                        <?= /** @escapeNotVerified */ $block->prepareSku($block->getSku()) ?>
+                    </td>
+                    <td class="col price" data-th="<?= $block->escapeHtml(__('Price')) ?>">
+                        <?= $block->getItemPriceHtml($_item) ?>
+                    </td>
+                    <td class="col qty" data-th="<?= $block->escapeHtml(__('Qty')) ?>">
+                        <ul class="items-qty">
+                        <?php if ($block->getItem()->getQtyOrdered() > 0): ?>
+                            <li class="item">
+                                <span class="title"><?= /** @escapeNotVerified */ __('Ordered') ?></span>
+                                <span class="content">
+                                    <?= /** @escapeNotVerified */ $block->getItem()->getQtyOrdered()*1 ?>
+                                </span>
+                            </li>
+                        <?php endif; ?>
+                        <?php if ($block->getItem()->getQtyInvoiced() > 0): ?>
+                            <li class="item">
+                                <span class="title"><?= /** @escapeNotVerified */ __('Invoiced') ?></span>
+                                <span class="content">
+                                    <?= /** @escapeNotVerified */ $block->getItem()->getQtyInvoiced()*1 ?>
+                                </span>
+                            </li>
+                        <?php endif; ?>
+                        <?php if ($block->getItem()->getQtyShipped() > 0): ?>
+                            <li class="item">
+                                <span class="title"><?= /** @escapeNotVerified */ __('Shipped') ?></span>
+                                <span class="content">
+                                    <?= /** @escapeNotVerified */ $block->getItem()->getQtyShipped()*1 ?>
+                                </span>
+                            </li>
+                        <?php endif; ?>
+                        <?php if ($block->getItem()->getQtyCanceled() > 0): ?>
+                            <li class="item">
+                                <span class="title"><?= /** @escapeNotVerified */ __('Canceled') ?></span>
+                                <span class="content">
+                                    <?= /** @escapeNotVerified */ $block->getItem()->getQtyCanceled()*1 ?>
+                                </span>
+                            </li>
+                        <?php endif; ?>
+                        <?php if ($block->getItem()->getQtyRefunded() > 0): ?>
+                            <li class="item">
+                                <span class="title"><?= /** @escapeNotVerified */ __('Refunded') ?></span>
+                                <span class="content">
+                                    <?= /** @escapeNotVerified */ $block->getItem()->getQtyRefunded()*1 ?>
+                                </span>
+                            </li>
+                        <?php endif; ?>
+                        </ul>
+                    </td>
+                    <?php if ($showGst): ?>
+                        <td class="col subtotal" data-th="<?= /* @noEscape */ $block->escapeHtml(__('CGST')); ?>">
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ round($_item->getCgstPercent() ?? 0, 2)."%";?>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ $order->formatPrice(
+                                                    $_item->getCgst()
+                                                );  ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="col subtotal" data-th="<?= /* @noEscape */ $block->escapeHtml(__('SGST')); ?>">
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ round($_item->getSgstPercent() ?? 0, 2)."%";?>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ $order->formatPrice(
+                                                    $_item->getSgst()
+                                                );  ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="col subtotal" data-th="<?= /* @noEscape */ $block->escapeHtml(__('IGST')); ?>">
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ round($_item->getIgstPercent() ?? 0, 2)."%";?>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <?= /* @noEscape */ $order->formatPrice(
+                                                    $_item->getIgst()
+                                                );  ?>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="col subtotal" data-th="<?= /* @noEscape */ $block->escapeHtml(__('UGST')); ?>">
+                            <table class="gsttable">
+                                <tbody style="background:none;text-align:center">
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <?= /* @noEscape */ round($_item->getUgstPercent()  ?? 0, 2)."%";?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span>
+                                            <?= /* @noEscape */ $order->formatPrice(
+                                                $_item->getUgst()
+                                            );  ?>
+                                    </span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    <?php endif; ?>                           
+                    <td class="col subtotal" data-th="<?= $block->escapeHtml(__('Subtotal')) ?>">
+                        <?= /** @escapeNotVerified */ $invoiceBlock->getItemRowTotalHtml() ?>
+                    </td>
+                </tr>
+            </tbody>
+            <?php $invoiceItem = $invoiceBlock->getItem(); ?>
+            <tfoot>
+                <?php $colspan = ($showGst) ? "8":"4" ?>
+                <tr class="subtotal">
+                    <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                        <?= $block->escapeHtml(__('Subtotal')) ?>
+                    </th>
+                    <td class="amount" data-th="<?= $block->escapeHtml(__('Subtotal')) ?>">
+                        <span class="price">
+                            <?= /** @escapeNotVerified */ $order->formatPrice($invoiceItem->getRowTotal()) ?>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="tax">
+                    <?php if ($showGst && $gstAmount > 0): ?>
+                        <th colspan="8" class="mark" scope="row">
+                            <?= $block->escapeHtml(__('GST')) ?>
+                        </th>
+                        <td class="amount" data-th="<?= $block->escapeHtml(__('GST')) ?>">
+                            <span class="price">
+                                <?= /** @escapeNotVerified */ $order->formatPrice($gstAmount) ?>
+                            </span>
+                        </td>
+                    <?php else:?>
+                        <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                            <?= $block->escapeHtml(__('Tax Amount')) ?>
+                        </th>
+                        <td class="amount" data-th="<?= $block->escapeHtml(__('Tax Amount')) ?>">
+                            <span class="price">
+                                <?= /** @escapeNotVerified */ $order->formatPrice($invoiceItem->getTaxAmount()) ?>
+                            </span>
+                        </td>
+                    <?php endif; ?>
+                </tr>
+                <tr class="discount">
+                    <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                        <?= $block->escapeHtml(__('Discount Amount')) ?>
+                    </th>
+                    <td class="amount" data-th="<?= $block->escapeHtml(__('Discount Amount')) ?>">
+                        <span class="price">
+                            -<?= /** @escapeNotVerified */ $order->formatPrice($invoiceItem->getDiscountAmount()) ?>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="grand_total">
+                    <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                        <strong><?= $block->escapeHtml(__('Grand Total')) ?></strong>
+                    </th>
+                    <td class="amount" data-th="<?= $block->escapeHtml(__('Grand Total')) ?>">
+                        <strong>
+                            <span class="price">
+                                <?= /** @escapeNotVerified */ $order->formatPrice(
+                                    $totalAmount
+                                ) ?>
+                            </span>
+                        </strong>
+                    </td>
+                </tr>
+                <?php if ($cancelCharge) { ?>
+                    <?php $cancelAmount = ($totalAmount * $cancelCharge)/100; ?>
+                    <tr class="charge">
+                        <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                            <?= $block->escapeHtml(__('Cancellation Charge (%1%)', $cancelCharge)) ?>
+                        </th>
+                        <td class="amount" data-th="<?= $block->escapeHtml(__('Cancellation Charge')) ?>">
+                            <span class="price">
+                                -<?= /** @escapeNotVerified */ $order->formatPrice($cancelAmount) ?>
+                            </span>
+                        </td>
+                    </tr>
+                <?php } ?>
+                <tr class="grand_total">
+                <?php $refundAmount = $totalAmount - $cancelAmount; ?>
+                    <th colspan="<?= /* @noEscape */ $colspan ?>" class="mark" scope="row">
+                        <strong><?= $block->escapeHtml(__('Total Refund Amount')) ?></strong>
+                    </th>
+                    <td class="amount" data-th="<?= $block->escapeHtml(__('Total Refund Amount')) ?>">
+                        <strong>
+                            <span class="price">
+                                <?= /** @escapeNotVerified */ $order->formatPrice($refundAmount) ?>
+                            </span>
+                        </strong>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>
+            <strong><?= $block->escapeHtml(__('Note:-')) ?></strong>
+            <?= $block->escapeHtml(__('Complete transaction will be cancelled. Refunds will be done according to')) ?>
+            <strong><?= $block->escapeHtml(__('Cancellation Policy')) ?>.</strong>
+        </p>
+        <form method="post"
+            action="<?= /** @escapeNotVerified */ $block->getUrl('mpadvancebooking/cancellation/cancel') ?>">
+            <?= /** @escapeNotVerified */ $block->getBlockHtml('formkey') ?>
+            <input type="hidden" name="order_id" value="<?= /** @escapeNotVerified */ $order->getId() ?>">
+            <input type="hidden" name="item_id" value="<?= /** @escapeNotVerified */ $_item->getId() ?>">
+            <button class="action primary" type="submit"><?= $block->escapeHtml(__('Cancel Booking')) ?></button>
+        </form>
+    </div>
+</div>
+<div class="buttons-set">
+    <p class="back-link">
+        <a href="javascript:;" onclick="javascript: window.history.back();" class="left">
+            &laquo; <?= /* @noEscape */ __('Back') ?>
+        </a>
+    </p>
+</div>

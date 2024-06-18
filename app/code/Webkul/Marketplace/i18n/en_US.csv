@@ -41,6 +41,7 @@ Email,Email
 "Flag Reason","Flag Reason"
 "Flag Date","Flag Date"
 "Product Name","Product Name"
+"Service Name","Service Name"
 "Product SKU","Product SKU"
 "Product Price","Product Price"
 "Product Assignment","Product Assignment"
@@ -69,6 +70,7 @@ Email,Email
 "Company Locality","Company Locality"
 "Select Country","Select Country"
 "Company Description","Company Description"
+"Short Description","Short Description"
 "Return Policy","Return Policy"
 "Shipping Policy","Shipping Policy"
 "Privacy Policy","Privacy Policy"
@@ -76,6 +78,7 @@ Email,Email
 "Meta Description","Meta Description"
 "Company Banner","Company Banner"
 "Company Logo","Company Logo"
+"Profile picture","Profile picture"
 Flags,Flags
 Back,Back
 "Delete Reason","Delete Reason"
@@ -166,6 +169,7 @@ Earnings,Earnings
 "Invalid Background Color","Invalid Background Color"
 "Marketplace Vendor Login","Marketplace Vendor Login"
 "Marketplace Notifications","Marketplace Notifications"
+Notifications,Notifications
 "Marketplace Review","Marketplace Review"
 "The URL Rewrite has been saved.","The URL Rewrite has been saved."
 "Google Analytic information was successfully saved","Google Analytic information was successfully saved"
@@ -624,7 +628,7 @@ Settings,Settings
 "Seller Panel","Seller Panel"
 "My Account","My Account"
 Account,Account
-"Billing & Payment","Billing & Payment"
+"Billing & Payments","Billing & Payments"
 "Account Setting","Account Setting"
 "Buyer Dashboard","Buyer Dashboard"
 Logout,Logout
@@ -1510,6 +1514,7 @@ Sell,Sell
 "Marketplace Become Seller","Marketplace Become Seller"
 "My Customer History","My Customer History"
 "Marketplace Edit Seller Profile","Marketplace Edit Seller Profile"
+"Vendor profile","Vendor profile"
 "New Credit Memo","New Credit Memo"
 "View Memo","View Memo"
 "View All Memos","View All Memos"

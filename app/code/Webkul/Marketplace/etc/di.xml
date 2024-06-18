@@ -240,6 +240,12 @@
     <preference for="Webkul\Marketplace\Api\SaleslistRepositoryInterface" type="Webkul\Marketplace\Model\SaleslistRepository"/>
     <preference for="Webkul\Marketplace\Api\Data\FeedbackInterface" type="Webkul\Marketplace\Model\Feedback"/>
     <preference for="Webkul\Marketplace\Api\FeedbackRepositoryInterface" type="Webkul\Marketplace\Model\FeedbackRepository"/>
+    <!-- <preference for="Webkul\Marketplace\Api\SellerRepositoryInterface" type="Webkul\Marketplace\Model\SellerRepository"/>
+    <preference for="Webkul\Marketplace\Api\Data\SellerInterface" type="Webkul\Marketplace\Model\Seller"/>
+    <preference for="Webkul\Marketplace\Api\Data\BecomeSellerInterface" type="Webkul\Marketplace\Model\BecomeSeller"/> -->
+    <preference for="Webkul\Marketplace\Api\BecomeSellerInterface" type="Webkul\Marketplace\Model\BecomeSeller" />
+    <preference for="Webkul\Marketplace\Api\Data\BecomeSellerResponseInterface" type="Webkul\Marketplace\Model\BecomeSellerResponse" />
+
     
     <type name="Magento\Quote\Model\Quote">
         <plugin name="Webkul_Marketplace::validateMinimumAmount"

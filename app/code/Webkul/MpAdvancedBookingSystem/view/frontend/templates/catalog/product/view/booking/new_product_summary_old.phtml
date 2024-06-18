@@ -1,0 +1,49 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpAdvancedBookingSystem
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+ /** @var $block \Webkul\MpAdvancedBookingSystem\Block\Product\Create */
+
+?>
+<?php 
+    // $product = $block->getProduct();
+    $viewModel = $block->getBookingViewModel(); 
+    // foreach ($product->getAttributes() as $attribute) {
+    //   $attributeCode = $attribute->getAttributeCode();
+    //   $productAttributes[$attributeCode] = $product->getData($attributeCode);
+    // } 
+?>
+
+<div id="product-layout"></div>
+<script type="text/javascript">
+    window.reactAppProductLayoutConfig = {
+        // productName: <?= json_encode($product->getName()); ?>,
+        // productDescription: <?= json_encode($product->getDescription()); ?>,
+        // vendorName: <?= json_encode($viewModel->getCustomerName($product)); ?>,
+        // country: <?= json_encode($product->getData('country_pic')); ?>,
+        // countries: <?= json_encode($viewModel->getCountryOptionArray()); ?>,
+        // skillSeniority: <?= json_encode($product->getData('skill_seniority')); ?>,
+        // languageSeniority: <?= json_encode($product->getData('language_seniority')); ?>,
+        // productAttributes: <?= json_encode($productAttributes); ?>,
+        getLanguageSenioritiesOptions: <?= json_encode($block->getLanguageSenioritiesOptions()); ?>,
+        getLanguagesOptions: <?= json_encode($block->getLanguagesOptions()); ?>,
+        getSkillsOptions: <?= json_encode($block->getSkillsOptions()); ?>,
+        getSkillSenioritiesOptions: <?= json_encode($block->getSkillSenioritiesOptions()); ?>
+    };
+</script>
+<script type="text/javascript" src="<?= $block->getViewFileUrl('Webkul_MpAdvancedBookingSystem/js/product-layout.js') ?>"></script>
+
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "Webkul_MpAdvancedBookingSystem/js/bookingsystem": <?= /* @noEscape */ $viewModel->getDefaultBookingProductData($product) ?>
+        }
+    }
+</script>

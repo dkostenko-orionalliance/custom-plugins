@@ -1,0 +1,12 @@
+<div style="display: flex; flex-direction: row;">
+    <div data-bind="foreach: pairs" style="width: 100%;">
+        <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; margin-bottom: 10px;">
+            <select data-bind="options: $parent.skills, value: skill, optionsText: 'label', optionsValue: 'value', optionsCaption: 'Select skill', event: { change: $parent.updateValue.bind($parent) }"></select>
+            <select data-bind="options: $parent.seniorities, value: seniority, optionsText: 'label', optionsValue: 'value', optionsCaption: 'Select seniority', event: { change: $parent.updateValue.bind($parent) }"></select>
+            <!-- ko if: $parent.pairs().length > 1 -->
+            <button type="button" data-bind="click: function() { $parent.removePair($data) }" style="height: 32px;">x</button>
+            <!-- /ko -->
+        </div>
+    </div>
+    <button type="button" data-bind="click: addPair" style="height: 32px;">Add</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="admin__field">
+    <div class="admin__field-control">
+        <div data-bind="scope: 'skillSeniority'">
+            <input name="product[skill_seniority]" data-bind="value: value" type="hidden"/>
+            <div data-bind="template: { name: 'Webkul_MpAdvancedBookingSystem/form/element/skill-seniority' }"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "skillSeniority": {
+                    "component": "Webkul_MpAdvancedBookingSystem/js/form/element/skill-seniority"
+                }
+            }
+        }
+    }
+}
+</script>

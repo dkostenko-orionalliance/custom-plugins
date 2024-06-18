@@ -28,6 +28,10 @@ if (!$helper->getIsSeparatePanel()) {
             }
         }
     </style>
+    <!-- <?php var_dump($isPartner);  ?> -->
+    <!-- <?php var_dump($sellerId); ?> -->
+    <!-- <?php var_dump($isSellerGroup); ?> -->
+    <!-- <?php var_dump($helper->getSellerProfileDisplayFlag()) ?> -->
     <div class="block account-nav block-collapsible-nav wk-mp-main">
         <div class="title block-collapsible-nav-title" 
         data-mage-init='{"toggleAdvanced": {"toggleContainers": "#block-collapsible-nav-seller", 
@@ -38,9 +42,9 @@ if (!$helper->getIsSeparatePanel()) {
             <nav class="account-nav">
                 <ul class="nav items">
                     <?php
-                    if ($isPartner) { ?>
-                        <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/account/dashboard'))
-                         || !$isSellerGroup) { ?>
+                    if ($isPartner || TRUE) { ?>
+                        <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/account/dashboard'))
+                         || !$isSellerGroup) && $isPartner) { ?>
                             <li class="nav item <?= /* @noEscape */
                             strpos($magentoCurrentUrl, 'marketplace/account/dashboard')? "current":"";?>">
                                 <?php
@@ -57,10 +61,27 @@ if (!$helper->getIsSeparatePanel()) {
                                 } ?>
                             </li>
                             <?php
+                        } else { ?>
+                            <li class="nav item <?= /* @noEscape */
+                            strpos($magentoCurrentUrl, 'customer/account')? "current":"";?>">
+                                <?php
+                                if (strpos($magentoCurrentUrl, 'customer/account') !== false && strpos($magentoCurrentUrl, 'customer/account/edit') == false) { ?>
+                                    <strong><?= /* @noEscape */ __('Dashboard') ?></strong>
+                                    <?php
+                                } else { ?>
+                                    <a href="<?= $escaper->escapeUrl($block
+                                    ->getUrl('customer/account', ['_secure' => $block
+                                    ->getRequest()->isSecure()])); ?>">
+                                        <?=/* @noEscape */__('Dashboard') ?>
+                                    </a>
+                                    <?php
+                                } ?>
+                            </li>
+                            <?php
                         } ?>
                         <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/account/editprofile'))
                         || !$isSellerGroup) { ?>
-                            <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
+                            <?php if ($helper->getSellerProfileDisplayFlag() && $isPartner) { ?>
                                 <li class="nav item <?= /* @noEscape */
                                 strpos($magentoCurrentUrl, 'marketplace/account/editprofile')? "current":"";?>">
                                     <?php if (strpos($magentoCurrentUrl, 'marketplace/account/editprofile') !== false) {
@@ -76,18 +97,34 @@ if (!$helper->getIsSeparatePanel()) {
                                         <?php
                                     } ?>
                                 </li>
+                            <?php } else { ?>
+                                <li class="nav item <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'sales/order/history')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'sales/order/history') !== false) {
+                                        ?>
+                                        <strong><?= /* @noEscape */ __('My Orders') ?></strong>
+                                        <?php
+                                    } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('sales/order/history', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */__('My Orders') ?>
+                                        </a>
+                                        <?php
+                                    } ?>
+                                </li>
                             <?php } ?>
                         <?php } ?>
                         <?php if (($isSellerGroup /*&& $helper->isAllowedAction('marketplace/account/customer')*/)
                          || !$isSellerGroup) { ?>
                             <?php if ($helper->getSellerProfileDisplayFlag()) { ?>
                                 <li class="nav item notification-link <?= /* @noEscape */
-                                strpos($magentoCurrentUrl, 'customer/account')? "current":"";?>">
-                                    <?php if (strpos($magentoCurrentUrl, 'customer/account') !== false) { ?>
+                                strpos($magentoCurrentUrl, 'customer/account/edit')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'customer/account/edit') !== false) { ?>
                                         <strong><?= /* @noEscape */ __('Account') ?></strong>
                                     <?php } else { ?>
                                         <a href="<?= $escaper->escapeUrl($block
-                                        ->getUrl('customer/account', ['_secure' => $block
+                                        ->getUrl('customer/account/edit', ['_secure' => $block
                                         ->getRequest()->isSecure()])); ?>">
                                             <?= /* @noEscape */ __('Account') ?>
                                         </a>
@@ -135,79 +172,97 @@ if (!$helper->getIsSeparatePanel()) {
                         <?php } ?>
                         <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/product/productlist'))
                          || !$isSellerGroup) { ?>
-                            <li class="nav item notification-link <?= /* @noEscape */
-                            strpos($magentoCurrentUrl, 'marketplace/product/productlist')? "current":"";?>">
-                            <?php if (strpos($magentoCurrentUrl, 'marketplace/product/productlist') !== false) { ?>
-                                <strong><?= /* @noEscape */ __('My Services') ?></strong>
-                                <?php } else { ?>
-                                    <a href="<?= $escaper->escapeUrl($block
-                                    ->getUrl('marketplace/product/productlist', ['_secure' => $block
-                                    ->getRequest()->isSecure()])); ?>">
-                                        <?= /* @noEscape */ __('My Services') ?>
-                                    </a>
-                                    <!-- Product Notification -->
-                                    <?php if ($block->getProductCollection()->getSize()) { ?>
-                                    <div class="notification-block">
-                                        <a href="" class="notifications-action marketplace-dropdown">
-                                            <img height="20" width="20" src="<?= $escaper->escapeUrl($block
-                                            ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png')); ?>"
-                                             class="notifications-img" />
-                                            <?php if ($productNotificationCount > 5): ?>
-                                                <span class="notification-count">5+</span>
-                                            <?php else: ?>
-                                                <span class="notification-count">
-                                                    <?= $escaper->escapeHtml($productNotificationCount); ?>
-                                                </span>
-                                            <?php endif; ?>
+                            <?php if ($helper->getSellerProfileDisplayFlag() && $isPartner) { ?>
+                                <li class="nav item notification-link <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'marketplace/product/productlist')? "current":"";?>">
+                                <?php if (strpos($magentoCurrentUrl, 'marketplace/product/productlist') !== false) { ?>
+                                    <strong><?= /* @noEscape */ __('My Services') ?></strong>
+                                    <?php } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('marketplace/product/productlist', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */ __('My Services') ?>
                                         </a>
-                                        <ul class="marketplace-dropdown-menu">
-                                        <span class="notify-point"></span>
-                                        <?php
-                                        $productDisplayCount = 1;
-                                        foreach ($block->getProductCollection() as $product):
-                                            if ($productDisplayCount <= 5):
-                                                ?>
-                                        <li class="notifications-entry">
-                                            <strong class="notifications-entry-title">
-                                                <?= $escaper->escapeHtml($block->getProductNotificationTitle($product
-                                                ->getMageproductId(), $product->getStatus())); ?>
-                                            </strong>
-                                            <p class="notifications-entry-description _cutted">
-                                                <a href="<?= $escaper->escapeUrl($block
-                                                ->getUrl('marketplace/product/productlist', ['_secure' => $block
-                                                ->getRequest()->isSecure()]))?>" 
-                                                class="notifications-entry-description-start">
-                                                    <span >
-                                                        <?= /* @noEscape */ $block->getProductNotificationDesc($product
-                                                        ->getMageproductId(), $product->getStatus()); ?>
+                                        <!-- Product Notification -->
+                                        <?php if ($block->getProductCollection()->getSize()) { ?>
+                                        <div class="notification-block">
+                                            <a href="" class="notifications-action marketplace-dropdown">
+                                                <img height="20" width="20" src="<?= $escaper->escapeUrl($block
+                                                ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png')); ?>"
+                                                class="notifications-img" />
+                                                <?php if ($productNotificationCount > 5): ?>
+                                                    <span class="notification-count">5+</span>
+                                                <?php else: ?>
+                                                    <span class="notification-count">
+                                                        <?= $escaper->escapeHtml($productNotificationCount); ?>
                                                     </span>
-                                                </a>
-                                            </p>
-                                            <time class="notifications-entry-time">
-                                                <?= /* @noEscape */ $block->getProductNotifyDateTime($product
-                                                ->getUpdatedAt()); ?>
-                                            </time>
-                                        </li>
-                                                <?php  $productDisplayCount++;
-                                            endif;
-                                        endforeach; ?>
-                                        <?php
-                                        if ($productDisplayCount > 5):
-                                            ?>
-                                                <li class="notifications-entry notifications-entry-last">
+                                                <?php endif; ?>
+                                            </a>
+                                            <ul class="marketplace-dropdown-menu">
+                                            <span class="notify-point"></span>
+                                            <?php
+                                            $productDisplayCount = 1;
+                                            foreach ($block->getProductCollection() as $product):
+                                                if ($productDisplayCount <= 5):
+                                                    ?>
+                                            <li class="notifications-entry">
+                                                <strong class="notifications-entry-title">
+                                                    <?= $escaper->escapeHtml($block->getProductNotificationTitle($product
+                                                    ->getMageproductId(), $product->getStatus())); ?>
+                                                </strong>
+                                                <p class="notifications-entry-description _cutted">
                                                     <a href="<?= $escaper->escapeUrl($block
                                                     ->getUrl('marketplace/product/productlist', ['_secure' => $block
-                                                    ->getRequest()->isSecure()])); ?>">
-                                                    <?= /* @noEscape */ __('Click here to view product list'); ?>
+                                                    ->getRequest()->isSecure()]))?>" 
+                                                    class="notifications-entry-description-start">
+                                                        <span >
+                                                            <?= /* @noEscape */ $block->getProductNotificationDesc($product
+                                                            ->getMageproductId(), $product->getStatus()); ?>
+                                                        </span>
                                                     </a>
-                                                </li>
-                                        <?php endif; ?>
-                                        </ul>
-                                    </div>
+                                                </p>
+                                                <time class="notifications-entry-time">
+                                                    <?= /* @noEscape */ $block->getProductNotifyDateTime($product
+                                                    ->getUpdatedAt()); ?>
+                                                </time>
+                                            </li>
+                                                    <?php  $productDisplayCount++;
+                                                endif;
+                                            endforeach; ?>
+                                            <?php
+                                            if ($productDisplayCount > 5):
+                                                ?>
+                                                    <li class="notifications-entry notifications-entry-last">
+                                                        <a href="<?= $escaper->escapeUrl($block
+                                                        ->getUrl('marketplace/product/productlist', ['_secure' => $block
+                                                        ->getRequest()->isSecure()])); ?>">
+                                                        <?= /* @noEscape */ __('Click here to view product list'); ?>
+                                                        </a>
+                                                    </li>
+                                            <?php endif; ?>
+                                            </ul>
+                                        </div>
+                                        <?php } ?>
+                                        <!-- Product Notification End -->
                                     <?php } ?>
-                                    <!-- Product Notification End -->
-                                <?php } ?>
-                            </li>
+                                </li>
+                            <?php } else { ?>
+                                <li class="nav item <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'marketplace/order/history')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'gdpr/customer/settings') !== false) {
+                                        ?>
+                                        <strong><?= /* @noEscape */ __('Privacy Settings') ?></strong>
+                                        <?php
+                                    } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('gdpr/customer/settings', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */__('Privacy Settings') ?>
+                                        </a>
+                                        <?php
+                                    } ?>
+                                </li>
+                            <?php } ?>
                         <?php } ?>
                         <?php if ((($isSellerGroup && $helper->isAllowedAction('marketplace/transaction/history'))
                          || !$isSellerGroup) && false) { ?>
@@ -334,87 +389,105 @@ if (!$helper->getIsSeparatePanel()) {
                         <?= $block->getChildHtml();?>
                         <?php if (($isSellerGroup && $helper->isAllowedAction('marketplace/order/history'))
                          || !$isSellerGroup) { ?>
-                            <li class="nav item notification-link  <?= /* @noEscape */
-                            strpos($magentoCurrentUrl, 'marketplace/order') &&
-                            (!strpos($magentoCurrentUrl, 'marketplace/order/shipping/'))? "current":"";?>">
-                                <?php
-                                if (strpos($magentoCurrentUrl, 'marketplace/order/history') !== false) { ?>
-                                    <strong><?= /* @noEscape */ __('My Applications') ?></strong>
+                            <?php if ($helper->getSellerProfileDisplayFlag() && $isPartner) { ?>
+                                <li class="nav item notification-link  <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'marketplace/order') &&
+                                (!strpos($magentoCurrentUrl, 'marketplace/order/shipping/'))? "current":"";?>">
                                     <?php
-                                } else { ?>
-                                    <a href="<?= $escaper->escapeUrl($block
-                                    ->getUrl('marketplace/order/history', ['_secure' => $block
-                                    ->getRequest()->isSecure()])); ?>">
-                                        <?= /* @noEscape */ __('My Applications') ?>
-                                    </a>
-                                    <?php if ($block->getMarketplaceOrderCollection()->getSize()) { ?>
-                                    <!-- Orders Notification -->
-                                    <div class="notification-block">
-                                        <a href="" class="notifications-action marketplace-dropdown">
-                                            <img height="20" width="20" src="<?= /* @noEscape */ $block
-                                            ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png'); ?>"
-                                             class="notifications-img" />
-                                            <?php if ($orderNotificationCount > 5): ?>
-                                            <span class="notification-count">5+</span>
-                                            <?php else: ?>
-                                                <span class="notification-count">
-                                                    <?= $escaper->escapeHtml($orderNotificationCount); ?></span>
-                                            <?php endif; ?>
+                                    if (strpos($magentoCurrentUrl, 'marketplace/order/history') !== false) { ?>
+                                        <strong><?= /* @noEscape */ __('My Applications') ?></strong>
+                                        <?php
+                                    } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('marketplace/order/history', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */ __('My Applications') ?>
                                         </a>
-                                        <ul class="marketplace-dropdown-menu">
-                                        <span class="notify-point"></span>
-                                        <?php
-                                        $orderDisplayCount = 1;
-                                        foreach ($block->getMarketplaceOrderCollection() as $order):
-                                            if ($orderDisplayCount <= 5):
+                                        <?php if ($block->getMarketplaceOrderCollection()->getSize()) { ?>
+                                        <!-- Orders Notification -->
+                                        <div class="notification-block">
+                                            <a href="" class="notifications-action marketplace-dropdown">
+                                                <img height="20" width="20" src="<?= /* @noEscape */ $block
+                                                ->getViewFileUrl('Webkul_Marketplace::images/icons_notifications.png'); ?>"
+                                                class="notifications-img" />
+                                                <?php if ($orderNotificationCount > 5): ?>
+                                                <span class="notification-count">5+</span>
+                                                <?php else: ?>
+                                                    <span class="notification-count">
+                                                        <?= $escaper->escapeHtml($orderNotificationCount); ?></span>
+                                                <?php endif; ?>
+                                            </a>
+                                            <ul class="marketplace-dropdown-menu">
+                                            <span class="notify-point"></span>
+                                            <?php
+                                            $orderDisplayCount = 1;
+                                            foreach ($block->getMarketplaceOrderCollection() as $order):
+                                                if ($orderDisplayCount <= 5):
+                                                    ?>
+                                                <li class="notifications-entry">
+                                                    <strong class="notifications-entry-title">
+                                                        <?= $escaper->escapeHtml($block
+                                                        ->getOrderNotificationTitle($order->getOrderId())); ?>
+                                                    </strong>
+                                                    <p class="notifications-entry-description _cutted">
+                                                        <a href="<?= $escaper->escapeUrl($block
+                                                        ->getUrl(
+                                                            'marketplace/order/view',
+                                                            ['id'=>$order->getOrderId(),
+                                                            'n' => 1,'
+                                                        _secure' => $block->getRequest()->isSecure()]
+                                                        ))?>" 
+                                                        class="notifications-entry-description-start">
+                                                            <span>
+                                                                <?= /* @noEscape */ $block->getOrderNotificationDesc($order
+                                                                ->getOrderId()); ?>
+                                                            </span>
+                                                        </a>
+                                                    </p>
+                                                    <time class="notifications-entry-time">
+                                                        <?= /* @noEscape */ $block->getOrderCreatedDate($order
+                                                        ->getOrderId()); ?>
+                                                    </time>
+                                                </li>
+                                                    <?php
+                                                    $orderDisplayCount++;
+                                                endif;
+                                            endforeach; ?>
+                                            <?php
+                                            if ($orderDisplayCount > 5):
                                                 ?>
-                                            <li class="notifications-entry">
-                                                <strong class="notifications-entry-title">
-                                                    <?= $escaper->escapeHtml($block
-                                                    ->getOrderNotificationTitle($order->getOrderId())); ?>
-                                                </strong>
-                                                <p class="notifications-entry-description _cutted">
+                                                <li class="notifications-entry notifications-entry-last">
                                                     <a href="<?= $escaper->escapeUrl($block
-                                                    ->getUrl(
-                                                        'marketplace/order/view',
-                                                        ['id'=>$order->getOrderId(),
-                                                        'n' => 1,'
-                                                    _secure' => $block->getRequest()->isSecure()]
-                                                    ))?>" 
-                                                    class="notifications-entry-description-start">
-                                                        <span>
-                                                            <?= /* @noEscape */ $block->getOrderNotificationDesc($order
-                                                            ->getOrderId()); ?>
-                                                        </span>
+                                                    ->getUrl('marketplace/order/history', ['_secure' => $block
+                                                    ->getRequest()->isSecure()])); ?>">
+                                                    <?= /* @noEscape */ __('Click here to view order history'); ?>
                                                     </a>
-                                                </p>
-                                                <time class="notifications-entry-time">
-                                                    <?= /* @noEscape */ $block->getOrderCreatedDate($order
-                                                    ->getOrderId()); ?>
-                                                </time>
-                                            </li>
-                                                <?php
-                                                $orderDisplayCount++;
-                                            endif;
-                                        endforeach; ?>
+                                                </li>
+                                            <?php endif; ?>
+                                            </ul>
+                                        </div>
+                                        <?php } ?>
+                                        <!-- Orders Notification End -->
                                         <?php
-                                        if ($orderDisplayCount > 5):
-                                            ?>
-                                            <li class="notifications-entry notifications-entry-last">
-                                                <a href="<?= $escaper->escapeUrl($block
-                                                ->getUrl('marketplace/order/history', ['_secure' => $block
-                                                ->getRequest()->isSecure()])); ?>">
-                                                <?= /* @noEscape */ __('Click here to view order history'); ?>
-                                                </a>
-                                            </li>
-                                        <?php endif; ?>
-                                        </ul>
-                                    </div>
-                                    <?php } ?>
-                                    <!-- Orders Notification End -->
-                                    <?php
-                                } ?>
-                            </li>
+                                    } ?>
+                                </li>
+                        <?php } else { ?>
+                            <li class="nav item <?= /* @noEscape */
+                                strpos($magentoCurrentUrl, 'marketplace/account/notification')? "current":"";?>">
+                                    <?php if (strpos($magentoCurrentUrl, 'marketplace/account/notification') !== false) {
+                                        ?>
+                                        <strong><?= /* @noEscape */ __('Notifications') ?></strong>
+                                        <?php
+                                    } else { ?>
+                                        <a href="<?= $escaper->escapeUrl($block
+                                        ->getUrl('marketplace/account/notification', ['_secure' => $block
+                                        ->getRequest()->isSecure()])); ?>">
+                                            <?= /* @noEscape */__('Notifications') ?>
+                                        </a>
+                                        <?php
+                                    } ?>
+                                </li>
+                        <?php } ?>
                         <?php } ?>
                         <?php if (($isSellerGroup /*&& $helper->isAllowedAction('marketplace/account/customer')*/)
                          || !$isSellerGroup) { ?>
@@ -422,12 +495,12 @@ if (!$helper->getIsSeparatePanel()) {
                                 <li class="nav item notification-link <?= /* @noEscape */
                                 strpos($magentoCurrentUrl, 'vault/cards/listaction')? "current":"";?>">
                                     <?php if (strpos($magentoCurrentUrl, 'vault/cards/listaction') !== false) { ?>
-                                        <strong><?= /* @noEscape */ __('Billing & Payment') ?></strong>
+                                        <strong><?= /* @noEscape */ __('Billing & Payments') ?></strong>
                                     <?php } else { ?>
                                         <a href="<?= $escaper->escapeUrl($block
                                         ->getUrl('vault/cards/listaction', ['_secure' => $block
                                         ->getRequest()->isSecure()])); ?>">
-                                            <?= /* @noEscape */ __('Billing & Payment') ?>
+                                            <?= /* @noEscape */ __('Billing & Payments') ?>
                                         </a>
                                     <?php } ?>
                                 </li>

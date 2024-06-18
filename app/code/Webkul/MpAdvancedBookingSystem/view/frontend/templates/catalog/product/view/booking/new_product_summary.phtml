@@ -1,0 +1,77 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpAdvancedBookingSystem
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+ /** @var $block \Webkul\MpAdvancedBookingSystem\Block\Product\Create */
+
+?>
+<?php 
+    $product = $block->getProduct();
+    // $viewModel = $block->getBookingViewModel(); 
+    // foreach ($product->getAttributes() as $attribute) {
+    //   $attributeCode = $attribute->getAttributeCode();
+    //   $productAttributes[$attributeCode] = $product->getData($attributeCode);
+    // } 
+?>
+
+
+<!-- Render the language and skill seniority attributes -->
+<div style="display: none;">
+    <div>
+        <h3>Seller Name:</h3>
+        <pre><?= $block->getVendorLastName(); ?> <?= $block->getVendorFirstName(); ?></pre>
+    </div>
+    <div>
+        <h3>Industry Expertise:</h3>
+        <pre><?= $block->getIndustryExpertise(); ?></pre>
+    </div>
+    <div>
+        <h3>Industry Expertise Options:</h3>
+        <pre><?= $block->getIndustryExpertiseOptions(); ?></pre>
+    </div>
+    <div>
+        <h3>Product name:</h3>
+        <pre><?= $block->getName(); ?></pre>
+    </div>
+    <div>
+        <h3>Country:</h3>
+        <pre><?= $block->getCountry(); ?></pre>
+    </div>
+    <div>
+        <h3>Description:</h3>
+        <pre><?= $block->getDescription(); ?></pre>
+    </div>
+    <div>
+        <h3>Short description:</h3>
+        <pre><?= $block->getShortDescription(); ?></pre>
+    </div><div>
+        <h3>Language Seniority:</h3>
+        <pre><?= $block->getLanguageSeniority(); ?></pre>
+    </div>
+    <div>
+        <h3>Skill Seniority:</h3>
+        <pre><?= $block->getSkillSeniority(); ?></pre>
+    </div>
+</div>
+
+<div id="product-layout"></div>
+<script type="text/javascript">
+    window.reactAppProductLayoutConfig = {
+        vendorFirstName: <?= json_encode($block->getVendorFirstName()); ?>,
+        vendorLastName: <?= json_encode($block->getVendorLastName()); ?>,
+        description: <?= json_encode($block->getDescription()); ?>,
+        serviceName: <?= json_encode($block->getName()); ?>,
+        country: <?= json_encode($block->getCountry()); ?>,
+        languageSeniority: <?= $block->getLanguageSeniority(); ?>,
+        skillSeniority: <?= $block->getSkillSeniority(); ?>,
+        industryExpertise: <?= json_encode($block->getIndustryExpertise()); ?>
+    };
+</script>
+<script type="text/javascript" src="<?= $block->getViewFileUrl('Webkul_MpAdvancedBookingSystem/js/product-layout.js') ?>"></script>

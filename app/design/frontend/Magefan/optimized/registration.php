@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/OrionAlliance/optimized', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Magefan/optimized', __DIR__);
