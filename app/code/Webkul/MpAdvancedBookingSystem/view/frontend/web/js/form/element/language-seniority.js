@@ -13,7 +13,7 @@ define([
         defaults: {
             template: 'Webkul_MpAdvancedBookingSystem/form/element/language-seniority',
             languages: window.languagesOptions || [],
-            seniorities: window.languageSenioritiesOptions || [],
+            seniorities: window.senioritiesOptions || [],
             pairs: ko.observableArray([]),
             listens: {
                 value: 'onValueChanged'
