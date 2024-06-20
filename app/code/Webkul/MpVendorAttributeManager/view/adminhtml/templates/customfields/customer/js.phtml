@@ -1,0 +1,73 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MpVendorAttributeManager
+ * @author    Webkul Software Private Limited
+ * @copyright Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<?php $vendorAttributes = $block->getVendorAttributes() ?>
+<?php if (count($vendorAttributes)): ?>
+    <script>
+        require([
+            "jquery",
+            "mage/mage",
+            "mage/calendar",
+            "prototype"
+        ], function($){
+            $.each($('.custom_date_field'),function(i,v){
+                $(this).calendar({
+                    dateFormat: 'yyyy-MM-dd',
+                    buttonText: "Select Date"
+                });
+                $.validator.addMethod(
+                'validate-vendor-date',
+                function (value) {
+                    return isValidDate(value);
+                },
+                errorMessage()
+                );
+            });
+
+            $("input[type='file']").attr('form','customer_form');
+            $("select[multiple='multiple']").attr('form','customer_form');
+            $("input[type='checkbox']").on('change', function(){
+                if (this.checked) {
+                    $(this).attr('form','customer_form');
+                    $(this).attr('value','1');
+                }else{
+                $(this).attr('value','0');
+                }
+            });
+
+            function isValidDate(dateString) {
+            if(dateString == ""){
+                return true;
+            }
+            const date = new Date(dateString);
+            
+            // Check if the Date object is valid
+            if (isNaN(date.getTime())) {
+                return false;
+            }
+
+            // Check if the Date object represents the same date as the input string
+            const parts = dateString.split("-");
+            const year = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10);
+            const day = parseInt(parts[2], 10);
+            return date.getFullYear() === year && date.getMonth() + 1 === month && date.getDate() === day;
+            }
+
+            function errorMessage() {
+                return "<?= /**@noEscape */
+                __('Please enter a date in valid format: yyyy-MM-dd. For example 2023-01-01.'); ?>"
+            }
+        });
+    </script>
+<?php endif; ?>      
+
+
