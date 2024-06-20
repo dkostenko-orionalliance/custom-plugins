@@ -12,6 +12,8 @@ namespace Webkul\MpAdvancedBookingSystem\Helper;
 
 use Magento\Framework\App\Http\Context as HttpContext;
 use Magento\Customer\Model\Context as CustomerContext;
+use Magento\Catalog\Model\ProductRepository;
+use Magento\Customer\Model\CustomerFactory;
 
 class Customer extends \Magento\Framework\App\Helper\AbstractHelper
 {
@@ -25,6 +27,15 @@ class Customer extends \Magento\Framework\App\Helper\AbstractHelper
      */
     private $httpContext;
 
+
+    /**
+     * @var ProductRepository
+     */
+    protected $productRepository;
+
+    protected $customerFactory;
+
+
     /**
      * Constructor
      *
@@ -35,10 +46,14 @@ class Customer extends \Magento\Framework\App\Helper\AbstractHelper
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
         \Magento\Customer\Model\Session $customerSession,
-        HttpContext $httpContext
+        HttpContext $httpContext,
+        ProductRepository $productRepository,
+        CustomerFactory $customerFactory
     ) {
         $this->customerSession = $customerSession;
         $this->httpContext = $httpContext;
+        $this->productRepository = $productRepository;
+        $this->customerFactory = $customerFactory;
         parent::__construct($context);
     }
 
@@ -74,5 +89,22 @@ class Customer extends \Magento\Framework\App\Helper\AbstractHelper
     public function getCustomerEmail()
     {
         return $this->getCustomer()->getEmail();
+    }
+
+    public function getCustomerNameByProductId($productId)
+    {
+        try {
+            $product = $this->productRepository->getById($productId);
+            $customerId = $product->getData('customer_id'); // Assuming 'customer_id' is the attribute code
+
+            if ($customerId) {
+                $customer = $this->customerFactory->create()->load($customerId);
+                return $customer->getName();
+            }
+
+            return '';
+        } catch (\Exception $e) {
+            return '';
+        }
     }
 }

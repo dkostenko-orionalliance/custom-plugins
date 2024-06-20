@@ -89,10 +89,10 @@ if (!empty($params['id'])) {
     $product['show_map_loction'] = 1;
 }
 ?>
-<div class="field">
+<!-- <div class="field">
     <label class="label"><?= /* @noEscape */ __('Renting Information') ?>:</label>
     <div class="wk-border"></div>
-</div>
+</div> -->
 <?php if ($optionId == '') { ?>
     <input type="hidden" name="product[options][0][record_id]" value="0" />
 <?php } ?>
@@ -104,7 +104,7 @@ if (!empty($params['id'])) {
 <input type="hidden" name="product[options][0][price_type]" value="fixed" />
 <input type="hidden" name="product[options][0][sku]" value="" />
 <input type="hidden" name="product[options][0][type]" value="radio" />
-<div class="field required" data-index="available_qty">
+<!-- <div class="field required" data-index="available_qty">
     <label class="label" for="wk-available-qt">
         <span>
             <?= /* @noEscape */ __('Available Qty to Rent')?>
@@ -115,11 +115,11 @@ if (!empty($params['id'])) {
             name="product[available_qty]" id="wk-available-qty"
             value="<?= /* @noEscape */ $availableQty?>" />
     </div>
-</div>
+</div> -->
 <div class="field required" data-index="renting_type">
     <label class="label" for="wk-renting-type">
         <span>
-            <?= /* @noEscape */ __('Renting Type')?>
+            <?= /* @noEscape */ __('Payment Type')?>
         </span>
     </label>
     <div class="control">

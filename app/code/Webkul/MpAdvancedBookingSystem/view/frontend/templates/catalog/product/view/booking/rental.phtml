@@ -99,7 +99,7 @@ if (is_array($validBookingDates)) {
             </div>
             <div class="wk-bk-dates-container">
                 <h3>
-                    <?= /* @noEscape */ __('Rent an Item')?>
+                    <?= /* @noEscape */ __('Book a Specialist')?>
                 </h3>
                 <?php
                 $optionId = $rentOptions['choose_rent_type']['option_id'];
@@ -116,9 +116,6 @@ if (is_array($validBookingDates)) {
                     $rentTypeArr = [];
                     ?>
                     <div class="wk-bk-rental-options" id="wk-bk-option<?= /* @noEscape */ $optionId?>">
-                        <label class="label" for="select_<?= /* @noEscape */ $optionId?>">
-                            <span><?= /* @noEscape */ __('Choose Rent Option')?></span>
-                        </label>
                         <div class="control">
                             <div class="options-list nested" id="options-<?= /* @noEscape */ $optionId?>-list">
                                 <?php foreach ($optionValues as $key => $value) {
@@ -198,28 +195,13 @@ if (is_array($validBookingDates)) {
                     <?php if ($product->isSaleable() && $optionValFieldId != ''): ?>
                         <div class="box-tocart">
                             <div class="fieldset">
-                                <div class="field qty">
-                                    <label class="label" for="qty">
-                                        <span><?= /* @noEscape */ __('Qty') ?></span>
-                                    </label>
-                                    <div class="control">
-                                        <input type="number"
-                                            name="qty"
-                                            id="qty"
-                                            value="<?= /* @noEscape */ $block->getProductDefaultQty() * 1 ?>"
-                                            title="<?= /* @noEscape */ __('Qty') ?>"
-                                            class="input-text qty"
-                                            data-validate="<?= /* @noEscape */
-                                                $viewModel->getJsonEncoded($block->getQuantityValidators()) ?>"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="actions">
+                                <div class="actions" style="width: 100%;">
                                     <button id="wk-book-now"
+                                        style="width: 100% !important; background: #FF6300 !important; border-radius: 3rem !important;"
                                         type="submit"
-                                        title="<?= /* @noEscape */ __('Rent Now'); ?>"
+                                        title="<?= /* @noEscape */ __('Book Now'); ?>"
                                         class="wk-book-now action primary tocart">
-                                        <span><?= /* @noEscape */ __('Rent Now'); ?></span>
+                                        <span><?= /* @noEscape */ __('Book Now'); ?></span>
                                     </button>
                                 </div>
                             </div>

@@ -18,7 +18,10 @@
         <attribute name="class" value="account"/>
         <referenceContainer name="sidebar.main">
             <block class="Webkul\Marketplace\Block\Account\Navigation"  name="seller_account_navigation"  before="-"/>
+            <block class="Magento\Customer\Block\Account\Navigation" name="customer_account_navigation" template="Webkul_Marketplace::account/collapsible.phtml"/>
         </referenceContainer>
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="customer.wishlist" remove="true"/>
         <referenceBlock name="seller_account_navigation">
             <action method="setTemplate">
                 <argument name="template" xsi:type="string">Webkul_Marketplace::account/navigation.phtml</argument>
@@ -35,5 +38,12 @@
                 
             </arguments>
         </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Cms\Block\Widget\Block" name="becomeseller.widget" template="widget/static_block/default.phtml" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">20</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>

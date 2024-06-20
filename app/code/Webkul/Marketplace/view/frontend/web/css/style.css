@@ -405,6 +405,17 @@ a:hover{
     float: right;
     margin-left: 5px!important;
 }
+.sg-orange-button, .sg-orange-button:hover {
+    border-radius: 20px !important;
+    color: white !important;
+    border: none !important;
+    background-color: #FF6300 !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important ;
+    
+}
 .wk-category{
     max-height: 200px;
     overflow: auto;

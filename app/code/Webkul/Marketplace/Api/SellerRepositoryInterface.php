@@ -10,6 +10,8 @@
  */
 namespace Webkul\Marketplace\Api;
 
+use Webkul\Marketplace\Api\Data\BecomeSellerInterface;
+
 /**
  * Seller CRUD interface.
  */
@@ -84,4 +86,14 @@ interface SellerRepositoryInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function deleteById($customerId);
+
+    /**
+     * Become Seller.
+     *
+     * @api
+     * @param \Webkul\Marketplace\Api\Data\BecomeSellerInterface $customerData
+     * @return \Webkul\Marketplace\Api\Data\SellerInterface
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function becomeSeller(BecomeSellerInterface $customerData);
 }

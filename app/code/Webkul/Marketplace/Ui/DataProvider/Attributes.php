@@ -93,6 +93,7 @@ class Attributes extends \Magento\Ui\DataProvider\AbstractDataProvider
             } else {
                 $skippedItems++;
             }
+            $items[] = $attribute->toArray();
         }
         
         return [

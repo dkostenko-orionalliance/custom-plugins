@@ -2126,11 +2126,11 @@ button.action-close {
     border-color: #adadad;
     color: #514943;
     box-shadow: none!important;
-    border-radius: 0!important;
+    border-radius: 0;
 }
 .action-default:hover, .wk-mp-design button:hover, .action-default:active, .wk-mp-design button:active, .action-default:focus, .wk-mp-design button:focus, .block-footer .action-add:hover, .block-footer .action-add:active, .block-footer .action-add:focus {
-    background-color: #dbdbdb!important;
-    color: #514943!important;
+    background-color: #dbdbdb;
+    color: #514943;
     text-decoration: none;
 }
 .action-primary {

@@ -106,6 +106,7 @@
     color: #1979C3;
 }
 .product.info.detailed.wk-supplier-tabs {
+    display: none;
     width: 80%;
     margin: auto;
 }

@@ -25,7 +25,10 @@ $bookingInfo = $helper->getBookingInfo($productId);
 $bookingType = $bookingInfo['type'];
 
 $data = $viewModel->getDefaultBookingProductData($product);
+
 ?>
+<span><?= /* @noEscape */ __('Booking Type: ') . $bookingType; ?></span>
+
 <?php if ($bookingType == 1 || $bookingType == 2): ?>
     <div class="wk-bg-container">
         <div class="wk-box-modal">

@@ -14,4 +14,9 @@
     <event name="catalog_product_delete_after_done">
         <observer name="webkul_mpadvancebooking_catalog_product_delete_after_observer" instance="Webkul\MpAdvancedBookingSystem\Observer\CatalogProductDeleteAfterObserver" />
     </event>
+    <event name="catalog_product_save_after">
+        <observer name="save_language_seniority_pairs" instance="Webkul\MpAdvancedBookingSystem\Observer\SaveLanguageSeniorityPairs" />
+        <observer name="save_country" instance="Webkul\MpAdvancedBookingSystem\Observer\SaveCountry" />
+        <observer name="save_industry_expertise" instance="Webkul\MpAdvancedBookingSystem\Observer\SaveIndustryExpertise" />
+    </event>
 </config>

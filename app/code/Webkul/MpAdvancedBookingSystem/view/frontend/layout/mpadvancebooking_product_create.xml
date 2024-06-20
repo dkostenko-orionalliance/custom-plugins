@@ -30,6 +30,10 @@
                     <argument name="booking_view_model" xsi:type="object">Webkul\MpAdvancedBookingSystem\ViewModel\BookingView</argument>
                 </arguments>
             </block>
+            <!-- Language + Seniority Block -->
+            <!-- <block class="Magento\Framework\View\Element\Template" name="mpadvancebooking_language_seniority" template="Webkul_MpAdvancedBookingSystem::product/booking/language_seniority.phtml" cacheable="false"/> -->
         </referenceContainer>
+        <block class="Webkul\MpAdvancedBookingSystem\Block\Product\Create" name="language_seniority_js" template="Webkul_MpAdvancedBookingSystem::product/booking/language_seniority_js.phtml"/>
+        <block class="Webkul\MpAdvancedBookingSystem\Block\Product\Create" name="skill_seniority_js" template="Webkul_MpAdvancedBookingSystem::product/booking/skill_seniority_js.phtml"/>
     </body>
 </page>

@@ -12,7 +12,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Webkul_Marketplace::marketplace" title="Marketplace Management" module="Webkul_Marketplace" sortOrder="10" resource="Webkul_Marketplace::marketplace"/>
+        <add id="Webkul_Marketplace::marketplace" title="SpecialistsGrid Marketplace Management" module="Webkul_Marketplace" sortOrder="10" resource="Webkul_Marketplace::marketplace"/>
 
         <add id="Webkul_Marketplace::product" title="Manage Product" translate="title" module="Webkul_Marketplace" sortOrder="1" parent="Webkul_Marketplace::menu" action="marketplace/product" resource="Webkul_Marketplace::product"/>
 
@@ -45,5 +45,8 @@
         <add id="Webkul_Marketplace::marketplace_services" title="Services" translate="title" module="Webkul_Marketplace" sortOrder="300" parent="Webkul_Marketplace::marketplace_support" action="marketplace/support/services" resource="Webkul_Marketplace::marketplace_services"/>
 
         <add id="Webkul_Marketplace::marketplace_reviews" title="Reviews" translate="title" module="Webkul_Marketplace" sortOrder="300" parent="Webkul_Marketplace::marketplace_support" action="marketplace/support/storereview" resource="Webkul_Marketplace::marketplace_reviews"/>
+
+        <!-- <add id="Webkul_Marketplace::customer_attributes" title="Customer Attributes" translate="title" module="Webkul_Marketplace" sortOrder="10" parent="Webkul_Marketplace::menu" action="marketplace/customer/attribute/index" resource="Webkul_Marketplace::customer_attributes"/> -->
+
     </menu>
 </config>
