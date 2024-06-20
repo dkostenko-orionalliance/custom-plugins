@@ -175,7 +175,7 @@ class SaveAttribute extends AbstractAccount
 
                 $customer->setData('ignore_validation_flag', true);
                 $this->_customerRepository->save($customer);
-                $this->messageManager->addSuccess(__('Vendor Attributes has been saved.'));
+                $this->messageManager->addSuccess(__('Profile has been saved.'));
             } catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
             }

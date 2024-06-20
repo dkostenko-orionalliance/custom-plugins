@@ -186,7 +186,7 @@ class SaveMpVendorAttributes implements ResolverInterface
 
             $customer->setData('ignore_validation_flag', true);
             $this->_customerRepository->save($customer);
-            $returnArray['message'] = __('Vendor Attributes has been saved.');
+            $returnArray['message'] = __('Profile has been saved.');
             $returnArray['status'] = self::SUCCESS;
         } catch (\Magento\Framework\Exception\LocalizedException $e) {
             $returnArray['message'] = $e->getMessage();

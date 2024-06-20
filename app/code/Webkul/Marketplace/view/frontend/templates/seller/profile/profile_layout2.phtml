@@ -12,7 +12,8 @@
 // $viewModel = $block->getViewModel();
 // $helper = $viewModel->getHelper();
 $partner=$block->getProfileDetail();
-if ($partner['shop_url']) {?>
+if ($partner['shop_url']) {
+    ?>
     <?php if ($detailedInfoGroup = $block->getGroupChildNames('microsite_details', 'getChildHtml')):?>
         <div class="product info detailed wk-supplier-tabs">
             <?php $layout = $block->getLayout(); ?>

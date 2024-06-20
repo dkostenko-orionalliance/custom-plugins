@@ -85,6 +85,19 @@ class VendorAttributeRepository implements \Webkul\MpVendorAttributeManager\Api\
     public function save(\Webkul\MpVendorAttributeManager\Model\VendorAttribute $subject)
     {
         try {
+            // Check if the attribute is of type composite and if the flag is set to use the second part
+            if ($subject->getFrontendInput() == 'composite') {
+                $compositeField = $subject->getCompositeField();
+                $useSecondPart = $subject->getUseSecondPart();
+                $secondPart = $useSecondPart ? $subject->getSecondPart() : null;
+
+                // Save the composite field and the second part as separate fields
+                $subject->setData('composite_field', $compositeField);
+                $subject->setData('use_second_part', $useSecondPart);
+                $subject->setData('second_part', $secondPart);
+            }
+
+            // Save the subject (attribute)
             $subject->save();
         } catch (\Exception $exception) {
             throw new \Magento\Framework\Exception\CouldNotSaveException(

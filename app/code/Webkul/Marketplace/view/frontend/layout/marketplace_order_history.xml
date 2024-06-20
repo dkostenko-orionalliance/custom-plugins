@@ -16,7 +16,7 @@
     <body>
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">My Order History</argument>
+                <argument translate="true" name="title" xsi:type="string">My Applications</argument>
             </action>
         </referenceBlock>
         <referenceContainer name="content">

@@ -1091,6 +1091,191 @@ class ProductAttributes implements DataPatchInterface
                 'unique' => false,
             ]
         );
+
+        // Composite attribute (language+seniority)
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'language_seniority_pairs',
+            [
+                'type' => 'text',
+                'label' => 'Language Seniority Pairs',
+                'input' => 'textarea',
+                'backend' => \Webkul\MpAdvancedBookingSystem\Model\Product\Attribute\Backend\LanguageSeniority::class,
+                'required' => false,
+                'sort_order' => 100,
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'group' => '',
+                'filterable' => true,
+                'searchable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'user_defined' => true,
+            ]
+        );
+
+        // Composite attribute (language+seniority)
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'skill_seniority_pairs',
+            [
+                'type' => 'text',
+                'label' => 'Skill Seniority Pairs',
+                'input' => 'textarea',
+                'backend' => \Webkul\MpAdvancedBookingSystem\Model\Product\Attribute\Backend\LanguageSeniority::class,
+                'required' => false,
+                'sort_order' => 100,
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'group' => '',
+                'filterable' => true,
+                'searchable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'user_defined' => true,
+            ]
+        );
+
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'industry_expertise',
+            [
+                'type' => 'text',
+                'backend' => '',
+                'frontend' => '',
+                'label' => 'Industry Expertise',
+                'input' => 'text',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => true,
+                'default' => '',
+                'searchable' => true,
+                'filterable' => true,
+                'comparable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'unique' => false,
+                'apply_to' => ''
+            ]
+        );
+
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'language_seniority',
+            [
+                'type' => 'text',
+                'backend' => '',
+                'frontend' => '',
+                'label' => 'Language Seniority',
+                'input' => 'text',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => true,
+                'default' => '',
+                'searchable' => true,
+                'filterable' => true,
+                'comparable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'unique' => false,
+                'apply_to' => ''
+            ]
+        );
+
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'skill_seniority',
+            [
+                'type' => 'text',
+                'backend' => '',
+                'frontend' => '',
+                'label' => 'Skill Seniority',
+                'input' => 'text',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => true,
+                'default' => '',
+                'searchable' => true,
+                'filterable' => true,
+                'comparable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'unique' => false,
+                'apply_to' => ''
+            ]
+        );
+
+
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'country_pic',
+            [
+                'type' => 'text',
+                'backend' => '',
+                'frontend' => '',
+                'label' => 'Country',
+                'input' => 'text',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => true,
+                'default' => '',
+                'searchable' => true,
+                'filterable' => true,
+                'comparable' => true,
+                'visible_on_front' => true,
+                'used_in_product_listing' => true,
+                'unique' => false,
+                'apply_to' => ''
+            ]
+        );
+        
+
+        // List of languages
+        // $eavSetup->addAttribute(
+        //     Product::ENTITY,
+        //     'language_options',
+        //     [
+        //         'type' => 'varchar',
+        //         'label' => 'Languages',
+        //         'input' => 'multiselect',
+        //         'source' => \Magento\Eav\Model\Entity\Attribute\Source\Table::class,
+        //         'required' => false,
+        //         'sort_order' => 100,
+        //         'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+        //         'group' => 'General',
+        //         'user_defined' => true,
+        //         'option' => ['values' => ['English', 'French', 'Spanish']]
+        //     ]
+        // );
+
+        // List of seniorities
+        // $eavSetup->addAttribute(
+        //     Product::ENTITY,
+        //     'language_seniority_options',
+        //     [
+        //         'type' => 'varchar',
+        //         'label' => 'Seniorities',
+        //         'input' => 'multiselect',
+        //         'source' => \Magento\Eav\Model\Entity\Attribute\Source\Table::class,
+        //         'required' => false,
+        //         'sort_order' => 110,
+        //         'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+        //         'group' => 'General',
+        //         'user_defined' => true,
+        //         'option' => ['values' => ['Junior', 'Mid', 'Senior']]
+        //     ]
+        // );
+
         $noOfGuestsAttrId = $eavSetup->getAttributeId(
             $entityTypeId,
             'no_of_guests'

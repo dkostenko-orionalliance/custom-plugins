@@ -61,7 +61,7 @@ class InsertDefaultData implements DataPatchInterface
             $data[] = [
                 'module_name' => 'Webkul_Marketplace',
                 'controller_path' => 'marketplace/account/editprofile',
-                'label' => 'Seller Profile',
+                'label' => 'Vendor Profile',
                 'is_child' => '0',
                 'parent_id' => '0',
             ];
@@ -88,7 +88,7 @@ class InsertDefaultData implements DataPatchInterface
             $data[] = [
                 'module_name' => 'Webkul_Marketplace',
                 'controller_path' => 'marketplace/product/productlist',
-                'label' => 'My Products List',
+                'label' => 'My Services',
                 'is_child' => '0',
                 'parent_id' => '0',
             ];
@@ -133,7 +133,7 @@ class InsertDefaultData implements DataPatchInterface
             $data[] = [
                 'module_name' => 'Webkul_Marketplace',
                 'controller_path' => 'marketplace/order/history',
-                'label' => 'My Order History',
+                'label' => 'My Applications',
                 'is_child' => '0',
                 'parent_id' => '0',
             ];

@@ -19,7 +19,7 @@
     <body>
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Marketplace Edit Seller Profile</argument>
+                <argument translate="true" name="title" xsi:type="string">Vendor profile</argument>
             </action>
         </referenceBlock>
         <referenceContainer name="content">
@@ -28,6 +28,7 @@
                     <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
+            <referenceBlock name="becomeseller.widget" remove="true"/>
         </referenceContainer>
     </body>
 </page>

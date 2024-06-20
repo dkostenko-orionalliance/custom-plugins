@@ -36,4 +36,5 @@ interface SellerInterface
      * @return \Webkul\Marketplace\Api\Data\SellerInterface
      */
     public function setId($id);
+
 }
