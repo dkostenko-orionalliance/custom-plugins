@@ -1,0 +1,31 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Marketplace
+ * @author    Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<div class="block block-logout">
+    <nav class="account-nav">
+        <ul class="nav items">
+            <li class="nav item">
+                <a href="<?= $escaper->escapeUrl($block
+                    ->getUrl('contact/report-issue', ['_secure' => $block
+                    ->getRequest()->isSecure()])); ?>">
+                        <?= /* @noEscape */ __('Help') ?>
+                </a>
+            </li>
+            <li class="nav item">
+                <a href="<?= $escaper->escapeUrl($block
+                    ->getUrl('customer/account/logout', ['_secure' => $block
+                    ->getRequest()->isSecure()])); ?>">
+                        <?= /* @noEscape */ __('Log Out') ?>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
