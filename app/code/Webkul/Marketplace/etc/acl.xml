@@ -23,6 +23,7 @@
                         <resource id="Webkul_Marketplace::feedback" title="Manage Feedback" sortOrder="13" />
                         <resource id="Webkul_Marketplace::sellerflag" title="Seller Flag Reason" sortOrder="14" />
                         <resource id="Webkul_Marketplace::productflag" title="Product Flag Reason" sortOrder="15" />
+                        <resource id="Webkul_Marketplace::customer_attributes" title="Customer Attributes" sortOrder="25" />
                         <resource id="Webkul_Marketplace::configattributes" title="Vendor Attributes" sortOrder="30" />
                     </resource>
                     <resource id="Webkul_Marketplace::marketplace_support" title="Support" sortOrder="20">
@@ -32,6 +33,7 @@
                         <resource id="Webkul_Marketplace::marketplace_services" title="Services" sortOrder="40" />
                         <resource id="Webkul_Marketplace::marketplace_reviews" title="Reviews" sortOrder="50" />
                     </resource>
+                    <!-- <resource id="Webkul_Marketplace::become_seller" title="Become Seller" sortOrder="30" /> -->
                 </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
@@ -41,6 +43,9 @@
                     </resource>
                 </resource>
             </resource>
+            <!-- <resource id="Magento_Customer::customer">
+                <resource id="Webkul_Marketplace::become_seller" title="Become Seller" sortOrder="10" />
+            </resource> -->
         </resources>
     </acl>
 </config>

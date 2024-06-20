@@ -12,6 +12,7 @@
 $helper = $block->getHelper();
 $mpHelper = $block->getMpHelper();
 $jsonHelper = $block->getJsonHelper();
+$partner = $block->getPersistentData();
 $isSeller = $mpHelper->isSeller();
 $mediaUrl = $mpHelper->getMediaUrl();
 $customer = $block->loadCustomer();
@@ -19,10 +20,12 @@ $vendorAttributes = $block->getAttributeCollection($isSeller);
 if ($helper->getConfigData('group_display') && $customer->getIsVendorGroup()) {
     $vendorAttributes = $block->getAttributeCollectionByGroup($customer->getIsVendorGroup(), $isSeller);
 }
+$profileUrl = 'marketplace/seller/profile/shop/'.$partner['shop_url'];
+
 if ($isSeller && $vendorAttributes):
     ?>
 <div class="wkeditprofile">
-    <form action="<?= $block->escapeUrl($block->getActionUrl()); ?>"
+    <form id='edit-vendor-profile-attributes-form' action="<?= $block->escapeUrl($block->getActionUrl()); ?>"
         enctype="multipart/form-data" method="post" data-role="form-profile-validate"
         data-mage-init='{"validation":{}}'>
         <?= /**@noEscape */ $block->getBlockHtml('formkey');?>
@@ -31,17 +34,20 @@ if ($isSeller && $vendorAttributes):
         <div class="wk-mp-design">
             <fieldset class="fieldset info wk-mp-fieldset custom-fieldset">
                 <div class="wk-mp-page-title page-title">
-                    <button class="button wk-mp-btn" t
-                        itle="<?= /**@noEscape */ __('Save Attributes') ?>" type="submit" id="save-btn-vendor">
+                    <!-- <button class="button wk-mp-btn" title="<?= /**@noEscape */ __('Save Attributes') ?>" type="submit" id="save-btn-vendor">
                         <span><span><?= /**@noEscape */ __('Save Attributes') ?></span></span>
-                    </button>
-                    <legend class="legend"><span>
+                    </button> -->
+                    <!-- <legend class="legend"><span>
                         <?= /**@noEscape */ $block->getConfigData('profile_label') ?>
-                    </span></legend>
+                    </span></legend> -->
                 </div>
 
                 <?php
                 foreach ($vendorAttributes as $vendorAttribute) {
+                    $attributeCode = $vendorAttribute->getAttributeCode();
+                    if (!in_array($attributeCode, ['wkv_vendor_specialization', 'wkv_vendor_languages', 'wkv_vendor_skills', 'wkv_industry_expertise', 'wkv_linkedin_profile_url'])) {
+                        continue;
+                    }
                     $isRequired = $block->checkIfRequired($vendorAttribute->getId());
                     ?>
                     <div class="field profile <?= /**@noEscape */ $isRequired ? 'required' : '' ?>">
@@ -51,7 +57,7 @@ if ($isSeller && $vendorAttributes):
                         </label>
                         <div class="control">
                             <?php
-                            $attributeCode = $vendorAttribute->getAttributeCode();
+                            
 
                             switch ($vendorAttribute->getFrontendInput()) {
                                 case "text":
@@ -109,32 +115,26 @@ if ($isSeller && $vendorAttributes):
                                                         $customer->getData($attributeCode) ? 'checked' : '' ; ?> />
                                     <?php
                                     break;
+
                                 case "multiselect":
                                     $options = $vendorAttribute->getSource()->getAllOptions();
                                     array_shift($options);
-                                    $selectedoptions = $customer->getData($attributeCode);
+                                    $selectedOptions = $customer->getData($attributeCode);
+                                    $reactAppConfigs[] = [
+                                        'attributeCode' => $attributeCode,
+                                        'options' => $options,
+                                        'selectedOptions' => $selectedOptions,
+                                        'isRequired' => $isRequired,
+                                    ];
                                     ?>
-                                <select name="<?= /**@noEscape */ $attributeCode; ?>[]"
-                                        id="<?= /**@noEscape */ $attributeCode; ?>"
-                                        class="input-select <?= /**@noEscape */
-                                            $vendorAttribute->getFrontendClass(); ?>"
-                                        <?= $isRequired ? 'data-validate="{required:true}"' : '' ?>
-                                        multiple="multiple">
-                                        <?php
-                                        foreach ($options as $option) {
-                                            $selected = in_array(
-                                                $option['value'],
-                                                $selectedoptions
-                                            ) ? "selected" : ""; ?>
-                                        ?>
-                                            <option  value="<?= /**@noEscape */ $option['value'] ?>"
-                                                <?= /**@noEscape */ $selected; ?>>
-                                                <?= /**@noEscape */ $option['label'] ?>
-                                            </option>
-                                        <?php } ?>
-                                </select>
+                                    <div id="<?= /**@noEscape */ $attributeCode; ?>"></div>
+                                    <script type="text/javascript">
+                                        window.reactAppConfigs = <?= json_encode($reactAppConfigs); ?>;
+                                    </script>
+                                    <script type="text/javascript" src="<?= $block->getViewFileUrl('Webkul_MpVendorAttributeManager/js/multiselect.js') ?>"></script>
                                     <?php
                                     break;
+                                    
                                 case "select":
                                     $options = $vendorAttribute->getSource()->getAllOptions();
                                     $selectedOption = $customer->getData($attributeCode);
@@ -264,6 +264,13 @@ if ($isSeller && $vendorAttributes):
                         </div>
                     </div>
                 <?php } ?>
+                <div class="field profile wk-profile-links-container">
+                    <div class="wk-profile-links">
+                        <a class="btn-primary sg-orange-button" 
+                        href="<?= /* @noEscape */ $mpHelper->getRewriteUrl($profileUrl); ?>" 
+                        target="_blank"><?= /* @noEscape */ __('View Profile') ?></a>
+                    </div>
+                </div>
             </fieldset>
         </div>
     </form>
@@ -284,4 +291,34 @@ if ($isSeller && $vendorAttributes):
         "editProfile": <?= /**@noEscape */ $serializedData; ?>
     }
 }
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    var firstForm = document.getElementById('edit-vendor-profile-attributes-form');
+    var secondForm = document.getElementById('edit-vendor-profile-form');
+
+    if (firstForm && secondForm) {
+        secondForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Listen for the first form submission to complete
+            console.log('firstForm', firstForm)
+            var formData = new FormData(firstForm);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', firstForm.action, true);
+            xhr.onload = function () {
+                console.log('xhr.status === 200', xhr.status === 200)
+                if (xhr.status === 200 || xhr.status === 302) {
+                    // After the first form is successfully submitted, submit the second form
+                    secondForm.submit();
+                } else {
+                    // Handle the error
+                    console.error('An error occurred during the first form submission.');
+                }
+            };
+            xhr.send(formData);
+        });
+    }
+});
 </script>

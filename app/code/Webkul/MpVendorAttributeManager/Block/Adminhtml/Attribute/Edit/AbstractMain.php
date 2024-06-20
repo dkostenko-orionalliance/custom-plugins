@@ -267,6 +267,36 @@ abstract class AbstractMain extends \Magento\Backend\Block\Widget\Form\Generic
             ]
         );
 
+        // Flag to use second part
+        // $fieldset->addField(
+        //     'use_second_part',
+        //     'select',
+        //     [
+        //         'name' => 'use_second_part',
+        //         'label' => __('Use Second Part'),
+        //         'title' => __('Use Second Part'),
+        //         'values' => [
+        //             ['value' => '0', 'label' => __('No')],
+        //             ['value' => '1', 'label' => __('Yes')]
+        //         ],
+        //         'required' => true,
+        //     ]
+        // );
+
+        
+
+        // // Second part field, shown conditionally
+        // $fieldset->addField(
+        //     'second_part',
+        //     'text',
+        //     [
+        //         'name' => 'second_part',
+        //         'label' => __('Second Part'),
+        //         'title' => __('Second Part'),
+        //         'required' => false,
+        //     ]
+        // );
+
         $this->propertyLocker->lock($form);
         $this->setForm($form);
 

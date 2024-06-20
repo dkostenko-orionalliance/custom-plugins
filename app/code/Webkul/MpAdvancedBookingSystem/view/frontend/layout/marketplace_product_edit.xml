@@ -24,6 +24,7 @@
                 </arguments>
             </block>
             <block class="Webkul\Marketplace\Block\Product\Create" ifconfig="mpadvancedbookingsystem/mp_settings/enable_booking" name="mpadvancebooking_product_add" template="Webkul_MpAdvancedBookingSystem::product/booking.phtml" cacheable="false">
+            <!-- <block class="Webkul\MpAdvancedBookingSystem\Block\Product\Create" ifconfig="mpadvancedbookingsystem/mp_settings/enable_booking" name="mpadvancebooking_product_add" template="Webkul_MpAdvancedBookingSystem::product/booking.phtml" cacheable="false"> -->
                 <arguments>
                     <argument name="booking_view_model" xsi:type="object">Webkul\MpAdvancedBookingSystem\ViewModel\BookingView</argument>
                 </arguments>
@@ -65,11 +66,11 @@
 
                 <!-- Rental Booking Block -->
                 <block class="Webkul\Marketplace\Block\Product\Create" name="mpadvancebooking_rental" as="rental-booking" template="Webkul_MpAdvancedBookingSystem::product/booking/rental.phtml">
-                    <block class="Webkul\Marketplace\Block\Product\Create" name="mpadvancebooking_rental_contact" as="rental-contact-info" template="Webkul_MpAdvancedBookingSystem::product/booking/rental/contact.phtml">
+                    <!-- <block class="Webkul\Marketplace\Block\Product\Create" name="mpadvancebooking_rental_contact" as="rental-contact-info" template="Webkul_MpAdvancedBookingSystem::product/booking/rental/contact.phtml">
                         <arguments>
                             <argument name="booking_view_model" xsi:type="object">Webkul\MpAdvancedBookingSystem\ViewModel\BookingView</argument>
                         </arguments>
-                    </block>
+                    </block> -->
                     <block class="Webkul\Marketplace\Block\Product\Create" name="mpadvancebooking_rental_booking_info" as="rental-booking-info" template="Webkul_MpAdvancedBookingSystem::product/booking/rental/booking.phtml">
                         <arguments>
                             <argument name="booking_view_model" xsi:type="object">Webkul\MpAdvancedBookingSystem\ViewModel\BookingView</argument>

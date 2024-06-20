@@ -23,6 +23,9 @@ use Webkul\Marketplace\Model\ResourceModel\Product\CollectionFactory;
 use Webkul\Marketplace\Model\ProductFactory as MpProductModel;
 use Magento\Catalog\Model\ProductFactory;
 use Webkul\Marketplace\Model\ResourceModel\SellerFlagReason\CollectionFactory as SellerFlagReason;
+use Webkul\MpVendorAttributeManager\Helper\Data as MpVendorAttrHelper;
+use Magento\Customer\Api\CustomerRepositoryInterface;
+use Magento\Framework\Api\SearchCriteriaBuilder;
 
 class Profile extends AbstractProduct
 {
@@ -88,6 +91,16 @@ class Profile extends AbstractProduct
     protected $filterProvider;
 
     /**
+     * Vendor attribute collection object
+     *
+     * @var MpVendorAttrHelper
+     */
+    protected $mpVendorAttrHelper;
+
+    protected $customerRepository;
+    protected $searchCriteriaBuilder;
+
+    /**
      * Construct
      *
      * @param \Magento\Catalog\Block\Product\Context $context
@@ -104,6 +117,7 @@ class Profile extends AbstractProduct
      * @param array $data
      * @param SellerFlagReason|null $reasonCollection
      * @param \Magento\Cms\Model\Template\FilterProvider|null $filterProvider
+     * @param MpVendorAttrHelper $mpVendorAttrHelper
      */
     public function __construct(
         \Magento\Catalog\Block\Product\Context $context,
@@ -118,8 +132,11 @@ class Profile extends AbstractProduct
         MpProductModel $mpProductModel,
         ProductFactory $productFactory,
         array $data = [],
+        CustomerRepositoryInterface $customerRepository,
+        SearchCriteriaBuilder $searchCriteriaBuilder,
         SellerFlagReason $reasonCollection = null,
-        \Magento\Cms\Model\Template\FilterProvider $filterProvider = null
+        \Magento\Cms\Model\Template\FilterProvider $filterProvider = null,
+        MpVendorAttrHelper $mpVendorAttrHelper
     ) {
         $this->_postDataHelper = $postDataHelper;
         $this->urlHelper = $urlHelper;
@@ -136,6 +153,9 @@ class Profile extends AbstractProduct
         $this->filterProvider = $filterProvider ?: \Magento\Framework\App\ObjectManager::getInstance()
         ->create(\Magento\Cms\Model\Template\FilterProvider::class);
         parent::__construct($context, $data);
+        $this->mpVendorAttrHelper = $mpVendorAttrHelper;
+        $this->customerRepository = $customerRepository;
+        $this->searchCriteriaBuilder = $searchCriteriaBuilder;
     }
 
     /**
@@ -312,6 +332,108 @@ class Profile extends AbstractProduct
      */
     public function getCustomer($customerId)
     {
+        if ($customerId == '') {
+            $customerId = $this->Session->getCustomer()->getId();
+        }
         return $this->Customer->load($customerId);
+    }
+
+
+    public function getCustomer2($identifier)
+    {
+        try {
+            if (is_numeric($identifier)) {
+                // If identifier is numeric, assume it's customerId
+                return $this->customerRepository->getById($identifier);
+            } else {
+                // Otherwise, assume it's sellerId and search by custom attribute (adjust attribute code if needed)
+                $searchCriteria = $this->searchCriteriaBuilder
+                    ->addFilter('seller_id', $identifier, 'eq')
+                    ->create();
+                $customers = $this->customerRepository->getList($searchCriteria)->getItems();
+                return reset($customers); // return the first customer found
+            }
+        } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+            return null; // Or handle the exception as needed
+        }
+    }
+
+    public function getCustomerAttribute($customer, $attributeCode)
+    {
+        $getterMethod = 'get' . str_replace('_', '', ucwords($attributeCode, '_'));
+        if (method_exists($customer, $getterMethod)) {
+            return $customer->$getterMethod();
+        }
+        return null;
+    }
+
+    // /**
+    //  * Return custom attributes collection
+    //  *
+    //  * @param boolean $status
+    //  * @return \Webkul\MpVendorAttributeManager\Model\ResourceModel\VendorAttribute\Collection
+    //  */
+    // private function getAttributeCollection()
+    // {
+    //     try {
+    //         $vendorCollection = $this->vendorAttributeCollection->create();
+    //         $vendorAttribute = $vendorCollection->getTable('marketplace_vendor_attribute');
+
+    //         $typeId = $this->_eavEntity->setType('customer')->getTypeId();
+    //         $collection = $this->_attributeCollection->create()
+    //             ->setEntityTypeFilter($typeId)
+    //             ->setOrder('sort_order', 'ASC');
+    //         $collection->getSelect()
+    //         ->join(
+    //             ["vendor_attr" => $vendorAttribute],
+    //             "vendor_attr.attribute_id = main_table.attribute_id"
+    //         );
+
+    //         return $collection;
+    //     } catch (\Exception $ex) {
+    //         return false;
+    //     }
+
+    //     return false;
+    // }
+
+    /**
+     * Get Attribute Collection
+     *
+     * @param  boolean $isSeller
+     *
+     * @return collection
+     */
+    public function getAttributeCollection($isSeller = false)
+    {
+        return $this->mpVendorAttrHelper->getAttributeCollection($isSeller);
+    }
+
+
+    /**
+     * Get Attribute Collection by Attribute Group
+     *
+     * @param  boolean $groupId
+     * @param  boolean $isSeller
+     *
+     * @return collection
+     */
+    public function getAttributeCollectionByGroup($groupId, $isSeller = false)
+    {
+        $groupAttributes = $this->mpVendorAttrHelper->getAttributesByGroupId($groupId);
+        if ($groupAttributes->getSize()) {
+            $attributeUsedFor = [0,1];
+            if ($isSeller) {
+                $attributeUsedFor = [0,2];
+            }
+
+            $attributeCollection = $groupAttributes->addFieldToFilter(
+                "vat.attribute_used_for",
+                ["in" => $attributeUsedFor]
+            );
+
+            return $attributeCollection;
+        }
+        return false;
     }
 }

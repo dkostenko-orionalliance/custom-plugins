@@ -22,6 +22,7 @@ use Webkul\Marketplace\Helper\Data as MarketplaceHelper;
 use Webkul\MpVendorAttributeManager\Helper\Data;
 use Webkul\MpVendorAttributeManager\Model\VendorAttributeFactory;
 use Magento\Cms\Helper\Wysiwyg\Images;
+use Magento\Framework\App\Request\DataPersistorInterface;
 
 class Editprofile extends Template
 {
@@ -54,6 +55,11 @@ class Editprofile extends Template
      * @var \Webkul\Marketplace\Helper\Data
      */
     protected $_mpHelper;
+
+    /**
+     * @var DataPersistorInterface
+     */
+    protected $dataPersistor;
 
     /**
      * @var \Webkul\MpVendorAttributeManager\Helper\Data
@@ -90,6 +96,7 @@ class Editprofile extends Template
      * @param Entity $eavEntity
      * @param CollectionFactory $attributeCollection
      * @param MarketplaceHelper $mpHelper
+     * @param DataPersistorInterface $dataPersistor
      * @param Data $helper
      * @param VendorAttributeFactory $vendorAttributeFactory
      * @param JsonHelper $jsonHelper
@@ -105,6 +112,7 @@ class Editprofile extends Template
         Entity $eavEntity,
         CollectionFactory $attributeCollection,
         MarketplaceHelper $mpHelper,
+        DataPersistorInterface $dataPersistor,
         Data $helper,
         VendorAttributeFactory $vendorAttributeFactory,
         JsonHelper $jsonHelper,
@@ -118,6 +126,7 @@ class Editprofile extends Template
         $this->eavEntity = $eavEntity;
         $this->attributeCollection = $attributeCollection;
         $this->_mpHelper = $mpHelper;
+        $this->dataPersistor = $dataPersistor;
         $this->helper = $helper;
         $this->vendorAttributeFactory = $vendorAttributeFactory;
         $this->jsonHelper = $jsonHelper;
@@ -137,6 +146,24 @@ class Editprofile extends Template
     public function getAttributeCollection($isSeller = false)
     {
         return $this->helper->getAttributeCollection($isSeller);
+    }
+
+    /**
+     * Get persistentData
+     *
+     * @return array
+     */
+    public function getPersistentData()
+    {
+        $partner = $this->_mpHelper->getSeller();
+        $persistentData = (array)$this->dataPersistor->get('seller_profile_data');
+        foreach ($partner as $key => $value) {
+            if (empty($persistentData[$key])) {
+                $persistentData[$key] = $value;
+            }
+        }
+        $this->dataPersistor->clear('seller_profile_data');
+        return $persistentData;
     }
 
     /**

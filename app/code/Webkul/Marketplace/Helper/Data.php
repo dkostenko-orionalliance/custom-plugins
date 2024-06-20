@@ -3377,6 +3377,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         if ($shopUrl) {
             $data = $this->getSellerCollectionObjByShop($shopUrl);
             foreach ($data as $seller) {
+                if ($seller->getSellerId()) {
+                    $customer = $this->customerModel->create();
+                    $customer->load($seller->getSellerId());
+                    $seller->setData('customer_data', $customer);
+                }
                 return $seller;
             }
         }

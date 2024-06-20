@@ -15,6 +15,7 @@
 	<head>
         <css src="Webkul_Marketplace::css/filter.css"/>
         <css src="Magento_Swatches::css/swatches.css"/>
+		<script src="Webkul_Marketplace::js/vendor-profile.js" />
     </head>
     <body>
 		<referenceContainer name="content">

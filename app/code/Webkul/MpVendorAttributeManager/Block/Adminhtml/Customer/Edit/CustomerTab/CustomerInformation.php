@@ -4,40 +4,29 @@
  *
  * @category  Webkul
  * @package   Webkul_MpVendorAttributeManager
- * @author    Webkul Software Private Limited
- * @copyright Webkul Software Private Limited (https://webkul.com)
- * @license   https://store.webkul.com/license.html
  */
 namespace Webkul\MpVendorAttributeManager\Block\Adminhtml\Customer\Edit\CustomerTab;
 
+use Magento\Framework\Registry;
+
 class CustomerInformation extends \Magento\Config\Block\System\Config\Form\Field
 {
-    /**
-     * @var \Webkul\MpVendorAttributeManager\Model\VendorAttributeFactory
-     */
     protected $vendorAttributeFactory;
+    protected $_coreRegistry;
 
     public const JS_TEMPLATE = 'customfields/customer/customer.phtml';
-    
-    /**
-     * @param \Magento\Backend\Block\Widget\Context $context
-     * @param \Webkul\MpVendorAttributeManager\Model\VendorAttributeFactory $vendorAttributeFactory
-     * @param Array $data
-     */
+
     public function __construct(
         \Magento\Backend\Block\Widget\Context $context,
         \Webkul\MpVendorAttributeManager\Model\VendorAttributeFactory $vendorAttributeFactory,
+        Registry $registry,
         array $data = []
     ) {
         $this->vendorAttributeFactory = $vendorAttributeFactory;
+        $this->_coreRegistry = $registry;
         parent::__construct($context, $data);
     }
-     
-    /**
-     * Set template to itself
-     *
-     * @return $this
-     */
+
     protected function _prepareLayout()
     {
         parent::_prepareLayout();
@@ -47,18 +36,41 @@ class CustomerInformation extends \Magento\Config\Block\System\Config\Form\Field
         return $this;
     }
 
-    /**
-     * Get Customer Assigned Attributes
-     *
-     * @return Collection $customerAttributes
-     */
     public function getCustomerAttributes()
     {
-        $attributeUsedForCustomer = [0,1];
+        $attributeUsedForCustomer = [0, 1];
         $customerAttributes = $this->vendorAttributeFactory->create()->getCollection()
-                                   ->addFieldToFilter("attribute_used_for", ["in" => $attributeUsedForCustomer])
-                                   ->addFieldToFilter("wk_attribute_status", "1");
+            ->addFieldToFilter("attribute_used_for", ["in" => $attributeUsedForCustomer])
+            ->addFieldToFilter("wk_attribute_status", "1");
 
         return $customerAttributes;
+    }
+
+    public function getCustomer()
+    {
+        return $this->_coreRegistry->registry('current_customer');
+    }
+
+    public function getCustomerCompositeAttribute()
+    {
+        $customer = $this->getCustomer();
+        if ($customer) {
+            $vendorAttributes = $this->vendorAttributeFactory->create()->load($customer->getId(), 'entity_id');
+            $compositeField = $vendorAttributes->getData('composite_field');
+            $secondPart = $vendorAttributes->getData('second_part');
+            return ['composite_field' => $compositeField, 'second_part' => $secondPart];
+        }
+        return null;
+    }
+
+    public function shouldUseSecondPart()
+    {
+        $customer = $this->getCustomer();
+        if ($customer) {
+            $vendorAttributes = $this->vendorAttributeFactory->create()->load($customer->getId(), 'entity_id');
+            $useSecondPart = $vendorAttributes->getData('use_second_part');
+            return $useSecondPart == '1';
+        }
+        return false;
     }
 }

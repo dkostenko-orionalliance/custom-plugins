@@ -193,6 +193,24 @@ class BookingProduct implements BookingProductInterface
                 $response->setResponseData('');
                 return $response;
             }
+
+            if (isset($bookingData['skill_seniority'])) {
+                $data->setCustomAttribute('skill_seniority', json_encode($bookingData['skill_seniority']));
+            }
+    
+            if (isset($bookingData['language_seniority'])) {
+                $data->setCustomAttribute('language_seniority', json_encode($bookingData['language_seniority']));
+            }
+
+            if (isset($bookingData['country_pic'])) {
+                $data->setCustomAttribute('country_pic', $bookingData['country_pic']);
+            }
+
+
+            if (isset($bookingData['industry_expertise'])) {
+                $data->setCustomAttribute('industry_expertise', $bookingData['industry_expertise']);
+            }
+            
             if (isset($bookingData['booking_type']) && $booking_type = $bookingData['booking_type']) {
                 $attributeSetId = $data->getAttributeSetId();
                 $attributeSetName = $this->attributeSetRepoInterface->get($attributeSetId)->getAttributeSetName();

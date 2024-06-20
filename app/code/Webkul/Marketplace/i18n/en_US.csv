@@ -15,7 +15,6 @@ Day,Day
 Month,Month
 Year,Year
 Sale,Sale
-"Billing & Payment","Billing & Payment"
 "Product approved","Product approved"
 "Product disapproved","Product disapproved"
 ". '</span>'",". '</span>'"
@@ -42,6 +41,7 @@ Email,Email
 "Flag Reason","Flag Reason"
 "Flag Date","Flag Date"
 "Product Name","Product Name"
+"Service Name","Service Name"
 "Product SKU","Product SKU"
 "Product Price","Product Price"
 "Product Assignment","Product Assignment"
@@ -70,6 +70,7 @@ Email,Email
 "Company Locality","Company Locality"
 "Select Country","Select Country"
 "Company Description","Company Description"
+"Short Description","Short Description"
 "Return Policy","Return Policy"
 "Shipping Policy","Shipping Policy"
 "Privacy Policy","Privacy Policy"
@@ -77,6 +78,7 @@ Email,Email
 "Meta Description","Meta Description"
 "Company Banner","Company Banner"
 "Company Logo","Company Logo"
+"Profile picture","Profile picture"
 Flags,Flags
 Back,Back
 "Delete Reason","Delete Reason"
@@ -167,6 +169,7 @@ Earnings,Earnings
 "Invalid Background Color","Invalid Background Color"
 "Marketplace Vendor Login","Marketplace Vendor Login"
 "Marketplace Notifications","Marketplace Notifications"
+Notifications,Notifications
 "Marketplace Review","Marketplace Review"
 "The URL Rewrite has been saved.","The URL Rewrite has been saved."
 "Google Analytic information was successfully saved","Google Analytic information was successfully saved"
@@ -556,14 +559,17 @@ Password,Password
 "Forgot Your Password?","Forgot Your Password?"
 "Don't have account? Click here to register","Don't have account? Click here to register"
 Marketplace,Marketplace
-"Dashboard","Dashboard"
+"Marketplace Dashboard","Marketplace Dashboard"
+"Vendor Profile","Vendor Profile"
 "Seller Profile","Seller Profile"
 "New Products","New Products"
 "My Products List","My Products List"
+"My Services","My Services"
 "Click here to view product list","Click here to view product list"
 "My Transaction List","My Transaction List"
 "Click here to view transaction history","Click here to view transaction history"
 "My Order History","My Order History"
+"My Applications","My Applications"
 "Click here to view order history","Click here to view order history"
 Customers,Customers
 "Review Notification","Review Notification"
@@ -608,6 +614,7 @@ Customer(s),Customer(s)
 "This month customer count","This month customer count"
 "Last month customer count","Last month customer count"
 Dashboard,Dashboard
+OrionAlliance,OrionAlliance
 Orders,Orders
 Products,Products
 Menu,Menu
@@ -620,9 +627,12 @@ Settings,Settings
 "Shipping Settings","Shipping Settings"
 "Seller Panel","Seller Panel"
 "My Account","My Account"
+Account,Account
+"Billing & Payments","Billing & Payments"
 "Account Setting","Account Setting"
 "Buyer Dashboard","Buyer Dashboard"
 Logout,Logout
+"Log Out","Log Out"
 "View Larger Map","View Larger Map"
 "Huge Buyers","Huge Buyers"
 "Get your product showcased to a huge range of customers,
@@ -1160,6 +1170,7 @@ Item,Item
 "I would like to inform you that your payment for your order(s) has been successfully done.","I would like to inform you that your payment for your order(s) has been successfully done."
 "You can check your transaction by <a href=""%account_url"">logging into your account</a>.","You can check your transaction by <a href=""%account_url"">logging into your account</a>."
 "Transaction Id <span class=""no-link"">#%increment_id</span>","Transaction Id <span class=""no-link"">#%increment_id</span>"
+Help,Help
 Hello,Hello
 "Request to withdraw an amount ","Request to withdraw an amount "
 " is received from seller %seller."," is received from seller %seller."
@@ -1503,6 +1514,7 @@ Sell,Sell
 "Marketplace Become Seller","Marketplace Become Seller"
 "My Customer History","My Customer History"
 "Marketplace Edit Seller Profile","Marketplace Edit Seller Profile"
+"Vendor profile","Vendor profile"
 "New Credit Memo","New Credit Memo"
 "View Memo","View Memo"
 "View All Memos","View All Memos"

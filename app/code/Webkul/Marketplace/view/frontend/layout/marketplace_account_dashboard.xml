@@ -21,10 +21,11 @@
         </referenceBlock>
         <referenceContainer name="content">
             <block class="Webkul\Marketplace\Block\Account\Dashboard" name="marketplace_account_dashboard" template="Webkul_Marketplace::account/dashboard.phtml" cacheable="false">
-            <arguments>
+                <arguments>
                     <argument name="view_model" xsi:type="object">Webkul\Marketplace\ViewModel\HelperViewModel</argument>
                 </arguments>
             </block>
+            <referenceBlock name="becomeseller.widget" remove="true"/>
         </referenceContainer>
 
         <referenceContainer name="marketplace_account_dashboard">

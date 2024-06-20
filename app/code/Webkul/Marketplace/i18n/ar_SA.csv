@@ -759,6 +759,7 @@ Are you sure you want to edit this product ? ,  هل تريد بالتأكيد 
 No Checkbox is checked ,  لم يتم تحديد مربع اختيار,,
 Are you sure you want to delete these product ? ,  هل تريد بالتأكيد حذف هذا المنتج؟,,
 Marketplace,السوق,,
+OrionAlliance,السوق,,
 Seller Profile,البائع الملف الشخصي,,
 Create Attribute,إنشاء سمة,,
 New Products,منتجات جديدة,,
@@ -1079,7 +1080,7 @@ Related Products,منتجات ذات صله,,
 Related products are shown to customers in addition to the item the customer is looking at.,وتظهر المنتجات ذات الصلة للعملاء بالإضافة إلى البند الذي يبحث العميل في.,,
 Up-Sell Products,ما يصل بيع المنتجات,,
 An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.,يتم تقديم ما يصل-- بيع البند للعميل كبديل أو أعلى-- جودة البديل للمنتج الذي يبحث في العملاء.,,
-Dashboard,لوحة تحكم ماركتبليس,,
+Marketplace Dashboard,لوحة تحكم ماركتبليس,,
 Manage Print PDF Header Info,إدارة معلومات رأس الطباعة بدف,,
 Buyer Dashboard,لوحة تحكم المشتري
 Transaction,عملية تجارية
@@ -1100,7 +1101,7 @@ Closed,مغلق
 Complete,اكتمال
 Pending,قيد الانتظار
 Process,معالجة
-Dashboard,لوحة تحكم السوق
+Marketplace Dashboard,لوحة تحكم السوق
 Seller Profile,ملف البائع
 Create Attribute,خلق السمة
 New Products,منتجات جديدة
